@@ -1,0 +1,80 @@
+Article:
+  Article_1:
+    title: edito
+    short_description: Lorem ipsum dolor sit amet.  Praesent et mi non orci vehicula eleifend at in dolor
+    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et mi non orci vehicula eleifend at in dolor. Praesent hendrerit non velit sit amet cursus. Vivamus quis magna vitae orci hendrerit ultricies. Cras hendrerit mauris eget nisl vestibulum aliquet. Sed condimentum felis vel sapien interdum euismod. Aenean id dictum ipsum, ultricies volutpat elit. Maecenas id est lorem. Duis hendrerit vitae nulla sed dignissim. Curabitur justo risus, iaculis sed sapien vel, blandit feugiat purus. Phasellus nec orci ultrices, cursus sem a, varius magna.'
+    is_published: true
+    published_at: '2010-01-01 00:00:00'
+    created_at: '2009-01-01 01:01:00'
+    updated_at: '2009-02-01 00:00:00'
+    Author: sfGuardUser_1
+
+ArticleKeyword:
+  ArticleKeyword_1_1:
+    Article: Article_1
+    Keyword: Keyword_1
+
+Keyword:
+  Keyword_1:
+    name: edito
+    reference: edito
+
+sfGuardUser:
+  sfGuardUser_1:
+    first_name: admin
+    last_name: _1
+    email_address: admin@mail.fr
+    username: admin
+    password: admin
+    is_active: true
+    is_super_admin: true
+    last_login: '2014-08-05 17:04:25'
+    created_at: '2014-08-05 17:04:15'
+    updated_at: '2014-08-05 17:04:25'
+  sfGuardUser_2:
+    first_name: editor
+    last_name: _1
+    email_address: editor@mail.fr
+    username: editor
+    password: editor
+    is_active: true
+    is_super_admin: false
+    last_login: '2014-08-06 13:10:39'
+    created_at: '2014-08-05 17:17:13'
+    updated_at: '2014-08-06 13:10:39'
+  sfGuardUser_3:
+    first_name: user
+    last_name: _1
+    email_address: user@mail.fr
+    username: user
+    password: user
+    is_active: true
+    is_super_admin: false
+    last_login: '2014-08-06 13:10:39'
+    created_at: '2014-08-05 17:17:13'
+    updated_at: '2014-08-06 13:10:39'
+
+sfGuardGroup:
+  sfGuardGroup_1:
+    name: admin
+    description: 'Groupe administrateur'
+    created_at: '2014-06-03 14:18:20'
+    updated_at: '2014-06-03 14:18:20'
+  sfGuardGroup_2:
+    name: editor
+    description: 'Groupe éditeur'
+    created_at: '2014-06-03 14:18:20'
+    updated_at: '2014-06-03 14:18:20'
+
+sfGuardUserGroup:
+  sfGuardUserGroup_1_1:
+    User: sfGuardUser_1
+    Group: sfGuardGroup_1
+    created_at: '2014-06-05 08:45:51'
+    updated_at: '2014-06-05 08:45:51'
+  sfGuardUserGroup_2_2:
+    User: sfGuardUser_2
+    Group: sfGuardGroup_2
+    created_at: '2014-06-05 08:43:41'
+    updated_at: '2014-06-05 08:43:41'
+

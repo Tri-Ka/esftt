@@ -1,0 +1,73 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/11-App
+
+# default values
+all:
+
+  imagesizes:
+
+    big:
+      width: 1440
+      height: 960
+
+    small:
+      width: 508
+      height: 800
+
+    slides:
+      width: 427
+      height: 240
+
+    slides_old:
+      width: 504
+      height: 320
+
+    ideas:
+      width: 646
+      height: 358
+
+    miniideas:
+      width: 323
+      height: 179
+
+    fit:
+      width: 608
+      height: 348
+
+    picture:
+      width: 800
+      height: 600
+
+  sf_admin_dash:
+    web_dir:                      /sfAdminDashPlugin
+    image_dir:                    /sfAdminDashPlugin/images/icons/
+    default_image:                config.png
+    dashboard_url:                @homepage
+    resize_mode:                  thumbnail
+    site:                         esftt
+    include_path:                 true
+    include_assets:               true
+    include_jquery:               false
+    include_jquery_no_conflict:   false
+    login_route:                  @sf_guard_signin
+    logout:                       true
+    logout_route:                 @sf_guard_signout
+    categories:
+      CMS:
+        items:
+          Articles:
+            url: article
+            image: addedit.png
+      Utilisateur:
+        items:
+          Utilisateurs:
+            url: sf_guard_user
+            image: users.png
+      Gallerie:
+        items:
+          Gallery:
+            url: gallery
+            image: addedit
+          Picture:
+            url: picture
+            image: addedit

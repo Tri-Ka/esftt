@@ -1,0 +1,33 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/13-View
+
+default:
+  http_metas:
+    content-type: text/html
+
+  metas:
+    title:        esftt
+    description:  esftt
+    keywords:     esftt
+    language:     fr
+    #robots:       index, follow
+
+  stylesheets:    
+    - bootstrap/bootstrap.min.css
+    - bootstrap/bootstrap-responsive.min.css
+    - font-awesome/css/font-awesome.min.css
+    - main.css
+
+  javascripts:    
+    - jquery-1.11.1.min.js
+    - bootstrap/bootstrap.min.js
+    - http://connect.facebook.net/fr_FR/all.js#xfbml=1
+    - vendor/jquery.textareaAutoResize.js
+    - vendor/galleryfic/jquery.galleriffic.js
+    - vendor/galleryfic/jquery.history.js
+    - vendor/galleryfic/jquery.opacityrollover.js
+    - script.js
+
+
+  has_layout:     true
+  layout:         layout

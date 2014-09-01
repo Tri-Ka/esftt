@@ -1,0 +1,54 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/10-Routing
+
+# article
+article_show:
+  url: /article/:id
+  param: { module: article, action: show }
+
+# comment
+new_comment:
+  url: /comment/new/
+  param: { module: article, action: newComment}
+
+# gallery
+
+gallery_list:
+  url: /galleries
+  param: { module: gallery, action: list }
+
+gallery_show:
+  url: /gallery/:id
+  param: { module: gallery, action: show }
+
+# user
+
+user_create:
+  url: /new-account
+  param: { module: user, action: new}
+
+sf_guard_signin:
+  url:   /login
+  param: { module: sfGuardAuth, action: signin }
+
+sf_guard_signout:
+  url:   /logout
+  param: { module: sfGuardAuth, action: signout }
+
+blog:
+  url: blog/
+  param: { module: blog, action: list }
+
+# default rules
+homepage:
+  url:   /
+  param: { module: homepage, action: index }
+
+# generic rules
+# please, remove them by adding more specific rules
+default_index:
+  url:   /:module
+  param: { action: index }
+
+default:
+  url:   /:module/:action/*

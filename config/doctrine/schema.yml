@@ -1,0 +1,123 @@
+Article:
+  tableName: article
+  actAs:
+    Timestampable: ~
+  columns:
+    title:
+      type: string(255)
+      notnull: true
+    short_description:
+      type: string(255)
+      notnull: true
+    content:
+      type: clob
+      notnull: true
+    picture:
+      type: string(255)
+    is_published:
+      type: boolean
+      notnull: false
+      default: false
+    published_at:
+      type: timestamp
+      notnull: true
+    author_id:
+      type: integer
+  relations:
+    Keywords:
+      class: Keyword
+      refClass: ArticleKeyword
+      local: article_id
+      foreign: keyword_id
+      foreignAlias: Articles
+    Author:
+      class: sfGuardUser
+      local: author_id
+      foreign: id
+      foreignAlias: Articles
+
+ArticleKeyword:
+  columns:
+    article_id:
+      type: integer
+      primary: true
+    keyword_id:
+      type: integer
+      primary: true
+  relations:
+    Article:
+      foreignAlias: ArticleKeywords
+      onDelete: CASCADE
+    Keyword:
+      foreignAlias: ArticleKeywords
+      onDelete: CASCADE
+
+Comment:
+  actAs:
+    Timestampable: ~
+  columns:
+    article_id:
+      type: integer
+      notnull: true
+    parent_id:
+      type: integer
+    author_id:
+      type: integer
+      notnull: true
+    content:
+      type: string(1000)
+      notnull: true
+  relations:
+    Article:
+      class: Article
+      local: article_id
+      foreign: id
+      foreignAlias: Comments
+    Author:
+      class: sfGuardUser
+      local: author_id
+      foreign: id
+      foreignAlias: ArticleComments
+
+Keyword:
+  columns:
+    name:
+      type: string(255)
+      notnull: true
+    reference:
+      type: string(255
+
+Gallery:
+  columns:
+    name:
+      type: string(255)
+      notnull: true
+    description:
+      type: string
+      notnull: true
+
+Picture:
+  columns:
+    name:
+      type: string
+      notnull: true
+    description:
+      type: string
+    gallery_id:
+      type: integer
+      notnull: true
+    is_cover_gallery:
+      type: boolean
+      default: false
+  relations:
+    Gallery:
+      class: Gallery
+      local: gallery_id
+      foreign: id
+      foreignAlias: Pictures
+      onDelete: CASCADE
+
+sfGuardUser:
+  columns:
+    avatar:
+      type: string(255)

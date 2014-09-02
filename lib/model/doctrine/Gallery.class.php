@@ -16,7 +16,13 @@ class Gallery extends BaseGallery
 	public function getCover()
 	{
 
-		return PictureTable::getInstance()->findByDql('gallery_id = ? and is_cover_gallery = ?', array($this->getId(), true))->getFirst();
+		$picture = PictureTable::getInstance()->findByDql('gallery_id = ? and is_cover_gallery = ?', array($this->getId(), true))->getFirst();
+
+		if(!$picture){
+			$picture = PictureTable::getInstance()->findByDql('gallery_id = ?', array($this->getId()))->getFirst();
+		}
+
+		return $picture;
 
 	}
 

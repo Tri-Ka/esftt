@@ -53,6 +53,19 @@ all:
     logout:                       true
     logout_route:                 @sf_guard_signout
     categories:
+      Competition:
+        items:
+          Equipes:
+            url: team
+            image: users.png
+          Composition équipes:
+            url: user_team
+          Competitions:
+            url: competition
+          Sessions de competition:
+            url: competition_session
+          Inscriptions des équipes aux sessions:
+            url: competition_session_team
       CMS:
         items:
           Articles:

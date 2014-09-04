@@ -79,6 +79,47 @@ Comment:
       foreign: id
       foreignAlias: ArticleComments
 
+Competition:
+  columns:
+    name:
+      type: string(255)
+      notnull: true
+
+CompetitionSession:
+  columns:
+    date:
+      type: date
+      notnull: true
+    competition_id:
+      type: integer
+      notnull: true
+  relations:
+    Competition:
+      class: Competition
+      local: competition_id
+      foreign: id
+      foreignAlias: Sessions
+
+CompetitionSessionTeam:
+  columns:
+    team_id:
+      type: integer
+      notnull: true
+    competition_session_id:
+      type: integer
+      notnull: true
+  relations:
+    Team:
+      class: Team
+      local: team_id
+      foreign: id
+      foreignAlias: Sessions
+    Session:
+      class: CompetitionSession
+      local: competition_session_id
+      foreign: id
+      foreignAlias: Sessions
+
 Keyword:
   columns:
     name:
@@ -117,7 +158,46 @@ Picture:
       foreignAlias: Pictures
       onDelete: CASCADE
 
+Team:
+  columns:
+    name:
+      type: string
+      notnull: true
+  # relations:
+  #   Users:
+  #     class: sfGuardUser
+  #     refClass: UserTeam
+  #     local: team_id
+  #     foreign: user_name
+  #     foreignAlias: Teams
+
+UserTeam:
+  columns:
+    # user_id:
+    #   type: integer
+    user_name:
+      type: string(255)
+    team_id:
+      type: integer
+    is_captain:
+      type: boolean
+  relations:
+    Team:
+      foreignAlias: TeamUsers
+      onDelete: CASCADE
+    # User:
+    #   foreignAlias: TeamUsers
+    #   onDelete: CASCADE
+
+
 sfGuardUser:
   columns:
     avatar:
       type: string(255)
+  # relations:
+  #   Teams:
+  #     class: Team
+  #     refClass: UserTeam
+  #     local: user_id
+  #     foreign: team_id
+  #     foreignAlias: Users

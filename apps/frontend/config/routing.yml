@@ -21,6 +21,12 @@ gallery_show:
   url: /gallery/:id
   param: { module: gallery, action: show }
 
+# competition
+
+competition_show:
+  url: /competition
+  param: { module: competition, action: show}
+
 # user
 
 user_create:

@@ -87,9 +87,87 @@ var GalleryFic =
 	}
 };
 
+var Competition =
+{
+	init: function()
+	{
+
+		var autoCompleteData = {
+		    teams : [
+		      ['fi:Player 1', ''],
+		      ['', '']
+		    ],
+		    results : []
+		  }
+
+		/* Data for autocomplete */
+		var acData = ["kr:MC", "ca:HuK", "se:Naniwa", "pe:Fenix",
+		              "us:IdrA", "tw:Sen", "fi:Naama"]
+
+		/* If you call doneCb([value], true), the next edit will be automatically
+		   activated. This works only in the first round. */
+		function acEditFn(container, data, doneCb) {
+
+			var input = $('<input type="text">');
+
+			input.val(data);
+
+			console.log(acData);
+
+			input.autocomplete({
+			  	source: acData
+			});
+
+			input.blur(function() {
+			  	doneCb(input.val());
+			});
+
+			input.keyup(function(e) {
+			  	if ((e.keyCode || e.which) === 13){
+			  		input.blur();
+			  	}
+			});
+
+			container.html(input);
+			input.focus();
+		};
+
+		function acRenderFn(container, data, score) {
+
+			var fields = data.split(':');
+
+			if (fields.length != 2){
+
+				container.append('--')
+
+			} else {
+
+			    container.append('<img src="site/png/'+fields[0]+'.png"> ').append(fields[1]);
+
+			}
+
+		};
+
+		$(function() {
+
+		    $('div#autoComplete .demo').bracket({
+
+			    init: autoCompleteData,
+			    save: function(){}, /* without save() labels are disabled */
+			    decorator: {
+			      	edit: acEditFn,
+			        render: acRenderFn
+			    }
+
+			});
+		});
+	}
+}
+
 $( document ).ready(function()
 {
 	AutoResize.init();
 	GalleryFic.init();
 	Comment.init();
+	Competition.init();
 });

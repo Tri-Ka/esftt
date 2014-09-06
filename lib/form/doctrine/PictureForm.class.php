@@ -10,26 +10,26 @@
  */
 class PictureForm extends BasePictureForm
 {
-	  public function configure()
-	  {
-	  	    $this->widgetSchema['name'] = new sfWidgetFormInputFileEditable(array(
-	          'file_src' => $this->getObject()->retrievePictureUrl(),
-	          'is_image' => true,
-	          'edit_mode' => !$this->isNew() && null != $this->getObject()->getName(),
-	        ));
+	public function configure()
+	{
+  	    $this->widgetSchema['name'] = new sfWidgetFormInputFileEditable(array(
+          'file_src' => $this->getObject()->retrievePictureUrl(),
+          'is_image' => true,
+          'edit_mode' => !$this->isNew() && null != $this->getObject()->getName(),
+        ));
 
-	        $this->validatorSchema['name'] = new sfValidatorFileImage(array(
-	            'required'   => false,
-	            'path'       => sfConfig::get('sf_upload_dir').'/articles',
-	            'min_height' =>  0,
-	            'min_width'  =>  0,
-	            'max_height' =>  99999999,
-	            'max_width'  =>  99999999,
-	            'mime_types' => 'web_images',
-	        ));
+        $this->validatorSchema['name'] = new sfValidatorFileImage(array(
+            'required'   => false,
+            'path'       => sfConfig::get('sf_upload_dir').'/articles',
+            'min_height' =>  0,
+            'min_width'  =>  0,
+            'max_height' =>  99999999,
+            'max_width'  =>  99999999,
+            'mime_types' => 'web_images',
+        ));
 
-	        $this->validatorSchema['name_delete'] = new sfValidatorBoolean();
-	  }
+        $this->validatorSchema['name_delete'] = new sfValidatorBoolean();
+	}
 
   	/**
      * @see sfFormObject
@@ -37,9 +37,11 @@ class PictureForm extends BasePictureForm
     public function doSave($con = null)
     {
 
-        parent::doSave($con);
-
         $picture = $this->getObject();
+
+        $oldGalleryId = $picture->getGalleryId();
+
+        parent::doSave($con);
 
         $directory = $picture->retrieveHashedPictureDirectory(false);
 
@@ -100,6 +102,27 @@ class PictureForm extends BasePictureForm
 
             $img->saveAs($directory . DIRECTORY_SEPARATOR . 'thumb/' . $picture->getName());
             @unlink($old);
+
+        } elseif ($oldGalleryId !== $this->getValue('gallery_id')) {
+
+            $newDirectory = str_replace('gallery/' . $oldGalleryId, 'gallery/' . $this->getValue('gallery_id'), $directory);
+
+            $oldFile = $directory . '/' . $this->getObject()->getName();
+            $newFile = $newDirectory . '/' . $this->getObject()->getName();
+
+            $oldThumbFile = $directory . '/thumb/' . $this->getObject()->getName();
+            $newThumbFile = $newDirectory . '/thumb/' . $this->getObject()->getName();
+
+            if(!file_exists($newDirectory)){
+                mkdir($newDirectory, 0777, true);
+            }
+
+            if(!file_exists($newDirectory . '/thumb/')){
+                mkdir($newDirectory . '/thumb/', 0777, true);
+            }
+
+            rename($oldFile, $newFile);
+            rename($oldThumbFile, $newThumbFile);
 
         }
 

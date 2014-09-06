@@ -51,7 +51,7 @@
           <?php include_component('homepage', 'signin'); ?>
 
 
-          <ul class="nav nav-list bs-docs-sidenav affix-top clearfix">
+          <!-- <ul class="nav nav-list bs-docs-sidenav affix-top clearfix">
                       <h2 class="blue">Infos</h2>
 
             <li>
@@ -78,7 +78,8 @@
                 <em>stats des match, forum...</em>
               </a>
             </li>
-          </ul>
+          </ul> -->
+
 
         </div>
 

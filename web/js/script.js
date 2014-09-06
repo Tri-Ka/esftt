@@ -94,10 +94,19 @@ var Competition =
 
 		var autoCompleteData = {
 		    teams : [
-		      ['fi:Player 1', ''],
-		      ['', '']
+		      ['Player 1', 'Player 2'],
+		      ['Player 3', 'Player 4'],
+		      ['Player 5', 'Player 6'],
+		      ['Player 7', 'Player 8'],
+
 		    ],
-		    results : []
+		    results : [
+		    	[[1,0], [2,7], [2,7], [2,7]],
+		    	[[3,0], [2,0]]
+		    ]
+
+
+
 		  }
 
 		/* Data for autocomplete */
@@ -134,17 +143,9 @@ var Competition =
 
 		function acRenderFn(container, data, score) {
 
-			var fields = data.split(':');
 
-			if (fields.length != 2){
+			    container.append(data);
 
-				container.append('--')
-
-			} else {
-
-			    container.append('<img src="site/png/'+fields[0]+'.png"> ').append(fields[1]);
-
-			}
 
 		};
 
@@ -153,7 +154,9 @@ var Competition =
 		    $('div#autoComplete .demo').bracket({
 
 			    init: autoCompleteData,
-			    save: function(){}, /* without save() labels are disabled */
+			    save: function(e){
+			    	console.log(e);
+			    }, /* without save() labels are disabled */
 			    decorator: {
 			      	edit: acEditFn,
 			        render: acRenderFn

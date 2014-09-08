@@ -57,3 +57,776 @@ Sep 08 17:29:27 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.48 ms (2
 Sep 08 17:29:27 symfony [info] {sfWebDebugLogger} Partial "sfAdminDash/_user_actions" 0.68 ms (1)
 Sep 08 17:29:27 symfony [info] {sfWebDebugLogger} Partial "sfAdminDash/_footer" 0.49 ms (1)
 Sep 08 17:29:27 symfony [info] {sfWebResponse} Send content (71675 o)
+Sep 08 17:56:30 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Sep 08 17:56:30 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Sep 08 17:56:30 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_filter" (/guard/users/filter.:sf_format)
+Sep 08 17:56:30 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_batch" (/guard/users/batch.:sf_format)
+Sep 08 17:56:30 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user" (/guard/users.:sf_format)
+Sep 08 17:56:30 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_new" (/guard/users/new.:sf_format)
+Sep 08 17:56:30 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_create" (/guard/users.:sf_format)
+Sep 08 17:56:30 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_edit" (/guard/users/:id/edit.:sf_format)
+Sep 08 17:56:30 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_update" (/guard/users/:id.:sf_format)
+Sep 08 17:56:30 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_delete" (/guard/users/:id.:sf_format)
+Sep 08 17:56:30 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_show" (/guard/users/:id.:sf_format)
+Sep 08 17:56:30 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_object" (/guard/users/:id/:action.:sf_format)
+Sep 08 17:56:30 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_collection" (/guard/users/:action/action.:sf_format)
+Sep 08 17:56:30 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'sfAdminDash',  'action' => 'dashboard',)
+Sep 08 17:56:30 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 08 17:56:30 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Sep 08 17:56:30 symfony [info] {sfBasicSecurityFilter} Action "sfAdminDash/dashboard" requires authentication, forwarding to "sfGuardAuth/signin"
+Sep 08 17:56:30 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 08 17:56:30 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 08 17:56:30 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeSignin()"
+Sep 08 17:56:30 symfony [info] {sfPHPView} Render "/Users/Etienne/Sites/esftt/plugins/sfDoctrineGuardPlugin/modules/sfGuardAuth/templates/signinSuccess.php"
+Sep 08 17:56:30 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfDoctrineGuardPlugin/modules/sfGuardAuth/templates/_signin_form.php"
+Sep 08 17:56:30 symfony [info] {sfPHPView} Decorate content with "/Users/Etienne/Sites/esftt/apps/backend/templates/layout.php"
+Sep 08 17:56:30 symfony [info] {sfPHPView} Render "/Users/Etienne/Sites/esftt/apps/backend/templates/layout.php"
+Sep 08 17:56:30 symfony [info] {main} Call "sfAdminDash->executeHeader()"
+Sep 08 17:56:30 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_header.php"
+Sep 08 17:56:30 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_footer.php"
+Sep 08 17:56:30 symfony [info] {sfWebResponse} Send status "HTTP/1.1 401 Unauthorized"
+Sep 08 17:56:30 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 08 17:56:30 symfony [info] {sfWebDebugLogger} Configuration 99.60 ms (15)
+Sep 08 17:56:30 symfony [info] {sfWebDebugLogger} Factories 129.04 ms (1)
+Sep 08 17:56:30 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/signin" 4.99 ms (1)
+Sep 08 17:56:30 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardAuth/signin" 17.42 ms (1)
+Sep 08 17:56:30 symfony [info] {sfWebDebugLogger} Partial "sfGuardAuth/_signin_form" 3.47 ms (1)
+Sep 08 17:56:30 symfony [info] {sfWebDebugLogger} Component "sfAdminDash/header" 1.62 ms (1)
+Sep 08 17:56:30 symfony [info] {sfWebDebugLogger} Partial "sfAdminDash/_header" 1.21 ms (1)
+Sep 08 17:56:30 symfony [info] {sfWebDebugLogger} Partial "sfAdminDash/_footer" 0.92 ms (1)
+Sep 08 17:56:30 symfony [info] {sfWebResponse} Send content (44333 o)
+Sep 08 17:56:32 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Sep 08 17:56:32 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Sep 08 17:56:32 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_filter" (/guard/users/filter.:sf_format)
+Sep 08 17:56:32 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_batch" (/guard/users/batch.:sf_format)
+Sep 08 17:56:32 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user" (/guard/users.:sf_format)
+Sep 08 17:56:32 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_new" (/guard/users/new.:sf_format)
+Sep 08 17:56:32 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_create" (/guard/users.:sf_format)
+Sep 08 17:56:32 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_edit" (/guard/users/:id/edit.:sf_format)
+Sep 08 17:56:32 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_update" (/guard/users/:id.:sf_format)
+Sep 08 17:56:32 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_delete" (/guard/users/:id.:sf_format)
+Sep 08 17:56:32 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_show" (/guard/users/:id.:sf_format)
+Sep 08 17:56:32 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_object" (/guard/users/:id/:action.:sf_format)
+Sep 08 17:56:32 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_collection" (/guard/users/:action/action.:sf_format)
+Sep 08 17:56:32 symfony [info] {sfPatternRouting} Match route "sf_guard_signin" (/guard/login) for /guard/login with parameters array (  'module' => 'sfGuardAuth',  'action' => 'signin',)
+Sep 08 17:56:32 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 08 17:56:32 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 08 17:56:32 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeSignin()"
+Sep 08 17:56:32 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Sep 08 17:56:32 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.avatar AS s__avatar, s.is_disponible AS s__is_disponible, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.username = ? AND s.is_active = ?) - (admin, 1)
+Sep 08 17:56:32 symfony [info] {myUser} User is authenticated
+Sep 08 17:56:32 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.name AS s__name, s.description AS s__description, s.created_at AS s__created_at, s.updated_at AS s__updated_at, s2.user_id AS s2__user_id, s2.permission_id AS s2__permission_id, s2.created_at AS s2__created_at, s2.updated_at AS s2__updated_at FROM sf_guard_permission s LEFT JOIN sf_guard_user_permission s2 ON s.id = s2.permission_id WHERE (s2.user_id IN (?)) - (1)
+Sep 08 17:56:32 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.name AS s__name, s.description AS s__description, s.created_at AS s__created_at, s.updated_at AS s__updated_at, s2.user_id AS s2__user_id, s2.group_id AS s2__group_id, s2.created_at AS s2__created_at, s2.updated_at AS s2__updated_at FROM sf_guard_group s LEFT JOIN sf_guard_user_group s2 ON s.id = s2.group_id WHERE (s2.user_id IN (?)) - (1)
+Sep 08 17:56:32 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.name AS s__name, s.description AS s__description, s.created_at AS s__created_at, s.updated_at AS s__updated_at, s2.group_id AS s2__group_id, s2.permission_id AS s2__permission_id, s2.created_at AS s2__created_at, s2.updated_at AS s2__updated_at FROM sf_guard_permission s LEFT JOIN sf_guard_group_permission s2 ON s.id = s2.permission_id WHERE (s2.group_id IN (?)) - (1)
+Sep 08 17:56:32 symfony [info] {myUser} Add credential(s) ""
+Sep 08 17:56:32 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE sf_guard_user SET last_login = ?, updated_at = ? WHERE id = ? - (2014-09-08 17:56:32, 2014-09-08 17:56:32, 1)
+Sep 08 17:56:32 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.avatar AS s__avatar, s.is_disponible AS s__is_disponible, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) - (1)
+Sep 08 17:56:32 symfony [info] {sfFrontWebController} Redirect to "http://esftt.dev/backend_dev.php"
+Sep 08 17:56:32 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Sep 08 17:56:32 symfony [info] {sfWebResponse} Send header "Location: http://esftt.dev/backend_dev.php"
+Sep 08 17:56:32 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 08 17:56:32 symfony [info] {sfWebDebugLogger} Configuration 1.50 ms (8)
+Sep 08 17:56:32 symfony [info] {sfWebDebugLogger} Factories 31.51 ms (1)
+Sep 08 17:56:32 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/signin" 66.90 ms (1)
+Sep 08 17:56:32 symfony [info] {sfWebDebugLogger} Database (Doctrine) 6.03 ms (7)
+Sep 08 17:56:32 symfony [info] {sfWebResponse} Send content (103 o)
+Sep 08 17:56:32 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Sep 08 17:56:32 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Sep 08 17:56:32 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_filter" (/guard/users/filter.:sf_format)
+Sep 08 17:56:32 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_batch" (/guard/users/batch.:sf_format)
+Sep 08 17:56:32 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user" (/guard/users.:sf_format)
+Sep 08 17:56:32 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_new" (/guard/users/new.:sf_format)
+Sep 08 17:56:32 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_create" (/guard/users.:sf_format)
+Sep 08 17:56:32 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_edit" (/guard/users/:id/edit.:sf_format)
+Sep 08 17:56:32 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_update" (/guard/users/:id.:sf_format)
+Sep 08 17:56:32 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_delete" (/guard/users/:id.:sf_format)
+Sep 08 17:56:32 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_show" (/guard/users/:id.:sf_format)
+Sep 08 17:56:32 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_object" (/guard/users/:id/:action.:sf_format)
+Sep 08 17:56:32 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_collection" (/guard/users/:action/action.:sf_format)
+Sep 08 17:56:32 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'sfAdminDash',  'action' => 'dashboard',)
+Sep 08 17:56:32 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 08 17:56:32 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Sep 08 17:56:32 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 08 17:56:32 symfony [info] {sfAdminDashActions} Call "sfAdminDashActions->executeDashboard()"
+Sep 08 17:56:32 symfony [info] {sfPHPView} Set component "sf_admin_dashboard_slot" (/)
+Sep 08 17:56:32 symfony [info] {sfPHPView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/dashboardSuccess.php"
+Sep 08 17:56:32 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_dash_list.php"
+Sep 08 17:56:32 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_dash_list.php"
+Sep 08 17:56:32 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_dash_list.php"
+Sep 08 17:56:32 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_dash_list.php"
+Sep 08 17:56:32 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_dash_list.php"
+Sep 08 17:56:32 symfony [info] {sfPHPView} Decorate content with "/Users/Etienne/Sites/esftt/apps/backend/templates/layout.php"
+Sep 08 17:56:32 symfony [info] {sfPHPView} Render "/Users/Etienne/Sites/esftt/apps/backend/templates/layout.php"
+Sep 08 17:56:32 symfony [info] {main} Call "sfAdminDash->executeHeader()"
+Sep 08 17:56:32 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_header.php"
+Sep 08 17:56:32 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu.php"
+Sep 08 17:56:32 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:32 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:32 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:32 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:32 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:32 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:32 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:32 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:32 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:32 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:32 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Sep 08 17:56:32 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.avatar AS s__avatar, s.is_disponible AS s__is_disponible, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (1)
+Sep 08 17:56:32 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_user_actions.php"
+Sep 08 17:56:32 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_footer.php"
+Sep 08 17:56:32 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 08 17:56:32 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 08 17:56:32 symfony [info] {sfWebDebugLogger} Configuration 1.73 ms (11)
+Sep 08 17:56:32 symfony [info] {sfWebDebugLogger} Factories 31.49 ms (1)
+Sep 08 17:56:32 symfony [info] {sfWebDebugLogger} Action "sfAdminDash/dashboard" 0.28 ms (1)
+Sep 08 17:56:32 symfony [info] {sfWebDebugLogger} View "Success" for "sfAdminDash/dashboard" 60.43 ms (1)
+Sep 08 17:56:32 symfony [info] {sfWebDebugLogger} Partial "sfAdminDash/_dash_list" 5.24 ms (5)
+Sep 08 17:56:32 symfony [info] {sfWebDebugLogger} Component "sfAdminDash/header" 1.39 ms (1)
+Sep 08 17:56:32 symfony [info] {sfWebDebugLogger} Partial "sfAdminDash/_header" 41.97 ms (1)
+Sep 08 17:56:32 symfony [info] {sfWebDebugLogger} Partial "sfAdminDash/_menu" 12.57 ms (1)
+Sep 08 17:56:32 symfony [info] {sfWebDebugLogger} Partial "sfAdminDash/_menu_list" 8.33 ms (10)
+Sep 08 17:56:32 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.60 ms (2)
+Sep 08 17:56:32 symfony [info] {sfWebDebugLogger} Partial "sfAdminDash/_user_actions" 0.98 ms (1)
+Sep 08 17:56:32 symfony [info] {sfWebDebugLogger} Partial "sfAdminDash/_footer" 0.58 ms (1)
+Sep 08 17:56:32 symfony [info] {sfWebResponse} Send content (68720 o)
+Sep 08 17:56:35 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Sep 08 17:56:35 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Sep 08 17:56:35 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_filter" (/guard/users/filter.:sf_format)
+Sep 08 17:56:35 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_batch" (/guard/users/batch.:sf_format)
+Sep 08 17:56:35 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user" (/guard/users.:sf_format)
+Sep 08 17:56:35 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_new" (/guard/users/new.:sf_format)
+Sep 08 17:56:35 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_create" (/guard/users.:sf_format)
+Sep 08 17:56:35 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_edit" (/guard/users/:id/edit.:sf_format)
+Sep 08 17:56:35 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_update" (/guard/users/:id.:sf_format)
+Sep 08 17:56:35 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_delete" (/guard/users/:id.:sf_format)
+Sep 08 17:56:35 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_show" (/guard/users/:id.:sf_format)
+Sep 08 17:56:35 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_object" (/guard/users/:id/:action.:sf_format)
+Sep 08 17:56:35 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_collection" (/guard/users/:action/action.:sf_format)
+Sep 08 17:56:35 symfony [info] {sfPatternRouting} Match route "link" (/link.:sf_format) for /link with parameters array (  'module' => 'link',  'action' => 'index',  'sf_format' => 'html',)
+Sep 08 17:56:35 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 08 17:56:35 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Sep 08 17:56:35 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 08 17:56:35 symfony [info] {linkActions} Call "linkActions->executeIndex()"
+Sep 08 17:56:35 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Sep 08 17:56:35 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM link l - ()
+Sep 08 17:56:35 symfony [info] {sfPHPView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoLink/templates/indexSuccess.php"
+Sep 08 17:56:35 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoLink/templates/_assets.php"
+Sep 08 17:56:35 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoLink/templates/_flashes.php"
+Sep 08 17:56:35 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoLink/templates/_list_header.php"
+Sep 08 17:56:35 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoLink/templates/_filters.php"
+Sep 08 17:56:35 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoLink/templates/_filters_field.php"
+Sep 08 17:56:35 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoLink/templates/_filters_field.php"
+Sep 08 17:56:35 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoLink/templates/_list.php"
+Sep 08 17:56:35 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoLink/templates/_list_th_tabular.php"
+Sep 08 17:56:35 symfony [info] {main} Set slot "sf_admin.current_header"
+Sep 08 17:56:35 symfony [info] {main} Get slot "sf_admin.current_header"
+Sep 08 17:56:35 symfony [info] {main} Set slot "sf_admin.current_header"
+Sep 08 17:56:35 symfony [info] {main} Get slot "sf_admin.current_header"
+Sep 08 17:56:35 symfony [info] {main} Set slot "sf_admin.current_header"
+Sep 08 17:56:35 symfony [info] {main} Get slot "sf_admin.current_header"
+Sep 08 17:56:35 symfony [info] {Doctrine_Connection_Mysql} query : SELECT l.id AS l__id, l.title AS l__title, l.url AS l__url FROM link l LIMIT 20 - ()
+Sep 08 17:56:35 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoLink/templates/_list_td_batch_actions.php"
+Sep 08 17:56:35 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoLink/templates/_list_td_tabular.php"
+Sep 08 17:56:35 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoLink/templates/_list_td_actions.php"
+Sep 08 17:56:35 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoLink/templates/_list_batch_actions.php"
+Sep 08 17:56:35 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoLink/templates/_list_actions.php"
+Sep 08 17:56:35 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoLink/templates/_list_footer.php"
+Sep 08 17:56:35 symfony [info] {sfPHPView} Decorate content with "/Users/Etienne/Sites/esftt/apps/backend/templates/layout.php"
+Sep 08 17:56:35 symfony [info] {sfPHPView} Render "/Users/Etienne/Sites/esftt/apps/backend/templates/layout.php"
+Sep 08 17:56:35 symfony [info] {main} Call "sfAdminDash->executeHeader()"
+Sep 08 17:56:35 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_header.php"
+Sep 08 17:56:35 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu.php"
+Sep 08 17:56:35 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:35 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:35 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:35 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:35 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:35 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:35 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:35 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:35 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:35 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:35 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.avatar AS s__avatar, s.is_disponible AS s__is_disponible, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (1)
+Sep 08 17:56:35 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_user_actions.php"
+Sep 08 17:56:35 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_footer.php"
+Sep 08 17:56:35 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 08 17:56:35 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 08 17:56:35 symfony [info] {sfWebDebugLogger} Configuration 59.93 ms (14)
+Sep 08 17:56:35 symfony [info] {sfWebDebugLogger} Factories 32.06 ms (1)
+Sep 08 17:56:35 symfony [info] {sfWebDebugLogger} Action "link/index" 16.12 ms (1)
+Sep 08 17:56:35 symfony [info] {sfWebDebugLogger} Database (Doctrine) 1.18 ms (4)
+Sep 08 17:56:35 symfony [info] {sfWebDebugLogger} View "Success" for "link/index" 67.16 ms (1)
+Sep 08 17:56:35 symfony [info] {sfWebDebugLogger} Partial "link/_assets" 0.55 ms (1)
+Sep 08 17:56:35 symfony [info] {sfWebDebugLogger} Partial "link/_flashes" 0.60 ms (1)
+Sep 08 17:56:35 symfony [info] {sfWebDebugLogger} Partial "link/_list_header" 0.53 ms (1)
+Sep 08 17:56:35 symfony [info] {sfWebDebugLogger} Partial "link/_filters" 6.71 ms (1)
+Sep 08 17:56:35 symfony [info] {sfWebDebugLogger} Partial "link/_filters_field" 2.84 ms (2)
+Sep 08 17:56:35 symfony [info] {sfWebDebugLogger} Partial "link/_list" 13.44 ms (1)
+Sep 08 17:56:35 symfony [info] {sfWebDebugLogger} Partial "link/_list_th_tabular" 2.16 ms (1)
+Sep 08 17:56:35 symfony [info] {sfWebDebugLogger} Partial "link/_list_td_batch_actions" 0.69 ms (1)
+Sep 08 17:56:35 symfony [info] {sfWebDebugLogger} Partial "link/_list_td_tabular" 2.15 ms (1)
+Sep 08 17:56:35 symfony [info] {sfWebDebugLogger} Partial "link/_list_td_actions" 1.67 ms (1)
+Sep 08 17:56:35 symfony [info] {sfWebDebugLogger} Partial "link/_list_batch_actions" 0.87 ms (1)
+Sep 08 17:56:35 symfony [info] {sfWebDebugLogger} Partial "link/_list_actions" 0.67 ms (1)
+Sep 08 17:56:35 symfony [info] {sfWebDebugLogger} Partial "link/_list_footer" 0.48 ms (1)
+Sep 08 17:56:35 symfony [info] {sfWebDebugLogger} Component "sfAdminDash/header" 0.38 ms (1)
+Sep 08 17:56:35 symfony [info] {sfWebDebugLogger} Partial "sfAdminDash/_header" 26.80 ms (1)
+Sep 08 17:56:35 symfony [info] {sfWebDebugLogger} Partial "sfAdminDash/_menu" 11.40 ms (1)
+Sep 08 17:56:35 symfony [info] {sfWebDebugLogger} Partial "sfAdminDash/_menu_list" 7.73 ms (10)
+Sep 08 17:56:35 symfony [info] {sfWebDebugLogger} Partial "sfAdminDash/_user_actions" 0.80 ms (1)
+Sep 08 17:56:35 symfony [info] {sfWebDebugLogger} Partial "sfAdminDash/_footer" 0.74 ms (1)
+Sep 08 17:56:35 symfony [info] {sfWebResponse} Send content (92641 o)
+Sep 08 17:56:38 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Sep 08 17:56:38 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Sep 08 17:56:38 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_filter" (/guard/users/filter.:sf_format)
+Sep 08 17:56:38 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_batch" (/guard/users/batch.:sf_format)
+Sep 08 17:56:38 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user" (/guard/users.:sf_format)
+Sep 08 17:56:38 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_new" (/guard/users/new.:sf_format)
+Sep 08 17:56:38 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_create" (/guard/users.:sf_format)
+Sep 08 17:56:38 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_edit" (/guard/users/:id/edit.:sf_format)
+Sep 08 17:56:38 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_update" (/guard/users/:id.:sf_format)
+Sep 08 17:56:38 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_delete" (/guard/users/:id.:sf_format)
+Sep 08 17:56:38 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_show" (/guard/users/:id.:sf_format)
+Sep 08 17:56:38 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_object" (/guard/users/:id/:action.:sf_format)
+Sep 08 17:56:38 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_collection" (/guard/users/:action/action.:sf_format)
+Sep 08 17:56:38 symfony [info] {sfPatternRouting} Match route "link_edit" (/link/:id/edit.:sf_format) for /link/1/edit with parameters array (  'module' => 'link',  'action' => 'edit',  'sf_format' => 'html',  'id' => '1',)
+Sep 08 17:56:38 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 08 17:56:38 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Sep 08 17:56:38 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 08 17:56:38 symfony [info] {linkActions} Call "linkActions->executeEdit()"
+Sep 08 17:56:38 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Sep 08 17:56:38 symfony [info] {Doctrine_Connection_Statement} execute : SELECT l.id AS l__id, l.title AS l__title, l.url AS l__url FROM link l WHERE (l.id = ?) - (1)
+Sep 08 17:56:38 symfony [info] {sfPHPView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoLink/templates/editSuccess.php"
+Sep 08 17:56:38 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoLink/templates/_assets.php"
+Sep 08 17:56:38 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoLink/templates/_flashes.php"
+Sep 08 17:56:38 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoLink/templates/_form_header.php"
+Sep 08 17:56:38 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoLink/templates/_form.php"
+Sep 08 17:56:38 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoLink/templates/_form_fieldset.php"
+Sep 08 17:56:38 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoLink/templates/_form_field.php"
+Sep 08 17:56:38 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoLink/templates/_form_field.php"
+Sep 08 17:56:38 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoLink/templates/_form_actions.php"
+Sep 08 17:56:38 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoLink/templates/_form_footer.php"
+Sep 08 17:56:38 symfony [info] {sfPHPView} Decorate content with "/Users/Etienne/Sites/esftt/apps/backend/templates/layout.php"
+Sep 08 17:56:38 symfony [info] {sfPHPView} Render "/Users/Etienne/Sites/esftt/apps/backend/templates/layout.php"
+Sep 08 17:56:38 symfony [info] {main} Call "sfAdminDash->executeHeader()"
+Sep 08 17:56:38 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_header.php"
+Sep 08 17:56:38 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu.php"
+Sep 08 17:56:38 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:38 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:38 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:38 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:38 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:38 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:38 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:38 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:38 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:38 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:38 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.avatar AS s__avatar, s.is_disponible AS s__is_disponible, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (1)
+Sep 08 17:56:38 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_user_actions.php"
+Sep 08 17:56:38 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_footer.php"
+Sep 08 17:56:38 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 08 17:56:38 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 08 17:56:38 symfony [info] {sfWebDebugLogger} Configuration 2.16 ms (13)
+Sep 08 17:56:38 symfony [info] {sfWebDebugLogger} Factories 31.30 ms (1)
+Sep 08 17:56:38 symfony [info] {sfWebDebugLogger} Action "link/edit" 33.23 ms (1)
+Sep 08 17:56:38 symfony [info] {sfWebDebugLogger} Database (Doctrine) 1.00 ms (3)
+Sep 08 17:56:38 symfony [info] {sfWebDebugLogger} View "Success" for "link/edit" 48.58 ms (1)
+Sep 08 17:56:38 symfony [info] {sfWebDebugLogger} Partial "link/_assets" 0.55 ms (1)
+Sep 08 17:56:38 symfony [info] {sfWebDebugLogger} Partial "link/_flashes" 0.56 ms (1)
+Sep 08 17:56:38 symfony [info] {sfWebDebugLogger} Partial "link/_form_header" 0.61 ms (1)
+Sep 08 17:56:38 symfony [info] {sfWebDebugLogger} Partial "link/_form" 8.80 ms (1)
+Sep 08 17:56:38 symfony [info] {sfWebDebugLogger} Partial "link/_form_fieldset" 4.21 ms (1)
+Sep 08 17:56:38 symfony [info] {sfWebDebugLogger} Partial "link/_form_field" 2.55 ms (2)
+Sep 08 17:56:38 symfony [info] {sfWebDebugLogger} Partial "link/_form_actions" 1.53 ms (1)
+Sep 08 17:56:38 symfony [info] {sfWebDebugLogger} Partial "link/_form_footer" 0.59 ms (1)
+Sep 08 17:56:38 symfony [info] {sfWebDebugLogger} Component "sfAdminDash/header" 0.44 ms (1)
+Sep 08 17:56:38 symfony [info] {sfWebDebugLogger} Partial "sfAdminDash/_header" 26.45 ms (1)
+Sep 08 17:56:38 symfony [info] {sfWebDebugLogger} Partial "sfAdminDash/_menu" 11.45 ms (1)
+Sep 08 17:56:38 symfony [info] {sfWebDebugLogger} Partial "sfAdminDash/_menu_list" 7.71 ms (10)
+Sep 08 17:56:38 symfony [info] {sfWebDebugLogger} Partial "sfAdminDash/_user_actions" 0.86 ms (1)
+Sep 08 17:56:38 symfony [info] {sfWebDebugLogger} Partial "sfAdminDash/_footer" 0.76 ms (1)
+Sep 08 17:56:38 symfony [info] {sfWebResponse} Send content (86938 o)
+Sep 08 17:56:39 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Sep 08 17:56:39 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Sep 08 17:56:39 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_filter" (/guard/users/filter.:sf_format)
+Sep 08 17:56:39 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_batch" (/guard/users/batch.:sf_format)
+Sep 08 17:56:39 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user" (/guard/users.:sf_format)
+Sep 08 17:56:39 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_new" (/guard/users/new.:sf_format)
+Sep 08 17:56:39 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_create" (/guard/users.:sf_format)
+Sep 08 17:56:39 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_edit" (/guard/users/:id/edit.:sf_format)
+Sep 08 17:56:39 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_update" (/guard/users/:id.:sf_format)
+Sep 08 17:56:39 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_delete" (/guard/users/:id.:sf_format)
+Sep 08 17:56:39 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_show" (/guard/users/:id.:sf_format)
+Sep 08 17:56:39 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_object" (/guard/users/:id/:action.:sf_format)
+Sep 08 17:56:39 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_collection" (/guard/users/:action/action.:sf_format)
+Sep 08 17:56:39 symfony [info] {sfPatternRouting} Match route "link" (/link.:sf_format) for /link with parameters array (  'module' => 'link',  'action' => 'index',  'sf_format' => 'html',)
+Sep 08 17:56:39 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 08 17:56:39 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Sep 08 17:56:39 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 08 17:56:39 symfony [info] {linkActions} Call "linkActions->executeIndex()"
+Sep 08 17:56:39 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Sep 08 17:56:39 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM link l - ()
+Sep 08 17:56:39 symfony [info] {sfPHPView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoLink/templates/indexSuccess.php"
+Sep 08 17:56:39 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoLink/templates/_assets.php"
+Sep 08 17:56:39 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoLink/templates/_flashes.php"
+Sep 08 17:56:39 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoLink/templates/_list_header.php"
+Sep 08 17:56:39 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoLink/templates/_filters.php"
+Sep 08 17:56:39 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoLink/templates/_filters_field.php"
+Sep 08 17:56:39 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoLink/templates/_filters_field.php"
+Sep 08 17:56:40 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoLink/templates/_list.php"
+Sep 08 17:56:40 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoLink/templates/_list_th_tabular.php"
+Sep 08 17:56:40 symfony [info] {main} Set slot "sf_admin.current_header"
+Sep 08 17:56:40 symfony [info] {main} Get slot "sf_admin.current_header"
+Sep 08 17:56:40 symfony [info] {main} Set slot "sf_admin.current_header"
+Sep 08 17:56:40 symfony [info] {main} Get slot "sf_admin.current_header"
+Sep 08 17:56:40 symfony [info] {main} Set slot "sf_admin.current_header"
+Sep 08 17:56:40 symfony [info] {main} Get slot "sf_admin.current_header"
+Sep 08 17:56:40 symfony [info] {Doctrine_Connection_Mysql} query : SELECT l.id AS l__id, l.title AS l__title, l.url AS l__url FROM link l LIMIT 20 - ()
+Sep 08 17:56:40 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoLink/templates/_list_td_batch_actions.php"
+Sep 08 17:56:40 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoLink/templates/_list_td_tabular.php"
+Sep 08 17:56:40 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoLink/templates/_list_td_actions.php"
+Sep 08 17:56:40 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoLink/templates/_list_batch_actions.php"
+Sep 08 17:56:40 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoLink/templates/_list_actions.php"
+Sep 08 17:56:40 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoLink/templates/_list_footer.php"
+Sep 08 17:56:40 symfony [info] {sfPHPView} Decorate content with "/Users/Etienne/Sites/esftt/apps/backend/templates/layout.php"
+Sep 08 17:56:40 symfony [info] {sfPHPView} Render "/Users/Etienne/Sites/esftt/apps/backend/templates/layout.php"
+Sep 08 17:56:40 symfony [info] {main} Call "sfAdminDash->executeHeader()"
+Sep 08 17:56:40 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_header.php"
+Sep 08 17:56:40 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu.php"
+Sep 08 17:56:40 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:40 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:40 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:40 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:40 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:40 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:40 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:40 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:40 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:40 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:40 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.avatar AS s__avatar, s.is_disponible AS s__is_disponible, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (1)
+Sep 08 17:56:40 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_user_actions.php"
+Sep 08 17:56:40 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_footer.php"
+Sep 08 17:56:40 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 08 17:56:40 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 08 17:56:40 symfony [info] {sfWebDebugLogger} Configuration 2.10 ms (13)
+Sep 08 17:56:40 symfony [info] {sfWebDebugLogger} Factories 32.07 ms (1)
+Sep 08 17:56:40 symfony [info] {sfWebDebugLogger} Action "link/index" 19.82 ms (1)
+Sep 08 17:56:40 symfony [info] {sfWebDebugLogger} Database (Doctrine) 1.04 ms (4)
+Sep 08 17:56:40 symfony [info] {sfWebDebugLogger} View "Success" for "link/index" 62.22 ms (1)
+Sep 08 17:56:40 symfony [info] {sfWebDebugLogger} Partial "link/_assets" 0.62 ms (1)
+Sep 08 17:56:40 symfony [info] {sfWebDebugLogger} Partial "link/_flashes" 0.57 ms (1)
+Sep 08 17:56:40 symfony [info] {sfWebDebugLogger} Partial "link/_list_header" 0.51 ms (1)
+Sep 08 17:56:40 symfony [info] {sfWebDebugLogger} Partial "link/_filters" 6.87 ms (1)
+Sep 08 17:56:40 symfony [info] {sfWebDebugLogger} Partial "link/_filters_field" 2.99 ms (2)
+Sep 08 17:56:40 symfony [info] {sfWebDebugLogger} Partial "link/_list" 12.57 ms (1)
+Sep 08 17:56:40 symfony [info] {sfWebDebugLogger} Partial "link/_list_th_tabular" 2.12 ms (1)
+Sep 08 17:56:40 symfony [info] {sfWebDebugLogger} Partial "link/_list_td_batch_actions" 0.68 ms (1)
+Sep 08 17:56:40 symfony [info] {sfWebDebugLogger} Partial "link/_list_td_tabular" 1.99 ms (1)
+Sep 08 17:56:40 symfony [info] {sfWebDebugLogger} Partial "link/_list_td_actions" 1.56 ms (1)
+Sep 08 17:56:40 symfony [info] {sfWebDebugLogger} Partial "link/_list_batch_actions" 0.90 ms (1)
+Sep 08 17:56:40 symfony [info] {sfWebDebugLogger} Partial "link/_list_actions" 0.64 ms (1)
+Sep 08 17:56:40 symfony [info] {sfWebDebugLogger} Partial "link/_list_footer" 0.54 ms (1)
+Sep 08 17:56:40 symfony [info] {sfWebDebugLogger} Component "sfAdminDash/header" 0.44 ms (1)
+Sep 08 17:56:40 symfony [info] {sfWebDebugLogger} Partial "sfAdminDash/_header" 27.15 ms (1)
+Sep 08 17:56:40 symfony [info] {sfWebDebugLogger} Partial "sfAdminDash/_menu" 12.38 ms (1)
+Sep 08 17:56:40 symfony [info] {sfWebDebugLogger} Partial "sfAdminDash/_menu_list" 8.46 ms (10)
+Sep 08 17:56:40 symfony [info] {sfWebDebugLogger} Partial "sfAdminDash/_user_actions" 0.66 ms (1)
+Sep 08 17:56:40 symfony [info] {sfWebDebugLogger} Partial "sfAdminDash/_footer" 0.55 ms (1)
+Sep 08 17:56:40 symfony [info] {sfWebResponse} Send content (92665 o)
+Sep 08 17:56:42 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Sep 08 17:56:42 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Sep 08 17:56:42 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_filter" (/guard/users/filter.:sf_format)
+Sep 08 17:56:42 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_batch" (/guard/users/batch.:sf_format)
+Sep 08 17:56:42 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user" (/guard/users.:sf_format)
+Sep 08 17:56:42 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_new" (/guard/users/new.:sf_format)
+Sep 08 17:56:42 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_create" (/guard/users.:sf_format)
+Sep 08 17:56:42 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_edit" (/guard/users/:id/edit.:sf_format)
+Sep 08 17:56:42 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_update" (/guard/users/:id.:sf_format)
+Sep 08 17:56:42 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_delete" (/guard/users/:id.:sf_format)
+Sep 08 17:56:42 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_show" (/guard/users/:id.:sf_format)
+Sep 08 17:56:42 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_object" (/guard/users/:id/:action.:sf_format)
+Sep 08 17:56:42 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_collection" (/guard/users/:action/action.:sf_format)
+Sep 08 17:56:42 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'sfAdminDash',  'action' => 'dashboard',)
+Sep 08 17:56:42 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 08 17:56:42 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Sep 08 17:56:42 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 08 17:56:42 symfony [info] {sfAdminDashActions} Call "sfAdminDashActions->executeDashboard()"
+Sep 08 17:56:42 symfony [info] {sfPHPView} Set component "sf_admin_dashboard_slot" (/)
+Sep 08 17:56:42 symfony [info] {sfPHPView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/dashboardSuccess.php"
+Sep 08 17:56:42 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_dash_list.php"
+Sep 08 17:56:42 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_dash_list.php"
+Sep 08 17:56:42 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_dash_list.php"
+Sep 08 17:56:42 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_dash_list.php"
+Sep 08 17:56:42 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_dash_list.php"
+Sep 08 17:56:42 symfony [info] {sfPHPView} Decorate content with "/Users/Etienne/Sites/esftt/apps/backend/templates/layout.php"
+Sep 08 17:56:42 symfony [info] {sfPHPView} Render "/Users/Etienne/Sites/esftt/apps/backend/templates/layout.php"
+Sep 08 17:56:42 symfony [info] {main} Call "sfAdminDash->executeHeader()"
+Sep 08 17:56:42 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_header.php"
+Sep 08 17:56:42 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu.php"
+Sep 08 17:56:42 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:42 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:42 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:42 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:42 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:42 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:42 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:42 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:42 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:42 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:42 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Sep 08 17:56:42 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.avatar AS s__avatar, s.is_disponible AS s__is_disponible, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (1)
+Sep 08 17:56:42 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_user_actions.php"
+Sep 08 17:56:42 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_footer.php"
+Sep 08 17:56:42 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 08 17:56:42 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 08 17:56:42 symfony [info] {sfWebDebugLogger} Configuration 1.77 ms (11)
+Sep 08 17:56:42 symfony [info] {sfWebDebugLogger} Factories 31.98 ms (1)
+Sep 08 17:56:42 symfony [info] {sfWebDebugLogger} Action "sfAdminDash/dashboard" 0.28 ms (1)
+Sep 08 17:56:42 symfony [info] {sfWebDebugLogger} View "Success" for "sfAdminDash/dashboard" 58.55 ms (1)
+Sep 08 17:56:42 symfony [info] {sfWebDebugLogger} Partial "sfAdminDash/_dash_list" 4.61 ms (5)
+Sep 08 17:56:42 symfony [info] {sfWebDebugLogger} Component "sfAdminDash/header" 1.44 ms (1)
+Sep 08 17:56:42 symfony [info] {sfWebDebugLogger} Partial "sfAdminDash/_header" 41.53 ms (1)
+Sep 08 17:56:42 symfony [info] {sfWebDebugLogger} Partial "sfAdminDash/_menu" 11.82 ms (1)
+Sep 08 17:56:42 symfony [info] {sfWebDebugLogger} Partial "sfAdminDash/_menu_list" 7.92 ms (10)
+Sep 08 17:56:42 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.63 ms (2)
+Sep 08 17:56:42 symfony [info] {sfWebDebugLogger} Partial "sfAdminDash/_user_actions" 0.69 ms (1)
+Sep 08 17:56:42 symfony [info] {sfWebDebugLogger} Partial "sfAdminDash/_footer" 0.63 ms (1)
+Sep 08 17:56:42 symfony [info] {sfWebResponse} Send content (68738 o)
+Sep 08 17:56:43 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Sep 08 17:56:43 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Sep 08 17:56:43 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_filter" (/guard/users/filter.:sf_format)
+Sep 08 17:56:43 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_batch" (/guard/users/batch.:sf_format)
+Sep 08 17:56:43 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user" (/guard/users.:sf_format)
+Sep 08 17:56:43 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_new" (/guard/users/new.:sf_format)
+Sep 08 17:56:43 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_create" (/guard/users.:sf_format)
+Sep 08 17:56:43 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_edit" (/guard/users/:id/edit.:sf_format)
+Sep 08 17:56:43 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_update" (/guard/users/:id.:sf_format)
+Sep 08 17:56:43 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_delete" (/guard/users/:id.:sf_format)
+Sep 08 17:56:43 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_show" (/guard/users/:id.:sf_format)
+Sep 08 17:56:43 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_object" (/guard/users/:id/:action.:sf_format)
+Sep 08 17:56:43 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_collection" (/guard/users/:action/action.:sf_format)
+Sep 08 17:56:43 symfony [info] {sfPatternRouting} Match route "info" (/info.:sf_format) for /info with parameters array (  'module' => 'info',  'action' => 'index',  'sf_format' => 'html',)
+Sep 08 17:56:43 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 08 17:56:43 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Sep 08 17:56:43 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 08 17:56:43 symfony [info] {infoActions} Call "infoActions->executeIndex()"
+Sep 08 17:56:43 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Sep 08 17:56:43 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM info i - ()
+Sep 08 17:56:43 symfony [info] {sfPHPView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoInfo/templates/indexSuccess.php"
+Sep 08 17:56:43 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoInfo/templates/_assets.php"
+Sep 08 17:56:43 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoInfo/templates/_flashes.php"
+Sep 08 17:56:43 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoInfo/templates/_list_header.php"
+Sep 08 17:56:43 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoInfo/templates/_filters.php"
+Sep 08 17:56:43 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoInfo/templates/_filters_field.php"
+Sep 08 17:56:43 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoInfo/templates/_filters_field.php"
+Sep 08 17:56:43 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoInfo/templates/_filters_field.php"
+Sep 08 17:56:43 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoInfo/templates/_filters_field.php"
+Sep 08 17:56:43 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoInfo/templates/_filters_field.php"
+Sep 08 17:56:43 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoInfo/templates/_filters_field.php"
+Sep 08 17:56:43 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoInfo/templates/_filters_field.php"
+Sep 08 17:56:43 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoInfo/templates/_list.php"
+Sep 08 17:56:43 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoInfo/templates/_list_th_tabular.php"
+Sep 08 17:56:43 symfony [info] {main} Set slot "sf_admin.current_header"
+Sep 08 17:56:43 symfony [info] {main} Get slot "sf_admin.current_header"
+Sep 08 17:56:43 symfony [info] {main} Set slot "sf_admin.current_header"
+Sep 08 17:56:43 symfony [info] {main} Get slot "sf_admin.current_header"
+Sep 08 17:56:43 symfony [info] {main} Set slot "sf_admin.current_header"
+Sep 08 17:56:43 symfony [info] {main} Get slot "sf_admin.current_header"
+Sep 08 17:56:43 symfony [info] {main} Set slot "sf_admin.current_header"
+Sep 08 17:56:43 symfony [info] {main} Get slot "sf_admin.current_header"
+Sep 08 17:56:43 symfony [info] {main} Set slot "sf_admin.current_header"
+Sep 08 17:56:43 symfony [info] {main} Get slot "sf_admin.current_header"
+Sep 08 17:56:43 symfony [info] {main} Set slot "sf_admin.current_header"
+Sep 08 17:56:43 symfony [info] {main} Get slot "sf_admin.current_header"
+Sep 08 17:56:43 symfony [info] {main} Set slot "sf_admin.current_header"
+Sep 08 17:56:43 symfony [info] {main} Get slot "sf_admin.current_header"
+Sep 08 17:56:43 symfony [info] {main} Set slot "sf_admin.current_header"
+Sep 08 17:56:43 symfony [info] {main} Get slot "sf_admin.current_header"
+Sep 08 17:56:43 symfony [info] {Doctrine_Connection_Mysql} query : SELECT i.id AS i__id, i.company AS i__company, i.address AS i__address, i.city AS i__city, i.zipcode AS i__zipcode, i.phone AS i__phone, i.fullname AS i__fullname, i.email AS i__email FROM info i LIMIT 20 - ()
+Sep 08 17:56:43 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoInfo/templates/_list_td_batch_actions.php"
+Sep 08 17:56:43 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoInfo/templates/_list_td_tabular.php"
+Sep 08 17:56:43 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoInfo/templates/_list_td_actions.php"
+Sep 08 17:56:43 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoInfo/templates/_list_batch_actions.php"
+Sep 08 17:56:43 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoInfo/templates/_list_actions.php"
+Sep 08 17:56:43 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoInfo/templates/_list_footer.php"
+Sep 08 17:56:43 symfony [info] {sfPHPView} Decorate content with "/Users/Etienne/Sites/esftt/apps/backend/templates/layout.php"
+Sep 08 17:56:43 symfony [info] {sfPHPView} Render "/Users/Etienne/Sites/esftt/apps/backend/templates/layout.php"
+Sep 08 17:56:43 symfony [info] {main} Call "sfAdminDash->executeHeader()"
+Sep 08 17:56:43 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_header.php"
+Sep 08 17:56:43 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu.php"
+Sep 08 17:56:43 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:43 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:43 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:43 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:43 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:43 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:43 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:43 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:43 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:43 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:43 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.avatar AS s__avatar, s.is_disponible AS s__is_disponible, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (1)
+Sep 08 17:56:43 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_user_actions.php"
+Sep 08 17:56:43 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_footer.php"
+Sep 08 17:56:43 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 08 17:56:43 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 08 17:56:43 symfony [info] {sfWebDebugLogger} Configuration 48.08 ms (14)
+Sep 08 17:56:43 symfony [info] {sfWebDebugLogger} Factories 30.81 ms (1)
+Sep 08 17:56:43 symfony [info] {sfWebDebugLogger} Action "info/index" 15.77 ms (1)
+Sep 08 17:56:44 symfony [info] {sfWebDebugLogger} Database (Doctrine) 1.49 ms (4)
+Sep 08 17:56:44 symfony [info] {sfWebDebugLogger} View "Success" for "info/index" 76.67 ms (1)
+Sep 08 17:56:44 symfony [info] {sfWebDebugLogger} Partial "info/_assets" 0.63 ms (1)
+Sep 08 17:56:44 symfony [info] {sfWebDebugLogger} Partial "info/_flashes" 0.63 ms (1)
+Sep 08 17:56:44 symfony [info] {sfWebDebugLogger} Partial "info/_list_header" 0.54 ms (1)
+Sep 08 17:56:44 symfony [info] {sfWebDebugLogger} Partial "info/_filters" 14.68 ms (1)
+Sep 08 17:56:44 symfony [info] {sfWebDebugLogger} Partial "info/_filters_field" 8.38 ms (7)
+Sep 08 17:56:44 symfony [info] {sfWebDebugLogger} Partial "info/_list" 16.07 ms (1)
+Sep 08 17:56:44 symfony [info] {sfWebDebugLogger} Partial "info/_list_th_tabular" 4.37 ms (1)
+Sep 08 17:56:44 symfony [info] {sfWebDebugLogger} Partial "info/_list_td_batch_actions" 0.73 ms (1)
+Sep 08 17:56:44 symfony [info] {sfWebDebugLogger} Partial "info/_list_td_tabular" 2.56 ms (1)
+Sep 08 17:56:44 symfony [info] {sfWebDebugLogger} Partial "info/_list_td_actions" 1.66 ms (1)
+Sep 08 17:56:44 symfony [info] {sfWebDebugLogger} Partial "info/_list_batch_actions" 0.97 ms (1)
+Sep 08 17:56:44 symfony [info] {sfWebDebugLogger} Partial "info/_list_actions" 0.77 ms (1)
+Sep 08 17:56:44 symfony [info] {sfWebDebugLogger} Partial "info/_list_footer" 0.54 ms (1)
+Sep 08 17:56:44 symfony [info] {sfWebDebugLogger} Component "sfAdminDash/header" 0.41 ms (1)
+Sep 08 17:56:44 symfony [info] {sfWebDebugLogger} Partial "sfAdminDash/_header" 26.83 ms (1)
+Sep 08 17:56:44 symfony [info] {sfWebDebugLogger} Partial "sfAdminDash/_menu" 11.20 ms (1)
+Sep 08 17:56:44 symfony [info] {sfWebDebugLogger} Partial "sfAdminDash/_menu_list" 7.59 ms (10)
+Sep 08 17:56:44 symfony [info] {sfWebDebugLogger} Partial "sfAdminDash/_user_actions" 0.86 ms (1)
+Sep 08 17:56:44 symfony [info] {sfWebDebugLogger} Partial "sfAdminDash/_footer" 0.79 ms (1)
+Sep 08 17:56:44 symfony [info] {sfWebResponse} Send content (120859 o)
+Sep 08 17:56:49 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Sep 08 17:56:49 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Sep 08 17:56:49 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_filter" (/guard/users/filter.:sf_format)
+Sep 08 17:56:49 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_batch" (/guard/users/batch.:sf_format)
+Sep 08 17:56:49 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user" (/guard/users.:sf_format)
+Sep 08 17:56:49 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_new" (/guard/users/new.:sf_format)
+Sep 08 17:56:49 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_create" (/guard/users.:sf_format)
+Sep 08 17:56:49 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_edit" (/guard/users/:id/edit.:sf_format)
+Sep 08 17:56:49 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_update" (/guard/users/:id.:sf_format)
+Sep 08 17:56:49 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_delete" (/guard/users/:id.:sf_format)
+Sep 08 17:56:49 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_show" (/guard/users/:id.:sf_format)
+Sep 08 17:56:49 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_object" (/guard/users/:id/:action.:sf_format)
+Sep 08 17:56:49 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_collection" (/guard/users/:action/action.:sf_format)
+Sep 08 17:56:49 symfony [info] {sfPatternRouting} Match route "info_edit" (/info/:id/edit.:sf_format) for /info/1/edit with parameters array (  'module' => 'info',  'action' => 'edit',  'sf_format' => 'html',  'id' => '1',)
+Sep 08 17:56:49 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 08 17:56:49 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Sep 08 17:56:49 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 08 17:56:49 symfony [info] {infoActions} Call "infoActions->executeEdit()"
+Sep 08 17:56:49 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Sep 08 17:56:49 symfony [info] {Doctrine_Connection_Statement} execute : SELECT i.id AS i__id, i.company AS i__company, i.address AS i__address, i.city AS i__city, i.zipcode AS i__zipcode, i.phone AS i__phone, i.fullname AS i__fullname, i.email AS i__email FROM info i WHERE (i.id = ?) - (1)
+Sep 08 17:56:49 symfony [info] {sfPHPView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoInfo/templates/editSuccess.php"
+Sep 08 17:56:49 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoInfo/templates/_assets.php"
+Sep 08 17:56:49 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoInfo/templates/_flashes.php"
+Sep 08 17:56:49 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoInfo/templates/_form_header.php"
+Sep 08 17:56:49 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoInfo/templates/_form.php"
+Sep 08 17:56:49 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoInfo/templates/_form_fieldset.php"
+Sep 08 17:56:49 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoInfo/templates/_form_field.php"
+Sep 08 17:56:49 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoInfo/templates/_form_field.php"
+Sep 08 17:56:49 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoInfo/templates/_form_field.php"
+Sep 08 17:56:49 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoInfo/templates/_form_field.php"
+Sep 08 17:56:49 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoInfo/templates/_form_field.php"
+Sep 08 17:56:49 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoInfo/templates/_form_field.php"
+Sep 08 17:56:49 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoInfo/templates/_form_field.php"
+Sep 08 17:56:49 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoInfo/templates/_form_actions.php"
+Sep 08 17:56:49 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoInfo/templates/_form_footer.php"
+Sep 08 17:56:49 symfony [info] {sfPHPView} Decorate content with "/Users/Etienne/Sites/esftt/apps/backend/templates/layout.php"
+Sep 08 17:56:49 symfony [info] {sfPHPView} Render "/Users/Etienne/Sites/esftt/apps/backend/templates/layout.php"
+Sep 08 17:56:49 symfony [info] {main} Call "sfAdminDash->executeHeader()"
+Sep 08 17:56:49 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_header.php"
+Sep 08 17:56:49 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu.php"
+Sep 08 17:56:49 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:49 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:49 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:49 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:49 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:49 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:49 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:49 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:49 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:49 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:49 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.avatar AS s__avatar, s.is_disponible AS s__is_disponible, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (1)
+Sep 08 17:56:49 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_user_actions.php"
+Sep 08 17:56:49 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_footer.php"
+Sep 08 17:56:49 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 08 17:56:49 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 08 17:56:49 symfony [info] {sfWebDebugLogger} Configuration 2.21 ms (13)
+Sep 08 17:56:49 symfony [info] {sfWebDebugLogger} Factories 30.82 ms (1)
+Sep 08 17:56:49 symfony [info] {sfWebDebugLogger} Action "info/edit" 27.92 ms (1)
+Sep 08 17:56:49 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.88 ms (3)
+Sep 08 17:56:49 symfony [info] {sfWebDebugLogger} View "Success" for "info/edit" 56.45 ms (1)
+Sep 08 17:56:49 symfony [info] {sfWebDebugLogger} Partial "info/_assets" 0.56 ms (1)
+Sep 08 17:56:49 symfony [info] {sfWebDebugLogger} Partial "info/_flashes" 0.58 ms (1)
+Sep 08 17:56:49 symfony [info] {sfWebDebugLogger} Partial "info/_form_header" 0.63 ms (1)
+Sep 08 17:56:49 symfony [info] {sfWebDebugLogger} Partial "info/_form" 17.39 ms (1)
+Sep 08 17:56:49 symfony [info] {sfWebDebugLogger} Partial "info/_form_fieldset" 11.91 ms (1)
+Sep 08 17:56:49 symfony [info] {sfWebDebugLogger} Partial "info/_form_field" 7.95 ms (7)
+Sep 08 17:56:49 symfony [info] {sfWebDebugLogger} Partial "info/_form_actions" 1.66 ms (1)
+Sep 08 17:56:49 symfony [info] {sfWebDebugLogger} Partial "info/_form_footer" 0.61 ms (1)
+Sep 08 17:56:49 symfony [info] {sfWebDebugLogger} Component "sfAdminDash/header" 0.45 ms (1)
+Sep 08 17:56:49 symfony [info] {sfWebDebugLogger} Partial "sfAdminDash/_header" 25.53 ms (1)
+Sep 08 17:56:49 symfony [info] {sfWebDebugLogger} Partial "sfAdminDash/_menu" 11.74 ms (1)
+Sep 08 17:56:49 symfony [info] {sfWebDebugLogger} Partial "sfAdminDash/_menu_list" 7.90 ms (10)
+Sep 08 17:56:49 symfony [info] {sfWebDebugLogger} Partial "sfAdminDash/_user_actions" 0.62 ms (1)
+Sep 08 17:56:49 symfony [info] {sfWebDebugLogger} Partial "sfAdminDash/_footer" 0.57 ms (1)
+Sep 08 17:56:49 symfony [info] {sfWebResponse} Send content (115334 o)
+Sep 08 17:56:54 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Sep 08 17:56:54 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Sep 08 17:56:54 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_filter" (/guard/users/filter.:sf_format)
+Sep 08 17:56:54 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_batch" (/guard/users/batch.:sf_format)
+Sep 08 17:56:54 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user" (/guard/users.:sf_format)
+Sep 08 17:56:54 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_new" (/guard/users/new.:sf_format)
+Sep 08 17:56:54 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_create" (/guard/users.:sf_format)
+Sep 08 17:56:54 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_edit" (/guard/users/:id/edit.:sf_format)
+Sep 08 17:56:54 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_update" (/guard/users/:id.:sf_format)
+Sep 08 17:56:54 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_delete" (/guard/users/:id.:sf_format)
+Sep 08 17:56:54 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_show" (/guard/users/:id.:sf_format)
+Sep 08 17:56:54 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_object" (/guard/users/:id/:action.:sf_format)
+Sep 08 17:56:54 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_collection" (/guard/users/:action/action.:sf_format)
+Sep 08 17:56:54 symfony [info] {sfPatternRouting} Match route "info" (/info.:sf_format) for /info with parameters array (  'module' => 'info',  'action' => 'index',  'sf_format' => 'html',)
+Sep 08 17:56:54 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 08 17:56:54 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Sep 08 17:56:54 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 08 17:56:54 symfony [info] {infoActions} Call "infoActions->executeIndex()"
+Sep 08 17:56:54 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Sep 08 17:56:54 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM info i - ()
+Sep 08 17:56:54 symfony [info] {sfPHPView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoInfo/templates/indexSuccess.php"
+Sep 08 17:56:54 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoInfo/templates/_assets.php"
+Sep 08 17:56:54 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoInfo/templates/_flashes.php"
+Sep 08 17:56:54 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoInfo/templates/_list_header.php"
+Sep 08 17:56:54 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoInfo/templates/_filters.php"
+Sep 08 17:56:54 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoInfo/templates/_filters_field.php"
+Sep 08 17:56:54 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoInfo/templates/_filters_field.php"
+Sep 08 17:56:54 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoInfo/templates/_filters_field.php"
+Sep 08 17:56:54 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoInfo/templates/_filters_field.php"
+Sep 08 17:56:54 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoInfo/templates/_filters_field.php"
+Sep 08 17:56:54 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoInfo/templates/_filters_field.php"
+Sep 08 17:56:54 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoInfo/templates/_filters_field.php"
+Sep 08 17:56:54 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoInfo/templates/_list.php"
+Sep 08 17:56:54 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoInfo/templates/_list_th_tabular.php"
+Sep 08 17:56:54 symfony [info] {main} Set slot "sf_admin.current_header"
+Sep 08 17:56:54 symfony [info] {main} Get slot "sf_admin.current_header"
+Sep 08 17:56:54 symfony [info] {main} Set slot "sf_admin.current_header"
+Sep 08 17:56:54 symfony [info] {main} Get slot "sf_admin.current_header"
+Sep 08 17:56:54 symfony [info] {main} Set slot "sf_admin.current_header"
+Sep 08 17:56:54 symfony [info] {main} Get slot "sf_admin.current_header"
+Sep 08 17:56:54 symfony [info] {main} Set slot "sf_admin.current_header"
+Sep 08 17:56:54 symfony [info] {main} Get slot "sf_admin.current_header"
+Sep 08 17:56:54 symfony [info] {main} Set slot "sf_admin.current_header"
+Sep 08 17:56:54 symfony [info] {main} Get slot "sf_admin.current_header"
+Sep 08 17:56:54 symfony [info] {main} Set slot "sf_admin.current_header"
+Sep 08 17:56:54 symfony [info] {main} Get slot "sf_admin.current_header"
+Sep 08 17:56:54 symfony [info] {main} Set slot "sf_admin.current_header"
+Sep 08 17:56:54 symfony [info] {main} Get slot "sf_admin.current_header"
+Sep 08 17:56:54 symfony [info] {main} Set slot "sf_admin.current_header"
+Sep 08 17:56:54 symfony [info] {main} Get slot "sf_admin.current_header"
+Sep 08 17:56:54 symfony [info] {Doctrine_Connection_Mysql} query : SELECT i.id AS i__id, i.company AS i__company, i.address AS i__address, i.city AS i__city, i.zipcode AS i__zipcode, i.phone AS i__phone, i.fullname AS i__fullname, i.email AS i__email FROM info i LIMIT 20 - ()
+Sep 08 17:56:54 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoInfo/templates/_list_td_batch_actions.php"
+Sep 08 17:56:54 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoInfo/templates/_list_td_tabular.php"
+Sep 08 17:56:54 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoInfo/templates/_list_td_actions.php"
+Sep 08 17:56:54 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoInfo/templates/_list_batch_actions.php"
+Sep 08 17:56:54 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoInfo/templates/_list_actions.php"
+Sep 08 17:56:54 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/cache/backend/dev/modules/autoInfo/templates/_list_footer.php"
+Sep 08 17:56:54 symfony [info] {sfPHPView} Decorate content with "/Users/Etienne/Sites/esftt/apps/backend/templates/layout.php"
+Sep 08 17:56:54 symfony [info] {sfPHPView} Render "/Users/Etienne/Sites/esftt/apps/backend/templates/layout.php"
+Sep 08 17:56:54 symfony [info] {main} Call "sfAdminDash->executeHeader()"
+Sep 08 17:56:54 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_header.php"
+Sep 08 17:56:54 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu.php"
+Sep 08 17:56:54 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:54 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:54 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:54 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:54 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:54 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:54 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:54 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:54 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:54 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:54 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.avatar AS s__avatar, s.is_disponible AS s__is_disponible, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (1)
+Sep 08 17:56:54 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_user_actions.php"
+Sep 08 17:56:54 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_footer.php"
+Sep 08 17:56:54 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 08 17:56:54 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 08 17:56:54 symfony [info] {sfWebDebugLogger} Configuration 2.02 ms (13)
+Sep 08 17:56:54 symfony [info] {sfWebDebugLogger} Factories 30.84 ms (1)
+Sep 08 17:56:54 symfony [info] {sfWebDebugLogger} Action "info/index" 21.18 ms (1)
+Sep 08 17:56:54 symfony [info] {sfWebDebugLogger} Database (Doctrine) 1.22 ms (4)
+Sep 08 17:56:54 symfony [info] {sfWebDebugLogger} View "Success" for "info/index" 76.80 ms (1)
+Sep 08 17:56:54 symfony [info] {sfWebDebugLogger} Partial "info/_assets" 0.58 ms (1)
+Sep 08 17:56:54 symfony [info] {sfWebDebugLogger} Partial "info/_flashes" 0.59 ms (1)
+Sep 08 17:56:54 symfony [info] {sfWebDebugLogger} Partial "info/_list_header" 0.53 ms (1)
+Sep 08 17:56:54 symfony [info] {sfWebDebugLogger} Partial "info/_filters" 14.41 ms (1)
+Sep 08 17:56:54 symfony [info] {sfWebDebugLogger} Partial "info/_filters_field" 8.28 ms (7)
+Sep 08 17:56:54 symfony [info] {sfWebDebugLogger} Partial "info/_list" 19.76 ms (1)
+Sep 08 17:56:54 symfony [info] {sfWebDebugLogger} Partial "info/_list_th_tabular" 5.04 ms (1)
+Sep 08 17:56:54 symfony [info] {sfWebDebugLogger} Partial "info/_list_td_batch_actions" 0.92 ms (1)
+Sep 08 17:56:54 symfony [info] {sfWebDebugLogger} Partial "info/_list_td_tabular" 3.17 ms (1)
+Sep 08 17:56:54 symfony [info] {sfWebDebugLogger} Partial "info/_list_td_actions" 1.82 ms (1)
+Sep 08 17:56:54 symfony [info] {sfWebDebugLogger} Partial "info/_list_batch_actions" 1.11 ms (1)
+Sep 08 17:56:54 symfony [info] {sfWebDebugLogger} Partial "info/_list_actions" 0.70 ms (1)
+Sep 08 17:56:54 symfony [info] {sfWebDebugLogger} Partial "info/_list_footer" 0.52 ms (1)
+Sep 08 17:56:54 symfony [info] {sfWebDebugLogger} Component "sfAdminDash/header" 0.39 ms (1)
+Sep 08 17:56:54 symfony [info] {sfWebDebugLogger} Partial "sfAdminDash/_header" 26.54 ms (1)
+Sep 08 17:56:54 symfony [info] {sfWebDebugLogger} Partial "sfAdminDash/_menu" 11.88 ms (1)
+Sep 08 17:56:54 symfony [info] {sfWebDebugLogger} Partial "sfAdminDash/_menu_list" 8.08 ms (10)
+Sep 08 17:56:54 symfony [info] {sfWebDebugLogger} Partial "sfAdminDash/_user_actions" 0.65 ms (1)
+Sep 08 17:56:54 symfony [info] {sfWebDebugLogger} Partial "sfAdminDash/_footer" 0.58 ms (1)
+Sep 08 17:56:54 symfony [info] {sfWebResponse} Send content (120884 o)
+Sep 08 17:56:55 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Sep 08 17:56:55 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Sep 08 17:56:55 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_filter" (/guard/users/filter.:sf_format)
+Sep 08 17:56:55 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_batch" (/guard/users/batch.:sf_format)
+Sep 08 17:56:55 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user" (/guard/users.:sf_format)
+Sep 08 17:56:55 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_new" (/guard/users/new.:sf_format)
+Sep 08 17:56:55 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_create" (/guard/users.:sf_format)
+Sep 08 17:56:55 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_edit" (/guard/users/:id/edit.:sf_format)
+Sep 08 17:56:55 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_update" (/guard/users/:id.:sf_format)
+Sep 08 17:56:55 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_delete" (/guard/users/:id.:sf_format)
+Sep 08 17:56:55 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_show" (/guard/users/:id.:sf_format)
+Sep 08 17:56:55 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_object" (/guard/users/:id/:action.:sf_format)
+Sep 08 17:56:55 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_collection" (/guard/users/:action/action.:sf_format)
+Sep 08 17:56:55 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'sfAdminDash',  'action' => 'dashboard',)
+Sep 08 17:56:55 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 08 17:56:55 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Sep 08 17:56:55 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 08 17:56:55 symfony [info] {sfAdminDashActions} Call "sfAdminDashActions->executeDashboard()"
+Sep 08 17:56:55 symfony [info] {sfPHPView} Set component "sf_admin_dashboard_slot" (/)
+Sep 08 17:56:55 symfony [info] {sfPHPView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/dashboardSuccess.php"
+Sep 08 17:56:55 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_dash_list.php"
+Sep 08 17:56:55 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_dash_list.php"
+Sep 08 17:56:55 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_dash_list.php"
+Sep 08 17:56:55 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_dash_list.php"
+Sep 08 17:56:55 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_dash_list.php"
+Sep 08 17:56:55 symfony [info] {sfPHPView} Decorate content with "/Users/Etienne/Sites/esftt/apps/backend/templates/layout.php"
+Sep 08 17:56:55 symfony [info] {sfPHPView} Render "/Users/Etienne/Sites/esftt/apps/backend/templates/layout.php"
+Sep 08 17:56:55 symfony [info] {main} Call "sfAdminDash->executeHeader()"
+Sep 08 17:56:55 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_header.php"
+Sep 08 17:56:55 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu.php"
+Sep 08 17:56:55 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:55 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:55 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:55 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:55 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:55 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:55 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:55 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:55 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:55 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_menu_list.php"
+Sep 08 17:56:55 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Sep 08 17:56:55 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.avatar AS s__avatar, s.is_disponible AS s__is_disponible, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (1)
+Sep 08 17:56:55 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_user_actions.php"
+Sep 08 17:56:55 symfony [info] {sfPartialView} Render "/Users/Etienne/Sites/esftt/plugins/sfAdminDashPlugin/modules/sfAdminDash/templates/_footer.php"
+Sep 08 17:56:55 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 08 17:56:55 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 08 17:56:55 symfony [info] {sfWebDebugLogger} Configuration 1.74 ms (11)
+Sep 08 17:56:55 symfony [info] {sfWebDebugLogger} Factories 32.47 ms (1)
+Sep 08 17:56:55 symfony [info] {sfWebDebugLogger} Action "sfAdminDash/dashboard" 0.27 ms (1)
+Sep 08 17:56:55 symfony [info] {sfWebDebugLogger} View "Success" for "sfAdminDash/dashboard" 57.21 ms (1)
+Sep 08 17:56:55 symfony [info] {sfWebDebugLogger} Partial "sfAdminDash/_dash_list" 4.42 ms (5)
+Sep 08 17:56:55 symfony [info] {sfWebDebugLogger} Component "sfAdminDash/header" 1.37 ms (1)
+Sep 08 17:56:55 symfony [info] {sfWebDebugLogger} Partial "sfAdminDash/_header" 40.60 ms (1)
+Sep 08 17:56:55 symfony [info] {sfWebDebugLogger} Partial "sfAdminDash/_menu" 12.09 ms (1)
+Sep 08 17:56:55 symfony [info] {sfWebDebugLogger} Partial "sfAdminDash/_menu_list" 8.13 ms (10)
+Sep 08 17:56:55 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.66 ms (2)
+Sep 08 17:56:55 symfony [info] {sfWebDebugLogger} Partial "sfAdminDash/_user_actions" 0.58 ms (1)
+Sep 08 17:56:55 symfony [info] {sfWebDebugLogger} Partial "sfAdminDash/_footer" 0.52 ms (1)
+Sep 08 17:56:55 symfony [info] {sfWebResponse} Send content (68788 o)

@@ -1,4 +1,5 @@
 <footer class="col col-3-3">
+
   <?php include_component('link', 'links') ?>
 
   <div class="col col-1-3">
@@ -14,7 +15,5 @@
   </div>
 
   <?php include_component('info', 'infos') ?>
-
-
 
 </footer>

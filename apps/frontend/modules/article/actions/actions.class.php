@@ -60,4 +60,9 @@ class articleActions extends sfActions
 		}
 	}
 
+	public function executeShowInformations(sfWebRequest $request)
+	{
+		$this->article = ArticleTable::getInstance()->findOneByKeyword('informations');
+	}
+
 }

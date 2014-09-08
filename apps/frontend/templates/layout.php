@@ -31,7 +31,7 @@
 
               <li><a href="<?php echo url_for('homepage'); ?>"><i class="fa fa-home"></i>Accueil</a></li>
               <li><a href="<?php echo url_for('gallery_list'); ?>"><i class="fa fa-picture-o"></i>Photos</a></li>
-              <li><a href="#"><i class="fa fa-info"></i>Informations</a></li>
+              <li><a href="<?php echo url_for('informations'); ?>"><i class="fa fa-info"></i>Informations</a></li>
               <li><a href="#"><i class="fa fa-calendar-o"></i>Résultats</a></li>
               <li><a href="#"><i class="fa fa-group"></i>Forum</a></li>
               <li><a href="#"><i class="fa fa-phone"></i>Contact</a></li>

@@ -12,33 +12,36 @@
  * @property boolean $is_published
  * @property timestamp $published_at
  * @property integer $author_id
+ * @property boolean $display_to_homepage
  * @property Doctrine_Collection $Keywords
  * @property sfGuardUser $Author
  * @property Doctrine_Collection $ArticleKeywords
  * @property Doctrine_Collection $Comments
  * 
- * @method string              getTitle()             Returns the current record's "title" value
- * @method string              getShortDescription()  Returns the current record's "short_description" value
- * @method clob                getContent()           Returns the current record's "content" value
- * @method string              getPicture()           Returns the current record's "picture" value
- * @method boolean             getIsPublished()       Returns the current record's "is_published" value
- * @method timestamp           getPublishedAt()       Returns the current record's "published_at" value
- * @method integer             getAuthorId()          Returns the current record's "author_id" value
- * @method Doctrine_Collection getKeywords()          Returns the current record's "Keywords" collection
- * @method sfGuardUser         getAuthor()            Returns the current record's "Author" value
- * @method Doctrine_Collection getArticleKeywords()   Returns the current record's "ArticleKeywords" collection
- * @method Doctrine_Collection getComments()          Returns the current record's "Comments" collection
- * @method Article             setTitle()             Sets the current record's "title" value
- * @method Article             setShortDescription()  Sets the current record's "short_description" value
- * @method Article             setContent()           Sets the current record's "content" value
- * @method Article             setPicture()           Sets the current record's "picture" value
- * @method Article             setIsPublished()       Sets the current record's "is_published" value
- * @method Article             setPublishedAt()       Sets the current record's "published_at" value
- * @method Article             setAuthorId()          Sets the current record's "author_id" value
- * @method Article             setKeywords()          Sets the current record's "Keywords" collection
- * @method Article             setAuthor()            Sets the current record's "Author" value
- * @method Article             setArticleKeywords()   Sets the current record's "ArticleKeywords" collection
- * @method Article             setComments()          Sets the current record's "Comments" collection
+ * @method string              getTitle()               Returns the current record's "title" value
+ * @method string              getShortDescription()    Returns the current record's "short_description" value
+ * @method clob                getContent()             Returns the current record's "content" value
+ * @method string              getPicture()             Returns the current record's "picture" value
+ * @method boolean             getIsPublished()         Returns the current record's "is_published" value
+ * @method timestamp           getPublishedAt()         Returns the current record's "published_at" value
+ * @method integer             getAuthorId()            Returns the current record's "author_id" value
+ * @method boolean             getDisplayToHomepage()   Returns the current record's "display_to_homepage" value
+ * @method Doctrine_Collection getKeywords()            Returns the current record's "Keywords" collection
+ * @method sfGuardUser         getAuthor()              Returns the current record's "Author" value
+ * @method Doctrine_Collection getArticleKeywords()     Returns the current record's "ArticleKeywords" collection
+ * @method Doctrine_Collection getComments()            Returns the current record's "Comments" collection
+ * @method Article             setTitle()               Sets the current record's "title" value
+ * @method Article             setShortDescription()    Sets the current record's "short_description" value
+ * @method Article             setContent()             Sets the current record's "content" value
+ * @method Article             setPicture()             Sets the current record's "picture" value
+ * @method Article             setIsPublished()         Sets the current record's "is_published" value
+ * @method Article             setPublishedAt()         Sets the current record's "published_at" value
+ * @method Article             setAuthorId()            Sets the current record's "author_id" value
+ * @method Article             setDisplayToHomepage()   Sets the current record's "display_to_homepage" value
+ * @method Article             setKeywords()            Sets the current record's "Keywords" collection
+ * @method Article             setAuthor()              Sets the current record's "Author" value
+ * @method Article             setArticleKeywords()     Sets the current record's "ArticleKeywords" collection
+ * @method Article             setComments()            Sets the current record's "Comments" collection
  * 
  * @package    esftt
  * @subpackage model
@@ -79,6 +82,10 @@ abstract class BaseArticle extends sfDoctrineRecord
              ));
         $this->hasColumn('author_id', 'integer', null, array(
              'type' => 'integer',
+             ));
+        $this->hasColumn('display_to_homepage', 'boolean', null, array(
+             'type' => 'boolean',
+             'default' => true,
              ));
     }
 

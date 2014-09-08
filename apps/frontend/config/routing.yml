@@ -27,6 +27,11 @@ competition_show:
   url: /competition
   param: { module: competition, action: show}
 
+# informations
+informations:
+  url: /informations
+  param: {module: article, action: showInformations}
+
 # user
 
 user_create:

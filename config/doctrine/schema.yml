@@ -23,6 +23,9 @@ Article:
       notnull: true
     author_id:
       type: integer
+    display_to_homepage:
+      type: boolean
+      default: true
   relations:
     Keywords:
       class: Keyword
@@ -196,6 +199,9 @@ UserTeam:
     User:
       foreignAlias: TeamUsers
       onDelete: CASCADE
+
+Informations:
+  columns:
 
 
 sfGuardUser:

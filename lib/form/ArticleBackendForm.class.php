@@ -13,7 +13,7 @@ class ArticleBackendForm extends BaseArticleForm
 
     public function configure()
     {
-        $this->useFields(array('title', 'short_description', 'content', 'is_published', 'picture'));
+        $this->useFields(array('title', 'short_description', 'content', 'is_published', 'picture', 'display_to_homepage', 'keywords_list'));
 
 
         $this->widgetSchema['published_at'] = new sfWidgetFormDateTime(array(

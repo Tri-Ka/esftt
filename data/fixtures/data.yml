@@ -1,3 +1,18 @@
+Info:
+  Info_1:
+    company: ESFTT
+    address: 28 rue Pong
+    city: Paris
+    zipcode: '75016'
+    phone: '0665986598'
+    fullname: Jack Dupont
+    email: ping@gmail.com
+
+Link:
+  Link_1:
+    title: test
+    url: www.test.com
+
 Article:
   Article_1:
     title: edito

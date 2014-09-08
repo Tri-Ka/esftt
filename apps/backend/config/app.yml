@@ -76,3 +76,11 @@ all:
           Picture:
             url: picture
             image: addedit
+      Settings:
+        items:
+          Links:
+            url: link
+            image: addedit        
+          Infos:
+            url: info
+            image: addedit

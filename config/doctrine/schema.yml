@@ -1,3 +1,31 @@
+Info:
+  columns:
+    company:
+      type: string(255)
+      notnull: true
+    address:
+      type: string(255)
+      notnull: true
+    city:
+      type: string(255)
+    zipcode:
+      type: string(255)
+    phone:
+      type: string(255)
+    fullname:
+      type: string(255)
+      notnull: true
+    email:
+      type: string(255)
+
+Link:
+  columns:
+    title:
+      type: string(255)
+      notnull: true
+    url:
+      type: string(255)
+
 Article:
   tableName: article
   actAs:

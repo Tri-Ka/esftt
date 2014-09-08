@@ -16,8 +16,10 @@
  * @property boolean $is_super_admin
  * @property timestamp $last_login
  * @property string $avatar
+ * @property boolean $is_disponible
  * @property Doctrine_Collection $Groups
  * @property Doctrine_Collection $Permissions
+ * @property Doctrine_Collection $Teams
  * @property Doctrine_Collection $sfGuardUserPermission
  * @property Doctrine_Collection $sfGuardUserGroup
  * @property sfGuardRememberKey $RememberKeys
@@ -36,8 +38,10 @@
  * @method boolean               getIsSuperAdmin()          Returns the current record's "is_super_admin" value
  * @method timestamp             getLastLogin()             Returns the current record's "last_login" value
  * @method string                getAvatar()                Returns the current record's "avatar" value
+ * @method boolean               getIsDisponible()          Returns the current record's "is_disponible" value
  * @method Doctrine_Collection   getGroups()                Returns the current record's "Groups" collection
  * @method Doctrine_Collection   getPermissions()           Returns the current record's "Permissions" collection
+ * @method Doctrine_Collection   getTeams()                 Returns the current record's "Teams" collection
  * @method Doctrine_Collection   getSfGuardUserPermission() Returns the current record's "sfGuardUserPermission" collection
  * @method Doctrine_Collection   getSfGuardUserGroup()      Returns the current record's "sfGuardUserGroup" collection
  * @method sfGuardRememberKey    getRememberKeys()          Returns the current record's "RememberKeys" value
@@ -55,8 +59,10 @@
  * @method sfGuardUser           setIsSuperAdmin()          Sets the current record's "is_super_admin" value
  * @method sfGuardUser           setLastLogin()             Sets the current record's "last_login" value
  * @method sfGuardUser           setAvatar()                Sets the current record's "avatar" value
+ * @method sfGuardUser           setIsDisponible()          Sets the current record's "is_disponible" value
  * @method sfGuardUser           setGroups()                Sets the current record's "Groups" collection
  * @method sfGuardUser           setPermissions()           Sets the current record's "Permissions" collection
+ * @method sfGuardUser           setTeams()                 Sets the current record's "Teams" collection
  * @method sfGuardUser           setSfGuardUserPermission() Sets the current record's "sfGuardUserPermission" collection
  * @method sfGuardUser           setSfGuardUserGroup()      Sets the current record's "sfGuardUserGroup" collection
  * @method sfGuardUser           setRememberKeys()          Sets the current record's "RememberKeys" value
@@ -123,6 +129,10 @@ abstract class BasesfGuardUser extends sfDoctrineRecord
              'type' => 'string',
              'length' => 255,
              ));
+        $this->hasColumn('is_disponible', 'boolean', null, array(
+             'type' => 'boolean',
+             'default' => true,
+             ));
 
 
         $this->index('is_active_idx', array(
@@ -145,6 +155,11 @@ abstract class BasesfGuardUser extends sfDoctrineRecord
              'refClass' => 'sfGuardUserPermission',
              'local' => 'user_id',
              'foreign' => 'permission_id'));
+
+        $this->hasMany('Team as Teams', array(
+             'refClass' => 'UserTeam',
+             'local' => 'user_id',
+             'foreign' => 'team_id'));
 
         $this->hasMany('sfGuardUserPermission', array(
              'local' => 'id',

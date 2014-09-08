@@ -13,13 +13,13 @@ abstract class BaseUserTeamFormFilter extends BaseFormFilterDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'user_name'  => new sfWidgetFormFilterInput(),
+      'user_id'    => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('sfGuardUser'), 'add_empty' => true)),
       'team_id'    => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Team'), 'add_empty' => true)),
       'is_captain' => new sfWidgetFormChoice(array('choices' => array('' => 'yes or no', 1 => 'yes', 0 => 'no'))),
     ));
 
     $this->setValidators(array(
-      'user_name'  => new sfValidatorPass(array('required' => false)),
+      'user_id'    => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('sfGuardUser'), 'column' => 'id')),
       'team_id'    => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Team'), 'column' => 'id')),
       'is_captain' => new sfValidatorChoice(array('required' => false, 'choices' => array('', 1, 0))),
     ));
@@ -42,7 +42,7 @@ abstract class BaseUserTeamFormFilter extends BaseFormFilterDoctrine
   {
     return array(
       'id'         => 'Number',
-      'user_name'  => 'Text',
+      'user_id'    => 'ForeignKey',
       'team_id'    => 'ForeignKey',
       'is_captain' => 'Boolean',
     );

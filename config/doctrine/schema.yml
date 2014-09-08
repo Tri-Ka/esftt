@@ -163,7 +163,7 @@ Team:
     name:
       type: string
       notnull: true
-  groupe:
+    type:
       type: enum(5)
       values:
         - PH - Championnat de Paris

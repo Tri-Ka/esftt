@@ -13,11 +13,15 @@ abstract class BaseTeamFormFilter extends BaseFormFilterDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'name' => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'name'       => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'type'       => new sfWidgetFormChoice(array('choices' => array('' => '', 'PH - Championnat de Paris' => 'PH - Championnat de Paris', 'PR - Championnat départemental' => 'PR - Championnat départemental', 'D2 - Championnat départemental' => 'D2 - Championnat départemental', 'D2 - Championnat de Paris' => 'D2 - Championnat de Paris', 'D3 - Championnat départemental' => 'D3 - Championnat départemental'))),
+      'users_list' => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'sfGuardUser')),
     ));
 
     $this->setValidators(array(
-      'name' => new sfValidatorPass(array('required' => false)),
+      'name'       => new sfValidatorPass(array('required' => false)),
+      'type'       => new sfValidatorChoice(array('required' => false, 'choices' => array('PH - Championnat de Paris' => 'PH - Championnat de Paris', 'PR - Championnat départemental' => 'PR - Championnat départemental', 'D2 - Championnat départemental' => 'D2 - Championnat départemental', 'D2 - Championnat de Paris' => 'D2 - Championnat de Paris', 'D3 - Championnat départemental' => 'D3 - Championnat départemental'))),
+      'users_list' => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'sfGuardUser', 'required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('team_filters[%s]');
@@ -29,6 +33,24 @@ abstract class BaseTeamFormFilter extends BaseFormFilterDoctrine
     parent::setup();
   }
 
+  public function addUsersListColumnQuery(Doctrine_Query $query, $field, $values)
+  {
+    if (!is_array($values))
+    {
+      $values = array($values);
+    }
+
+    if (!count($values))
+    {
+      return;
+    }
+
+    $query
+      ->leftJoin($query->getRootAlias().'.UserTeam UserTeam')
+      ->andWhereIn('UserTeam.user_name', $values)
+    ;
+  }
+
   public function getModelName()
   {
     return 'Team';
@@ -37,8 +59,10 @@ abstract class BaseTeamFormFilter extends BaseFormFilterDoctrine
   public function getFields()
   {
     return array(
-      'id'   => 'Number',
-      'name' => 'Text',
+      'id'         => 'Number',
+      'name'       => 'Text',
+      'type'       => 'Enum',
+      'users_list' => 'ManyKey',
     );
   }
 }

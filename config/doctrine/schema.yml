@@ -200,10 +200,6 @@ UserTeam:
       foreignAlias: TeamUsers
       onDelete: CASCADE
 
-Informations:
-  columns:
-
-
 sfGuardUser:
   columns:
     avatar:

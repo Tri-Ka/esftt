@@ -13,21 +13,23 @@ abstract class BaseInfoFormFilter extends BaseFormFilterDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'address' => new sfWidgetFormFilterInput(array('with_empty' => false)),
-      'street'  => new sfWidgetFormFilterInput(),
-      'city'    => new sfWidgetFormFilterInput(),
-      'zipcode' => new sfWidgetFormFilterInput(),
-      'phone'   => new sfWidgetFormFilterInput(),
-      'email'   => new sfWidgetFormFilterInput(),
+      'company'  => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'address'  => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'city'     => new sfWidgetFormFilterInput(),
+      'zipcode'  => new sfWidgetFormFilterInput(),
+      'phone'    => new sfWidgetFormFilterInput(),
+      'fullname' => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'email'    => new sfWidgetFormFilterInput(),
     ));
 
     $this->setValidators(array(
-      'address' => new sfValidatorPass(array('required' => false)),
-      'street'  => new sfValidatorPass(array('required' => false)),
-      'city'    => new sfValidatorPass(array('required' => false)),
-      'zipcode' => new sfValidatorPass(array('required' => false)),
-      'phone'   => new sfValidatorPass(array('required' => false)),
-      'email'   => new sfValidatorPass(array('required' => false)),
+      'company'  => new sfValidatorPass(array('required' => false)),
+      'address'  => new sfValidatorPass(array('required' => false)),
+      'city'     => new sfValidatorPass(array('required' => false)),
+      'zipcode'  => new sfValidatorPass(array('required' => false)),
+      'phone'    => new sfValidatorPass(array('required' => false)),
+      'fullname' => new sfValidatorPass(array('required' => false)),
+      'email'    => new sfValidatorPass(array('required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('info_filters[%s]');
@@ -47,13 +49,14 @@ abstract class BaseInfoFormFilter extends BaseFormFilterDoctrine
   public function getFields()
   {
     return array(
-      'id'      => 'Number',
-      'address' => 'Text',
-      'street'  => 'Text',
-      'city'    => 'Text',
-      'zipcode' => 'Text',
-      'phone'   => 'Text',
-      'email'   => 'Text',
+      'id'       => 'Number',
+      'company'  => 'Text',
+      'address'  => 'Text',
+      'city'     => 'Text',
+      'zipcode'  => 'Text',
+      'phone'    => 'Text',
+      'fullname' => 'Text',
+      'email'    => 'Text',
     );
   }
 }

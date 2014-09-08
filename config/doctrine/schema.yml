@@ -1,16 +1,20 @@
 Info:
   columns:
+    company:
+      type: string(255)
+      notnull: true
     address:
       type: string(255)
       notnull: true
-    street:
-      type: string(255)
     city:
       type: string(255)
     zipcode:
       type: string(255)
     phone:
       type: string(255)
+    fullname:
+      type: string(255)
+      notnull: true
     email:
       type: string(255)
 

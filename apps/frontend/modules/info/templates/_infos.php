@@ -5,7 +5,7 @@
       <?php echo $info->address; ?>
     </p>
     <address>
-      <strong>Twitter, Inc.</strong><br>
+      <strong><?php echo $info->company; ?></strong><br>
         <?php echo $info->address; ?><br>
         <?php echo $info->city; ?>, <?php echo $info->zipcode; ?><br>
       <abbr title="Phone"><?php echo $info->phone; ?></abbr>

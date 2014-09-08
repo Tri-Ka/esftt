@@ -1,3 +1,4 @@
-web/uploads/*
-cache/*
-log/*
+/cache/*
+/log/*
+/web/uploads/*
+.DS_Store

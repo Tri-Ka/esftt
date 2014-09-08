@@ -163,20 +163,28 @@ Team:
     name:
       type: string
       notnull: true
-  # relations:
-  #   Users:
-  #     class: sfGuardUser
-  #     refClass: UserTeam
-  #     local: team_id
-  #     foreign: user_name
-  #     foreignAlias: Teams
+  groupe:
+      type: enum(5)
+      values:
+        - PH - Championnat de Paris
+        - PR - Championnat départemental
+        - D2 - Championnat départemental
+        - D2 - Championnat de Paris
+        - D3 - Championnat départemental
+  relations:
+    Users:
+      class: sfGuardUser
+      refClass: UserTeam
+      local: team_id
+      foreign: user_name
+      foreignAlias: Teams
 
 UserTeam:
   columns:
-    # user_id:
-    #   type: integer
-    user_name:
-      type: string(255)
+    user_id:
+      type: integer
+    # user_name:
+    #   type: string(255)
     team_id:
       type: integer
     is_captain:
@@ -185,19 +193,22 @@ UserTeam:
     Team:
       foreignAlias: TeamUsers
       onDelete: CASCADE
-    # User:
-    #   foreignAlias: TeamUsers
-    #   onDelete: CASCADE
+    User:
+      foreignAlias: TeamUsers
+      onDelete: CASCADE
 
 
 sfGuardUser:
   columns:
     avatar:
       type: string(255)
-  # relations:
-  #   Teams:
-  #     class: Team
-  #     refClass: UserTeam
-  #     local: user_id
-  #     foreign: team_id
-  #     foreignAlias: Users
+    is_disponible:
+      type: boolean
+      default: true
+  relations:
+    Teams:
+      class: Team
+      refClass: UserTeam
+      local: user_id
+      foreign: team_id
+      foreignAlias: Users

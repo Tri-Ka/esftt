@@ -14,7 +14,6 @@ class sfGuardUserBackendForm extends BasesfGuardUserForm
           'username',
           'avatar',
           'groups_list',
-          'author_id'
         ));
 
         $this->widgetSchema['password'] = new sfWidgetFormInputPassword();
@@ -29,11 +28,6 @@ class sfGuardUserBackendForm extends BasesfGuardUserForm
           ));
 
         $user = $this->getOption('user');
-
-        $this->widgetSchema['author_id'] = new sfWidgetFormInputHidden();
-        $this->widgetSchema['author_id']->setDefault($user->getId());
-
-        $this->validatorSchema['author_id'] = new sfValidatorPass();
 
     }
 

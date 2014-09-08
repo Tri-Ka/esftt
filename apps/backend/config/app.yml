@@ -58,14 +58,6 @@ all:
           Equipes:
             url: team
             image: users.png
-          Composition équipes:
-            url: user_team
-          Competitions:
-            url: competition
-          Sessions de competition:
-            url: competition_session
-          Inscriptions des équipes aux sessions:
-            url: competition_session_team
       CMS:
         items:
           Articles:

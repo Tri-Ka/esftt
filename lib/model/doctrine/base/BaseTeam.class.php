@@ -36,7 +36,7 @@ abstract class BaseTeam extends sfDoctrineRecord
              'type' => 'string',
              'notnull' => true,
              ));
-        $this->hasColumn('type', 'enum', 5, array(
+        $this->hasColumn('type', 'enum', null, array(
              'type' => 'enum',
              'values' => 
              array(
@@ -46,7 +46,6 @@ abstract class BaseTeam extends sfDoctrineRecord
               3 => 'D2 - Championnat de Paris',
               4 => 'D3 - Championnat départemental',
              ),
-             'length' => 5,
              ));
     }
 

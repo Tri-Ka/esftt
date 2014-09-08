@@ -10,6 +10,7 @@ generator:
     route_prefix:          team
     with_doctrine_route:   true
     actions_base_class:    sfActions
+    css:                   nothing
 
     config:
       actions: ~

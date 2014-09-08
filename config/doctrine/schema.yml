@@ -164,7 +164,7 @@ Team:
       type: string
       notnull: true
     type:
-      type: enum(5)
+      type: enum
       values:
         - PH - Championnat de Paris
         - PR - Championnat départemental

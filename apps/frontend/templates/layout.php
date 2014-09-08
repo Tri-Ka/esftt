@@ -44,57 +44,23 @@
         </div>
       </div>
 
-      <div class="row span12 main-content">
+      <div class="">
 
-        <div class="span3 bs-docs-sidebar">
+        <div class="col col-1-4 floatleft">
 
           <?php include_component('homepage', 'signin'); ?>
 
-
-          <!-- <ul class="nav nav-list bs-docs-sidenav affix-top clearfix">
-                      <h2 class="blue">Infos</h2>
-
-            <li>
-              <a href="#">
-                <span class="li-title">Derniers résultat</span>
-                <em>tous les résultats, les classements des poules et le calendrier...</em>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <span class="li-title">Classement</span>
-                <em>liste des joueurs, grille des points...</em>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <span class="li-title">Infos pratiques</span>
-                <em>horaires, tarifs, la salle Albert Marquet, les équipes engagées</em>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <span class="li-title">Zone membre</span>
-                <em>stats des match, forum...</em>
-              </a>
-            </li>
-          </ul> -->
-
-
         </div>
 
-        <div class="span8 sub-content">
+        <div class="col col-3-4 floatright maincontent">
           <?php echo $sf_content ?>
         </div>
 
       </div>
 
+        <footer class="col col-3-3">
 
-      <div class="row">
-
-        <footer class="span12">
-
-          <div class="span4">
+          <div class="col col-1-3">
             <h2>Liens</h2>
               <ul>
                 <li><a href="http://www.fftt.com" class="style8">le site de la fédération </a></li>
@@ -104,7 +70,7 @@
               </ul>
           </div>
 
-          <div class="span3">
+          <div class="col col-1-3">
 
             <h2>Sponsors</h2>
             <ul id="sponsor-list">
@@ -116,7 +82,8 @@
 
           </div>
 
-          <div class="span4">
+          <div class="col col-1-3">
+
             <h2>Adresse</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...
@@ -133,11 +100,10 @@
             </address>
             <p><a class="btn" href="#">En savoir plus <i class="icon-chevron-right"></i></a></p>
           </div>
+
         </footer>
-      </div>
 
     </div>
-
 
   </body>
   <?php include_stylesheets() ?>

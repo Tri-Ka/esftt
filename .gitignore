@@ -2,3 +2,6 @@
 /log/*
 /web/uploads/*
 .DS_Store
+log/*
+log/backend_dev.log
+log/frontend_dev.log

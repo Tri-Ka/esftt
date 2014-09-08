@@ -1,3 +1,30 @@
+info:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Info
+    module:               info
+    prefix_path:          /info
+    column:               id
+    with_wildcard_routes: true
+
+address:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Address
+    module:               address
+    prefix_path:          /address
+    column:               id
+    with_wildcard_routes: true
+
+link:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Link
+    module:               link
+    prefix_path:          /link
+    column:               id
+    with_wildcard_routes: true
+
 user_team:
   class: sfDoctrineRouteCollection
   options:

@@ -58,50 +58,7 @@
 
       </div>
 
-        <footer class="col col-3-3">
-
-          <div class="col col-1-3">
-            <h2>Liens</h2>
-              <ul>
-                <li><a href="http://www.fftt.com" class="style8">le site de la fédération </a></li>
-                <li><a href="http://perso.wanadoo.fr/fftt.idf/" class="style8">le site de l ile de france </a></li>
-                <li><a href="http://perso.wanadoo.fr/fftt.cd95tt/" class="style8">le site du département </a></li>
-                <li><a href="http://www.tennis-de-table.com" class="style8">tennisdetable.com</a></li>
-              </ul>
-          </div>
-
-          <div class="col col-1-3">
-
-            <h2>Sponsors</h2>
-            <ul id="sponsor-list">
-              <li><a href="#" class="style8"><img src="http://placehold.it/250x55" class="img-rounded"></a></li>
-              <li><a href="#" class="style8"><img src="http://placehold.it/250x55" class="img-rounded"></a></li>
-              <li><a href="#" class="style8"><img src="http://placehold.it/250x55" class="img-rounded"></a></li>
-              <li><a href="#" class="style8"><img src="http://placehold.it/250x55" class="img-rounded"></a></li>
-            </ul>
-
-          </div>
-
-          <div class="col col-1-3">
-
-            <h2>Adresse</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...
-            </p>
-            <address>
-              <strong>Twitter, Inc.</strong><br>
-                795 Folsom Ave, Suite 600<br>
-                San Francisco, CA 94107<br>
-              <abbr title="Phone">P:</abbr> (123) 456-7890
-            </address>
-            <address>
-              <strong>Full Name</strong><br>
-              <a href="mailto:#">first.last@gmail.com</a>
-            </address>
-            <p><a class="btn" href="#">En savoir plus <i class="icon-chevron-right"></i></a></p>
-          </div>
-
-        </footer>
+      <?php include_partial('global/footer') ?>        
 
     </div>
 

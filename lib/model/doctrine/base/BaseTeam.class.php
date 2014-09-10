@@ -10,17 +10,20 @@
  * @property Doctrine_Collection $Users
  * @property Doctrine_Collection $Sessions
  * @property Doctrine_Collection $TeamUsers
+ * @property Doctrine_Collection $BigTopics
  * 
  * @method string              getName()      Returns the current record's "name" value
  * @method enum                getType()      Returns the current record's "type" value
  * @method Doctrine_Collection getUsers()     Returns the current record's "Users" collection
  * @method Doctrine_Collection getSessions()  Returns the current record's "Sessions" collection
  * @method Doctrine_Collection getTeamUsers() Returns the current record's "TeamUsers" collection
+ * @method Doctrine_Collection getBigTopics() Returns the current record's "BigTopics" collection
  * @method Team                setName()      Sets the current record's "name" value
  * @method Team                setType()      Sets the current record's "type" value
  * @method Team                setUsers()     Sets the current record's "Users" collection
  * @method Team                setSessions()  Sets the current record's "Sessions" collection
  * @method Team                setTeamUsers() Sets the current record's "TeamUsers" collection
+ * @method Team                setBigTopics() Sets the current record's "BigTopics" collection
  * 
  * @package    esftt
  * @subpackage model
@@ -62,6 +65,10 @@ abstract class BaseTeam extends sfDoctrineRecord
              'foreign' => 'team_id'));
 
         $this->hasMany('UserTeam as TeamUsers', array(
+             'local' => 'id',
+             'foreign' => 'team_id'));
+
+        $this->hasMany('BigTopic as BigTopics', array(
              'local' => 'id',
              'foreign' => 'team_id'));
     }

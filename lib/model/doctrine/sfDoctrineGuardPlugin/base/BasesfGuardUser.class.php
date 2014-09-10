@@ -26,6 +26,8 @@
  * @property sfGuardForgotPassword $ForgotPassword
  * @property Doctrine_Collection $Articles
  * @property Doctrine_Collection $ArticleComments
+ * @property Doctrine_Collection $Topics
+ * @property Doctrine_Collection $TopicMessages
  * 
  * @method string                getFirstName()             Returns the current record's "first_name" value
  * @method string                getLastName()              Returns the current record's "last_name" value
@@ -48,6 +50,8 @@
  * @method sfGuardForgotPassword getForgotPassword()        Returns the current record's "ForgotPassword" value
  * @method Doctrine_Collection   getArticles()              Returns the current record's "Articles" collection
  * @method Doctrine_Collection   getArticleComments()       Returns the current record's "ArticleComments" collection
+ * @method Doctrine_Collection   getTopics()                Returns the current record's "Topics" collection
+ * @method Doctrine_Collection   getTopicMessages()         Returns the current record's "TopicMessages" collection
  * @method sfGuardUser           setFirstName()             Sets the current record's "first_name" value
  * @method sfGuardUser           setLastName()              Sets the current record's "last_name" value
  * @method sfGuardUser           setEmailAddress()          Sets the current record's "email_address" value
@@ -69,6 +73,8 @@
  * @method sfGuardUser           setForgotPassword()        Sets the current record's "ForgotPassword" value
  * @method sfGuardUser           setArticles()              Sets the current record's "Articles" collection
  * @method sfGuardUser           setArticleComments()       Sets the current record's "ArticleComments" collection
+ * @method sfGuardUser           setTopics()                Sets the current record's "Topics" collection
+ * @method sfGuardUser           setTopicMessages()         Sets the current record's "TopicMessages" collection
  * 
  * @package    esftt
  * @subpackage model
@@ -182,6 +188,14 @@ abstract class BasesfGuardUser extends sfDoctrineRecord
              'foreign' => 'author_id'));
 
         $this->hasMany('Comment as ArticleComments', array(
+             'local' => 'id',
+             'foreign' => 'author_id'));
+
+        $this->hasMany('Topic as Topics', array(
+             'local' => 'id',
+             'foreign' => 'author_id'));
+
+        $this->hasMany('TopicMessage as TopicMessages', array(
              'local' => 'id',
              'foreign' => 'author_id'));
 

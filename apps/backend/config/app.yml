@@ -76,11 +76,21 @@ all:
           Picture:
             url: picture
             image: addedit
+      Forum:
+        items:
+          Categories:
+            url: big_topic_category
+          Topics généraux:
+            url: big_topic
+          Topics:
+            url: topic
+          Messages:
+            url: topic_message
       Settings:
         items:
           Links:
             url: link
-            image: addedit        
+            image: addedit
           Infos:
             url: info
             image: addedit

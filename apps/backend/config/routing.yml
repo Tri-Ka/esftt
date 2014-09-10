@@ -1,3 +1,39 @@
+topic_message:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                TopicMessage
+    module:               topic_message
+    prefix_path:          /topic_message
+    column:               id
+    with_wildcard_routes: true
+
+topic:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Topic
+    module:               topic
+    prefix_path:          /topic
+    column:               id
+    with_wildcard_routes: true
+
+big_topic:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                BigTopic
+    module:               big_topic
+    prefix_path:          /big_topic
+    column:               id
+    with_wildcard_routes: true
+
+big_topic_category:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                BigTopicCategory
+    module:               big_topic_category
+    prefix_path:          /big_topic_category
+    column:               id
+    with_wildcard_routes: true
+
 info:
   class: sfDoctrineRouteCollection
   options:

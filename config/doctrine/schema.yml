@@ -228,6 +228,103 @@ UserTeam:
       foreignAlias: TeamUsers
       onDelete: CASCADE
 
+BigTopicCategory:
+  tableName: f_big_topic_category
+  columns:
+    title:
+      type: string(255)
+      notnull: false
+
+BigTopic:
+  tableName: f_big_topic
+  columns:
+    title:
+      type: string(255)
+      notnull: true
+    subtitle:
+      type: string(1000)
+      notnull: true
+    is_private:
+      type: boolean
+      default: false
+    team_id:
+      type: integer
+    category_id:
+      type: integer
+      notnull: true
+  relations:
+    Team:
+      class: Team
+      local: team_id
+      foreign: id
+      foreignAlias: BigTopics
+      onDelete: CASCADE
+    Category:
+      class: BigTopicCategory
+      local: category_id
+      foreign: id
+      foreignAlias: BigTopics
+      onDelete: CASCADE
+
+Topic:
+  tableName: f_topic
+  actAs:
+    Timestampable: ~
+  columns:
+    title:
+      type: string(255)
+      notnull: true
+    subtitle:
+      type: string(1000)
+      notnull: true
+    author_id:
+      type: integer
+      notnull: false
+    big_topic_id:
+      type: integer
+      notnull: false
+  relations:
+    BigTopic:
+      class: BigTopic
+      local: big_topic_id
+      foreign: id
+      foreignAlias: Topics
+      onDelete: CASCADE
+    Author:
+      class: sfGuardUser
+      local: author_id
+      foreign: id
+      foreignAlias: Topics
+      onDelete: CASCADE
+
+TopicMessage:
+  tableName: f_topic_message
+  actAs:
+    Timestampable: ~
+  columns:
+    message:
+      type: clob
+      notnull: true
+    author_id:
+      type: integer
+      notnull: false
+    topic_id:
+      type: integer
+      notnull: false
+  relations:
+    Topic:
+      class: Topic
+      local: topic_id
+      foreign: id
+      foreignAlias: Messages
+      onDelete: CASCADE
+    Author:
+      class: sfGuardUser
+      local: author_id
+      foreign: id
+      foreignAlias: TopicMessages
+      onDelete: CASCADE
+
 sfGuardUser:
   columns:
     avatar:

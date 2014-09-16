@@ -32,6 +32,24 @@ informations:
   url: /informations
   param: {module: article, action: showInformations}
 
+# forum
+
+forum:
+  url: /forum
+  param: { module: forum, action: listCategories }
+
+show_big_topics:
+  url: /forum/category/:cat_id
+  param: { module: forum, action: listBigTopics }
+
+show_topics:
+  url: /forum/bt/:big_topic_id
+  param: { module: forum, action: listTopics }
+
+show_topic_messages:
+  url: /forum/t/:topic_id
+  param: { module: forum, action: listMessages }
+
 # user
 
 user_create:

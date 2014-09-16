@@ -33,7 +33,7 @@
               <li><a href="<?php echo url_for('gallery_list'); ?>"><i class="fa fa-picture-o"></i>Photos</a></li>
               <li><a href="<?php echo url_for('informations'); ?>"><i class="fa fa-info"></i>Informations</a></li>
               <li><a href="#"><i class="fa fa-calendar-o"></i>Résultats</a></li>
-              <li><a href="#"><i class="fa fa-group"></i>Forum</a></li>
+              <li><a href="<?php echo url_for('forum'); ?>"><i class="fa fa-group"></i>Forum</a></li>
               <li><a href="#"><i class="fa fa-phone"></i>Contact</a></li>
               <?php if ($sf_user->isAuthenticated()): ?>
                 <li class="visible-phone"><a href="<?php echo url_for('sf_guard_signout'); ?>"><i class="fa fa-power-off"></i>se déconnecter</a></li>
@@ -58,7 +58,7 @@
 
       </div>
 
-      <?php include_partial('global/footer') ?>        
+      <?php include_partial('global/footer') ?>
 
     </div>
 

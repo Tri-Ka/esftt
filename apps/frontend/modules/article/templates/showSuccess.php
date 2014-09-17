@@ -1,1 +1,1 @@
-<?php include_partial('articleDetail', array('article' => $article, 'commentForm' => $commentForm)); ?>
+<?php include_partial('articleDetail', array('article' => $article, 'commentForm' => isset($commentForm) ? $commentForm : null)); ?>

@@ -2,6 +2,8 @@
 	clear: both;
 }
 
+
+
 .col {
 
 	padding: 10px;
@@ -56,6 +58,7 @@
 
 body {
 	background: #363636;
+	padding: 0;
 }
 
 .container {

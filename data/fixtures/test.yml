@@ -1,0 +1,229 @@
+Article:
+  Article_1:
+    title: edito
+    short_description: 'Lorem ipsum dolor sit amet.  Praesent et mi non orci vehicula eleifend at in dolor'
+    content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et mi non orci vehicula eleifend at in dolor. Praesent hendrerit non velit sit amet cursus. Vivamus quis magna vitae orci hendrerit ultricies. Cras hendrerit mauris eget nisl vestibulum aliquet. Sed condimentum felis vel sapien interdum euismod. Aenean id dictum ipsum, ultricies volutpat elit. Maecenas id est lorem. Duis hendrerit vitae nulla sed dignissim. Curabitur justo risus, iaculis sed sapien vel, blandit feugiat purus. Phasellus nec orci ultrices, cursus sem a, varius magna.</p>'
+    picture: null
+    is_published: true
+    published_at: '2010-01-01 00:00:00'
+    Author: sfGuardUser_1
+    display_to_homepage: true
+    created_at: '2009-01-01 01:01:00'
+    updated_at: '2014-09-08 14:14:37'
+  Article_2:
+    title: Informations
+    short_description: 'Lorem ipsum dolor sit amet.  Praesent et mi non orci vehicula eleifend at in dolor'
+    content: "<ul>\r\n<li>\r\n<h2><strong>horaires</strong></h2>\r\n</li>\r\n</ul>\r\n<p class=\"Style20\">-&nbsp;<span class=\"style3\">Entra&icirc;nement jeunes</span></p>\r\n<p class=\"Style20\" style=\"padding-left: 30px;\"><span class=\"style3\">Niveau 1 (en fonction &acirc;ge/niveau sera d&eacute;termin&eacute; entre l&rsquo;inscription et les tous premiers cours)&nbsp;<strong>Mercredi 17h45 - 18h45</strong></span></p>\r\n<p class=\"Style20\" style=\"padding-left: 30px;\"><span class=\"style3\">Niveau 2&nbsp;<strong>Mercredi 18h45 - 19h45</strong></span></p>\r\n<p class=\"Style22\">- Entra&icirc;nement adultes&nbsp;<strong>Mercredi 19h30- 21h30</strong></p>\r\n<p class=\"Style22\">- Entrainement libre&nbsp;<strong>Dimanche 10h15-12h30</strong>&nbsp;et&nbsp;<strong>Mercredi 20h00- 22h00</strong></p>\r\n<p class=\"Style22\">&nbsp;</p>\r\n<ul>\r\n<li class=\"style10\">\r\n<h2><strong>tarifs</strong></h2>\r\n</li>\r\n</ul>\r\n<p class=\"style3\">- Cotisation annuelle adultes et juniors&nbsp;<span class=\"style6\">115 Euros</span></p>\r\n<p class=\"style3\">- Cotisation annuelle jeunes&nbsp;jusqu&rsquo;&agrave;&nbsp;cadets 2&egrave;me&nbsp;ann&eacute;e (31/12/99)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"style6\">100 Euros</span></p>\r\n<p><strong>inscriptions aux comp&eacute;titions individuelles&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</strong></p>\r\n<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Poussins &ndash; Benjamins &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20 euros</p>\r\n<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Minimes Cadets Juniors &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;31 euros</p>\r\n<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adultes &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 38 euros</p>\r\n<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Maillot pour la comp&eacute;tition&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10&nbsp; euros de participation</p>\r\n<p>&nbsp;</p>\r\n<ul>\r\n<li class=\"style10\">\r\n<h2><strong class=\"style16\">Competitions<br /></strong></h2>\r\n</li>\r\n</ul>\r\n<p>Cette saison notre club alignera :</p>\r\n<p>&nbsp;</p>\r\n<ul>\r\n<li><strong>Cinq &eacute;quipes en championnat de FRANCE </strong>:<span class=\"Style18\">&nbsp;<strong>de d&eacute;partementale 3 &agrave; r&eacute;gionale&nbsp;</strong></span>3</li>\r\n<li><strong>Trois &eacute;quipes en championnat de Paris </strong>&nbsp;:&nbsp;<span class=\"Style24\">de la division 2 &agrave; la division promotion honneur</span></li>\r\n<li><strong>Des &eacute;quipes en coupe du Val d'Oise.</strong></li>\r\n<li><strong>Des &eacute;quipes en championnat de jeunes.</strong></li>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<p><strong>&nbsp;</strong></p>"
+    picture: null
+    is_published: true
+    published_at: '2010-01-01 00:00:00'
+    Author: sfGuardUser_1
+    display_to_homepage: false
+    created_at: '2009-01-01 01:01:00'
+    updated_at: '2014-09-08 14:12:12'
+ArticleKeyword:
+  ArticleKeyword_1_1:
+    Article: Article_1
+    Keyword: Keyword_1
+  ArticleKeyword_2_2:
+    Article: Article_2
+    Keyword: Keyword_2
+BigTopic:
+  BigTopic_1:
+    title: 'title super topic'
+    subtitle: 'sous titre super topic'
+    is_private: false
+    Category: BigTopicCategory_1
+  BigTopic_2:
+    title: 'title super topic 2'
+    subtitle: 'sous titre super topic 2'
+    is_private: false
+    Category: BigTopicCategory_2
+  BigTopic_3:
+    title: yest
+    subtitle: zegz
+    is_private: false
+    Category: BigTopicCategory_1
+  BigTopic_4:
+    title: erherherh
+    subtitle: zegzegezg
+    is_private: false
+    Category: BigTopicCategory_1
+  BigTopic_5:
+    title: 'azr azaef a'
+    subtitle: 'azf aezfz'
+    is_private: false
+    Category: BigTopicCategory_3
+BigTopicCategory:
+  BigTopicCategory_1:
+    title: test
+  BigTopicCategory_2:
+    title: 'test 2'
+  BigTopicCategory_3:
+    title: oui
+Gallery:
+  Gallery_1:
+    name: 'gallerie 1'
+    description: 'super gallerie'
+Info:
+  Info_1:
+    company: ESFTT
+    address: '28 rue Pong'
+    city: Paris
+    zipcode: '75016'
+    phone: '0665986598'
+    fullname: 'Jack Dupont'
+    email: ping@gmail.com
+Keyword:
+  Keyword_1:
+    name: edito
+    reference: edito
+  Keyword_2:
+    name: informations
+    reference: informations
+Link:
+  Link_1:
+    title: test
+    url: www.test.com
+Picture:
+  Picture_1:
+    name: b4cb775770b1e353a80a61de3c9d3524a6ee4803.jpg
+    description: 'zegzegzeg zeg zeg'
+    Gallery: Gallery_1
+    is_cover_gallery: false
+  Picture_2:
+    name: f77d3d56307c7629a65aa6de18807a4d516d2ba7.jpg
+    description: 'zef zef zef ze'
+    Gallery: Gallery_1
+    is_cover_gallery: true
+  Picture_3:
+    name: 6f543a531bfbf40321ffa9d72889875c574a7353.gif
+    description: 'zef zefezf ezf '
+    Gallery: Gallery_1
+    is_cover_gallery: false
+sfGuardGroup:
+  sfGuardGroup_1:
+    name: admin
+    description: 'Groupe administrateur'
+    created_at: '2014-06-03 14:18:20'
+    updated_at: '2014-06-03 14:18:20'
+  sfGuardGroup_2:
+    name: editor
+    description: 'Groupe éditeur'
+    created_at: '2014-06-03 14:18:20'
+    updated_at: '2014-06-03 14:18:20'
+sfGuardUser:
+  sfGuardUser_1:
+    first_name: admin
+    last_name: _1
+    email_address: admin@mail.fr
+    username: admin
+    algorithm: sha1
+    salt: f7fba7850ce9edc45a1507ba24de73cd
+    password: 38118dd46ce50442c4cb139e98e8b4a0a52843b9
+    is_active: true
+    is_super_admin: true
+    last_login: '2014-09-16 13:08:09'
+    avatar: null
+    is_disponible: true
+    created_at: '2014-08-05 17:04:15'
+    updated_at: '2014-09-16 13:08:09'
+  sfGuardUser_2:
+    first_name: editor
+    last_name: _1
+    email_address: editor@mail.fr
+    username: editor
+    algorithm: sha1
+    salt: 050f6956641825ec4d6daad2c0406911
+    password: 8f994cbea511f688a641b82b1861aa358eb30ba2
+    is_active: true
+    is_super_admin: false
+    last_login: '2014-08-06 13:10:39'
+    avatar: null
+    is_disponible: true
+    created_at: '2014-08-05 17:17:13'
+    updated_at: '2014-08-06 13:10:39'
+  sfGuardUser_3:
+    first_name: user
+    last_name: _1
+    email_address: user@mail.fr
+    username: user
+    algorithm: sha1
+    salt: 09f44e3fa8813f337ef35d5bada1b723
+    password: 10203d07a826370d9aaa3ad83890008562208555
+    is_active: true
+    is_super_admin: false
+    last_login: '2014-08-06 13:10:39'
+    avatar: null
+    is_disponible: true
+    created_at: '2014-08-05 17:17:13'
+    updated_at: '2014-08-06 13:10:39'
+sfGuardUserGroup:
+  sfGuardUserGroup_1_1:
+    User: sfGuardUser_1
+    Group: sfGuardGroup_1
+    created_at: '2014-06-05 08:45:51'
+    updated_at: '2014-06-05 08:45:51'
+  sfGuardUserGroup_2_2:
+    User: sfGuardUser_2
+    Group: sfGuardGroup_2
+    created_at: '2014-06-05 08:43:41'
+    updated_at: '2014-06-05 08:43:41'
+Topic:
+  Topic_1:
+    title: 'title topic 1'
+    subtitle: 'sous titre topic 1'
+    Author: sfGuardUser_1
+    BigTopic: BigTopic_1
+    created_at: '2009-01-01 00:00:00'
+    updated_at: '2009-01-01 00:00:00'
+  Topic_2:
+    title: test
+    subtitle: zeherh
+    created_at: '2014-09-16 13:56:20'
+    updated_at: '2014-09-16 13:56:20'
+  Topic_3:
+    title: 'azfaz azf az'
+    subtitle: 'z eezger erh '
+    created_at: '2014-09-16 13:57:00'
+    updated_at: '2014-09-16 13:57:00'
+  Topic_4:
+    title: 'azgz egzeg '
+    subtitle: 'a zzegz e'
+    Author: sfGuardUser_1
+    BigTopic: BigTopic_1
+    created_at: '2014-09-16 13:57:42'
+    updated_at: '2014-09-16 13:57:42'
+  Topic_5:
+    title: 'ze gzegzeg '
+    subtitle: 'ze zeg'
+    Author: sfGuardUser_1
+    BigTopic: BigTopic_2
+    created_at: '2014-09-16 13:59:35'
+    updated_at: '2014-09-16 13:59:35'
+  Topic_6:
+    title: '"tz'' "grg eh'
+    subtitle: 'ze ze'
+    Author: sfGuardUser_1
+    BigTopic: BigTopic_5
+    created_at: '2014-09-16 14:01:22'
+    updated_at: '2014-09-16 14:01:22'
+TopicMessage:
+  TopicMessage_1:
+    message: 'mon message'
+    Author: sfGuardUser_2
+    Topic: Topic_1
+    created_at: '2009-01-01 00:00:00'
+    updated_at: '2009-01-01 00:00:00'
+  TopicMessage_2:
+    message: 'OUI TOUT CA'
+    Author: sfGuardUser_1
+    Topic: Topic_4
+    created_at: '2014-09-16 13:58:44'
+    updated_at: '2014-09-16 13:58:44'
+  TopicMessage_3:
+    message: sher
+    Author: sfGuardUser_1
+    Topic: Topic_5
+    created_at: '2014-09-16 13:59:41'
+    updated_at: '2014-09-16 13:59:41'

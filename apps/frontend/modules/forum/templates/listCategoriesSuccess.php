@@ -1,19 +1,24 @@
+<h2><?php echo __('Forum'); ?></h2>
+
 <ul>
-<?php foreach ($categories as $c): ?>
+	<?php foreach ($categories as $c): ?>
 
-	<li>
+		<li>
 
-		<a href="<?php echo url_for('show_big_topics', array('cat_id' => $c->getId())); ?>"><?php echo $c; ?></a>
+			<a href="<?php echo url_for('show_big_topics', array('cat_id' => $c->getId())); ?>">
 
-	</li>
+				<span class="f-title"><?php echo $c; ?></span>
+				<em class="f-subtitle"><?php echo $c->getSubTitle(); ?></em>
 
-<?php endforeach; ?>
+			</a>
+
+		</li>
+
+	<?php endforeach; ?>
 </ul>
 
-<form action="" method="post">
+<?php if($sf_user->getGuardUser()->hasGroup('admin')): ?>
 
-	<?php echo $form; ?>
+	<?php include_partial('form', array('form' => $form, 'new' => __('new Category'))); ?>
 
-	<input type="submit" value="valider">
-
-</form>
+<?php endif; ?>

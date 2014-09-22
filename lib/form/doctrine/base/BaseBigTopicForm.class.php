@@ -18,7 +18,6 @@ abstract class BaseBigTopicForm extends BaseFormDoctrine
       'id'          => new sfWidgetFormInputHidden(),
       'title'       => new sfWidgetFormInputText(),
       'subtitle'    => new sfWidgetFormTextarea(),
-      'is_private'  => new sfWidgetFormInputCheckbox(),
       'team_id'     => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Team'), 'add_empty' => true)),
       'category_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Category'), 'add_empty' => false)),
     ));
@@ -27,7 +26,6 @@ abstract class BaseBigTopicForm extends BaseFormDoctrine
       'id'          => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
       'title'       => new sfValidatorString(array('max_length' => 255)),
       'subtitle'    => new sfValidatorString(array('max_length' => 1000)),
-      'is_private'  => new sfValidatorBoolean(array('required' => false)),
       'team_id'     => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Team'), 'required' => false)),
       'category_id' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Category'))),
     ));

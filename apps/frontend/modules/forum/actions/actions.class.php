@@ -28,6 +28,7 @@ class forumActions extends sfActions
 	public function executeListBigTopics(sfWebRequest $request){
 
 		$this->bigTopics = BigTopicTable::getInstance()->findByCategoryId($request->getParameter('cat_id'));
+		$this->category = BigtopicCategoryTable::getInstance()->find($request->getParameter('cat_id'));
 
 		$this->form = new BigTopicFrontendForm(
 			null,
@@ -48,6 +49,7 @@ class forumActions extends sfActions
 	public function executeListTopics(sfWebRequest $request){
 
 		$this->Topics = TopicTable::getInstance()->findByBigTopicId($request->getParameter('big_topic_id'));
+		$this->bigTopic = BigTopicTable::getInstance()->find($request->getParameter('big_topic_id'));
 
 		$this->form = new TopicFrontendForm(
 			null,
@@ -69,6 +71,7 @@ class forumActions extends sfActions
 	public function executeListMessages(sfWebRequest $request){
 
 		$this->Messages = TopicMessageTable::getInstance()->findByTopicId($request->getParameter('topic_id'));
+		$this->topic = TopicTable::getInstance()->find($request->getParameter('topic_id'));
 
 		$this->form = new TopicMessageFrontendForm(
 			null,

@@ -13,11 +13,13 @@ abstract class BaseBigTopicCategoryFormFilter extends BaseFormFilterDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'title' => new sfWidgetFormFilterInput(),
+      'title'     => new sfWidgetFormFilterInput(),
+      'sub_title' => new sfWidgetFormFilterInput(),
     ));
 
     $this->setValidators(array(
-      'title' => new sfValidatorPass(array('required' => false)),
+      'title'     => new sfValidatorPass(array('required' => false)),
+      'sub_title' => new sfValidatorPass(array('required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('big_topic_category_filters[%s]');
@@ -37,8 +39,9 @@ abstract class BaseBigTopicCategoryFormFilter extends BaseFormFilterDoctrine
   public function getFields()
   {
     return array(
-      'id'    => 'Number',
-      'title' => 'Text',
+      'id'        => 'Number',
+      'title'     => 'Text',
+      'sub_title' => 'Text',
     );
   }
 }

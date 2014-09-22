@@ -16,14 +16,14 @@ abstract class BaseTeamForm extends BaseFormDoctrine
   {
     $this->setWidgets(array(
       'id'         => new sfWidgetFormInputHidden(),
-      'name'       => new sfWidgetFormTextarea(),
+      'name'       => new sfWidgetFormInputText(),
       'type'       => new sfWidgetFormChoice(array('choices' => array('PH - Championnat de Paris' => 'PH - Championnat de Paris', 'PR - Championnat départemental' => 'PR - Championnat départemental', 'D2 - Championnat départemental' => 'D2 - Championnat départemental', 'D2 - Championnat de Paris' => 'D2 - Championnat de Paris', 'D3 - Championnat départemental' => 'D3 - Championnat départemental'))),
       'users_list' => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'sfGuardUser')),
     ));
 
     $this->setValidators(array(
       'id'         => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
-      'name'       => new sfValidatorString(),
+      'name'       => new sfValidatorString(array('max_length' => 255)),
       'type'       => new sfValidatorChoice(array('choices' => array(0 => 'PH - Championnat de Paris', 1 => 'PR - Championnat départemental', 2 => 'D2 - Championnat départemental', 3 => 'D2 - Championnat de Paris', 4 => 'D3 - Championnat départemental'), 'required' => false)),
       'users_list' => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'sfGuardUser', 'required' => false)),
     ));

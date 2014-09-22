@@ -2,12 +2,10 @@ BigTopic:
   BigTopic_1:
     title: 'title super topic'
     subtitle: 'sous titre super topic'
-    is_private: false
     Category: BigTopicCategory_1
   BigTopic_2:
     title: 'title super topic 2'
     subtitle: 'sous titre super topic 2'
-    is_private: false
     Category: BigTopicCategory_2
 BigTopicCategory:
   BigTopicCategory_1:

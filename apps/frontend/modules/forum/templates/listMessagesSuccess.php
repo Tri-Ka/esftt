@@ -1,3 +1,5 @@
+<h2><?php echo __($topic); ?></h2>
+
 <ul>
 <?php foreach ($Messages as $m): ?>
 
@@ -11,10 +13,11 @@
 
 </ul>
 
-<form action="" method="post">
+<form action="">
 
 	<?php echo $form; ?>
 
-	<input type="submit" value="valider">
+	<input type="submit" class="btn" value="<?php echo __('valid'); ?>">
 
 </form>
+

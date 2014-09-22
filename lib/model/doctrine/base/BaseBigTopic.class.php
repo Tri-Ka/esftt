@@ -7,7 +7,6 @@
  * 
  * @property string $title
  * @property string $subtitle
- * @property boolean $is_private
  * @property integer $team_id
  * @property integer $category_id
  * @property Team $Team
@@ -16,7 +15,6 @@
  * 
  * @method string              getTitle()       Returns the current record's "title" value
  * @method string              getSubtitle()    Returns the current record's "subtitle" value
- * @method boolean             getIsPrivate()   Returns the current record's "is_private" value
  * @method integer             getTeamId()      Returns the current record's "team_id" value
  * @method integer             getCategoryId()  Returns the current record's "category_id" value
  * @method Team                getTeam()        Returns the current record's "Team" value
@@ -24,7 +22,6 @@
  * @method Doctrine_Collection getTopics()      Returns the current record's "Topics" collection
  * @method BigTopic            setTitle()       Sets the current record's "title" value
  * @method BigTopic            setSubtitle()    Sets the current record's "subtitle" value
- * @method BigTopic            setIsPrivate()   Sets the current record's "is_private" value
  * @method BigTopic            setTeamId()      Sets the current record's "team_id" value
  * @method BigTopic            setCategoryId()  Sets the current record's "category_id" value
  * @method BigTopic            setTeam()        Sets the current record's "Team" value
@@ -50,10 +47,6 @@ abstract class BaseBigTopic extends sfDoctrineRecord
              'type' => 'string',
              'notnull' => true,
              'length' => 1000,
-             ));
-        $this->hasColumn('is_private', 'boolean', null, array(
-             'type' => 'boolean',
-             'default' => false,
              ));
         $this->hasColumn('team_id', 'integer', null, array(
              'type' => 'integer',

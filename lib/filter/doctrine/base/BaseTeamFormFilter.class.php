@@ -47,7 +47,7 @@ abstract class BaseTeamFormFilter extends BaseFormFilterDoctrine
 
     $query
       ->leftJoin($query->getRootAlias().'.UserTeam UserTeam')
-      ->andWhereIn('UserTeam.user_name', $values)
+      ->andWhereIn('UserTeam.user_id', $values)
     ;
   }
 

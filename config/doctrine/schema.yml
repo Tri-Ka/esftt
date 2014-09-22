@@ -192,7 +192,7 @@ Picture:
 Team:
   columns:
     name:
-      type: string
+      type: string(255)
       notnull: true
     type:
       type: enum
@@ -207,7 +207,7 @@ Team:
       class: sfGuardUser
       refClass: UserTeam
       local: team_id
-      foreign: user_name
+      foreign: user_id
       foreignAlias: Teams
 
 UserTeam:
@@ -234,6 +234,9 @@ BigTopicCategory:
     title:
       type: string(255)
       notnull: false
+    sub_title:
+      type: string(1000)
+      notnull: false
 
 BigTopic:
   tableName: f_big_topic
@@ -244,9 +247,6 @@ BigTopic:
     subtitle:
       type: string(1000)
       notnull: true
-    is_private:
-      type: boolean
-      default: false
     team_id:
       type: integer
     category_id:

@@ -15,7 +15,6 @@ abstract class BaseBigTopicFormFilter extends BaseFormFilterDoctrine
     $this->setWidgets(array(
       'title'       => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'subtitle'    => new sfWidgetFormFilterInput(array('with_empty' => false)),
-      'is_private'  => new sfWidgetFormChoice(array('choices' => array('' => 'yes or no', 1 => 'yes', 0 => 'no'))),
       'team_id'     => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Team'), 'add_empty' => true)),
       'category_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Category'), 'add_empty' => true)),
     ));
@@ -23,7 +22,6 @@ abstract class BaseBigTopicFormFilter extends BaseFormFilterDoctrine
     $this->setValidators(array(
       'title'       => new sfValidatorPass(array('required' => false)),
       'subtitle'    => new sfValidatorPass(array('required' => false)),
-      'is_private'  => new sfValidatorChoice(array('required' => false, 'choices' => array('', 1, 0))),
       'team_id'     => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Team'), 'column' => 'id')),
       'category_id' => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Category'), 'column' => 'id')),
     ));
@@ -48,7 +46,6 @@ abstract class BaseBigTopicFormFilter extends BaseFormFilterDoctrine
       'id'          => 'Number',
       'title'       => 'Text',
       'subtitle'    => 'Text',
-      'is_private'  => 'Boolean',
       'team_id'     => 'ForeignKey',
       'category_id' => 'ForeignKey',
     );

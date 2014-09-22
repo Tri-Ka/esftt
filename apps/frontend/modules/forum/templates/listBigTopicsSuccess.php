@@ -1,19 +1,45 @@
+<h2><?php echo __($category); ?></h2>
+
 <ul>
-<?php foreach ($bigTopics as $bt): ?>
+	<?php foreach ($bigTopics as $bt): ?>
 
-	<li>
+		<?php if (null == $bt->getTeamId()): ?>
 
-		<a href="<?php echo url_for('show_topics', array('big_topic_id' => $bt->getId())); ?>"><?php echo $bt; ?></a>
+		<li>
 
-	</li>
+			<a href="<?php echo url_for('show_topics', array('big_topic_id' => $bt->getId())); ?>">
 
-<?php endforeach; ?>
+				<span class="f-title"><?php echo $bt; ?></span>
+				<em class="f-subtitle"><?php echo $bt->getSubTitle(); ?></em>
+
+			</a>
+
+		</li>
+
+		<?php else: ?>
+
+			<?php if($sf_user->getGuardUser()->isInTeam($bt->getTeamId())): ?>
+
+				<li>
+
+					<a href="<?php echo url_for('show_topics', array('big_topic_id' => $bt->getId())); ?>">
+
+						<span class="f-title"><?php echo $bt; ?></span>
+						<em class="f-subtitle"><?php echo $bt->getSubTitle(); ?></em>
+
+					</a>
+
+				</li>
+
+			<?php endif; ?>
+
+		<?php endif; ?>
+
+	<?php endforeach; ?>
 </ul>
 
-<form action="" method="post">
+<?php if($sf_user->getGuardUser()->hasGroup('admin')): ?>
 
-	<?php echo $form; ?>
+	<?php include_partial('form', array('form' => $form, 'new' => __('new Big Topic'))); ?>
 
-	<input type="submit" value="valider">
-
-</form>
+<?php endif; ?>

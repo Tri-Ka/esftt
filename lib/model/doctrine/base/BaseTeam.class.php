@@ -35,9 +35,10 @@ abstract class BaseTeam extends sfDoctrineRecord
     public function setTableDefinition()
     {
         $this->setTableName('team');
-        $this->hasColumn('name', 'string', null, array(
+        $this->hasColumn('name', 'string', 255, array(
              'type' => 'string',
              'notnull' => true,
+             'length' => 255,
              ));
         $this->hasColumn('type', 'enum', null, array(
              'type' => 'enum',
@@ -58,7 +59,7 @@ abstract class BaseTeam extends sfDoctrineRecord
         $this->hasMany('sfGuardUser as Users', array(
              'refClass' => 'UserTeam',
              'local' => 'team_id',
-             'foreign' => 'user_name'));
+             'foreign' => 'user_id'));
 
         $this->hasMany('CompetitionSessionTeam as Sessions', array(
              'local' => 'id',

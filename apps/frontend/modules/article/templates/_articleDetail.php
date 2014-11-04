@@ -1,23 +1,23 @@
-<div class="articleDetail col-3-3">
+<div>
 
-	<div class="head head-article col col-3-3">
+	<div>
 
 		<h1><?php echo $article->getTitle() ?></h1>
 
-		<div class="article-info">
+		<div>
 			<em class="article-date"><?php echo '|   ' . date('d-m-Y', strtotime($article->getCreatedAt())) ?></em>
 			<em class="article-author"><?php echo $article->getAuthor(); ?></em>
 		</div>
 
 	</div>
 
-	<div class="article-unit col col-3-3">
+	<div>
 
-		<div class="article-image col-3-3">
+		<div>
 			<img class="image" src="<?php echo $article->retrievePictureUrl(); ?>">
 		</div>
 
-		<div class="article-content col-3-3">
+		<div>
 			<p class="article-short"><?php echo $article->getShortDescription(); ?></p>
 			<p><?php echo $article->getContent(ESC_RAW); ?></p>
 		</div>
@@ -26,7 +26,7 @@
 			<fb:like href="<?php echo url_for('article_show', array('id' => $article->getId()), true); ?>"></fb:like>
 		</div> -->
 
-		<div class="share-social">
+		<div>
 		    <div>
 		        <a target="_blank" title="Twitter" href="https://twitter.com/share?url=<?php echo url_for('article_show', array('id' => $article->getId()), true); ?>&text=<?php echo $article->getTitle(); ?>" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=700');return false;"><i class="fa fa-twitter"></i></a>
 		        <a target="_blank" title="Facebook" href="https://www.facebook.com/sharer.php?u=<?php echo url_for('article_show', array('id' => $article->getId()), true); ?>&t=<?php echo $article->getTitle(); ?>" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;"><i class="fa fa-facebook-square"></i></a>
@@ -36,11 +36,11 @@
 
 	</div>
 
-	<div class="article-comments col col-3-3">
+	<div>
 
-		<h2 class="blue">Commentaires</h2>
+		<h2>Commentaires</h2>
 
-		<div class="list-comments">
+		<div>
 
 			<ul id="commentList">
 

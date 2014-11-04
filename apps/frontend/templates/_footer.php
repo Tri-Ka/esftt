@@ -1,8 +1,8 @@
-<footer class="col col-3-3">
+<footer>
 
   <?php include_component('link', 'links') ?>
 
-  <div class="col col-1-3">
+  <div>
 
     <h2>Sponsors</h2>
     <ul id="sponsor-list">

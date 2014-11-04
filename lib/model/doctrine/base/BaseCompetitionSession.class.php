@@ -9,15 +9,18 @@
  * @property integer $competition_id
  * @property Competition $Competition
  * @property Doctrine_Collection $Sessions
+ * @property Doctrine_Collection $CompetitionSessionDisponibilities
  * 
- * @method date                getDate()           Returns the current record's "date" value
- * @method integer             getCompetitionId()  Returns the current record's "competition_id" value
- * @method Competition         getCompetition()    Returns the current record's "Competition" value
- * @method Doctrine_Collection getSessions()       Returns the current record's "Sessions" collection
- * @method CompetitionSession  setDate()           Sets the current record's "date" value
- * @method CompetitionSession  setCompetitionId()  Sets the current record's "competition_id" value
- * @method CompetitionSession  setCompetition()    Sets the current record's "Competition" value
- * @method CompetitionSession  setSessions()       Sets the current record's "Sessions" collection
+ * @method date                getDate()                              Returns the current record's "date" value
+ * @method integer             getCompetitionId()                     Returns the current record's "competition_id" value
+ * @method Competition         getCompetition()                       Returns the current record's "Competition" value
+ * @method Doctrine_Collection getSessions()                          Returns the current record's "Sessions" collection
+ * @method Doctrine_Collection getCompetitionSessionDisponibilities() Returns the current record's "CompetitionSessionDisponibilities" collection
+ * @method CompetitionSession  setDate()                              Sets the current record's "date" value
+ * @method CompetitionSession  setCompetitionId()                     Sets the current record's "competition_id" value
+ * @method CompetitionSession  setCompetition()                       Sets the current record's "Competition" value
+ * @method CompetitionSession  setSessions()                          Sets the current record's "Sessions" collection
+ * @method CompetitionSession  setCompetitionSessionDisponibilities() Sets the current record's "CompetitionSessionDisponibilities" collection
  * 
  * @package    esftt
  * @subpackage model
@@ -49,5 +52,9 @@ abstract class BaseCompetitionSession extends sfDoctrineRecord
         $this->hasMany('CompetitionSessionTeam as Sessions', array(
              'local' => 'id',
              'foreign' => 'competition_session_id'));
+
+        $this->hasMany('CompetitionSessionDisponibility as CompetitionSessionDisponibilities', array(
+             'local' => 'id',
+             'foreign' => 'session_id'));
     }
 }

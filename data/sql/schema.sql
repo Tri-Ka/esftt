@@ -5,6 +5,7 @@ CREATE TABLE f_big_topic_category (id BIGINT AUTO_INCREMENT, title VARCHAR(255),
 CREATE TABLE comment (id BIGINT AUTO_INCREMENT, article_id BIGINT NOT NULL, parent_id BIGINT, author_id BIGINT NOT NULL, content TEXT NOT NULL, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, INDEX article_id_idx (article_id), INDEX author_id_idx (author_id), PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE = INNODB;
 CREATE TABLE competition (id BIGINT AUTO_INCREMENT, name VARCHAR(255) NOT NULL, PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE = INNODB;
 CREATE TABLE competition_session (id BIGINT AUTO_INCREMENT, date DATE NOT NULL, competition_id BIGINT NOT NULL, INDEX competition_id_idx (competition_id), PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE = INNODB;
+CREATE TABLE competition_session_disponibility (user_id BIGINT, session_id BIGINT, is_available TINYINT(1) DEFAULT '0' NOT NULL, PRIMARY KEY(user_id, session_id)) DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE = INNODB;
 CREATE TABLE competition_session_team (id BIGINT AUTO_INCREMENT, team_id BIGINT NOT NULL, competition_session_id BIGINT NOT NULL, INDEX team_id_idx (team_id), INDEX competition_session_id_idx (competition_session_id), PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE = INNODB;
 CREATE TABLE gallery (id BIGINT AUTO_INCREMENT, name VARCHAR(255) NOT NULL, description TEXT NOT NULL, PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE = INNODB;
 CREATE TABLE info (id BIGINT AUTO_INCREMENT, company VARCHAR(255) NOT NULL, address VARCHAR(255) NOT NULL, city VARCHAR(255), zipcode VARCHAR(255), phone VARCHAR(255), fullname VARCHAR(255) NOT NULL, email VARCHAR(255), PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE = INNODB;
@@ -32,6 +33,8 @@ ALTER TABLE f_big_topic ADD CONSTRAINT f_big_topic_category_id_f_big_topic_categ
 ALTER TABLE comment ADD CONSTRAINT comment_author_id_sf_guard_user_id FOREIGN KEY (author_id) REFERENCES sf_guard_user(id);
 ALTER TABLE comment ADD CONSTRAINT comment_article_id_article_id FOREIGN KEY (article_id) REFERENCES article(id);
 ALTER TABLE competition_session ADD CONSTRAINT competition_session_competition_id_competition_id FOREIGN KEY (competition_id) REFERENCES competition(id);
+ALTER TABLE competition_session_disponibility ADD CONSTRAINT csci FOREIGN KEY (session_id) REFERENCES competition_session(id);
+ALTER TABLE competition_session_disponibility ADD CONSTRAINT competition_session_disponibility_user_id_sf_guard_user_id FOREIGN KEY (user_id) REFERENCES sf_guard_user(id);
 ALTER TABLE competition_session_team ADD CONSTRAINT competition_session_team_team_id_team_id FOREIGN KEY (team_id) REFERENCES team(id);
 ALTER TABLE competition_session_team ADD CONSTRAINT ccci FOREIGN KEY (competition_session_id) REFERENCES competition_session(id);
 ALTER TABLE picture ADD CONSTRAINT picture_gallery_id_gallery_id FOREIGN KEY (gallery_id) REFERENCES gallery(id) ON DELETE CASCADE;

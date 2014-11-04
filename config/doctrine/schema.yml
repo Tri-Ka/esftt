@@ -151,6 +151,30 @@ CompetitionSessionTeam:
       foreign: id
       foreignAlias: Sessions
 
+CompetitionSessionDisponibility:
+  columns:
+    user_id:
+      type: integer
+      primary: true
+    session_id:
+      type: integer
+      primary: true
+    is_available:
+      type: boolean
+      default: false
+      notnull: true
+  relations:
+    User:
+      class: sfGuardUser
+      local: user_id
+      foreign: id
+      foreignAlias: CompetitionSessionDisponibilities
+    Session:
+      class: CompetitionSession
+      local: session_id
+      foreign: id
+      foreignAlias: CompetitionSessionDisponibilities
+
 Keyword:
   columns:
     name:

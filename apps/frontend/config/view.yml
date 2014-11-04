@@ -13,22 +13,14 @@ default:
     #robots:       index, follow
 
   stylesheets:
-    - bootstrap/bootstrap.min.css
-    - bootstrap/bootstrap-responsive.min.css
+    - bootstrap.min.css
     - font-awesome/css/font-awesome.min.css
-    - vendor/bracket/jquery.bracket.min.css
-    - main.css
+    - front/s.css
 
   javascripts:
     - jquery-1.11.1.min.js
     - jquery-ui.min.js
-    - bootstrap/bootstrap.min.js
-    - http://connect.facebook.net/fr_FR/all.js#xfbml=1
-    - vendor/jquery.textareaAutoResize.js
-    - vendor/galleryfic/jquery.galleriffic.js
-    - vendor/galleryfic/jquery.history.js
-    - vendor/galleryfic/jquery.opacityrollover.js
-    - vendor/bracket/jquery.bracket.min.js
+    - bootstrap.min.js
     - script.js
 
 

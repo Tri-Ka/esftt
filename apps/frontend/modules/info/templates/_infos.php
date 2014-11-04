@@ -1,4 +1,4 @@
-<div class="col col-1-3">
+<div>
 
     <h2>Adresse</h2>
 

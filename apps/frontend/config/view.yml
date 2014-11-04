@@ -13,7 +13,7 @@ default:
     #robots:       index, follow
 
   stylesheets:
-    - bootstrap.min.css
+    - bootstrap/bootstrap.min.css
     - font-awesome/css/font-awesome.min.css
     - front/s.css
 

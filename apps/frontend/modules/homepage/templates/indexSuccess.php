@@ -1,4 +1,4 @@
-<div class="head col col-3-3">
+<div>
 
 <h1><?php echo __('Les News du CLub'); ?></h1>
 

@@ -1,1 +1,8 @@
+$break-small: 768px;
+$break-medium: 992px;
+$break-large: 1200px;
+
 @import "main";
+@import "desktop";
+@import "tablet";
+@import "mobile";

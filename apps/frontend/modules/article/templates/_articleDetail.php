@@ -42,7 +42,7 @@
 
 		<div>
 
-			<ul id="commentList">
+			<ul>
 
 				<?php foreach ($article->getComments() as $c) : ?>
 
@@ -60,9 +60,9 @@
 
 			<?php if ($sf_user->isAuthenticated()): ?>
 
-				<form action="<?php echo url_for('new_comment'); ?>" id="newCommentForm" class="comment-form">
+				<form action="<?php echo url_for('new_comment'); ?>">
 					<?php echo $commentForm; ?>
-					<input type="submit" class="btn btn-small blue submitComment" value="envoyer">
+					<input type="submit" value="envoyer">
 				</form>
 
 			<?php endif; ?>

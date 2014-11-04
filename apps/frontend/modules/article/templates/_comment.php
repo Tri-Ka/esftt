@@ -1,4 +1,4 @@
-<div class="comment">
+<div>
 
 	<div class="comment-header">
 

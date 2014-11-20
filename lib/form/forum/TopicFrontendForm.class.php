@@ -21,5 +21,7 @@ class TopicFrontendForm extends TopicForm
 		$this->setDefault('author_id', $this->getOption('author_id'));
 		$this->setDefault('big_topic_id', $this->getOption('big_topic_id'));
 
+		$this->widgetSchema->setFormFormatterName('BootstrapForm');
+
   }
 }

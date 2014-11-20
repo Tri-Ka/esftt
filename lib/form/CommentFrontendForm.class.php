@@ -26,5 +26,7 @@ class CommentFrontendForm extends CommentForm
   	$this->setDefault('author_id', $this->getOption('user')->getId());
   	$this->setDefault('article_id', $this->getOption('article_id'));
 
+    $this->widgetSchema->setFormFormatterName('BootstrapForm');
+
   }
 }

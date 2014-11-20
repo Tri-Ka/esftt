@@ -57,6 +57,8 @@ class articleActions extends sfActions
 
 			}
 
+			$this->redirect('article_show', array('id' => $c['article_id']));
+
 		}
 	}
 

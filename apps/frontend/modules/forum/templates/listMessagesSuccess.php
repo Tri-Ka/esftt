@@ -1,23 +1,30 @@
+<section class="col-md-8">
 <h2><?php echo __($topic); ?></h2>
 
-<ul>
-<?php foreach ($Messages as $m): ?>
+	<div class="folded">
 
-	<li>
+		<ul>
+		<?php foreach ($Messages as $m): ?>
 
-		<?php echo $m->getMessage(); ?>
+			<li>
 
-	</li>
+				<?php echo $m->getMessage(); ?>
 
-<?php endforeach; ?>
+			</li>
 
-</ul>
+		<?php endforeach; ?>
 
-<form action="">
+		</ul>
 
-	<?php echo $form; ?>
+		<form class="form" action="">
 
-	<input type="submit" class="btn" value="<?php echo __('valid'); ?>">
+			<?php echo $form; ?>
 
-</form>
+			<input type="submit" class="btn" value="<?php echo __('valid'); ?>">
+
+		</form>
+
+	</div>
+
+</section>
 

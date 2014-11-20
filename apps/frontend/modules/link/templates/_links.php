@@ -1,4 +1,4 @@
-<div>
+<div class="col-md-4 text-left">
   <h2>Liens</h2>
     <ul>
   		<?php foreach($links as $link): ?>

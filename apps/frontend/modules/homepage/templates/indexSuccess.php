@@ -1,25 +1,23 @@
-<div>
+<section class="home-paragraph col-md-8">
+    <h2><?php echo __('Les News du CLub'); ?></h2>
 
-<h1><?php echo __('Les News du CLub'); ?></h1>
+    <div class="articles">
 
-</div>
+        <?php if (0 < $articles->getNbResults()): ?>
 
-<div class="articles">
+            <?php foreach ($articles->getResults() as $article): ?>
 
-    <?php if (0 < $articles->getNbResults()): ?>
+    			<?php include_partial('article', array('article' => $article)); ?>
 
-        <?php foreach ($articles->getResults() as $article): ?>
+    		<?php endforeach; ?>
 
-			<?php include_partial('article', array('article' => $article)); ?>
+    	<?php endif; ?>
 
-		<?php endforeach; ?>
+    	<?php if ($articles->haveToPaginate()): ?>
+            <div class="pagination">
+                <?php renderPagination($articles, url_for('homepage')) ?>
+            </div>
+        <?php endif; ?>
 
-	<?php endif; ?>
-
-	<?php if ($articles->haveToPaginate()): ?>
-        <div class="pagination">
-            <?php renderPagination($articles, url_for('homepage')) ?>
-        </div>
-    <?php endif; ?>
-
-</div>
+    </div>
+</section>

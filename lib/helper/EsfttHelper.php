@@ -55,7 +55,9 @@ function renderPagination($pager, $url, $params = array(), $ajax = null)
     $params = (!empty($params)) ? '&' . http_build_query($params) : '';
 
     if ($pager->haveToPaginate()) {
-        echo '<ul class=" ' . ((null !== $ajax) ? 'paginationAjax' : '' ) . '" data-load="' . ((null !== $ajax) ? $ajax : '' ) . '">';
+
+        echo '<nav>';
+        echo '<ul class="pagination ' . ((null !== $ajax) ? 'paginationAjax' : '' ) . '" data-load="' . ((null !== $ajax) ? $ajax : '' ) . '">';
 
         echo '
           <li>
@@ -73,9 +75,9 @@ function renderPagination($pager, $url, $params = array(), $ajax = null)
             } else {
                 $class = "";
             }
-            
+
             echo '<li><a class="pagination_list '. $class .'" href="' . $url . '?page=' . $page . '' . $params . '" title="' . __('aller à la page') . ' ' . $page . '" >' . $page . '</a></li>';
-            
+
         }
 
         echo '
@@ -88,6 +90,7 @@ function renderPagination($pager, $url, $params = array(), $ajax = null)
         ';
 
         echo '</ul>';
+        echo '</nav>';
     }
 }
 
@@ -269,18 +272,18 @@ function renderAvatar($params)
 /**
  *
  * @param type $params
- * 
+ *
  * count:   number to display;
  * ico:     icon to display
  * allwaysDisplay:  true/false display notif even if count egual zero
  * class:
  *      - default
  *      - idea-messaging
- *      - planning   
+ *      - planning
  * url:     redirect on click
  * plural:  type when count > 1
- * 
- * @return boolean 
+ *
+ * @return boolean
  */
 function displayNotifCount($params)
 {

@@ -11,4 +11,11 @@
 class infoActions extends sfActions
 {
 
+	public function executeShow(sfWebRequest $request)
+	{
+
+		$this->articles = ArticleTable::getInstance()->findByKeyWord('Informations');
+
+	}
+
 }

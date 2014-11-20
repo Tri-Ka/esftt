@@ -21,6 +21,11 @@ gallery_show:
   url: /gallery/:id
   param: { module: gallery, action: show }
 
+# results
+results_show:
+  url: /results
+  param: {module: results, action: show }
+
 # competition
 
 competition_show:
@@ -30,7 +35,7 @@ competition_show:
 # informations
 informations:
   url: /informations
-  param: {module: article, action: showInformations}
+  param: {module: info, action: show}
 
 # forum
 

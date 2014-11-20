@@ -9,15 +9,18 @@
   </head>
   <body>
 
-    <div class="container">
+    <?php include_partial('global/header') ?>
 
-      <?php include_partial('global/header') ?>
+    <section class="content container">
 
       <?php echo $sf_content ?>
 
-      <?php include_partial('global/footer') ?>
+      <?php include_component('homepage', 'signin'); ?>
 
-    </div>
+
+    </section>
+
+    <?php include_partial('global/footer') ?>
 
   </body>
   <?php include_stylesheets() ?>

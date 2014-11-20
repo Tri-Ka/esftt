@@ -17,5 +17,7 @@ class BigTopicFrontendForm extends BigTopicForm
 
 	$this->setDefault('category_id', $this->getOption('category_id'));
 
+	$this->widgetSchema->setFormFormatterName('BootstrapForm');
+
   }
 }

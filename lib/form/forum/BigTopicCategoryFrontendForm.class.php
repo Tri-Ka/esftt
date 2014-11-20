@@ -12,5 +12,8 @@ class BigTopicCategoryFrontendForm extends BigTopicCategoryForm
 {
   public function configure()
   {
+
+  	$this->widgetSchema->setFormFormatterName('BootstrapForm');
+
   }
 }

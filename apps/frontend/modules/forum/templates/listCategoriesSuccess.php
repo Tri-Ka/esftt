@@ -1,24 +1,32 @@
-<h2><?php echo __('Forum'); ?></h2>
+<section class="col-md-8">
 
-<ul>
-	<?php foreach ($categories as $c): ?>
+	<h2><?php echo __('Forum'); ?></h2>
 
-		<li>
+	<div class="folded">
 
-			<a href="<?php echo url_for('show_big_topics', array('cat_id' => $c->getId())); ?>">
+		<ul>
+			<?php foreach ($categories as $c): ?>
 
-				<span class="f-title"><?php echo $c; ?></span>
-				<em class="f-subtitle"><?php echo $c->getSubTitle(); ?></em>
+				<li>
 
-			</a>
+					<a href="<?php echo url_for('show_big_topics', array('cat_id' => $c->getId())); ?>">
 
-		</li>
+						<span class="f-title"><?php echo $c; ?></span>
+						<em class="f-subtitle"><?php echo $c->getSubTitle(); ?></em>
 
-	<?php endforeach; ?>
-</ul>
+					</a>
 
-<?php if($sf_user->getGuardUser()->hasGroup('admin')): ?>
+				</li>
 
-	<?php include_partial('form', array('form' => $form, 'new' => __('new Category'))); ?>
+			<?php endforeach; ?>
+		</ul>
 
-<?php endif; ?>
+		<?php if($sf_user->getGuardUser()->hasGroup('admin')): ?>
+
+			<?php include_partial('form', array('form' => $form, 'new' => __('new Category'))); ?>
+
+		<?php endif; ?>
+
+	</div>
+
+</section>

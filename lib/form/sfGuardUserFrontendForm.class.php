@@ -48,8 +48,8 @@ class sfGuardUserFrontendForm extends BasesfGuardUserForm
         $this->widgetSchema['password']->setLabel('Mot de passe');
         $this->widgetSchema['username']->setLabel('Pseudonyme');
         $this->widgetSchema['password_again']->setLabel('Répeter le mot de passe');
-  
 
+        $this->widgetSchema->setFormFormatterName('BootstrapForm');
 
     }
 

@@ -19,5 +19,8 @@ class TopicMessageFrontendForm extends TopicMessageForm
 
 		$this->setDefault('author_id', $this->getOption('author_id'));
 		$this->setDefault('topic_id', $this->getOption('topic_id'));
+
+		$this->widgetSchema->setFormFormatterName('BootstrapForm');
+
   }
 }

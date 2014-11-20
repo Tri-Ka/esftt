@@ -1,22 +1,30 @@
-<h2><?php echo __($bigTopic); ?></h2>
+<section class="col-md-8">
 
-<ul>
-<?php foreach ($Topics as $t): ?>
+	<h2><?php echo __($bigTopic); ?></h2>
 
-	<li>
+	<div class="folded">
 
-		<a href="<?php echo url_for('show_topic_messages', array('topic_id' => $t->getId())); ?>">
-			<span class="f-title"><?php echo $t; ?></span>
-			<em class="f-subtitle"><?php echo $t->getSubTitle(); ?></em>
-		</a>
+		<ul>
+			<?php foreach ($Topics as $t): ?>
 
-	</li>
+				<li>
 
-<?php endforeach; ?>
-</ul>
+					<a href="<?php echo url_for('show_topic_messages', array('topic_id' => $t->getId())); ?>">
+						<span class="f-title"><?php echo $t; ?></span>
+						<em class="f-subtitle"><?php echo $t->getSubTitle(); ?></em>
+					</a>
 
-<?php if($sf_user->getGuardUser()->hasGroup('admin')): ?>
+				</li>
 
-	<?php include_partial('form', array('form' => $form, 'new' => __('new Topic'))); ?>
+			<?php endforeach; ?>
+		</ul>
 
-<?php endif; ?>
+		<?php if($sf_user->getGuardUser()->hasGroup('admin')): ?>
+
+			<?php include_partial('form', array('form' => $form, 'new' => __('new Topic'))); ?>
+
+		<?php endif; ?>
+
+	</div>
+
+</section>

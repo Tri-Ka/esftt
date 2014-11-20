@@ -169,6 +169,10 @@ var Competition =
 
 $( document ).ready(function()
 {
+	$('.pop-help').popover({
+		'template': '<div class="popover" role="tooltip"><div class="arrow"></div><div class="popover-content"></div></div>',
+		'animation': true
+	});
 	AutoResize.init();
 	GalleryFic.init();
 	Comment.init();

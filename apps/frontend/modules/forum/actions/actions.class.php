@@ -23,6 +23,15 @@ class forumActions extends sfActions
 
         }
 
+        $this->formBigTopic = new BigTopicFrontendForm();
+
+        if ($this->formBigTopic->bindAndValid($request)) {
+
+            $user = $this->formBigTopic->save();
+            $this->redirect('forum');
+
+        }
+
 	}
 
 	public function executeListBigTopics(sfWebRequest $request){

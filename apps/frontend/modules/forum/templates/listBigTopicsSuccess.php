@@ -1,7 +1,7 @@
 <section class="col-md-8">
 	<h2><?php echo __($category); ?></h2>
 	<div class="folded">
-		<ul>
+		<ul class="forum-list">
 			<?php foreach ($bigTopics as $bt): ?>
 
 				<?php if (null == $bt->getTeamId()): ?>

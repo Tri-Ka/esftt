@@ -34,14 +34,9 @@ Article:
     title:
       type: string(255)
       notnull: true
-    short_description:
-      type: string(255)
-      notnull: true
     content:
       type: clob
       notnull: true
-    picture:
-      type: string(255)
     is_published:
       type: boolean
       notnull: false
@@ -124,6 +119,8 @@ CompetitionSession:
     competition_id:
       type: integer
       notnull: true
+    name:
+      type: string
   relations:
     Competition:
       class: Competition

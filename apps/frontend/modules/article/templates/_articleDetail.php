@@ -49,6 +49,8 @@
 
 			<?php if ($sf_user->isAuthenticated()): ?>
 
+
+
 				<form action="<?php echo url_for('new_comment'); ?>">
 					<?php echo $commentForm; ?>
 					<input type="submit" class="btn btn-primary" value="envoyer">

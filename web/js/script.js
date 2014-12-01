@@ -177,4 +177,5 @@ $( document ).ready(function()
 	GalleryFic.init();
 	Comment.init();
 	Competition.init();
+	$('#myModal').modal('show');
 });

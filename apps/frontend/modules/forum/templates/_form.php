@@ -1,22 +1,33 @@
-<a href="#myModal" role="button" class="btn" data-toggle="modal"><?php echo $new; ?></a>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#<?php echo $id; ?>"><?php echo $new; ?></button>
 
-<!-- Modal -->
-<form action="" method="post">
-	<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div id="<?php echo $id; ?>" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
 
-		  <div class="modal-header">
-		    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-		    <h3 id="myModalLabel"><?php echo $new; ?></h3>
-		  </div>
-		  <div class="modal-body">
+			<form action="" type="post">
 
-			<?php echo $form; ?>
+				<div class="modal-header">
+
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+
+					<h3 id="myModalLabel"><?php echo $new; ?></h3>
+
+				</div>
+
+				<div class="modal-body">
+
+					<?php echo $form; ?>
+
+				</div>
+
+				<div class="modal-footer">
+
+					<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+					<input class="btn btn-primary" type="submit" value="valider">
+
+				</div>
 
 			</form>
-		  </div>
-		  <div class="modal-footer">
-		    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-		    <input class="btn btn-primary" type="submit" value="valider">
-		  </div>
+		</div>
 	</div>
-</form>
+</div>

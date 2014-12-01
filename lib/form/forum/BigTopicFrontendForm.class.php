@@ -13,10 +13,6 @@ class BigTopicFrontendForm extends BigTopicForm
   public function configure()
   {
 
-	$this->widgetSchema['category_id'] = new sfWidgetFormInputHidden();
-
-	$this->setDefault('category_id', $this->getOption('category_id'));
-
 	$this->widgetSchema->setFormFormatterName('BootstrapForm');
 
   }

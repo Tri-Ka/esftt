@@ -392,39 +392,41 @@ div.folded {
 .article li.comment .comment-left {
   float: left;
   margin-right: 15px;
+  width: 7%;
 }
-/* line 283, ../../../compass/sass/front/_main.scss */
+/* line 284, ../../../compass/sass/front/_main.scss */
 .article li.comment .comment-left .comment-avatar {
   border-radius: 50%;
   width: 50px;
   float: left;
   box-shadow: 0px 1px 2px #00537E;
 }
-/* line 294, ../../../compass/sass/front/_main.scss */
+/* line 295, ../../../compass/sass/front/_main.scss */
 .article li.comment .comment-right {
   float: left;
+  width: 90%;
 }
-/* line 297, ../../../compass/sass/front/_main.scss */
+/* line 299, ../../../compass/sass/front/_main.scss */
 .article li.comment .comment-right .comment-header {
   margin-bottom: 10px;
 }
-/* line 299, ../../../compass/sass/front/_main.scss */
+/* line 301, ../../../compass/sass/front/_main.scss */
 .article li.comment .comment-right .comment-header .comment-author {
   font-weight: bold;
 }
-/* line 302, ../../../compass/sass/front/_main.scss */
+/* line 304, ../../../compass/sass/front/_main.scss */
 .article li.comment .comment-right .comment-header .comment-date {
   font-size: 10px;
   font-style: italic;
 }
 
-/* line 316, ../../../compass/sass/front/_main.scss */
+/* line 318, ../../../compass/sass/front/_main.scss */
 div.pagination {
   width: 100%;
   text-align: center;
 }
 
-/* line 321, ../../../compass/sass/front/_main.scss */
+/* line 323, ../../../compass/sass/front/_main.scss */
 .popover {
   text-align: center;
   background: #000;
@@ -432,23 +434,23 @@ div.pagination {
   color: #fff;
   font-weight: 100;
 }
-/* line 330, ../../../compass/sass/front/_main.scss */
+/* line 332, ../../../compass/sass/front/_main.scss */
 .popover .popover-content {
   padding: 5px 10px;
 }
 
-/* line 336, ../../../compass/sass/front/_main.scss */
+/* line 338, ../../../compass/sass/front/_main.scss */
 .popover.top > .arrow:after {
   border-top-color: #000;
   box-shadow: none;
 }
 
-/* line 342, ../../../compass/sass/front/_main.scss */
+/* line 344, ../../../compass/sass/front/_main.scss */
 ul li ul {
   padding-left: 20px;
 }
 
-/* line 346, ../../../compass/sass/front/_main.scss */
+/* line 348, ../../../compass/sass/front/_main.scss */
 .info-list {
   padding: 20px;
   background: #FCFCFC;
@@ -457,31 +459,121 @@ ul li ul {
   padding-top: 50px;
   overflow: auto;
 }
-/* line 356, ../../../compass/sass/front/_main.scss */
+/* line 358, ../../../compass/sass/front/_main.scss */
 .info-list li .cotisation {
   width: 400px;
   float: left;
 }
-/* line 361, ../../../compass/sass/front/_main.scss */
+/* line 363, ../../../compass/sass/front/_main.scss */
 .info-list .results {
   float: right;
 }
-/* line 366, ../../../compass/sass/front/_main.scss */
+/* line 368, ../../../compass/sass/front/_main.scss */
 .info-list ul.list-teams li {
   padding-left: 20px;
 }
 
-/* line 374, ../../../compass/sass/front/_main.scss */
+/* line 376, ../../../compass/sass/front/_main.scss */
 ul.tarif-list li .cat {
   width: 200px;
   display: block;
   float: left;
 }
 
-/* line 383, ../../../compass/sass/front/_main.scss */
+/* line 385, ../../../compass/sass/front/_main.scss */
 .info-paragraph .gmap {
   float: left;
   padding: 10px;
+}
+
+/* line 392, ../../../compass/sass/front/_main.scss */
+div.folded.forum {
+  padding-top: 50px;
+}
+/* line 394, ../../../compass/sass/front/_main.scss */
+div.folded.forum.bt {
+  padding-top: 10px;
+}
+/* line 402, ../../../compass/sass/front/_main.scss */
+div.folded.forum .forum-list .cat {
+  margin-bottom: 50px;
+}
+/* line 406, ../../../compass/sass/front/_main.scss */
+div.folded.forum .forum-list li {
+  margin-bottom: 10px;
+}
+/* line 410, ../../../compass/sass/front/_main.scss */
+div.folded.forum .forum-list li a {
+  padding: 5px;
+  border: 1px solid #C7C7C7;
+  background: #F0F8FF;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  transition: background 0.2s;
+  overflow: auto;
+  position: relative;
+}
+/* line 422, ../../../compass/sass/front/_main.scss */
+div.folded.forum .forum-list li a .t {
+  float: left;
+}
+/* line 425, ../../../compass/sass/front/_main.scss */
+div.folded.forum .forum-list li a .t .f-title {
+  color: #000;
+}
+/* line 429, ../../../compass/sass/front/_main.scss */
+div.folded.forum .forum-list li a .t .f-subtitle {
+  font-size: 11px;
+}
+/* line 435, ../../../compass/sass/front/_main.scss */
+div.folded.forum .forum-list li a .t-by {
+  font-size: 11px;
+  font-style: italic;
+  color: #767676;
+}
+/* line 441, ../../../compass/sass/front/_main.scss */
+div.folded.forum .forum-list li a .nb-msgs {
+  font-size: 25px;
+  color: #4A4A4A;
+  float: right;
+  height: 35px;
+  line-height: 20px;
+  display: block;
+  width: 50px;
+  text-align: center;
+}
+/* line 452, ../../../compass/sass/front/_main.scss */
+div.folded.forum .forum-list li a .nb-msgs .nb {
+  font-size: 15px;
+  color: #A60000;
+}
+/* line 459, ../../../compass/sass/front/_main.scss */
+div.folded.forum .forum-list li a .type {
+  background: #FFF;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  font-size: 15px;
+  box-shadow: 0px 0px 1px #ADADAD;
+  float: left;
+  margin-right: 15px;
+  line-height: 35px;
+  border-radius: 50%;
+}
+/* line 472, ../../../compass/sass/front/_main.scss */
+div.folded.forum .forum-list li a .nb_messages {
+  float: right;
+  padding: 15px;
+  border-radius: 50%;
+  background: #FFF;
+  font-size: 15px;
+}
+/* line 482, ../../../compass/sass/front/_main.scss */
+div.folded.forum .forum-list li a:hover {
+  background: #D2E9FD;
+  transition: background 0.2s;
+  text-decoration: none;
 }
 
 @media screen and (max-width: 768px) {

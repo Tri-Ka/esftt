@@ -15,12 +15,18 @@ default:
   stylesheets:
     - bootstrap/bootstrap.min.css
     - font-awesome/css/font-awesome.min.css
+    - animate.css
+    - hover-min.css
+    - fullcalendar/fullcalendar.min.css
     - front/s.css
 
   javascripts:
     - jquery-1.11.1.min.js
     - jquery-ui.min.js
     - bootstrap.min.js
+    - moment.js
+    - vendor/fullcalendar/fullcalendar.min.js
+    - vendor/fullcalendar/lang-all.js
     - script.js
 
 

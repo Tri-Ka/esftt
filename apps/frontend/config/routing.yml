@@ -6,10 +6,25 @@ article_show:
   url: /article/:id
   param: { module: article, action: show }
 
+#calendar
+calendar_events:
+  url: /calendar/events
+  param: { module: calendar, action: getEvents }
+
+calendar_show:
+  url: /calendar
+  param: { module: calendar, action: show }
+
 # comment
 new_comment:
   url: /comment/new/
   param: { module: article, action: newComment}
+
+#compo
+compo:
+  url: /compo
+  param: { module: compo, action: show}
+
 
 # gallery
 
@@ -36,6 +51,11 @@ competition_show:
 informations:
   url: /informations
   param: {module: info, action: show}
+
+#news
+news:
+  url: /news
+  param: {module: article, action: list}
 
 # forum
 

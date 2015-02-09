@@ -13,10 +13,13 @@
 
     <section class="content container">
 
-      <?php echo $sf_content ?>
+      <div class="animated">
+        <?php echo $sf_content ?>
+      </div>
 
-      <?php include_component('homepage', 'signin'); ?>
-
+      <div class="animated">
+        <?php include_component('homepage', 'signin'); ?>
+      </div>
 
     </section>
 

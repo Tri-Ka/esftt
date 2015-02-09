@@ -58,6 +58,18 @@ all:
           Equipes:
             url: team
             image: users.png
+          Competition:
+            url: competition
+            image: users.png
+          Session:
+            url: competition_session
+            image: users.png
+          SessionTeam:
+            url: competition_session_team
+            image: users.png
+          Disponibility:
+            url: competition_session_disponibility
+            image: users.png
       CMS:
         items:
           Articles:

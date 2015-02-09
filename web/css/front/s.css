@@ -576,6 +576,76 @@ div.folded.forum .forum-list li a:hover {
   text-decoration: none;
 }
 
+/* line 493, ../../../compass/sass/front/_main.scss */
+[draggable] {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* line 502, ../../../compass/sass/front/_main.scss */
+.compo .team {
+  width: 250px;
+  min-height: 100px;
+  background: #D5D5D5;
+  float: left;
+  margin: 5px;
+}
+/* line 512, ../../../compass/sass/front/_main.scss */
+.compo .dispo {
+  float: left;
+  width: 150px;
+  background: #8CFF6C;
+  padding: 10px;
+}
+/* line 519, ../../../compass/sass/front/_main.scss */
+.compo .no-dispo {
+  float: left;
+  width: 150px;
+  background: #7E7E7E;
+  padding: 10px;
+}
+/* line 526, ../../../compass/sass/front/_main.scss */
+.compo .member {
+  margin: 4px;
+  width: 75px;
+  border: 1px solid #000;
+  border-radius: 2px;
+  cursor: move;
+  text-align: center;
+  padding: 2px;
+  box-shadow: 1px 1px 12px #555;
+  background-color: white;
+  list-style-type: none;
+}
+/* line 540, ../../../compass/sass/front/_main.scss */
+.compo .zone-drop-hover {
+  opacity: 0.5;
+}
+
+/* line 546, ../../../compass/sass/front/_main.scss */
+.elem-homepage {
+  float: left;
+  margin-right: 25px;
+  padding: 10px;
+  background: #E9F0F5;
+  width: 31%;
+  transition: width 0.3s;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+/* line 558, ../../../compass/sass/front/_main.scss */
+.elem-homepage.last {
+  margin-right: 0;
+}
+/* line 563, ../../../compass/sass/front/_main.scss */
+.elem-homepage img {
+  width: 100px;
+  height: 100px;
+}
+
 @media screen and (max-width: 768px) {
   /* line 3, ../../../compass/sass/front/_mobile.scss */
   .hidden-phone {

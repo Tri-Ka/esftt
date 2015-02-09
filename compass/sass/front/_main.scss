@@ -489,3 +489,79 @@ div.folded.forum{
 	}
 
 }
+
+[draggable] {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.compo{
+
+	.team{
+
+		width: 250px;
+		min-height: 100px;
+		background: #D5D5D5;
+		float: left;
+		margin: 5px;
+
+	}
+
+	.dispo{
+		float: left;
+		width: 150px;
+		background: #8CFF6C;
+		padding: 10px;
+	}
+
+	.no-dispo{
+		float: left;
+		width: 150px;
+		background: #7E7E7E;
+		padding: 10px;
+	}
+
+	.member{
+		margin:4px;
+	    width:75px;
+	    border: 1px solid #000;
+	    border-radius:2px;
+	    cursor: move;
+	    text-align:center;
+	    padding:2px;
+	    box-shadow: 1px 1px 12px #555;
+	    background-color:white;
+	    list-style-type:none;
+
+	}
+
+	.zone-drop-hover {
+		opacity: 0.5;
+	}
+
+}
+
+.elem-homepage {
+
+	float: left;
+	margin-right: 25px;
+	padding: 10px;
+	background: #E9F0F5;
+	width: 31%;
+	transition: width 0.3s;
+	text-align: center;
+	margin-bottom: 10px;
+	margin-top: 10px;
+
+	&.last {
+		margin-right: 0;
+	}
+
+
+	img{
+		width: 100px;
+		height: 100px;
+	}
+}

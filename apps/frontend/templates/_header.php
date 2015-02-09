@@ -11,6 +11,7 @@
         <div class="navbar-collapse collapse" id="navbar-main">
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#">Photos</a></li>
+                <li><a href="<?php echo url_for('news'); ?>">News</a></li>
                 <li><a href="<?php echo url_for('informations'); ?>">Informations</a></li>
                 <li><a href="<?php echo url_for('results_show'); ?>">Résultats</a></li>
                 <li><a href="<?php echo url_for('forum'); ?>">Forum</a></li>
@@ -32,7 +33,7 @@
                     <li data-target="#carousel" data-slide-to="2"></li>
                 </ol>
                 <!-- Carousel items -->
-                <div class="carousel-inner">
+                <div class="carousel-inner animated fadeIn">
                     <div class="item active">
                         <div>
                             <img src="/images/pongiste.png">
@@ -63,7 +64,7 @@
                     <h1>ESFTT</h1>
                     <p>La Frette Tennis de Table</p>
                 </div> -->
-                <div class="logo">
+                <div class="logo animated fadeIn">
                     <img src="/images/logo-new2.png">
                 </div>
             </div>

@@ -15,13 +15,7 @@ class homepageActions extends sfActions
 	{
 		//$this->articles = ArticleTable::getInstance()->findAll();
 
-		$this->articles = new sfDoctrinePager('Article', sfConfig::get('app_pagination_max_article_per_page'));
-             
-        $articleQuery = ArticleTable::getInstance()->getArticleQuery();
-        $this->articles->setQuery($articleQuery);
-        
-        $this->articles->setPage($request->getParameter('page', 1));
-        $this->articles->init();
+
 	}
 
 }

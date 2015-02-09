@@ -37,135 +37,88 @@ var Comment =
 	}
 };
 
-var GalleryFic =
+
+var dragAndDrop =
 {
-	init: function()
-	{
+	init: function(){
 
-		if(0 < $('#thumbs').length){
+		$('.member').draggable({
+			revert: true
+		});
 
-			$('#thumbs').galleriffic({
-	        delay:                     2500,
-			numThumbs:                 15,
-			preloadAhead:              10,
-			enableTopPager:            false,
-			enableBottomPager:         true,
-			maxPagesToShow:            7,
-			imageContainerSel:         '#slideshow',
-			controlsContainerSel:      '#controls',
-			captionContainerSel:       '#caption',
-			loadingContainerSel:       '#loading',
-			renderSSControls:          true,
-			renderNavControls:         true,
-			playLinkText:              'Play Slideshow',
-			pauseLinkText:             'Pause Slideshow',
-			prevLinkText:              '&lsaquo; Previous Photo',
-			nextLinkText:              'Next Photo &rsaquo;',
-			nextPageLinkText:          'Next &rsaquo;',
-			prevPageLinkText:          '&lsaquo; Prev',
-			enableHistory:             false,
-			autoStart:                 false,
-			syncTransitions:           true,
-			defaultTransitionDuration: 700,
-			onSlideChange:             function(prevIndex, nextIndex) {
-				// 'this' refers to the gallery, which is an extension of $('#thumbs')
-				this.find('ul.thumbs').children()
-					.eq(prevIndex).fadeTo('fast', 1.0).end()
-					.eq(nextIndex).fadeTo('fast', 1.0);
+		$('.team, .dispo, .no-dispo').droppable({
+			accept:".member",
+			hoverClass:"zone-drop-hover",
+			drop:function(event, ui){
+
+				var team = $(this).attr( 'id' );
+				var member = ui.draggable.attr( 'id' );
+
+				ui.draggable.draggable( 'option', 'revert', false );
+
+ 			}
+ 		});
+
+	}
+}
+
+var hoverAnimate =
+{
+
+	init: function(){
+
+		$( ".elem-homepage").mouseenter(function() {
+
+			var animation = 'bounce';
+
+			elem = $(this).find('h3');
+
+		    $(elem).removeClass(animation + ' animated').addClass(animation + ' animated').on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+      			$(this).removeClass(animation + ' animated');
+    		});
+		});
+	}
+};
+
+var calendar =
+{
+	init: function(){
+
+
+		$('#calendar').fullCalendar({
+
+			header: {
+
+				left:   'today, prev, next',
+	    		center: 'title',
+	    		right:  'agendaDay, agendaWeek, month',
+
 			},
-			onPageTransitionOut:       function(callback) {
-				this.fadeTo('fast', 0.0, callback);
-			},
-			onPageTransitionIn:        function() {
-				this.fadeTo('fast', 1.0);
-			}
-    	});
 
-		}
+			lang: 'fr',
+			events: {
+		        url: $('#calendar').attr('data-urlEvent'),
+		        type: 'POST',
+		        error: function() {
+		            alert('there was an error while fetching events!');
+		        },
+		        color: 'yellow',   // a non-ajax option
+		        textColor: 'black' // a non-ajax option
+		    },
 
+		 	//events: $(this).attr('data-urlEvent'),
+
+			dayClick: function(date, jsEvent, view) {
+
+		        alert('Clicked on: ' + date.format());
+
+    		}
+
+    	})
 
 	}
 };
 
-var Competition =
-{
-	init: function()
-	{
-
-		var autoCompleteData = {
-		    teams : [
-		      ['Player 1', 'Player 2'],
-		      ['Player 3', 'Player 4'],
-		      ['Player 5', 'Player 6'],
-		      ['Player 7', 'Player 8'],
-
-		    ],
-		    results : [
-		    	[[1,0], [2,7], [2,7], [2,7]],
-		    	[[3,0], [2,0]]
-		    ]
-
-
-
-		  }
-
-		/* Data for autocomplete */
-		var acData = ["kr:MC", "ca:HuK", "se:Naniwa", "pe:Fenix",
-		              "us:IdrA", "tw:Sen", "fi:Naama"]
-
-		/* If you call doneCb([value], true), the next edit will be automatically
-		   activated. This works only in the first round. */
-		function acEditFn(container, data, doneCb) {
-
-			var input = $('<input type="text">');
-
-			input.val(data);
-
-			console.log(acData);
-
-			input.autocomplete({
-			  	source: acData
-			});
-
-			input.blur(function() {
-			  	doneCb(input.val());
-			});
-
-			input.keyup(function(e) {
-			  	if ((e.keyCode || e.which) === 13){
-			  		input.blur();
-			  	}
-			});
-
-			container.html(input);
-			input.focus();
-		};
-
-		function acRenderFn(container, data, score) {
-
-
-			    container.append(data);
-
-
-		};
-
-		$(function() {
-
-		    $('div#autoComplete .demo').bracket({
-
-			    init: autoCompleteData,
-			    save: function(e){
-			    	console.log(e);
-			    }, /* without save() labels are disabled */
-			    decorator: {
-			      	edit: acEditFn,
-			        render: acRenderFn
-			    }
-
-			});
-		});
-	}
-}
 
 $( document ).ready(function()
 {
@@ -174,8 +127,9 @@ $( document ).ready(function()
 		'animation': true
 	});
 	AutoResize.init();
-	GalleryFic.init();
 	Comment.init();
-	Competition.init();
 	$('#myModal').modal('show');
+	dragAndDrop.init();
+	hoverAnimate.init();
+	calendar.init();
 });

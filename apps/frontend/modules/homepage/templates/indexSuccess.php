@@ -1,23 +1,65 @@
 <section class="home-paragraph col-md-8">
-    <h2><?php echo __('Les News du CLub'); ?></h2>
 
-    <div class="articles">
+<h2>Accueil</h2>
 
-        <?php if (0 < $articles->getNbResults()): ?>
+    <a href="<?php echo url_for('news'); ?>">
+        <div class="elem-homepage">
 
-            <?php foreach ($articles->getResults() as $article): ?>
+            <img src="/images/icon-news.png">
 
-    			<?php include_partial('article', array('article' => $article)); ?>
+            <h3>News</h3>
 
-    		<?php endforeach; ?>
+        </div>
+    </a>
 
-    	<?php endif; ?>
+    <a href="<?php echo url_for('results_show'); ?>">
+        <div class="elem-homepage">
 
-    	<?php if ($articles->haveToPaginate()): ?>
-            <div class="pagination">
-                <?php renderPagination($articles, url_for('homepage')) ?>
-            </div>
-        <?php endif; ?>
+            <img src="/images/icon-rank.png">
 
-    </div>
+            <h3>Résultats</h3>
+
+        </div>
+    </a>
+
+    <a href="<?php echo url_for('forum'); ?>">
+        <div class="elem-homepage last">
+
+            <img src="/images/icon-forum.png">
+
+            <h3>Forum</h3>
+
+        </div>
+    </a>
+
+    <a href="<?php echo url_for('gallery_list'); ?>">
+        <div class="elem-homepage">
+
+            <img src="/images/icon-camera.png">
+
+            <h3>Photos</h3>
+
+        </div>
+    </a>
+
+    <a href="<?php echo url_for('informations'); ?>">
+        <div class="elem-homepage">
+
+            <img src="/images/icon-info.png">
+
+            <h3>Informations</h3>
+
+        </div>
+    </a>
+
+    <a href="#">
+        <div class="elem-homepage last">
+
+            <img src="/images/icon-contact.png">
+
+            <h3>Contact</h3>
+
+        </div>
+    </a>
+
 </section>

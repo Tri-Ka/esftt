@@ -1,3 +1,39 @@
+competition:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Competition
+    module:               competition
+    prefix_path:          /competition
+    column:               id
+    with_wildcard_routes: true
+
+competition_session_disponibility:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                CompetitionSessionDisponibility
+    module:               competition_session_disponibilty
+    prefix_path:          /competition_session_disponibilty
+    column:               Array
+    with_wildcard_routes: true
+
+competition_session_team:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                CompetitionSessionTeam
+    module:               competition_session_team
+    prefix_path:          /competition_session_team
+    column:               id
+    with_wildcard_routes: true
+
+competition_session:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                CompetitionSession
+    module:               competition_session
+    prefix_path:          /competition_session
+    column:               id
+    with_wildcard_routes: true
+
 topic_message:
   class: sfDoctrineRouteCollection
   options:
@@ -70,39 +106,12 @@ user_team:
     column:               id
     with_wildcard_routes: true
 
-competition_session_team:
-  class: sfDoctrineRouteCollection
-  options:
-    model:                CompetitionSessionTeam
-    module:               sessionTeam
-    prefix_path:          /sessionTeam
-    column:               id
-    with_wildcard_routes: true
-
 team:
   class: sfDoctrineRouteCollection
   options:
     model:                Team
     module:               team
     prefix_path:          /team
-    column:               id
-    with_wildcard_routes: true
-
-competition_session:
-  class: sfDoctrineRouteCollection
-  options:
-    model:                CompetitionSession
-    module:               session
-    prefix_path:          /session
-    column:               id
-    with_wildcard_routes: true
-
-competition:
-  class: sfDoctrineRouteCollection
-  options:
-    model:                Competition
-    module:               competition
-    prefix_path:          /competition
     column:               id
     with_wildcard_routes: true
 

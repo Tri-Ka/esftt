@@ -13,14 +13,12 @@ abstract class BaseTeamFormFilter extends BaseFormFilterDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'name'       => new sfWidgetFormFilterInput(array('with_empty' => false)),
-      'type'       => new sfWidgetFormChoice(array('choices' => array('' => '', 'PH - Championnat de Paris' => 'PH - Championnat de Paris', 'PR - Championnat départemental' => 'PR - Championnat départemental', 'D2 - Championnat départemental' => 'D2 - Championnat départemental', 'D2 - Championnat de Paris' => 'D2 - Championnat de Paris', 'D3 - Championnat départemental' => 'D3 - Championnat départemental'))),
+      'name'       => new sfWidgetFormFilterInput(),
       'users_list' => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'sfGuardUser')),
     ));
 
     $this->setValidators(array(
       'name'       => new sfValidatorPass(array('required' => false)),
-      'type'       => new sfValidatorChoice(array('required' => false, 'choices' => array('PH - Championnat de Paris' => 'PH - Championnat de Paris', 'PR - Championnat départemental' => 'PR - Championnat départemental', 'D2 - Championnat départemental' => 'D2 - Championnat départemental', 'D2 - Championnat de Paris' => 'D2 - Championnat de Paris', 'D3 - Championnat départemental' => 'D3 - Championnat départemental'))),
       'users_list' => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'sfGuardUser', 'required' => false)),
     ));
 
@@ -61,7 +59,6 @@ abstract class BaseTeamFormFilter extends BaseFormFilterDoctrine
     return array(
       'id'         => 'Number',
       'name'       => 'Text',
-      'type'       => 'Enum',
       'users_list' => 'ManyKey',
     );
   }

@@ -17,7 +17,6 @@ default:
     - font-awesome/css/font-awesome.min.css
     - animate.css
     - hover-min.css
-    - fullcalendar/fullcalendar.min.css
     - front/s.css
 
   javascripts:

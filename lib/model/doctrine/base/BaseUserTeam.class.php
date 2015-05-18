@@ -7,17 +7,17 @@
  * 
  * @property integer $user_id
  * @property integer $team_id
- * @property boolean $is_captain
+ * @property sfGuardUser $User
  * @property Team $Team
  * 
- * @method integer  getUserId()     Returns the current record's "user_id" value
- * @method integer  getTeamId()     Returns the current record's "team_id" value
- * @method boolean  getIsCaptain()  Returns the current record's "is_captain" value
- * @method Team     getTeam()       Returns the current record's "Team" value
- * @method UserTeam setUserId()     Sets the current record's "user_id" value
- * @method UserTeam setTeamId()     Sets the current record's "team_id" value
- * @method UserTeam setIsCaptain()  Sets the current record's "is_captain" value
- * @method UserTeam setTeam()       Sets the current record's "Team" value
+ * @method integer     getUserId()  Returns the current record's "user_id" value
+ * @method integer     getTeamId()  Returns the current record's "team_id" value
+ * @method sfGuardUser getUser()    Returns the current record's "User" value
+ * @method Team        getTeam()    Returns the current record's "Team" value
+ * @method UserTeam    setUserId()  Sets the current record's "user_id" value
+ * @method UserTeam    setTeamId()  Sets the current record's "team_id" value
+ * @method UserTeam    setUser()    Sets the current record's "User" value
+ * @method UserTeam    setTeam()    Sets the current record's "Team" value
  * 
  * @package    esftt
  * @subpackage model
@@ -35,17 +35,17 @@ abstract class BaseUserTeam extends sfDoctrineRecord
         $this->hasColumn('team_id', 'integer', null, array(
              'type' => 'integer',
              ));
-        $this->hasColumn('is_captain', 'boolean', null, array(
-             'type' => 'boolean',
-             ));
     }
 
     public function setUp()
     {
         parent::setUp();
+        $this->hasOne('sfGuardUser as User', array(
+             'local' => 'user_id',
+             'foreign' => 'id'));
+
         $this->hasOne('Team', array(
              'local' => 'team_id',
-             'foreign' => 'id',
-             'onDelete' => 'CASCADE'));
+             'foreign' => 'id'));
     }
 }

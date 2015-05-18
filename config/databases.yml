@@ -1,10 +1,19 @@
 # You can find more information about this file on the symfony website:
 # http://www.symfony-project.org/reference/1_4/en/07-Databases
 
-all:
+
+prod:
   doctrine:
     class: sfDoctrineDatabase
     param:
-      dsn:      mysql:host=localhost;dbname=sf_esftt
+      dsn:      mysql:host=sql.free.fr;dbname=datcharrye
+      username: datcharrye
+      password: spx728sn1per
+
+dev:
+  doctrine:
+    class: sfDoctrineDatabase
+    param:
+      dsn:      mysql:host=localhost;dbname=esftt
       username: root
       password: root

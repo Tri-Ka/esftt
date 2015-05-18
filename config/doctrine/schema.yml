@@ -1,31 +1,3 @@
-Info:
-  columns:
-    company:
-      type: string(255)
-      notnull: true
-    address:
-      type: string(255)
-      notnull: true
-    city:
-      type: string(255)
-    zipcode:
-      type: string(255)
-    phone:
-      type: string(255)
-    fullname:
-      type: string(255)
-      notnull: true
-    email:
-      type: string(255)
-
-Link:
-  columns:
-    title:
-      type: string(255)
-      notnull: true
-    url:
-      type: string(255)
-
 Article:
   tableName: article
   actAs:
@@ -34,6 +6,8 @@ Article:
     title:
       type: string(255)
       notnull: true
+    sub_title:
+      type: string(255)
     content:
       type: clob
       notnull: true
@@ -44,319 +18,49 @@ Article:
     published_at:
       type: timestamp
       notnull: true
-    author_id:
-      type: integer
-    display_to_homepage:
-      type: boolean
-      default: true
-  relations:
-    Keywords:
-      class: Keyword
-      refClass: ArticleKeyword
-      local: article_id
-      foreign: keyword_id
-      foreignAlias: Articles
-    Author:
-      class: sfGuardUser
-      local: author_id
-      foreign: id
-      foreignAlias: Articles
-
-ArticleKeyword:
-  columns:
-    article_id:
-      type: integer
-      primary: true
-    keyword_id:
-      type: integer
-      primary: true
-  relations:
-    Article:
-      foreignAlias: ArticleKeywords
-      onDelete: CASCADE
-    Keyword:
-      foreignAlias: ArticleKeywords
-      onDelete: CASCADE
-
-Comment:
-  actAs:
-    Timestampable: ~
-  columns:
-    article_id:
-      type: integer
-      notnull: true
-    parent_id:
-      type: integer
-    author_id:
-      type: integer
-      notnull: true
-    content:
-      type: string(1000)
-      notnull: true
-  relations:
-    Article:
-      class: Article
-      local: article_id
-      foreign: id
-      foreignAlias: Comments
-    Author:
-      class: sfGuardUser
-      local: author_id
-      foreign: id
-      foreignAlias: ArticleComments
-
-Competition:
-  columns:
-    name:
+    illustration:
       type: string(255)
-      notnull: true
-
-CompetitionSession:
-  columns:
-    date:
-      type: date
-      notnull: true
-    competition_id:
-      type: integer
-      notnull: true
-    name:
-      type: string
-  relations:
-    Competition:
-      class: Competition
-      local: competition_id
-      foreign: id
-      foreignAlias: Sessions
-
-CompetitionSessionTeam:
-  columns:
-    team_id:
-      type: integer
-      notnull: true
-    competition_session_id:
-      type: integer
-      notnull: true
-  relations:
-    Team:
-      class: Team
-      local: team_id
-      foreign: id
-      foreignAlias: Sessions
-    Session:
-      class: CompetitionSession
-      local: competition_session_id
-      foreign: id
-      foreignAlias: Sessions
-
-CompetitionSessionDisponibility:
-  columns:
-    user_id:
-      type: integer
-      primary: true
-    session_id:
-      type: integer
-      primary: true
-    is_available:
-      type: boolean
-      default: false
-      notnull: true
-  relations:
-    User:
-      class: sfGuardUser
-      local: user_id
-      foreign: id
-      foreignAlias: CompetitionSessionDisponibilities
-    Session:
-      class: CompetitionSession
-      local: session_id
-      foreign: id
-      foreignAlias: CompetitionSessionDisponibilities
-
-Keyword:
-  columns:
-    name:
-      type: string(255)
-      notnull: true
-    reference:
-      type: string(255
-
-Gallery:
-  columns:
-    name:
-      type: string(255)
-      notnull: true
-    description:
-      type: string
-      notnull: true
-
-Picture:
-  columns:
-    name:
-      type: string
-      notnull: true
-    description:
-      type: string
-    gallery_id:
-      type: integer
-      notnull: true
-    is_cover_gallery:
-      type: boolean
-      default: false
-  relations:
-    Gallery:
-      class: Gallery
-      local: gallery_id
-      foreign: id
-      foreignAlias: Pictures
-      onDelete: CASCADE
-
-Team:
-  columns:
-    name:
-      type: string(255)
-      notnull: true
-    type:
-      type: enum
-      values:
-        - PH - Championnat de Paris
-        - PR - Championnat départemental
-        - D2 - Championnat départemental
-        - D2 - Championnat de Paris
-        - D3 - Championnat départemental
-  relations:
-    Users:
-      class: sfGuardUser
-      refClass: UserTeam
-      local: team_id
-      foreign: user_id
-      foreignAlias: Teams
-
-UserTeam:
-  columns:
-    user_id:
-      type: integer
-    # user_name:
-    #   type: string(255)
-    team_id:
-      type: integer
-    is_captain:
-      type: boolean
-  relations:
-    Team:
-      foreignAlias: TeamUsers
-      onDelete: CASCADE
-    User:
-      foreignAlias: TeamUsers
-      onDelete: CASCADE
-
-BigTopicCategory:
-  tableName: f_big_topic_category
-  columns:
-    title:
-      type: string(255)
-      notnull: false
-    sub_title:
-      type: string(1000)
-      notnull: false
-
-BigTopic:
-  tableName: f_big_topic
-  columns:
-    title:
-      type: string(255)
-      notnull: true
-    subtitle:
-      type: string(1000)
-      notnull: true
-    team_id:
-      type: integer
-    category_id:
-      type: integer
-      notnull: true
-  relations:
-    Team:
-      class: Team
-      local: team_id
-      foreign: id
-      foreignAlias: BigTopics
-      onDelete: CASCADE
-    Category:
-      class: BigTopicCategory
-      local: category_id
-      foreign: id
-      foreignAlias: BigTopics
-      onDelete: CASCADE
-
-Topic:
-  tableName: f_topic
-  actAs:
-    Timestampable: ~
-  columns:
-    title:
-      type: string(255)
-      notnull: true
-    subtitle:
-      type: string(1000)
-      notnull: true
-    author_id:
-      type: integer
-      notnull: false
-    big_topic_id:
-      type: integer
-      notnull: false
-  relations:
-    BigTopic:
-      class: BigTopic
-      local: big_topic_id
-      foreign: id
-      foreignAlias: Topics
-      onDelete: CASCADE
-    Author:
-      class: sfGuardUser
-      local: author_id
-      foreign: id
-      foreignAlias: Topics
-      onDelete: CASCADE
-
-TopicMessage:
-  tableName: f_topic_message
-  actAs:
-    Timestampable: ~
-  columns:
-    message:
-      type: clob
-      notnull: true
-    author_id:
-      type: integer
-      notnull: false
-    topic_id:
-      type: integer
-      notnull: false
-  relations:
-    Topic:
-      class: Topic
-      local: topic_id
-      foreign: id
-      foreignAlias: Messages
-      onDelete: CASCADE
-    Author:
-      class: sfGuardUser
-      local: author_id
-      foreign: id
-      foreignAlias: TopicMessages
-      onDelete: CASCADE
 
 sfGuardUser:
   columns:
     avatar:
       type: string(255)
-    is_disponible:
-      type: boolean
-      default: true
   relations:
     Teams:
       class: Team
       refClass: UserTeam
       local: user_id
       foreign: team_id
+      foreignAlias: Teams
+
+Team:
+  columns:
+    name:
+      type: string(255)
+  relations:
+    Users:
+      class: sfGuardUser
+      refClass: UserTeam
+      local: team_id
+      foreign: user_id
       foreignAlias: Users
+
+UserTeam:
+  columns:
+    user_id:
+      type: integer
+    team_id:
+      type: integer
+  relations:
+    User:
+      class: sfGuardUser
+      local: user_id
+      foreign: id
+      foreignAlias: UserTeams
+    Team:
+      class: Team
+      local: team_id
+      foreign: id
+      foreignAlias: UserTeams
+
+

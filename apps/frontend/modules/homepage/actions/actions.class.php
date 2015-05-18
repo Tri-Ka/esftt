@@ -13,8 +13,6 @@ class homepageActions extends sfActions
 
 	public function executeIndex(sfWebRequest $request)
 	{
-		//$this->articles = ArticleTable::getInstance()->findAll();
-
 
 	}
 

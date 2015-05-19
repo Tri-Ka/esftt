@@ -10,19 +10,35 @@
     </head>
     <body>
 
-        <section class="container">
+        <header>
+            <div class="container-fluid">
+                <div class="container text-center">
+                    <a id="logo" href="<?php echo url_for('homepage'); ?>">
+                        <img src="<?php echo public_path('images/logo.png'); ?>">
+                    </a>
+                </div>
+            </div>
+        </header>
 
-            <div>
+        <div id="main-container" class="container-fluid">
+
+            <div class="container">
                 <?php echo $sf_content ?>
             </div>
 
-        </section>
+        </div>
 
-        <?php include_partial('global/footer') ?>
+        <footer>
+            <div class="container-fluid">
+                <div class="container">
+                    eeee
+                </div>
+            </div>
+        </footer>
 
     </body>
-  
-    
+
+
     <?php include_javascripts() ?>
 
 </html>

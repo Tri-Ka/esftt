@@ -1,0 +1,35 @@
+/* line 5, ../../../compass/sass/front/s.scss */
+header .container-fluid {
+  border-bottom: 4px solid #FFF;
+  box-shadow: 0px 6px 100px #FFF;
+  position: fixed;
+  width: 120%;
+  top: 0;
+  margin-left: -10%;
+}
+/* line 14, ../../../compass/sass/front/s.scss */
+header .container-fluid #logo img {
+  height: 150px;
+  margin-top: 10px;
+}
+/* line 19, ../../../compass/sass/front/s.scss */
+header .container-fluid .container {
+  height: 85px;
+}
+
+/* line 26, ../../../compass/sass/front/s.scss */
+#main-container {
+  background: #012242;
+  min-height: 1000px;
+  padding-top: 160px;
+}
+
+/* line 33, ../../../compass/sass/front/s.scss */
+footer .container-fluid {
+  border-top: 4px solid #FFF;
+  background: #C3C3C3;
+}
+/* line 37, ../../../compass/sass/front/s.scss */
+footer .container-fluid .container {
+  height: 185px;
+}

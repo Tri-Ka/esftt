@@ -13,19 +13,16 @@ default:
     #robots:       index, follow
 
   stylesheets:
-    - bootstrap/bootstrap.min.css
-    - font-awesome/css/font-awesome.min.css
-    - animate.css
-    - hover-min.css
+    - bootstrap.min.css
+    - bootstrap-theme.min.css
+    - font-awesome.min.css
+    - swiper.min.css
     - front/s.css
 
   javascripts:
-    - jquery-1.11.1.min.js
-    - jquery-ui.min.js
+    - jquery.min.js
     - bootstrap.min.js
-    - moment.js
-    - vendor/fullcalendar/fullcalendar.min.js
-    - vendor/fullcalendar/lang-all.js
+    - swiper.min.js
     - script.js
 
 

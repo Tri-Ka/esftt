@@ -1,0 +1,42 @@
+$dark-blue: #012242;
+$grey: #C3C3C3;
+
+header {
+	.container-fluid {
+		border-bottom: 4px solid #FFF;
+		box-shadow: 0px 6px 100px #FFF;
+		position: fixed;
+		width: 120%;
+		top: 0;
+		margin-left: -10%;
+
+		#logo {
+			img {
+				height: 150px; margin-top: 10px;
+			}
+		}
+
+		.container {
+			height: 85px;
+		}
+
+	}
+}
+
+#main-container {
+	background: $dark-blue;
+	min-height: 1000px;
+	padding-top: 160px;
+}
+
+footer {
+	.container-fluid {
+		border-top: 4px solid #FFF;
+		background: $grey;
+
+		.container {
+			height: 185px;
+		}
+
+	}
+}

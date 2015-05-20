@@ -27,10 +27,18 @@ class globalActions extends sfActions
         $this->directories = array();
 
         foreach ($this->dirs as $directory) {
-            $foldersImages = glob($directory.DIRECTORY_SEPARATOR."*.jpg");
+            $foldersImages = array_merge(
+                glob($directory.DIRECTORY_SEPARATOR."*.jpg"),
+                glob($directory.DIRECTORY_SEPARATOR."*.JPG")
+            );
 
             $directoryName = str_replace($this->currentDir.DIRECTORY_SEPARATOR, '', $directory);
-            $imageName = str_replace($this->currentDir.DIRECTORY_SEPARATOR.$directoryName, '', $foldersImages[0]);
+
+            if (0 < count($foldersImages)) {
+                $imageName = str_replace($this->currentDir.DIRECTORY_SEPARATOR.$directoryName, '', $foldersImages[0]);
+            } else {
+               $imageName = ''; 
+            }
 
             $this->directories[] = array(
                 'name' => $directoryName,
@@ -39,7 +47,10 @@ class globalActions extends sfActions
             );
         }
 
-        $images = glob($this->currentDir.DIRECTORY_SEPARATOR."*.jpg");
+        $images = array_merge(
+            glob($this->currentDir.DIRECTORY_SEPARATOR."*.jpg"),
+            glob($this->currentDir.DIRECTORY_SEPARATOR."*.JPG")
+        );
 
         $this->pictures = array();
 

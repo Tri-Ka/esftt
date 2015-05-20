@@ -15,26 +15,10 @@
             </div>
         </div>
 
-        <a href="<?php echo url_for('infos'); ?>">
-            <div class="box col-xs-12 hvr-grow-rotate marged-top">
-                <div class="box-title">
-                    <i class="fa fa-question-circle"></i> <?php echo __('Informations'); ?>
-                </div>
-            </div>
-        </a>
-
         <a href="#">
             <div class="box col-xs-12 hvr-grow-rotate marged-top">
                 <div class="box-title">
                     <i class="fa fa-star-o"></i> <?php echo __('Le Club'); ?>
-                </div>
-            </div>
-        </a>
-
-        <a href="#">
-            <div class="box col-xs-12 hvr-grow-rotate marged-top">
-                <div class="box-title">
-                    <i class="fa fa-envelope"></i> <?php echo __('Contacts'); ?>
                 </div>
             </div>
         </a>
@@ -46,6 +30,32 @@
                 </div>
             </div>
         </a>
+
+        <a href="<?php echo url_for('infos'); ?>">
+            <div class="box col-xs-12 hvr-grow-rotate marged-top">
+                <div class="box-title">
+                    <i class="fa fa-question-circle"></i> <?php echo __('Informations'); ?>
+                </div>
+            </div>
+        </a>
+
+        <a href="#">
+            <div class="box col-xs-12 hvr-grow-rotate marged-top">
+                <div class="box-title">
+                    <i class="fa fa-envelope"></i> <?php echo __('Contact'); ?>
+                </div>
+            </div>
+        </a>
+
+        <div class="box col-xs-12 marged-top">
+            <div class="box-title text-center">
+                <div class="full-text"><?php echo __('Le mot du président'); ?></div>
+                <img class="img-circle img-thumbnail marged-top" src="http://placehold.it/100x100">
+            </div>
+            <div class="box-content marged-top">
+                Harum trium sententiarum nulli prorsus assentior. Nec enim illa prima vera est, ut, quem ad modum in se quisque sit, sic in amicum sit animatus. Quam multa enim, quae nostra causa numquam faceremus, facimus causa amicorum!
+            </div>
+        </div>
 
     </div>
 

@@ -17,6 +17,7 @@ default:
     - bootstrap-theme.min.css
     - font-awesome.min.css
     - swiper.min.css
+    - hover-min.css
     - front/s.css
 
   javascripts:

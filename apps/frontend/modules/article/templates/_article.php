@@ -1,4 +1,15 @@
- <div class="article">
+ <div class="row article">
+
+ 	<div class="col-xs-12">
+ 		<div class="date">
+	 		<span class="day">15</span>
+	 		<span class="month">Janv</span>
+	 		<!-- <span class="year">2015</span> -->
+ 		</div>
+ 		<div class="news-title">
+ 			Titre de la news
+ 		</div>
+ 	</div>
 
     <div class="col-xs-12 col-sm-5">
 

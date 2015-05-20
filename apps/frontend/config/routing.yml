@@ -1,3 +1,12 @@
+gallery:
+  url: /gallery
+  param: { module: global, action: gallery }
+
+
+infos:
+  url: /informations
+  param: { module: global, action: info }
+
 # default rules
 homepage:
   url:   /

@@ -238,32 +238,38 @@ footer {
 
 	position: relative;
   	float: left;
+  	font-size: 16px;
+  	font-family: 'Lobster', cursive;
+  	color: #fff !important;
+  	text-decoration: none !important;
+  	width: 100%;
+
+  	&:hover .gallery-hover{
+		opacity: 1;
+		transition: opacity 0.3s;
+	};
 
 	.gallery-hover {
 
 		position: absolute;
 		background: #000;
 		width: 100%;
-		height: 100%;
-		top: 0;
+		bottom: 0;
 		left: 0;
-		color: #fff;
+		color: #FFF;
 		text-align: center;
 		padding: 15px;
-		padding-top: 70px;
 		overflow: hidden;
 		border-radius: 5px;
-
-		
-		opacity: 0;
+		opacity: 0.6;
 		transition: opacity 0.3s;
 
-		&:hover {
-			opacity: 0.7;
-			transition: opacity 0.3s;
-		};
-
 	}
+}
+
+.directory .box{
+	height: 156px;
+	overflow: hidden;
 }
 
 li.home a {
@@ -285,7 +291,12 @@ li.home a {
 
 .swiper-container {
         width: 100%;
-        height: 300px;
+
+        @media (min-width: 768px) {
+        	height: 300px;
+        }
+
+        
         margin-left: auto;
         margin-right: auto;
         background: #000;
@@ -294,9 +305,25 @@ li.home a {
         background-size: cover;
         background-position: center;
         text-align: center;
+        &.swiper-slide-prev {
+        	margin-right: 0 !important;
+        }
+
+        .photo {
+        	 @media (min-width: 768px) {
+        	 	height: 100%;
+        	 }
+
+        	 @media (max-width: 768px) {
+        	 	width: 100%;
+        	 }
+        }
     }
     .gallery-top {
-        height: 600px;
+        
+        @media (min-width: 768px) {
+    	 	height: 600px;
+    	}
         width: 100%;
         background: #000;
 		margin-top: 15px;
@@ -315,3 +342,7 @@ li.home a {
     .gallery-thumbs .swiper-slide-active {
         opacity: 1;
     }
+
+.no-pad {
+	padding: 0
+}	

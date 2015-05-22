@@ -24,6 +24,7 @@ default:
     - jquery.min.js
     - bootstrap.min.js
     - swiper.min.js
+    - masonry.pkgd.min.js
     - script.js
 
 

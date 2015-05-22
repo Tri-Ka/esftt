@@ -7,12 +7,8 @@
  *
  * @version    SVN: $Id: actions.class.php 23810 2009-11-12 11:07:44Z Kris.Wallsmith $
  */
-class globalActions extends sfActions
+class galleryActions extends sfActions
 {
-    public function executeInfo(sfWebRequest $request)
-    {
-    }
-
     public function executeGallery(sfWebRequest $request)
     {
         if (true == $request->hasParameter('folder')) {
@@ -37,7 +33,7 @@ class globalActions extends sfActions
             if (0 < count($foldersImages)) {
                 $imageName = str_replace($this->currentDir.DIRECTORY_SEPARATOR.$directoryName, '', $foldersImages[0]);
             } else {
-               $imageName = ''; 
+                $imageName = '';
             }
 
             $this->directories[] = array(

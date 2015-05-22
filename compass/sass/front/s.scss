@@ -123,6 +123,10 @@ h1, h2, h3 {
 	&.black {
 		background: #000;
 	}
+
+	.box-content {
+		position: relative;
+	}
 }
 
 .marged-top {
@@ -346,3 +350,13 @@ li.home a {
 .no-pad {
 	padding: 0
 }	
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+	background-color: $dark-blue;
+}
+
+.nav {
+	a {
+	  color: #333;
+	}
+}

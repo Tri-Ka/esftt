@@ -27,7 +27,7 @@
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav">
                                 <li class="visible-xs visible-lg"><a href="<?php echo url_for('homepage'); ?>">Accueil</a></li>
-                                <li><a href="#">Le Club</a></li>
+                                <li><a href="<?php echo url_for('club'); ?>">Le Club</a></li>
                                 <li><a href="<?php echo url_for('gallery'); ?>">Gallerie</a></li>
                                 <li><a href="<?php echo url_for('infos'); ?>">Infos</a></li>
                                 <li><a href="#">Contact</a></li>
@@ -40,7 +40,7 @@
                     </a>
 
                 </div>
-                
+
             </div>
         </header>
 

@@ -15,7 +15,7 @@
             </div>
         </div>
 
-        <a href="#">
+        <a href="<?php echo url_for('club'); ?>">
             <div class="box col-xs-12 hvr-grow-rotate marged-top">
                 <div class="box-title">
                     <i class="fa fa-star-o"></i> <?php echo __('Le Club'); ?>

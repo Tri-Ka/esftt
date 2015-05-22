@@ -1,11 +1,15 @@
+club:
+  url: /club
+  param: { module: club, action: show }
+
 gallery:
   url: /gallery
-  param: { module: global, action: gallery }
+  param: { module: gallery, action: gallery }
 
 
 infos:
   url: /informations
-  param: { module: global, action: info }
+  param: { module: club, action: info }
 
 # default rules
 homepage:

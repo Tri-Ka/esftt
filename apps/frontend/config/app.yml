@@ -8,6 +8,12 @@ dev:
 
 
 all:
+  
+  imagesizes:
+    article_picture:
+      width: 580
+      height: 360
+
   pagination:
     max_article_per_page: 4
 

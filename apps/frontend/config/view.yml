@@ -18,6 +18,7 @@ default:
     - font-awesome.min.css
     - swiper.min.css
     - hover-min.css
+    - animate.css
     - front/s.css
 
   javascripts:

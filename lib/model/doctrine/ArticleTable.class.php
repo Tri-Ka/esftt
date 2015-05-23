@@ -17,53 +17,16 @@ class ArticleTable extends Doctrine_Table
         return Doctrine_Core::getTable('Article');
     }
 
-    public function getArticleQuery()
+    public function findAllPublishedQuery()
     {
         return $this
             ->createQuery('a')
-            ->andWhere('a.is_published = 1')
-            ->andWhere('a.display_to_homepage = 1')
+            ->andWhere('a.is_published = true')
             ->orderBy('a.published_at DESC');
     }
 
-    /**
-     * Find by keyword query
-     *
-     * @param  string $keyword
-     * @return Doctrine_Query
-     */
-    public function findByKeywordQuery($keyword)
+    public function findAllPublished()
     {
-        return $this
-            ->createQuery('a')
-            ->innerJoin('a.Keywords k')
-            ->andWhere('k.reference = ?', $keyword);
-    }
-
-    /**
-     * Find one by keyword
-     *
-     * @param  string $keyword
-     * @return collection of Article
-     */
-    public function findOneByKeyword($keyword){
-        $query = $this
-            ->findByKeywordQuery($keyword)
-            ->limit(1);
-
-        return $query->execute()->getFirst();
-    }
-
-    /**
-     * Find by keyword
-     *
-     * @param  string $keyword
-     * @return CmsArticle
-     */
-    public function findByKeyword($keyword){
-        $query = $this
-            ->findByKeywordQuery($keyword);
-
-        return $query->execute();
+        return $this->findAllPublishedQuery()->execute();
     }
 }

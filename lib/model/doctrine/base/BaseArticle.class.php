@@ -10,20 +10,20 @@
  * @property clob $content
  * @property boolean $is_published
  * @property timestamp $published_at
- * @property string $illustration
+ * @property string $picture
  * 
  * @method string    getTitle()        Returns the current record's "title" value
  * @method string    getSubTitle()     Returns the current record's "sub_title" value
  * @method clob      getContent()      Returns the current record's "content" value
  * @method boolean   getIsPublished()  Returns the current record's "is_published" value
  * @method timestamp getPublishedAt()  Returns the current record's "published_at" value
- * @method string    getIllustration() Returns the current record's "illustration" value
+ * @method string    getPicture()      Returns the current record's "picture" value
  * @method Article   setTitle()        Sets the current record's "title" value
  * @method Article   setSubTitle()     Sets the current record's "sub_title" value
  * @method Article   setContent()      Sets the current record's "content" value
  * @method Article   setIsPublished()  Sets the current record's "is_published" value
  * @method Article   setPublishedAt()  Sets the current record's "published_at" value
- * @method Article   setIllustration() Sets the current record's "illustration" value
+ * @method Article   setPicture()      Sets the current record's "picture" value
  * 
  * @package    esftt
  * @subpackage model
@@ -55,9 +55,8 @@ abstract class BaseArticle extends sfDoctrineRecord
              ));
         $this->hasColumn('published_at', 'timestamp', null, array(
              'type' => 'timestamp',
-             'notnull' => true,
              ));
-        $this->hasColumn('illustration', 'string', 255, array(
+        $this->hasColumn('picture', 'string', 255, array(
              'type' => 'string',
              'length' => 255,
              ));

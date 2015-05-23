@@ -31,13 +31,17 @@ all:
     escaping_strategy:      true
     escaping_method:        ESC_SPECIALCHARS
 
-    enabled_modules:      [default, sfGuardAuth, sfGuardForgotPassword]
+    enabled_modules:
+      - default
+      - sfGuardAuth
+      - sfGuardForgotPassword
 
     login_module:           sfGuardAuth
     login_action:           signin
 
     secure_module:          sfGuardAuth
     secure_action:          secure
+
 
     # Enable the database manager
     use_database:           true
@@ -50,5 +54,7 @@ all:
       - Cache
       - I18N
       - Esftt
+
+    default_culture: fr
 
 

@@ -17,8 +17,7 @@ Article:
       default: false
     published_at:
       type: timestamp
-      notnull: true
-    illustration:
+    picture:
       type: string(255)
 
 sfGuardUser:

@@ -2,10 +2,38 @@ club:
   url: /club
   param: { module: club, action: show }
 
+contact:
+  url: /contact
+  param: { module: contact, action: new }
+
 gallery:
   url: /gallery
   param: { module: gallery, action: gallery }
 
+article_edit:
+  url: /admin/article/edit/:id
+  param: { module: article, action: edit }
+
+article_delete:
+  url: /admin/article/delete/:id
+  param: { module: article, action: delete }
+
+article_new:
+  url: /admin/article/new
+  param: { module: article, action: new }
+
+
+admin:
+  url: /admin
+  param: { module: admin, action: index }
+
+sf_guard_signin:
+  url:   /login
+  param: { module: sfGuardAuth, action: signin }
+
+sf_guard_logout:
+  url:   /logout
+  param: { module: sfGuardAuth, action: signout }
 
 infos:
   url: /informations

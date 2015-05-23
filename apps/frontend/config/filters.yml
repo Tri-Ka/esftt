@@ -5,6 +5,9 @@ rendering: ~
 security:  ~
 
 # insert your own filters here
+index:
+  class: indexFilter
+
 
 cache:     ~
 execution: ~

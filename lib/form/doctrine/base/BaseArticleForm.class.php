@@ -21,7 +21,7 @@ abstract class BaseArticleForm extends BaseFormDoctrine
       'content'      => new sfWidgetFormTextarea(),
       'is_published' => new sfWidgetFormInputCheckbox(),
       'published_at' => new sfWidgetFormDateTime(),
-      'illustration' => new sfWidgetFormInputText(),
+      'picture'      => new sfWidgetFormInputText(),
       'created_at'   => new sfWidgetFormDateTime(),
       'updated_at'   => new sfWidgetFormDateTime(),
     ));
@@ -32,8 +32,8 @@ abstract class BaseArticleForm extends BaseFormDoctrine
       'sub_title'    => new sfValidatorString(array('max_length' => 255, 'required' => false)),
       'content'      => new sfValidatorString(),
       'is_published' => new sfValidatorBoolean(array('required' => false)),
-      'published_at' => new sfValidatorDateTime(),
-      'illustration' => new sfValidatorString(array('max_length' => 255, 'required' => false)),
+      'published_at' => new sfValidatorDateTime(array('required' => false)),
+      'picture'      => new sfValidatorString(array('max_length' => 255, 'required' => false)),
       'created_at'   => new sfValidatorDateTime(),
       'updated_at'   => new sfValidatorDateTime(),
     ));

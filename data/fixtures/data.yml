@@ -1,0 +1,58 @@
+sfGuardUser:
+  sfGuardUser_1:
+    first_name: 'admin'
+    last_name: 'Admin'
+    email_address: datcharrye@gmail.com
+    username: admin
+    password: admin
+    is_active: true
+    is_super_admin: true
+  sfGuardUser_2:
+    first_name: 'captain'
+    last_name: 'captain'
+    email_address: captain@gmail.com
+    username: captain
+    password: captain
+    is_active: true
+  sfGuardUser_3:
+    first_name: 'member'
+    last_name: 'member'
+    email_address: member@gmail.com
+    username: member
+    password: member
+    is_active: true
+  sfGuardUser_4:
+    first_name: 'visitor'
+    last_name: 'visitor'
+    email_address: visitor@gmail.com
+    username: visitor
+    password: visitor
+    is_active: true
+
+sfGuardGroup:
+  sfGuardGroup_1:
+    name: admin
+    description: 'Groupe administrateur'
+  sfGuardGroup_2:
+    name: capitaine
+    description: 'Groupe capitaines'
+  sfGuardGroup_3:
+    name: member
+    description: 'Groupe des membres'
+  sfGuardGroup_4:
+    name: visitor
+    description: 'Groupe visiteur'
+
+sfGuardUserGroup:
+  sfGuardUserGroup_1_1:
+    User: sfGuardUser_1
+    Group: sfGuardGroup_1
+  sfGuardUserGroup_2_2:
+    User: sfGuardUser_2
+    Group: sfGuardGroup_2
+  sfGuardUserGroup_3_3:
+    User: sfGuardUser_3
+    Group: sfGuardGroup_3
+  sfGuardUserGroup_4_4:
+    User: sfGuardUser_4
+    Group: sfGuardGroup_4

@@ -1,5 +1,5 @@
 <div class="col-xs-12 col-sm-8 col-md-9">
-    <div class="box marged-top">
+    <div class="box">
 
     	<div class="box-title">
     		<?php echo __('Les évènements'); ?>

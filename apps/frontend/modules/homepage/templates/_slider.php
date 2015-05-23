@@ -1,21 +1,25 @@
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1" class=""></li>
-        <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+
+        <?php foreach ($pictures as $k => $picture): ?>
+
+            <li data-target="#myCarousel" data-slide-to="<?php echo $k; ?>" class="<?php echo 0 == $k ? 'active' : ''; ?>"></li>
+
+        <?php endforeach; ?>
+
     </ol>
 
     <div class="carousel-inner" role="listbox">
-        <div class="item active">
-            <img src="<?php echo public_path('images/slides/01.jpg'); ?>">
-        </div>
-        <div class="item">
-          <img src="<?php echo public_path('images/slides/02.jpg'); ?>">
-        </div>
-        <div class="item">
-          <img src="<?php echo public_path('images/slides/03.jpg'); ?>">
-        </div>
+
+        <?php foreach ($pictures as $k => $picture): ?>
+            
+            <div class="item <?php echo 0 == $k ? 'active' : ''; ?>">
+              <img class="img-responsive center-block" src="<?php echo public_path('uploads/slides' . $picture); ?>">
+            </div>
+
+        <?php endforeach; ?>
+
     </div>
 
     <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">

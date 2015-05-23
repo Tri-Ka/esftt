@@ -1,4 +1,4 @@
-<?php include_partial('slider'); ?>
+<?php include_component('homepage', 'slider'); ?>
 
 <div class="row">
 
@@ -39,7 +39,7 @@
             </div>
         </a>
 
-        <a href="#">
+        <a href="<?php echo url_for('contact'); ?>">
             <div class="box col-xs-12 hvr-grow-rotate marged-top">
                 <div class="box-title">
                     <i class="fa fa-envelope"></i> <?php echo __('Contact'); ?>
@@ -68,11 +68,9 @@
 
             <div class="box-content">
 
-                <?php for ($i = 0; $i< 4; $i++): ?>
-
-                    <?php include_partial('article/article'); ?>
-
-                <?php endfor; ?>
+                <?php foreach ($articles as $article): ?>
+                    <?php include_partial('article/article', array('article' => $article)); ?>
+                <?php endforeach; ?>
 
             </div>
 

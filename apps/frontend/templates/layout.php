@@ -1,5 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//FR" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
     <head>
         <?php include_http_metas() ?>
         <?php include_metas() ?>
@@ -30,7 +30,7 @@
                                 <li><a href="<?php echo url_for('club'); ?>">Le Club</a></li>
                                 <li><a href="<?php echo url_for('gallery'); ?>">Gallerie</a></li>
                                 <li><a href="<?php echo url_for('infos'); ?>">Infos</a></li>
-                                <li><a href="#">Contact</a></li>
+                                <li><a href="<?php echo url_for('contact'); ?>">Contact</a></li>
                             </ul>
                         </div><!-- /.navbar-collapse -->
                     </nav>
@@ -45,6 +45,18 @@
         </header>
 
         <div id="main-container" class="container-fluid">
+
+            <?php if ($sf_user->hasFlash('notice')): ?>
+                <div class="flash notice">
+                    <?php echo $sf_user->getFlash('notice') ?>
+                </div>
+            <?php endif ?>
+
+            <?php if ($sf_user->hasFlash('error')): ?>
+                <div class="flash error">
+                    <?php echo $sf_user->getFlash('error') ?>
+                </div>
+            <?php endif ?>
 
             <div class="container">
 

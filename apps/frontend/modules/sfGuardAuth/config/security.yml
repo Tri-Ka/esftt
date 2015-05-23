@@ -1,8 +1,2 @@
-signinHybridProcess:
-  is_secure: false
-signinHybrid:
-  is_secure: false
-signinProfilHybrid:
-  is_secure: false
-signinAjax:
+default:
   is_secure: false

@@ -1,14 +1,24 @@
-<div class="col-xs-12 col-sm-8 col-sm-offset-2">
+<div class="row">
 
-	<div class="box">
+	<div class="col-xs-12 col-sm-4">
 
-		<div class="box-title">
-			<?php echo __('Edition de l\' article'); ?>
-		</div>
+	    <?php include_partial('admin/menu'); ?>
 
-		<div class="box-content marged-top">
+	</div>
 
-			<?php include_partial('form', array('form' => $form)); ?>
+	<div class="col-xs-12 col-sm-8 col-sm-offset-2">
+
+		<div class="box">
+
+			<div class="box-title">
+				<?php echo __('Edition de l\' article'); ?>
+			</div>
+
+			<div class="box-content marged-top">
+
+				<?php include_partial('form', array('form' => $form)); ?>
+
+			</div>
 
 		</div>
 

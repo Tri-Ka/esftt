@@ -15,7 +15,8 @@ all:
       height: 360
 
   pagination:
-    max_article_per_page: 4
+    max_article: 5
+    max_item_admin: 20
 
   sf_guard_plugin:
     success_signin_url: "@homepage"

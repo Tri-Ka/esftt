@@ -446,3 +446,28 @@ li.home a {
 .nav a {
   color: #333;
 }
+
+/* line 441, ../../../compass/sass/front/s.scss */
+.pagination a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 28px;
+  background-color: #012242;
+  color: #FFF;
+  border-radius: 50%;
+  text-decoration: none;
+  border: 1px solid #012242;
+  font-size: 10px;
+}
+/* line 454, ../../../compass/sass/front/s.scss */
+.pagination a.current {
+  background: #fff;
+  color: #012242;
+  border: 1px solid #012242;
+}
+/* line 457, ../../../compass/sass/front/s.scss */
+.pagination a.current:hover {
+  cursor: default;
+}

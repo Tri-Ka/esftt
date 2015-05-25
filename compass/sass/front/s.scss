@@ -436,3 +436,29 @@ li.home a {
 	  color: #333;
 	}
 }
+
+.pagination {
+	a {
+		display: inline-block;
+		width: 30px;
+		height: 30px;
+		text-align: center;
+		line-height: 28px;
+		background-color: $dark-blue;
+		color: #FFF;
+		border-radius: 50%;
+		text-decoration: none;
+		border: 1px solid $dark-blue;
+		font-size: 10px;
+
+		&.current {
+			background: #fff;
+			color: $dark-blue;
+			&:hover {
+				cursor: default;
+			};
+			border: 1px solid $dark-blue;
+		}
+
+	}
+}

@@ -7,8 +7,8 @@ prod:
     class: sfDoctrineDatabase
     param:
       dsn:      mysql:host=localhost;dbname=esftt
-      username: datcharrye
-      password: spx728sn1per
+      username: root
+      password: root
 
 dev:
   doctrine:

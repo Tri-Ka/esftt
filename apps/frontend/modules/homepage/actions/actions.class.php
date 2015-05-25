@@ -13,7 +13,10 @@ class homepageActions extends sfActions
 
 	public function executeIndex(sfWebRequest $request)
 	{
-		$this->articles = ArticleTable::getInstance()->findAllPublished();
+		$this->articles = new sfDoctrinePager('Article', sfConfig::get('app_pagination_max_article'));
+		$this->articles->setQuery(ArticleTable::getInstance()->findAllPublishedQuery());
+		$this->articles->setPage($request->getParameter('page', 1));
+		$this->articles->init();
 	}
 
 }

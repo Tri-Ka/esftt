@@ -11,7 +11,7 @@
 		<div class="box">
 
 			<div class="box-title">
-				<?php echo __('Nouvel article'); ?>
+				<?php echo __('Edition de l\' utilisateur'); ?>
 			</div>
 
 			<div class="box-content marged-top">

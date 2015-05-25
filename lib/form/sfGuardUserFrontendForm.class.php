@@ -12,7 +12,6 @@ class sfGuardUserFrontendForm extends BasesfGuardUserForm
           'email_address',
           'password',
           'username',
-          'avatar'
         ));
 
         $this->widgetSchema['password'] = new sfWidgetFormInputPassword();

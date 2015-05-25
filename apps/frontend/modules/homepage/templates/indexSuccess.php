@@ -70,7 +70,12 @@
 
                 <?php foreach ($articles as $article): ?>
                     <?php include_partial('article/article', array('article' => $article)); ?>
+
+                    <hr>
+
                 <?php endforeach; ?>
+
+                <?php include_partial('pagination', array('pager' => $articles, 'url' => url_for('homepage'))); ?>
 
             </div>
 

@@ -1,19 +1,27 @@
-<section class="col-md-8">
+<div class="row">
 
-	<h2><?php echo __('Créer un compte'); ?></h2>
+	<div class="col-xs-12 col-sm-4">
 
-	<?php echo helptxt(__('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et mi non orci vehicula eleifend at in dolor. Praesent hendrerit non velit sit amet cursus. Vivamus quis magna vitae orci hendrerit ultricies. Cras hendrerit mauris eget nisl vestibulum aliquet. Sed condimentum felis vel sapien interdum euismod. Aenean id dictum ipsum, ultricies volutpat elit. Maecenas id est lorem. Duis hendrerit vitae nulla sed dignissim. Curabitur justo risus, iaculis sed sapien vel, blandit feugiat purus. Phasellus nec orci ultrices, cursus sem a, varius magna.'), 'quiet') ?>
-
-	<div class="folded">
-
-		<form class="form" role="form" method="post" enctype="multipart/form-data">
-
-			<?php echo $form; ?>
-
-			<input class="btn btn-primary" type="submit" value="créer mon compte">
-
-		</form>
+	    <?php include_partial('admin/menu'); ?>
 
 	</div>
 
-</section>
+	<div class="col-xs-12 col-sm-8">
+
+		<div class="box">
+
+			<div class="box-title">
+				<?php echo __('Nouvel utilisateur'); ?>
+			</div>
+
+			<div class="box-content marged-top">
+
+				<?php include_partial('form', array('form' => $form)); ?>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>

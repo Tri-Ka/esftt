@@ -17,12 +17,33 @@ class userActions extends sfActions
 
 		if ($this->form->bindAndValid($request)) {
 
-                  $user = $this->form->save();
+			$user = $this->form->save();
+			$this->getUser()->setFlash('notice', 'utilisateur créé');
+			$this->redirect('admin');
 
-                  $this->getUser()->signin($user);
-                  $this->redirect('homepage');
-
-            }
-
+		}
 	}
+
+	public function executeEdit(sfWebRequest $request)
+    {
+    	$this->user = sfGuardUserTable::getInstance()->find($request->getParameter('id'));
+
+    	$this->form = new sfGuardUserFrontendForm($this->user);
+
+    	if ($this->form->bindAndValid($request)) {
+
+    		$this->form->save();
+            $this->getUser()->setFlash('notice', 'utilisateur modifié');
+    		$this->redirect('admin');
+
+    	}
+    }
+
+    public function executeDelete(sfWebRequest $request)
+    {
+        $this->user = sfGuardUserTable::getInstance()->find($request->getParameter('id'));
+        $this->user->delete();
+        $this->getUser()->setFlash('notice', 'utilisateur supprimé');
+        $this->redirect('admin');
+    }
 }

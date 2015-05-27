@@ -11,13 +11,17 @@ class contactActions extends sfActions
 {
     public function executeNew(sfWebRequest $request)
     {
-    	$this->form = new contactForm();
+        $this->form = new contactForm();
 
-    	if ($this->form->bindAndValid($request)) {
+        if ($this->form->bindAndValid($request)) {
+            $dispatcher = new sfEventDispatcher();
+            $mailer = new sfMailer($dispatcher, array());
 
-    		var_dump('ok');exit;
+            $to = sfConfig::get('app_mail_to');
 
-    	}
+            $mailer->composeAndSend($this->form->getValue('from'), $to, '[contact ESFTT] - '.$this->form->getValue('subject'), $this->form->getValue('content'));
 
+            $this->setTemplate('messageSent');
+        }
     }
 }

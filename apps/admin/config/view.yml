@@ -1,0 +1,34 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/13-View
+
+default:
+  http_metas:
+    content-type: text/html
+
+  metas:
+    title:        esftt
+    description:  esftt
+    keywords:     esftt
+    language:     fr
+    #robots:       index, follow
+
+  stylesheets:
+    - bootstrap.min.css
+    - bootstrap-theme.min.css
+    - font-awesome.min.css
+    - swiper.min.css
+    - hover-min.css
+    - animate.css
+    - admin/sb-admin.css
+    - admin/s.css
+
+  javascripts:
+    - jquery.min.js
+    - bootstrap.min.js
+    - swiper.min.js
+    - masonry.pkgd.min.js
+    - admin.js
+
+
+  has_layout:     true
+  layout:         layout

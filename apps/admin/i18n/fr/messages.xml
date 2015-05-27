@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
+<xliff version="1.0">
+  <file source-language="EN" target-language="fr" datatype="plaintext" original="messages" date="2014-07-22T16:23:05Z" product-name="messages">
+    <header/>
+    <body>
+            
+      <trans-unit>
+        <source>Jan</source>
+        <target>Janvier</target>
+      </trans-unit>      
+      <trans-unit>
+        <source>Feb</source>
+        <target>Fevrier</target>
+      </trans-unit>      
+      <trans-unit>
+        <source>Mar</source>
+        <target>Mars</target>
+      </trans-unit>      
+      <trans-unit>
+        <source>Apr</source>
+        <target>Avril</target>
+      </trans-unit>      
+      <trans-unit>
+        <source>May</source>
+        <target>Mai</target>
+      </trans-unit>      
+      <trans-unit>
+        <source>Jun</source>
+        <target>Juin</target>
+      </trans-unit>      
+      <trans-unit>
+        <source>Jul</source>
+        <target>Juillet</target>
+      </trans-unit>      
+      <trans-unit>
+        <source>Aug</source>
+        <target>Aout</target>
+      </trans-unit>      
+      <trans-unit>
+        <source>Sep</source>
+        <target>Sept</target>
+      </trans-unit>      
+      <trans-unit>
+        <source>Oct</source>
+        <target>Oct</target>
+      </trans-unit>      
+      <trans-unit>
+        <source>Nov</source>
+        <target>Nov</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Dec</source>
+        <target>Dec</target>
+      </trans-unit>
+
+    </body>
+  </file>
+</xliff>

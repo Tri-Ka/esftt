@@ -1,0 +1,15 @@
+@import url(http://fonts.googleapis.com/css?family=Lobster|Oxygen:400,300,700|Playball|Righteous|Allan:400,700);
+/* line 3, ../../../compass/sass/admin/s.scss */
+.box {
+  background: #EEE;
+  border-radius: 4px;
+  padding: 15px;
+}
+/* line 8, ../../../compass/sass/admin/s.scss */
+.box .box-title {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: 'Lobster', cursive;
+}

@@ -75,7 +75,7 @@
 
                 <?php endforeach; ?>
 
-                <?php include_partial('pagination', array('pager' => $articles, 'url' => url_for('homepage'))); ?>
+                <?php include_partial('general/pagination', array('pager' => $articles, 'url' => url_for('homepage'))); ?>
 
             </div>
 

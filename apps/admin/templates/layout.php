@@ -39,8 +39,14 @@
                 <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
                 <div class="navbar-collapse navbar-ex1-collapse collapse" aria-expanded="false" style="height: 1px;">
                     <ul class="nav navbar-nav side-nav">
-                        <li class="active">
-                            <a href="index.html"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
+                        <li class="<?php echo 'homepage' == $sf_context->getModuleName() ? 'active' : ''; ?>">
+                            <a href="<?php echo url_for('homepage'); ?>"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
+                        </li>
+                        <li class="<?php echo 'user' == $sf_context->getModuleName() ? 'active' : ''; ?>">
+                            <a href="<?php echo url_for('user_list'); ?>"><i class="fa fa-fw fa-users"></i> Utilisateurs</a>
+                        </li>
+                        <li class="<?php echo 'article' == $sf_context->getModuleName() ? 'active' : ''; ?>">
+                            <a href="<?php echo url_for('article_list'); ?>"><i class="fa fa-fw fa-newspaper-o"></i> Articles</a>
                         </li>
                     </ul>
                 </div>

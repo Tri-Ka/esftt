@@ -1,3 +1,5 @@
+$green: #5CB85C;
+
 @import url(http://fonts.googleapis.com/css?family=Lobster|Oxygen:400,300,700|Playball|Righteous|Allan:400,700);
 
 .box {
@@ -12,4 +14,30 @@
 		font-size: 20px;
 		font-family: 'Lobster', cursive;
 	}
+}
+
+#page-wrapper {
+	padding-bottom: 15px;
+}
+
+.green {
+	color: $green;
+}
+
+.flash {
+	padding: 8px 15px;
+	margin-bottom: 20px;
+	list-style: none;
+	border-radius: 4px;
+
+	&.notice {
+		color: #3B773B;
+		background-color: #D7FFDD;
+	}
+
+	&.error {
+		color: #773B3B;
+		background-color: #FFD7D7;
+	}
+
 }

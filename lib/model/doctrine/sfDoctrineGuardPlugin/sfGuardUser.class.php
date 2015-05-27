@@ -92,4 +92,15 @@ class sfGuardUser extends PluginsfGuardUser
     {
         return 0 < UserTeamTable::getInstance()->findByDql('user_id = ? AND team_id = ?', array($this->getId(), $team_id))->count();
     }
+
+    public function getGroupsString()
+    {
+        $return = '';
+
+        foreach ($this->getGroups() as $group) {
+            $return .= $group . ', ';
+        }
+
+        return substr($return, 0, -2);
+    }
 }

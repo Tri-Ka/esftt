@@ -1,15 +1,43 @@
 @import url(http://fonts.googleapis.com/css?family=Lobster|Oxygen:400,300,700|Playball|Righteous|Allan:400,700);
-/* line 3, ../../../compass/sass/admin/s.scss */
+/* line 5, ../../../compass/sass/admin/s.scss */
 .box {
   background: #EEE;
   border-radius: 4px;
   padding: 15px;
 }
-/* line 8, ../../../compass/sass/admin/s.scss */
+/* line 10, ../../../compass/sass/admin/s.scss */
 .box .box-title {
   margin-top: 10px;
   margin-bottom: 10px;
   font-weight: bold;
   font-size: 20px;
   font-family: 'Lobster', cursive;
+}
+
+/* line 19, ../../../compass/sass/admin/s.scss */
+#page-wrapper {
+  padding-bottom: 15px;
+}
+
+/* line 23, ../../../compass/sass/admin/s.scss */
+.green {
+  color: #5CB85C;
+}
+
+/* line 27, ../../../compass/sass/admin/s.scss */
+.flash {
+  padding: 8px 15px;
+  margin-bottom: 20px;
+  list-style: none;
+  border-radius: 4px;
+}
+/* line 33, ../../../compass/sass/admin/s.scss */
+.flash.notice {
+  color: #3B773B;
+  background-color: #D7FFDD;
+}
+/* line 38, ../../../compass/sass/admin/s.scss */
+.flash.error {
+  color: #773B3B;
+  background-color: #FFD7D7;
 }

@@ -6,6 +6,38 @@ sf_guard_logout:
   url:   /logout
   param: { module: sfGuardAuth, action: signout }
 
+user_list:
+  url:   /users
+  param: { module: user, action: list }
+
+user_new:
+  url:   /user/new
+  param: { module: user, action: new }
+
+user_edit:
+  url:   /user/edit/:id
+  param: { module: user, action: edit }
+
+user_delete:
+  url:   /user/delete/:id
+  param: { module: user, action: delete }
+
+article_list:
+  url:   /articles
+  param: { module: article, action: list }
+
+article_new:
+  url:   /article/new
+  param: { module: article, action: new }
+
+article_edit:
+  url:   /article/edit/:id
+  param: { module: article, action: edit }
+
+article_delete:
+  url:   /article/delete/:id
+  param: { module: article, action: delete }
+
 
 # default rules
 homepage:

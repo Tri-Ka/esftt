@@ -20,3 +20,7 @@ all:
 
   sf_guard_plugin:
     success_signin_url: "@homepage"
+  
+  mail:
+    to: datcharrye@gmail.com
+

@@ -1,9 +1,7 @@
 <?php
 
 /**
- * contactForm
- *
- * @subpackage form
+ * contactForm.
  */
 class contactForm extends BaseForm
 {
@@ -12,18 +10,18 @@ class contactForm extends BaseForm
    */
   public function setup()
   {
-    $this->setWidgets(array(
+      $this->setWidgets(array(
       'from' => new sfWidgetFormInputText(),
       'subject' => new sfWidgetFormInputText(),
       'content' => new sfWidgetFormTextarea(),
     ));
 
-    $this->setValidators(array(
-      'from' => new sfValidatorString(),
-      'subject' => new sfValidatorString(),
-      'content' => new sfValidatorString(),
+      $this->setValidators(array(
+      'from' => new sfValidatorEmail(array('required' => true)),
+      'subject' => new sfValidatorString(array('required' => true)),
+      'content' => new sfValidatorString(array('required' => true)),
     ));
 
-    $this->widgetSchema->setNameFormat('contact[%s]');
+      $this->widgetSchema->setNameFormat('contact[%s]');
   }
 }

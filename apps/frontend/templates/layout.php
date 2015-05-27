@@ -26,11 +26,15 @@
                         <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav">
-                                <li class="visible-xs visible-lg"><a href="<?php echo url_for('homepage'); ?>">Accueil</a></li>
-                                <li><a href="<?php echo url_for('club'); ?>">Le Club</a></li>
-                                <li><a href="<?php echo url_for('gallery'); ?>">Gallerie</a></li>
-                                <li><a href="<?php echo url_for('infos'); ?>">Infos</a></li>
-                                <li><a href="<?php echo url_for('contact'); ?>">Contact</a></li>
+                                <li class="visible-xs visible-lg"><a href="<?php echo url_for('homepage'); ?>" class="hvr-bounce-to-top">Accueil</a></li>
+                                <li><a href="<?php echo url_for('club'); ?>" class="hvr-bounce-to-top">Le Club</a></li>
+                                <li><a href="<?php echo url_for('gallery'); ?>" class="hvr-bounce-to-top">Gallerie</a></li>
+                                <li><a href="<?php echo url_for('infos'); ?>" class="hvr-bounce-to-top">Infos</a></li>
+                                <li><a href="<?php echo url_for('contact'); ?>" class="hvr-bounce-to-top">Contact</a></li>
+                            </ul>
+                            <ul class="nav navbar-nav social-nav">
+                                <li><a href="#" class="facebook hvr-bounce-in"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#" class="twitter hvr-bounce-in"><i class="fa fa-twitter"></i></a></li>
                             </ul>
                         </div><!-- /.navbar-collapse -->
                     </nav>
@@ -69,6 +73,31 @@
         <footer>
             <div class="container-fluid">
                 <div class="container">
+
+                    <div class="col-xs-12 col-sm-4">
+
+                        <ul class="links">
+                            <li>
+                                <a target="blank" href="http://www.fftt.com/">site de la fédération</a>
+                            </li>
+                            <li>
+                                <a target="blank" href="http://www.tennis-de-table.com/">tennis-de-table.com</a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                    <div class="col-xs-12 col-sm-4">
+
+                    </div>
+
+                    <div class="col-xs-12 col-sm-4">
+
+                    </div>
+
+                    <div class="col-xs-12 text-center">
+                        <span class="small">© ESFTT <?php echo date('Y'); ?> - Tous droits réservés</span>
+                    </div>
 
                 </div>
             </div>

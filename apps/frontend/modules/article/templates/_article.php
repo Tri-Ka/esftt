@@ -13,7 +13,7 @@
 
     <?php if (null !== $article->getPicture()): ?>
 
-    <div class="col-xs-12 col-md-5">
+    <div class="col-xs-12 col-md-5 img-cont">
 
         <img class="thumbnail" src="<?php echo $article->retrievePictureUrl(); ?>">
 

@@ -14,24 +14,30 @@
 
 					<?php echo $form->renderHiddenFields() ?>
 
-				 	<div class="form-group">
+				 	<div class="form-group  <?php echo true == $form['from']->hasError() ? 'has-error' : ''; ?>">
 				 		<label><?php echo __('Votre addresse mail'); ?></label>
+				 		<?php echo $form['from']->renderError(); ?>
 				 		<?php echo $form['from']->render(array('class' => 'form-control')); ?>
-					</div>		
+					</div>
 
-					<div class="form-group">
+					<div class="form-group <?php echo true == $form['subject']->hasError() ? 'has-error' : ''; ?>">
 				 		<label><?php echo __('Votre sujet'); ?></label>
+				 		<?php echo $form['subject']->renderError(); ?>
 				 		<?php echo $form['subject']->render(array('class' => 'form-control')); ?>
-					</div>	
+					</div>
 
-					<div class="form-group">
+					<div class="form-group  <?php echo true == $form['content']->hasError() ? 'has-error' : ''; ?>">
 				 		<label><?php echo __('Votre message'); ?></label>
+				 		<?php echo $form['content']->renderError(); ?>
 				 		<?php echo $form['content']->render(array('class' => 'form-control')); ?>
-					</div>	
+					</div>
 
 					<div class="form-group">
-				 		<input type="submit" class="btn btn-primary" value="envoyer">
-					</div>				
+				 		<button type="submit" class="btn btn-primary pull-right">
+				 		<?php echo __('envoyer'); ?> <i class="fa fa-paper-plane"></i>
+
+				 		</button>
+					</div>
 
 				</form>
 

@@ -41,3 +41,26 @@ $green: #5CB85C;
 	}
 
 }
+
+.userItem {
+	float: left;
+	border: 1px solid #CCC;
+	padding: 5px;
+	margin-bottom: 15px;
+	border-radius: 4px;
+	width: 100%;
+
+	.dropdown {
+		position: absolute;
+		top: 5px;
+		right: 5px;
+	}
+
+	.captain {  
+		position: absolute;
+		top: -10px;
+		right: 6px;
+		font-size: 20px;
+		color: #F80;	
+	}
+}

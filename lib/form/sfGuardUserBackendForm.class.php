@@ -13,6 +13,7 @@ class sfGuardUserBackendForm extends BasesfGuardUserForm
           'password',
           'username',
           'groups_list',
+          'teams_list',
           'avatar'
         ));
 

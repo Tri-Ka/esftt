@@ -41,3 +41,27 @@
   color: #773B3B;
   background-color: #FFD7D7;
 }
+
+/* line 45, ../../../compass/sass/admin/s.scss */
+.userItem {
+  float: left;
+  border: 1px solid #CCC;
+  padding: 5px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  width: 100%;
+}
+/* line 53, ../../../compass/sass/admin/s.scss */
+.userItem .dropdown {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+/* line 59, ../../../compass/sass/admin/s.scss */
+.userItem .captain {
+  position: absolute;
+  top: -10px;
+  right: 6px;
+  font-size: 20px;
+  color: #F80;
+}

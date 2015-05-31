@@ -16,4 +16,13 @@ class UserTeamTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('UserTeam');
     }
+
+    public function findOneByUserIdAndTeamId($userId, $teamId)
+    {
+    	$q = $this->createQuery('tu')
+    	->andWhere('tu.user_id = ?', array($userId))
+    	->andWhere('tu.team_id = ?', array($teamId));
+
+    	return $q->execute()->getFirst();
+    }
 }

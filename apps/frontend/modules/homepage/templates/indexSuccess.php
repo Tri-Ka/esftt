@@ -1,4 +1,4 @@
-<?php include_component('homepage', 'slider'); ?>
+<?php // include_component('homepage', 'slider'); ?>
 
 <div class="row">
 
@@ -63,7 +63,7 @@
         <div class="box marged-top">
 
             <div class="box-title">
-                <?php echo __('News'); ?>
+                <?php echo __('Les dernières actus'); ?>
             </div>
 
             <div class="box-content">

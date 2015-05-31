@@ -11,5 +11,8 @@ class homepageActions extends sfActions
 {
     public function executeIndex(sfWebRequest $request)
     {
+    	$this->userCount = sfGuardUserTable::getInstance()->findAll()->count();
+    	$this->teamCount = TeamTable::getInstance()->findAll()->count();
+    	$this->articleCount = ArticleTable::getInstance()->findAll()->count();
     }
 }

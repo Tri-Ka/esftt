@@ -6,4 +6,6 @@
 require_once dirname(__FILE__).'/../config/ProjectConfiguration.class.php';
 
 $configuration = ProjectConfiguration::getApplicationConfiguration('admin', 'dev', true);
+
+// var_dump($configuration);exit;
 sfContext::createInstance($configuration)->dispatch();

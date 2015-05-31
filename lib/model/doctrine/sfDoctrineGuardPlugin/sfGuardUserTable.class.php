@@ -17,7 +17,8 @@ class sfGuardUserTable extends PluginsfGuardUserTable
         return Doctrine_Core::getTable('sfGuardUser');
     }
 
-    public function findAvailableBySessionId($session_id){
+    public function findAvailableBySessionId($session_id)
+    {
 
     	$q = $this->createQuery('u')
     	->innerJoin('u.CompetitionSessionDisponibility csd')
@@ -27,7 +28,8 @@ class sfGuardUserTable extends PluginsfGuardUserTable
 
     }
 
-    public function findUnAvailableBySessionId($session_id){
+    public function findUnAvailableBySessionId($session_id)
+    {
 
     	$q = $this->createQuery('u')
     	->innerJoin('u.CompetitionSessionDisponibility csd')
@@ -35,5 +37,14 @@ class sfGuardUserTable extends PluginsfGuardUserTable
 
     	return $q->execute();
 
+    }
+
+    public function findUsersWithoutTeam()
+    {
+        $q = $this->createQuery('u')
+        ->leftJoin('u.Teams t')
+        ->andWhere('t.id IS NULL');
+
+        return $q->execute();
     }
 }

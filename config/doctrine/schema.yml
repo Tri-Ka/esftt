@@ -50,16 +50,21 @@ UserTeam:
       type: integer
     team_id:
       type: integer
+    is_captain:
+      type: boolean
+      default: false
   relations:
     User:
       class: sfGuardUser
       local: user_id
       foreign: id
       foreignAlias: UserTeams
+      onDelete: CASCADE
     Team:
       class: Team
       local: team_id
       foreign: id
       foreignAlias: UserTeams
+      onDelete: CASCADE
 
 

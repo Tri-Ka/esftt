@@ -43,6 +43,12 @@
 	 		<?php echo $form['groups_list']->render(array('class' => 'form-control')); ?>
 		</div>	
 
+		<div class="form-group">
+	 		<label><?php echo __('teams'); ?></label>
+	 		<?php echo $form['teams_list']->renderError(); ?>
+	 		<?php echo $form['teams_list']->render(array('class' => 'form-control')); ?>
+		</div>	
+
 	</div>
 
 	<div class="col-xs-12">

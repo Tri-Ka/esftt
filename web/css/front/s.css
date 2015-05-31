@@ -574,3 +574,18 @@ header .social-nav li a.facebook {
 header .social-nav li a.twitter {
   background-color: #00A5FF;
 }
+
+/* line 560, ../../../compass/sass/front/s.scss */
+.slider-full {
+  margin-top: -50px;
+}
+/* line 564, ../../../compass/sass/front/s.scss */
+.slider-full #myCarousel {
+  border: none;
+  border-bottom: 5px solid #FFF;
+}
+
+/* line 570, ../../../compass/sass/front/s.scss */
+img.swiper-lazy.photo.swiper-lazy-loaded {
+  margin-left: -30px;
+}

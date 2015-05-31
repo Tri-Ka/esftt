@@ -556,3 +556,17 @@ header .social-nav {
 	}
 
 }
+
+.slider-full {
+
+	margin-top: -50px;
+
+	#myCarousel {
+		border: none;
+		border-bottom: 5px solid #FFF;
+	}
+}
+
+img.swiper-lazy.photo.swiper-lazy-loaded {
+  margin-left: -30px;
+}

@@ -9,4 +9,11 @@ dev:
 
 all:
   
+  imagesizes:
+    article_picture:
+      width: 580
+      height: 360
+
+  pagination:
+    max_item_admin: 20
 

@@ -48,6 +48,9 @@
                         <li class="<?php echo 'article' == $sf_context->getModuleName() ? 'active' : ''; ?>">
                             <a href="<?php echo url_for('article_list'); ?>"><i class="fa fa-fw fa-newspaper-o"></i> Articles</a>
                         </li>
+                        <li class="<?php echo 'team' == $sf_context->getModuleName() ? 'active' : ''; ?>">
+                            <a href="<?php echo url_for('team_list'); ?>"><i class="fa fa-fw fa-star-o"></i> Teams</a>
+                        </li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->

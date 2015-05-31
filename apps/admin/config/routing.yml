@@ -38,6 +38,39 @@ article_delete:
   url:   /article/delete/:id
   param: { module: article, action: delete }
 
+team_list:
+  url:   /teams
+  param: { module: team, action: list }
+
+team_new:
+  url:   /team/new
+  param: { module: team, action: new }
+
+team_edit:
+  url:   /team/edit/:id
+  param: { module: team, action: edit }
+
+team_delete:
+  url:   /team/delete/:id
+  param: { module: team, action: delete }
+
+delete_from_team:
+  url:   /team/deleteUser/:teamId/:userId
+  param: { module: team, action: deleteUser }
+
+name_captain:
+  url:   /team/nameCaptain/:teamId/:userId
+  param: { module: team, action: nameCaptain }
+
+remove_captain:
+  url:   /team/removeCaptain/:teamId/:userId
+  param: { module: team, action: removeCaptain }
+
+
+add_team_user:
+  url:   /team/addTeamUser/:teamId/:userId
+  param: { module: team, action: addTeamUser }
+
 
 # default rules
 homepage:

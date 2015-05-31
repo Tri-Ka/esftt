@@ -62,6 +62,16 @@
                 </div>
             <?php endif ?>
 
+            <?php if ('homepage' == $sf_params->get('module')): ?>
+
+                <div class="row slider-full">
+
+                    <?php include_component('homepage', 'slider'); ?>
+
+                </div>
+
+            <?php endif; ?>
+
             <div class="container">
 
                 <?php echo $sf_content ?>

@@ -10,30 +10,6 @@ gallery:
   url: /gallery
   param: { module: gallery, action: gallery }
 
-article_edit:
-  url: /admin/article/edit/:id
-  param: { module: article, action: edit }
-
-article_delete:
-  url: /admin/article/delete/:id
-  param: { module: article, action: delete }
-
-article_new:
-  url: /admin/article/new
-  param: { module: article, action: new }
-
-
-admin:
-  url: /admin
-  param: { module: admin, action: articleList }
-
-admin_article_list:
-  url: /admin/articles
-  param: { module: admin, action: articleList }
-
-admin_user_list:
-  url: /admin/users
-  param: { module: admin, action: userList }
 
 sf_guard_signin:
   url:   /login
@@ -43,17 +19,10 @@ sf_guard_logout:
   url:   /logout
   param: { module: sfGuardAuth, action: signout }
 
-user_edit:
-  url: /admin/user/edit/:id
-  param: { module: user, action: edit }
+user_show:
+  url: /user/:id
+  param: { module: user, action: show }
 
-user_delete:
-  url: /admin/user/delete/:id
-  param: { module: user, action: delete }
-
-user_new:
-  url: /admin/user/new
-  param: { module: user, action: new }
 
 infos:
   url: /informations

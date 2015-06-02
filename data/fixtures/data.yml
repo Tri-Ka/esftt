@@ -28,6 +28,13 @@ sfGuardUser:
     username: visitor
     password: visitor
     is_active: true
+  sfGuardUser_5:
+    first_name: 'Etienne'
+    last_name: 'Datcharry'
+    email_address: datcharrye2@gmail.com
+    username: datcharrye
+    password: datcharrye
+    is_active: true
 
 sfGuardGroup:
   sfGuardGroup_1:

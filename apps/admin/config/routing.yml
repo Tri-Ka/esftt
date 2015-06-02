@@ -38,6 +38,22 @@ article_delete:
   url:   /article/delete/:id
   param: { module: article, action: delete }
 
+event_list:
+  url:   /events
+  param: { module: event, action: list }
+
+event_new:
+  url:   /event/new
+  param: { module: event, action: new }
+
+event_edit:
+  url:   /event/edit/:id
+  param: { module: event, action: edit }
+
+event_delete:
+  url:   /event/delete/:id
+  param: { module: event, action: delete }
+
 team_list:
   url:   /teams
   param: { module: team, action: list }

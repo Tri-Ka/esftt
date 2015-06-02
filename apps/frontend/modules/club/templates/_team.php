@@ -7,7 +7,36 @@
 
         <div class="box-content marged-top">
 
-        	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede. Praesent blandit odio eu enim. Pellentesque sed dui ut augue blandit sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam nibh. Mauris ac mauris sed pede pellentesque fermentum. Maecenas adipiscing ante non diam sodales hendrerit.
+        	<?php foreach ($teams as $team): ?>
+        		
+        		<span class="team-name h4"><?php echo $team; ?></span>
+
+        		<div class="row">
+
+        		<div class="col-xs-12">
+
+        		<?php foreach ($team->getUsers() as $user): ?>
+        			
+        			<a href="<?php echo url_for('user_show', array('id' => $user->getId())); ?>">
+        			<div class="col-xs-6 col-sm-2 text-center user-team-unit">
+
+	        			<img class="img-circle img-thumbnail" src="<?php echo $user->retrievePictureUrl(); ?>">
+
+	        			<div class="row">
+		        			<strong class="col-xs-12"><?php echo $user->getLastName(); ?></strong><br>
+		        			<?php echo $user->getFirstName(); ?>
+	        			</div>
+
+        			</div>
+        			</a>
+
+        		<?php endforeach; ?>
+
+        		</div>
+
+        		</div>
+
+        	<?php endforeach; ?>
 
         </div>
 

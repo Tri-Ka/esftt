@@ -41,19 +41,23 @@ class sfGuardUser extends PluginsfGuardUser
      *
      * @return string avatar path
      */
-    public function retrievePictureUrl($web = true)
+    public function retrievePictureUrl($web = true, $big = false)
     {
 
         $logo = $this->getAvatar();
 
         if (null == $logo) {
-            //return null;
-            return  sfConfig::get('public_path') . '/images/avatar-male.png';
+            return  'http://placehold.it/100x100';
         }
 
-        $dirSep = '/';
+        $dirSep = DIRECTORY_SEPARATOR;
 
-        return $this->retrieveHashedPictureDirectory($web) . $dirSep . $logo;
+        if (true == $big) {
+            return $this->retrieveHashedPictureDirectory($web) . $dirSep . 'big' . $dirSep .$logo;
+        } else {
+            return $this->retrieveHashedPictureDirectory($web) . $dirSep . $logo;    
+        }
+        
     }
 
     public function retrievePictureWidth()

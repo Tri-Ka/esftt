@@ -16,6 +16,7 @@
  * @property boolean $is_super_admin
  * @property timestamp $last_login
  * @property string $avatar
+ * @property string $fftt_link
  * @property Doctrine_Collection $Groups
  * @property Doctrine_Collection $Permissions
  * @property Doctrine_Collection $Teams
@@ -36,6 +37,7 @@
  * @method boolean               getIsSuperAdmin()          Returns the current record's "is_super_admin" value
  * @method timestamp             getLastLogin()             Returns the current record's "last_login" value
  * @method string                getAvatar()                Returns the current record's "avatar" value
+ * @method string                getFfttLink()              Returns the current record's "fftt_link" value
  * @method Doctrine_Collection   getGroups()                Returns the current record's "Groups" collection
  * @method Doctrine_Collection   getPermissions()           Returns the current record's "Permissions" collection
  * @method Doctrine_Collection   getTeams()                 Returns the current record's "Teams" collection
@@ -55,6 +57,7 @@
  * @method sfGuardUser           setIsSuperAdmin()          Sets the current record's "is_super_admin" value
  * @method sfGuardUser           setLastLogin()             Sets the current record's "last_login" value
  * @method sfGuardUser           setAvatar()                Sets the current record's "avatar" value
+ * @method sfGuardUser           setFfttLink()              Sets the current record's "fftt_link" value
  * @method sfGuardUser           setGroups()                Sets the current record's "Groups" collection
  * @method sfGuardUser           setPermissions()           Sets the current record's "Permissions" collection
  * @method sfGuardUser           setTeams()                 Sets the current record's "Teams" collection
@@ -122,6 +125,9 @@ abstract class BasesfGuardUser extends sfDoctrineRecord
         $this->hasColumn('avatar', 'string', 255, array(
              'type' => 'string',
              'length' => 255,
+             ));
+        $this->hasColumn('fftt_link', 'string', null, array(
+             'type' => 'string',
              ));
 
 

@@ -21,6 +21,18 @@
 	 		<?php echo $form['email_address']->render(array('class' => 'form-control')); ?>
 		</div>	
 
+		<div class="form-group">
+	 		<label><?php echo __('Nom'); ?></label>
+	 		<?php echo $form['last_name']->renderError(); ?>
+	 		<?php echo $form['last_name']->render(array('class' => 'form-control')); ?>
+		</div>	
+
+		<div class="form-group">
+	 		<label><?php echo __('Prénom'); ?></label>
+	 		<?php echo $form['first_name']->renderError(); ?>
+	 		<?php echo $form['first_name']->render(array('class' => 'form-control')); ?>
+		</div>	
+
 	</div>
 
 	<div class="col-xs-12 col-sm-6">
@@ -48,6 +60,12 @@
 	 		<?php echo $form['teams_list']->renderError(); ?>
 	 		<?php echo $form['teams_list']->render(array('class' => 'form-control')); ?>
 		</div>	
+
+		<div class="form-group">
+	 		<label><?php echo __('lien FFTT'); ?></label>
+	 		<?php echo $form['fftt_link']->renderError(); ?>
+	 		<?php echo $form['fftt_link']->render(array('class' => 'form-control')); ?>
+		</div>
 
 	</div>
 

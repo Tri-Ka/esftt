@@ -51,6 +51,9 @@
                         <li class="<?php echo 'team' == $sf_context->getModuleName() ? 'active' : ''; ?>">
                             <a href="<?php echo url_for('team_list'); ?>"><i class="fa fa-fw fa-star-o"></i> Teams</a>
                         </li>
+                        <li class="<?php echo 'event' == $sf_context->getModuleName() ? 'active' : ''; ?>">
+                            <a href="<?php echo url_for('event_list'); ?>"><i class="fa fa-calendar"></i> Evènements</a>
+                        </li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->

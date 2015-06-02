@@ -28,7 +28,7 @@
                             <ul class="nav navbar-nav">
                                 <li class="visible-xs visible-lg"><a href="<?php echo url_for('homepage'); ?>" class="hvr-bounce-to-top">Accueil</a></li>
                                 <li><a href="<?php echo url_for('club'); ?>" class="hvr-bounce-to-top">Le Club</a></li>
-                                <li><a href="<?php echo url_for('gallery'); ?>" class="hvr-bounce-to-top">Gallerie</a></li>
+                                <li><a href="<?php echo url_for('gallery'); ?>" class="hvr-bounce-to-top">Galerie</a></li>
                                 <li><a href="<?php echo url_for('infos'); ?>" class="hvr-bounce-to-top">Infos</a></li>
                                 <li><a href="<?php echo url_for('contact'); ?>" class="hvr-bounce-to-top">Contact</a></li>
                             </ul>

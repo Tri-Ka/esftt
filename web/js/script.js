@@ -43,5 +43,6 @@ $( document ).ready(function()
 {
 	swiper.init();
 	//masonry.init();
+	$('iframe').removeAttr('style');
 
 });

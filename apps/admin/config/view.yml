@@ -19,6 +19,7 @@ default:
     - swiper.min.css
     - hover-min.css
     - animate.css
+    - bootstrap-datetimepicker.min.css
     - admin/sb-admin.css
     - admin/s.css
 
@@ -27,6 +28,9 @@ default:
     - bootstrap.min.js
     - swiper.min.js
     - masonry.pkgd.min.js
+    - moment.js
+    - locale/fr.js
+    - bootstrap-datetimepicker.min.js
     - admin.js
 
 

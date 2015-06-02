@@ -14,5 +14,6 @@ class homepageActions extends sfActions
     	$this->userCount = sfGuardUserTable::getInstance()->findAll()->count();
     	$this->teamCount = TeamTable::getInstance()->findAll()->count();
     	$this->articleCount = ArticleTable::getInstance()->findAll()->count();
+    	$this->eventCount = EventTable::getInstance()->findAll()->count();
     }
 }

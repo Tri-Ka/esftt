@@ -14,7 +14,10 @@ class sfGuardUserBackendForm extends BasesfGuardUserForm
           'username',
           'groups_list',
           'teams_list',
-          'avatar'
+          'avatar',
+          'last_name',
+          'first_name',
+          'fftt_link'
         ));
 
         $this->widgetSchema['password'] = new sfWidgetFormInputPassword();
@@ -71,14 +74,25 @@ class sfGuardUserBackendForm extends BasesfGuardUserForm
             mkdir($directory, 0777, true);
         }
 
+        $directoryBig = $user->retrieveHashedPictureDirectory(false) . DIRECTORY_SEPARATOR . 'big';
+
+        if (!file_exists($directoryBig)) {
+            mkdir($directoryBig, 0777, true);
+        }
+
         $picture = $this->getValue('avatar');
 
         if (!is_null($picture)) {
 
             $old = $picture->getSavedName();
             $img = new sfImage($old, $picture->getType());
-            $img->thumbnail(200, 200, 'center');
+
+            $img->thumbnail(400, 400, 'center');
+            $img->saveAs($directoryBig . DIRECTORY_SEPARATOR . $user->getAvatar());
+
+            $img->thumbnail(100, 100, 'center');
             $img->saveAs($directory . DIRECTORY_SEPARATOR . $user->getAvatar());
+
 
             @unlink($old);
         }

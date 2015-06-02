@@ -24,6 +24,8 @@ sfGuardUser:
   columns:
     avatar:
       type: string(255)
+    fftt_link:
+      type: string
   relations:
     Teams:
       class: Team
@@ -66,5 +68,19 @@ UserTeam:
       foreign: id
       foreignAlias: UserTeams
       onDelete: CASCADE
+
+Event:
+  columns:
+    name:
+      type: string(255)
+      notnull: true
+    description:
+      type: clob
+    picture:
+      type: string(255)
+    date_from:
+      type: DateTime
+    date_to:
+      type: DateTime
 
 

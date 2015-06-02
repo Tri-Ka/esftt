@@ -9,7 +9,7 @@
 	 		<?php echo $form['name']->render(array('class' => 'form-control')); ?>
 		</div>	
 
-		<div class="form-group">
+		<div class="form-group full-label">
 	 		<label><?php echo __('Illustration'); ?></label>
 	 		<?php echo $form['picture']->render(); ?>
 		</div>	

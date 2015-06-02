@@ -13,5 +13,11 @@ class userActions extends sfActions
 	public function executeShow(sfWebRequest $request)
     {
     	$this->user = sfGuardUserTable::getInstance()->find($request->getParameter('id'));
+
+    	if (null !== $this->user->getLicence()) {
+    		$serv = new Service();
+    		$this->infosJoueur = $serv->getJoueur($this->user->getLicence());	
+    	}
+
     }
 }

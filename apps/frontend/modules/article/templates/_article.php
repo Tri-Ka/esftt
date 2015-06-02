@@ -22,7 +22,7 @@
     <div class="col-xs-12 col-md-7">
     	<div class="row">
     		<div class="col-xs-12"><strong><?php echo $article->getSubTitle(); ?></strong></div>
-        	<div class="col-xs-12"><?php echo nl2br($article->getContent()); ?></div>
+        	<div class="col-xs-12"><?php echo $article->getContent(ESC_RAW); ?></div>
         </div>
 
     </div>

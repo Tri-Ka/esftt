@@ -16,4 +16,9 @@ class EventTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('Event');
     }
+
+    public function findAllQuery()
+    {
+    	return $this->createQuery('e')->orderBy('e.created_at DESC');
+    }
 }

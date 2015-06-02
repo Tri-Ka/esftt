@@ -47,7 +47,14 @@ class sfGuardUser extends PluginsfGuardUser
         $logo = $this->getAvatar();
 
         if (null == $logo) {
-            return  'http://placehold.it/100x100';
+
+            if (false == $big) {
+                return  'http://placehold.it/100x100';
+            } else {
+                return  'http://placehold.it/400x400';
+            }
+
+            
         }
 
         $dirSep = DIRECTORY_SEPARATOR;

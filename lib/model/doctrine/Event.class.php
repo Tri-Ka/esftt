@@ -12,4 +12,55 @@
  */
 class Event extends BaseEvent
 {
+	/**
+     * Retrieve picture path
+     *
+     * @return string avatar path
+     */
+    public function retrievePictureUrl($web = true, $big = false)
+    {
+
+        $logo = $this->getPicture();
+
+        if (null == $logo) {
+
+            if (false == $big) {
+                return  'http://placehold.it/320x320';
+            } else {
+                return  'http://placehold.it/750x320';
+            }
+
+            
+        }
+
+        $dirSep = DIRECTORY_SEPARATOR;
+
+        if (true == $big) {
+            return $this->retrieveHashedPictureDirectory($web) . $dirSep . 'big' . $dirSep .$logo;
+        } else {
+            return $this->retrieveHashedPictureDirectory($web) . $dirSep . $logo;    
+        }
+        
+    }
+
+     /**
+     * Retrieve picture directory only
+     *
+     * @return string avatar directory only
+     */
+    public function retrieveHashedPictureDirectory($web = true)
+    {
+        if ($web) {
+            $dirSep = '/';
+            $dirPrefix = str_replace(sfConfig::get('sf_web_dir'), '', sfConfig::get('sf_upload_dir'));
+            sfContext::getInstance()->getConfiguration()->loadHelpers(array('Url'));
+
+            return public_path(implode($dirSep, array_merge_recursive(array($dirPrefix, 'events'), str_split($this->getId()))), true);
+        } else {
+            $dirSep = DIRECTORY_SEPARATOR;
+            $dirPrefix = sfConfig::get('sf_upload_dir');
+
+            return implode($dirSep, array_merge_recursive(array($dirPrefix, 'events'), str_split($this->getId())));
+        }
+    }
 }

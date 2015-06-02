@@ -65,3 +65,50 @@
   font-size: 20px;
   color: #F80;
 }
+
+/* line 68, ../../../compass/sass/admin/s.scss */
+.textarea {
+  width: 100%;
+  min-height: 300px;
+  -webkit-appearance: textarea;
+  border-image-source: initial;
+  border-image-slice: initial;
+  border-image-width: initial;
+  border-image-outset: initial;
+  border-image-repeat: initial;
+  padding: 2px;
+  padding: 6px 12px;
+  font-size: 14px;
+  background-color: #FFF;
+  border: 1px solid #CCC;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+/* line 90, ../../../compass/sass/admin/s.scss */
+.marged-top {
+  margin-top: 15px;
+}
+
+/* line 94, ../../../compass/sass/admin/s.scss */
+.marged-bottom {
+  margin-bottom: 15px;
+}
+
+/* line 101, ../../../compass/sass/admin/s.scss */
+.form-group.full-label label {
+  width: 100% !important;
+}
+/* line 106, ../../../compass/sass/admin/s.scss */
+.form-group img {
+  max-width: 100%;
+}
+
+/* line 112, ../../../compass/sass/admin/s.scss */
+#toolbar-editor .btn-group {
+  margin-bottom: 5px;
+}

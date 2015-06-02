@@ -24,8 +24,8 @@ sfGuardUser:
   columns:
     avatar:
       type: string(255)
-    fftt_link:
-      type: string
+    licence:
+      type: string(255)
   relations:
     Teams:
       class: Team
@@ -70,6 +70,8 @@ UserTeam:
       onDelete: CASCADE
 
 Event:
+  actAs:
+    Timestampable: ~
   columns:
     name:
       type: string(255)

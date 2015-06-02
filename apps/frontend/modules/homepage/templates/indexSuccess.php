@@ -82,4 +82,26 @@
         </div>
     </div>
 
+    <div class="col-xs-12 col-sm-8">
+        <div class="box marged-top">
+
+            <div class="box-title">
+                <?php echo __('Les dernièrs évènements'); ?>
+            </div>
+
+            <div class="box-content marged-top">
+                <div class="row">
+                <?php foreach ($events as $event): ?>
+                    
+                    <?php include_partial('event/event', array('event' => $event)); ?>
+
+                <?php endforeach; ?>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
 </div>

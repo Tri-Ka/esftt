@@ -28,6 +28,7 @@ class ArticleBackendForm extends ArticleForm
           'file_src' => $this->getObject()->retrievePictureUrl(),
           'is_image' => true,
           'edit_mode' => !$this->isNew() && null != $this->getObject()->getPicture(),
+          'template' => '<div class="img-thumbnail marged-bottom">%file%</div>%input%'
         ));
 
         $this->validatorSchema['picture'] = new sfValidatorFile(array(

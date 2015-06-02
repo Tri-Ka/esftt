@@ -34,6 +34,9 @@
 
 				<?php endif; ?>
 
+				<li role="presentation" class="divider"></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="<?php echo url_for('user_edit', array('id' => $user->getId())); ?>"><?php echo __('Editer l\'utilisateur'); ?></a></li>
+
 			  </ul>
 			</div>
 

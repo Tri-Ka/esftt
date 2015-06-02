@@ -12,6 +12,7 @@ class ProjectConfiguration extends sfProjectConfiguration
     $this->enablePlugins('sfImageTransformPlugin');
     $this->enablePlugins('sfFormExtraPlugin');
     $this->enablePlugins('sfAdminDashPlugin');
+    $this->enablePlugins('ffttPlugin');
 
   }
 

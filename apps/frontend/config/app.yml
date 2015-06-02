@@ -16,6 +16,7 @@ all:
 
   pagination:
     max_article: 5
+    max_event: 2
     max_item_admin: 20
 
   sf_guard_plugin:

@@ -656,3 +656,13 @@ iframe body table tr, iframe body table td {
 iframe body table tr img, iframe body table td img {
   display: none;
 }
+
+/* line 636, ../../../compass/sass/front/s.scss */
+.red {
+  color: red;
+}
+
+/* line 640, ../../../compass/sass/front/s.scss */
+.green {
+  color: #00C000;
+}

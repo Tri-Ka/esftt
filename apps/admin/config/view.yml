@@ -31,6 +31,8 @@ default:
     - moment.js
     - locale/fr.js
     - bootstrap-datetimepicker.min.js
+    - jquery.hotkeys.js
+    - bootstrap-wysiwyg.js
     - admin.js
 
 

@@ -87,6 +87,10 @@ add_team_user:
   url:   /team/addTeamUser/:teamId/:userId
   param: { module: team, action: addTeamUser }
 
+test_sb:
+  url:   /sb
+  param: { module: homepage, action: sb }
+
 
 # default rules
 homepage:

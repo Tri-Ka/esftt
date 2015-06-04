@@ -37,6 +37,41 @@ var masonry =
 		  itemSelector: '.directory'
 		});
 	}
+};
+
+var chart = 
+{
+	init: function()
+	{
+
+		var myData = $('#myfirstchart').data('stats');
+
+		var min = $('#myfirstchart').data('min');
+		var max = $('#myfirstchart').data('max');
+
+		new Morris.Area({
+		  element: 'myfirstchart',
+		  data: myData,
+		  xkey: 'y',
+		  ykeys: ['value'],
+		  labels: ['Value'],
+		  ymin: min,
+		  ymax: max,
+		  parseTime: false,
+		  fillOpacity: 0.6,
+		});
+
+		var pieData = $('#pie-chart').data('stats');
+
+		new Morris.Donut({
+		  	element: 'pie-chart',
+		  	data: pieData,
+		 	colors: [
+				'#118E08',
+				'#D00000'
+			],
+		});
+	}
 }
 
 $( document ).ready(function()
@@ -44,5 +79,5 @@ $( document ).ready(function()
 	swiper.init();
 	//masonry.init();
 	$('iframe').removeAttr('style');
-
+	chart.init();
 });

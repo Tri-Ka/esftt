@@ -20,6 +20,7 @@ default:
     - hover-min.css
     - animate.css
     - bootstrap-datetimepicker.min.css
+    - morris.css
     - admin/sb-admin.css
     - admin/s.css
 
@@ -33,6 +34,7 @@ default:
     - bootstrap-datetimepicker.min.js
     - jquery.hotkeys.js
     - bootstrap-wysiwyg.js
+    - morris.min.js
     - admin.js
 
 

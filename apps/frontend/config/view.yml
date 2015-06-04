@@ -19,6 +19,7 @@ default:
     - swiper.min.css
     - hover-min.css
     - animate.css
+    - morris.css
     - front/s.css
 
   javascripts:
@@ -26,6 +27,8 @@ default:
     - bootstrap.min.js
     - swiper.min.js
     - masonry.pkgd.min.js
+    - raphael.min.js
+    - morris.min.js
     - script.js
 
 

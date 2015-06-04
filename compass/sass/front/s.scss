@@ -640,3 +640,11 @@ iframe {
 .green {
 	color: #00C000;
 }
+
+.pie-chart-box {
+	@media (min-width: 768px) {
+		position: absolute;
+		top: -65px;
+		right: 0px;
+	}
+}

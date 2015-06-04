@@ -23,6 +23,9 @@
     	<div class="row">
     		<div class="col-xs-12"><strong><?php echo $article->getSubTitle(); ?></strong></div>
         	<div class="col-xs-12"><?php echo $article->getContent(ESC_RAW); ?></div>
+
+            <a href="<?php echo url_for('article_show', array('id' => $article->getId())); ?>" class="btn btn-primary btn-sm"><?php echo __('detail'); ?> <i class="fa fa-long-arrow-right"></i></a>
+
         </div>
 
     </div>
@@ -33,6 +36,9 @@
             <div class="row">
                 <div class="col-xs-12"><strong><?php echo $article->getSubTitle(); ?></strong></div>
                 <div class="col-xs-12"><?php echo nl2br($article->getContent()); ?></div>
+
+                <a href="<?php echo url_for('article_show', array('id' => $article->getId())); ?>" class="btn btn-primary btn-sm"><?php echo __('detail'); ?> <i class="fa fa-long-arrow-right"></i></a>
+
             </div>
 
         </div>

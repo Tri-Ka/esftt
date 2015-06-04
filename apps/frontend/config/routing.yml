@@ -1,3 +1,7 @@
+article_show:
+  url: /article/:id
+  param: { module: article, action: show }
+
 club:
   url: /club
   param: { module: club, action: show }

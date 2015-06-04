@@ -87,10 +87,13 @@ class sfGuardUserBackendForm extends BasesfGuardUserForm
             $old = $picture->getSavedName();
             $img = new sfImage($old, $picture->getType());
 
-            $img->thumbnail(400, 400, 'center');
+            $smallSizes = sfConfig::get('app_imagesizes_avatar_small');
+            $bigSizes = sfConfig::get('app_imagesizes_avatar_big');
+
+            $img->thumbnail($bigSizes['width'], $bigSizes['height'], 'center');
             $img->saveAs($directoryBig . DIRECTORY_SEPARATOR . $user->getAvatar());
 
-            $img->thumbnail(100, 100, 'center');
+            $img->thumbnail($smallSizes['width'], $smallSizes['height'], 'center');
             $img->saveAs($directory . DIRECTORY_SEPARATOR . $user->getAvatar());
 
 

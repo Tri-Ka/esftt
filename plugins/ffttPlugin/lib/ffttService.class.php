@@ -317,7 +317,7 @@ class Service
  
     public static function getObject($data, $key = null)
     {
-        if ($key) {
+        if ($key && $data) {
             return array_key_exists($key, $data) ? $data[$key] : null;
         } else {
             return empty($data) ? null : $data;

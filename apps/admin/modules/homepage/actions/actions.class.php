@@ -16,4 +16,9 @@ class homepageActions extends sfActions
     	$this->articleCount = ArticleTable::getInstance()->findAll()->count();
     	$this->eventCount = EventTable::getInstance()->findAll()->count();
     }
+
+    public function executeSb()
+    {
+    	$this->setLayout('sb_admin');
+    }
 }

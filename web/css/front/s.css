@@ -666,3 +666,12 @@ iframe body table tr img, iframe body table td img {
 .green {
   color: #00C000;
 }
+
+@media (min-width: 768px) {
+  /* line 644, ../../../compass/sass/front/s.scss */
+  .pie-chart-box {
+    position: absolute;
+    top: -65px;
+    right: 0px;
+  }
+}

@@ -16,6 +16,12 @@ all:
     event_picture:
       width: 320
       height: 320
+    avatar_small:
+      width: 100
+      height: 100
+    avatar_big:
+      width: 300
+      height: 300
 
   pagination:
     max_item_admin: 20

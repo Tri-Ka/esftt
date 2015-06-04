@@ -9,5 +9,10 @@
  */
 class articleActions extends sfActions
 {
-   
+   public function executeShow(sfWebRequest $request)
+   {
+
+   		$this->article = ArticleTable::getInstance()->find($request->getParameter('id'));
+
+   }
 }

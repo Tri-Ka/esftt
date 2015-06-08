@@ -33,8 +33,8 @@
                                 <li><a href="<?php echo url_for('contact'); ?>" class="hvr-bounce-to-top">Contact</a></li>
                             </ul>
                             <ul class="nav navbar-nav social-nav">
-                                <li><a href="#" class="facebook hvr-bounce-in"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#" class="twitter hvr-bounce-in"><i class="fa fa-twitter"></i></a></li>
+                                <li><a target="_blank" href="<?php echo sfConfig::get('app_url_facebook'); ?>" class="facebook hvr-bounce-in"><i class="fa fa-facebook"></i></a></li>
+                                <li><a target="_blank" href="<?php echo sfConfig::get('app_url_twitter'); ?>" class="twitter hvr-bounce-in"><i class="fa fa-twitter"></i></a></li>
                             </ul>
                         </div><!-- /.navbar-collapse -->
                     </nav>
@@ -88,10 +88,10 @@
 
                         <ul class="links">
                             <li>
-                                <a target="blank" href="http://www.fftt.com/">site de la fédération</a>
+                                <a target="blank" href="<?php echo sfConfig::get('app_url_fftt'); ?>">site de la fédération</a>
                             </li>
                             <li>
-                                <a target="blank" href="http://www.tennis-de-table.com/">tennis-de-table.com</a>
+                                <a target="blank" href="<?php echo sfConfig::get('app_url_tennis_de_table'); ?>">tennis-de-table.com</a>
                             </li>
                         </ul>
 

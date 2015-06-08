@@ -14,20 +14,14 @@
     <?php if (null !== $article->getPicture()): ?>
 
     <div class="col-xs-12 col-md-5 img-cont">
-
         <img class="thumbnail" src="<?php echo $article->retrievePictureUrl(); ?>">
-
     </div>
 
-    <div class="col-xs-12 col-md-7">
+    <div class="col-xs-12 col-md-7 content-part">
     	<div class="row">
-    		<div class="col-xs-12"><strong><?php echo $article->getSubTitle(); ?></strong></div>
-        	<div class="col-xs-12"><?php echo $article->getContent(ESC_RAW); ?></div>
-
-            <a href="<?php echo url_for('article_show', array('id' => $article->getId())); ?>" class="btn btn-primary btn-sm"><?php echo __('detail'); ?> <i class="fa fa-long-arrow-right"></i></a>
-
+    		<div class="col-xs-12 home-pitch"><strong><?php echo $article->getSubTitle(); ?></strong></div>
+        	<div class="col-xs-12 home-content"><?php echo strip_tags($article->getContent(ESC_RAW)); ?></div>
         </div>
-
     </div>
 
     <?php else: ?>
@@ -35,14 +29,12 @@
         <div class="col-xs-12">
             <div class="row">
                 <div class="col-xs-12"><strong><?php echo $article->getSubTitle(); ?></strong></div>
-                <div class="col-xs-12"><?php echo nl2br($article->getContent()); ?></div>
-
-                <a href="<?php echo url_for('article_show', array('id' => $article->getId())); ?>" class="btn btn-primary btn-sm"><?php echo __('detail'); ?> <i class="fa fa-long-arrow-right"></i></a>
-
+                <div class="col-xs-12"><?php echo strip_tags($article->getContent(ESC_RAW)); ?></div>
             </div>
-
         </div>
 
     <?php endif; ?>
+
+    <a href="<?php echo url_for('article_show', array('id' => $article->getId())); ?>" class="btn btn-primary btn-xs show-article"><?php echo __('voir la suite'); ?> <i class="fa fa-long-arrow-right"></i></a>
 
 </div>

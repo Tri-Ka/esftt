@@ -9,6 +9,12 @@ dev:
 
 all:
   
+  url:
+    facebook: https://www.facebook.com/groups/46831155736/
+    twitter: 'https://twitter.com'
+    fftt: 'http://www.fftt.com/'
+    tennis_de_table: 'http://www.tennis-de-table.com/'
+
   imagesizes:
     article_picture:
       width: 580

@@ -1,5 +1,5 @@
 <div class="btn-toolbar" data-role="editor-toolbar" data-target="#editor" id="toolbar-editor">
-  				
+
 	<div class="btn-group">
 		<a class="btn btn-default dropdown-toggle" data-toggle="dropdown" title="Font"><i class="fa fa-font"></i><b class="caret"></b></a>
 		<ul class="dropdown-menu">
@@ -11,7 +11,7 @@
 		<a class="btn btn-default dropdown-toggle" data-toggle="dropdown" title="Font Size"><i class="fa fa-text-height"></i><b class="caret"></b></a>
 		<ul class="dropdown-menu">
 			<li><a data-edit="fontSize 8"><font size="8">Huge</font></a></li>
-			<li><a data-edit="fontSize 3"><font size="3">Normal</font></a></li>
+			<li><a data-edit="fontSize 2"><font size="2">Normal</font></a></li>
 			<li><a data-edit="fontSize 1"><font size="1">Small</font></a></li>
 		</ul>
 	</div>
@@ -42,4 +42,4 @@
 		<a class="btn btn-default" data-edit="redo" title="Redo (Ctrl/Cmd+Y)"><i class="fa fa-repeat"></i></a>
 	</div>
 
-</div> 
+</div>

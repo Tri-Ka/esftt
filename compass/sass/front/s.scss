@@ -288,6 +288,7 @@ footer {
 
 .article {
 	margin-top: 15px;
+	position: relative;
 	img {
 		width: 100%; 
 	}
@@ -333,6 +334,17 @@ footer {
 		font-size: 25px;
 		float: left;
 		line-height: 60px;
+	}
+	
+	.content-part {
+		max-height: 145px;
+  		overflow: hidden;
+	}
+
+	.show-article {
+		position: absolute;
+		bottom: 0;
+		right: 15px;
 	}
 }
 

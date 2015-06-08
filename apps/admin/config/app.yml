@@ -14,8 +14,8 @@ all:
       width: 580
       height: 360
     event_picture:
-      width: 320
-      height: 320
+      width: 500
+      height: 715
     avatar_small:
       width: 100
       height: 100

@@ -26,14 +26,7 @@
 		<div class="form-group">
 	 		
 	 		<label><?php echo __('Contenu'); ?></label>
- 			
- 			<?php include_partial('general/toolbar'); ?>
-
-			<div id="editor" class="textarea marged-top">
-				<?php echo trim($form->getObject()->getContent(ESC_RAW)); ?>
-  			</div>
-
-	 		<?php echo $form['content']->render(array('class' => 'form-control hidden')); ?>
+	 		<?php echo $form['content']->render(array('class' => 'form-control')); ?>
 
 		</div>	
 

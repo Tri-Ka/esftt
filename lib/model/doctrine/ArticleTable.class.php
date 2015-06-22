@@ -22,7 +22,7 @@ class ArticleTable extends Doctrine_Table
         return $this
             ->createQuery('a')
             ->andWhere('a.is_published = true')
-            ->orderBy('a.published_at DESC');
+            ->orderBy('a.created_at DESC');
     }
 
     public function findAllPublished()

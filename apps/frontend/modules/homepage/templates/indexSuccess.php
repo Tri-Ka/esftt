@@ -11,11 +11,10 @@
 
             <div class="box-content">
 
-                <?php foreach ($articles as $article): ?>
+                <?php foreach ($articles->getResults() as $article): ?>
                     <?php include_partial('article/article', array('article' => $article)); ?>
 
                     <hr>
-
                 <?php endforeach; ?>
 
                 <?php include_partial('general/pagination', array('pager' => $articles, 'url' => url_for('homepage'))); ?>
@@ -25,7 +24,7 @@
         </div>
     </div>
 
-    <div class="col-xs-12 col-sm-8">
+    <div class="col-xs-12 col-sm-8 pull-right">
         <div class="box marged-top">
 
             <div class="box-title">

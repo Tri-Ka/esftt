@@ -6,11 +6,4 @@ $( document ).ready(function()
 		extraFormats: [ 'YYYY-mm-D HH:mm' ]
 	});
 	
-	$('#editor').wysiwyg();
-
-	$('.article-form').on('submit', function(e){
-
-		$('#article_content').val($('#editor').html());
-	});
-
 });

@@ -1,7 +1,12 @@
 $dark-blue: #012242;
 $grey: #C3C3C3;
 
-@import url(http://fonts.googleapis.com/css?family=Lobster|Oxygen:400,300,700|Playball|Righteous|Allan:400,700);
+@import url(http://fonts.googleapis.com/css?family=Oxygen:400,300,700|Playball|Righteous|Allan:400,700);
+
+@font-face {
+    font-family: Lobster;
+    src: url('../../fonts/Lobster-Regular.ttf');
+}
 
 div.flash {
 

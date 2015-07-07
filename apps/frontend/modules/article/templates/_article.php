@@ -35,6 +35,7 @@
 
     <?php endif; ?>
 
-    <a href="<?php echo url_for('article_show', array('id' => $article->getId())); ?>" class="btn btn-primary btn-xs show-article"><?php echo __('voir la suite'); ?> <i class="fa fa-long-arrow-right"></i></a>
+    <a href="<?php echo url_for('article_show', array('id' => $article->getId())); ?>#disqus_thread" class="coms-number"></a>
+    <a href="<?php echo url_for('article_show', array('id' => $article->getId())); ?>" class="btn btn-primary btn-xs show-article"><?php echo __('voir la suite'); ?></a>
 
 </div>

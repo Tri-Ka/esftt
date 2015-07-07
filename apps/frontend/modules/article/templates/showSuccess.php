@@ -1,4 +1,4 @@
- <div class="row">
+ <div class="row equalized">
 
     <?php include_partial('homepage/menuLeft'); ?>
 
@@ -44,6 +44,10 @@
                     </div>
 
                 <?php endif; ?>
+            
+            <div class="col-xs-12">
+                <div id="disqus_thread"></div>
+            </div>
 
         </div>
     </div>

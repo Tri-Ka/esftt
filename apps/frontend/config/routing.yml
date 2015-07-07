@@ -2,6 +2,10 @@ article_show:
   url: /article/:id
   param: { module: article, action: show }
 
+event_show:
+  url: /event/:id
+  param: { module: event, action: show }
+
 club:
   url: /club
   param: { module: club, action: show }

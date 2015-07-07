@@ -52,8 +52,8 @@ class EventForm extends BaseEventForm
         $year_to = substr($date_to, 6, 4);
         $hour_to = substr($date_to, 11, 5);
 
-        $new_from_format = $year_from.'-'.$month_from.'-'.$day_from.' '.$hour_from;
-        $new_to_format = $year_to.'-'.$month_to.'-'.$day_to.' '.$hour_to;
+        $new_from_format = $year_from.'-'.$month_from.'-'.$day_from.' '.$hour_from.':00';
+        $new_to_format = $year_to.'-'.$month_to.'-'.$day_to.' '.$hour_to.':00';
 
         $taintedValues['date_from'] = $new_from_format;
         $taintedValues['date_to'] = $new_to_format;

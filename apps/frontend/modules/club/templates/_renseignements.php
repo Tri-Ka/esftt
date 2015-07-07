@@ -6,8 +6,15 @@
 
 	<div class="box-content marged-top">
 
-		Patrick FANZUTTI <br>
-		Tel : 07 82 33 79 72
+		<table class="table table-striped table-hover">
+
+			<tbody>
+				<tr>
+					<td>Patrick FANZUTTI</td><td class="text-right"></td><td class="text-right"><i class="fa fa-phone"></i> 07 82 33 79 72</td>
+				</tr>
+			</tbody>
+
+		</table>
 
 	</div>
 

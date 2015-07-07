@@ -5,7 +5,7 @@
     <div class="col-xs-12 col-sm-8">
         <div class="box marged-top">
 
-            <div class="box-title">
+            <div class="box-title special-title">
                 <?php echo __('Les dernières actus'); ?>
             </div>
 
@@ -27,7 +27,7 @@
     <div class="col-xs-12 col-sm-8 pull-right">
         <div class="box marged-top">
 
-            <div class="box-title">
+            <div class="box-title special-title">
                 <?php echo __('Les dernièrs évènements'); ?>
             </div>
 

@@ -8,10 +8,8 @@
 
 		Cette saison notre club alignera :
 		<ul>
-			<li>Cinq équipes en championnat de FRANCE: de départementale 3 à régionale 3</li>
-			<li>Trois équipes en championnat de Paris: de la division 2 à la division promotion honneur</li>
-			<li>Des équipes en coupe du Val d'Oise.</li>
-			<li>Des équipes en championnat de jeunes.</li>
+			<li>4 équipes en championnat de FRANCE: de départementale 2 à départementale 2</li>
+			<li>2 équipes en championnat de Paris: de la division 2 à la division promotion honneur</li>
 		</ul>
 
 	</div>

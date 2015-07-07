@@ -45,7 +45,7 @@
 
     <div class="box col-xs-12 marged-top">
         <div class="box-title text-center">
-            <div class="full-text"><?php echo __('Le mot du président'); ?></div>
+            <div class="full-text special-title"><?php echo __('Le mot du président'); ?></div>
             <img class="img-circle img-thumbnail marged-top" src="http://placehold.it/100x100">
         </div>
         <div class="box-content marged-top">

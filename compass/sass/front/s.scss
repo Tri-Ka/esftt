@@ -338,7 +338,7 @@ footer {
 		font-family: 'Lobster', cursive;
 		font-size: 25px;
 		float: left;
-		line-height: 60px;
+		margin-bottom: 15px;
 	}
 	
 	.content-part {
@@ -350,6 +350,26 @@ footer {
 		position: absolute;
 		bottom: 0;
 		right: 15px;
+	}
+
+	.pitch, .content {
+		margin-bottom: 15px;
+	}
+
+	.pitch {
+		text-align: center;
+	}
+
+	.title-part {
+		margin-bottom: 15px;
+		@media (max-width: 768px) {
+			text-align: center;
+
+			.date {
+				left: 50%;
+  				margin-left: -32px;
+			}
+		}
 	}
 }
 
@@ -680,7 +700,7 @@ a.coms-number {
 
 .info-dates {
 	padding: 15px;
-  	background: #D0D0D0;
+  	background: #FCEEB6;
   	border-radius: 4px;
   	margin-bottom: 15px;
 	
@@ -695,4 +715,15 @@ a.coms-number {
   		float: left;
   		width: 100%;
   	}
+}
+
+.special-title {
+	text-align: center;
+	padding-bottom: 15px;
+	margin-bottom: 15px;
+	border-bottom: 1px dashed #000;
+}
+
+.box .row {
+	position: relative;
 }

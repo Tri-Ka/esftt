@@ -7,7 +7,7 @@
 	<div class="box-content marged-top">
 
 		Patrick FANZUTTI <br>
-		Tel : 06 03 90 95 37
+		Tel : 07 82 33 79 72
 
 	</div>
 

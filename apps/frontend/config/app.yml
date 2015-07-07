@@ -21,7 +21,7 @@ all:
       height: 360
 
   pagination:
-    max_article: 5
+    max_article: 3
     max_event: 2
     max_item_admin: 20
 

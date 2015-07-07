@@ -26,7 +26,7 @@
 		<div class="form-group">
 	 		
 	 		<label><?php echo __('Contenu'); ?></label>
-	 		<?php echo $form['content']->render(array('class' => 'form-control')); ?>
+	 		<?php echo $form['content']->render(array('class' => 'form-control niceEditor')); ?>
 
 		</div>	
 

@@ -4,7 +4,7 @@
 
 		<div class="box">
 
-			<div class="box-title text-center">
+			<div class="box-title text-center special-title">
 				<?php echo __('Nous contacter'); ?>
 			</div>
 

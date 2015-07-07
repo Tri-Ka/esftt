@@ -25,7 +25,7 @@
 
         <?php if ($pager->getNextPage() != $pager->getPage()): ?>
    
-            <a href="<?php echo $url; ?>?page=<?php echo $articles->getNextPage() ?>" class="next hvr-grow">
+            <a href="<?php echo $url; ?>?page=<?php echo $pager->getNextPage() ?>" class="next hvr-grow">
                 <?php echo $pager->getNextPage(); ?>
             </a>
 

@@ -1,7 +1,24 @@
 <div class="box col-xs-12">
 
 	<div class="box-title">
-		<i class="fa fa-photo"></i> <?php echo __('Gallerie'); ?>
+		<i class="fa fa-photo"></i> <?php echo $title; ?>
+	</div>
+
+</div>
+
+<div class="box col-xs-12 marged-top">
+
+	<div class="row">
+		<div class="col-xs-12">
+			<a href="<?php echo url_for('gallery'); ?>">Galerie</a>
+
+			<?php $folderRoot = ''; ?>
+
+			<?php foreach ($breadscrums as $folder): ?>
+				<?php $folderRoot.= '/'.$folder; ?>
+				/ <a href="<?php echo url_for('gallery', array('folder' => $folderRoot)); ?>"><?php echo $folder ; ?></a>
+			<?php endforeach; ?>
+		</div>
 	</div>
 
 </div>
@@ -49,7 +66,10 @@
 								<?php echo $directory['name']; ?>
 							</div>
 						<?php else: ?>
-							<div class="box black text-center">
+							<div class="box black">
+								<img width="100%" src="<?php echo public_path('images/default-gallery.jpg'); ?>">
+							</div>
+							<div class="gallery-hover">
 								<?php echo $directory['name']; ?>
 							</div>
 						<?php endif; ?>

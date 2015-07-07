@@ -11,6 +11,18 @@ class galleryActions extends sfActions
 {
     public function executeGallery(sfWebRequest $request)
     {
+
+        $this->breadscrums = array();
+
+        $this->title = 'Galerie';
+
+        foreach(explode('/', $request->getParameter('folder')) as $folder) {
+            if ('' !== $folder) {
+                $this->breadscrums[] = $folder;
+                $this->title = $folder;
+            }
+        }
+
         if (true == $request->hasParameter('folder')) {
             $sublFolder = DIRECTORY_SEPARATOR.$request->getParameter('folder');
         } else {

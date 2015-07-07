@@ -16,13 +16,13 @@
 
 			<tbody>
 				<tr>
-					<td colspan="2">Adulte</td><td class="text-right">115€</td>
+					<td colspan="2">Adulte</td><td class="text-right">130€</td>
 				</tr>
 				<tr>
-					<td colspan="2">Junior</td><td class="text-right">115€</td>
+					<td colspan="2">Junior</td><td class="text-right">130€</td>
 				</tr>
 				<tr>
-					<td colspan="2">Jeune</td><td class="text-right">100€</td>
+					<td colspan="2">Jeune</td><td class="text-right">120€</td>
 				</tr>
 			</tbody>
 

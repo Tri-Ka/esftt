@@ -336,7 +336,7 @@ footer .links a {
   font-family: 'Lobster', cursive;
   font-size: 25px;
   float: left;
-  line-height: 60px;
+  margin-bottom: 15px;
 }
 /* line 344, ../../../compass/sass/front/s.scss */
 .article .content-part {
@@ -349,8 +349,31 @@ footer .links a {
   bottom: 0;
   right: 15px;
 }
+/* line 355, ../../../compass/sass/front/s.scss */
+.article .pitch, .article .content {
+  margin-bottom: 15px;
+}
+/* line 359, ../../../compass/sass/front/s.scss */
+.article .pitch {
+  text-align: center;
+}
+/* line 363, ../../../compass/sass/front/s.scss */
+.article .title-part {
+  margin-bottom: 15px;
+}
+@media (max-width: 768px) {
+  /* line 363, ../../../compass/sass/front/s.scss */
+  .article .title-part {
+    text-align: center;
+  }
+  /* line 368, ../../../compass/sass/front/s.scss */
+  .article .title-part .date {
+    left: 50%;
+    margin-left: -32px;
+  }
+}
 
-/* line 356, ../../../compass/sass/front/s.scss */
+/* line 376, ../../../compass/sass/front/s.scss */
 .gallery-folder {
   position: relative;
   float: left;
@@ -360,12 +383,12 @@ footer .links a {
   text-decoration: none !important;
   width: 100%;
 }
-/* line 366, ../../../compass/sass/front/s.scss */
+/* line 386, ../../../compass/sass/front/s.scss */
 .gallery-folder:hover .gallery-hover {
   opacity: 1;
   transition: opacity 0.3s;
 }
-/* line 371, ../../../compass/sass/front/s.scss */
+/* line 391, ../../../compass/sass/front/s.scss */
 .gallery-folder .gallery-hover {
   position: absolute;
   background: #000;
@@ -381,13 +404,13 @@ footer .links a {
   transition: opacity 0.3s;
 }
 
-/* line 389, ../../../compass/sass/front/s.scss */
+/* line 409, ../../../compass/sass/front/s.scss */
 .directory .box {
   height: 156px;
   overflow: hidden;
 }
 
-/* line 394, ../../../compass/sass/front/s.scss */
+/* line 414, ../../../compass/sass/front/s.scss */
 li.home a {
   font-size: 25px;
   padding-top: 25px !important;
@@ -395,7 +418,7 @@ li.home a {
 }
 
 @media (min-width: 768px) {
-  /* line 401, ../../../compass/sass/front/s.scss */
+  /* line 421, ../../../compass/sass/front/s.scss */
   header .navbar-nav > li > a {
     padding-top: 27px;
     padding-bottom: 28px;
@@ -404,7 +427,7 @@ li.home a {
     font-size: 20px;
   }
 }
-/* line 411, ../../../compass/sass/front/s.scss */
+/* line 431, ../../../compass/sass/front/s.scss */
 .swiper-container {
   width: 100%;
   margin-left: auto;
@@ -412,36 +435,36 @@ li.home a {
   background: #000;
 }
 @media (min-width: 768px) {
-  /* line 411, ../../../compass/sass/front/s.scss */
+  /* line 431, ../../../compass/sass/front/s.scss */
   .swiper-container {
     height: 300px;
   }
 }
 
-/* line 423, ../../../compass/sass/front/s.scss */
+/* line 443, ../../../compass/sass/front/s.scss */
 .swiper-slide {
   background-size: cover;
   background-position: center;
   text-align: center;
 }
-/* line 427, ../../../compass/sass/front/s.scss */
+/* line 447, ../../../compass/sass/front/s.scss */
 .swiper-slide.swiper-slide-prev {
   margin-right: 0 !important;
 }
 @media (min-width: 768px) {
-  /* line 431, ../../../compass/sass/front/s.scss */
+  /* line 451, ../../../compass/sass/front/s.scss */
   .swiper-slide .photo {
     height: 100%;
   }
 }
 @media (max-width: 768px) {
-  /* line 431, ../../../compass/sass/front/s.scss */
+  /* line 451, ../../../compass/sass/front/s.scss */
   .swiper-slide .photo {
     width: 100%;
   }
 }
 
-/* line 441, ../../../compass/sass/front/s.scss */
+/* line 461, ../../../compass/sass/front/s.scss */
 .gallery-top {
   width: 100%;
   background: #000;
@@ -449,47 +472,47 @@ li.home a {
   padding: 15px;
 }
 @media (min-width: 768px) {
-  /* line 441, ../../../compass/sass/front/s.scss */
+  /* line 461, ../../../compass/sass/front/s.scss */
   .gallery-top {
     height: 600px;
   }
 }
 
-/* line 451, ../../../compass/sass/front/s.scss */
+/* line 471, ../../../compass/sass/front/s.scss */
 .gallery-thumbs {
   height: 20%;
   box-sizing: border-box;
   padding: 10px 0;
 }
 
-/* line 456, ../../../compass/sass/front/s.scss */
+/* line 476, ../../../compass/sass/front/s.scss */
 .gallery-thumbs .swiper-slide {
   width: auto;
   height: 80px;
   opacity: 0.4;
 }
 
-/* line 461, ../../../compass/sass/front/s.scss */
+/* line 481, ../../../compass/sass/front/s.scss */
 .gallery-thumbs .swiper-slide-active {
   opacity: 1;
 }
 
-/* line 465, ../../../compass/sass/front/s.scss */
+/* line 485, ../../../compass/sass/front/s.scss */
 .no-pad {
   padding: 0;
 }
 
-/* line 469, ../../../compass/sass/front/s.scss */
+/* line 489, ../../../compass/sass/front/s.scss */
 .nav-pills > li.active > a, .nav-pills > li.active > a:focus, .nav-pills > li.active > a:hover {
   background-color: #012242;
 }
 
-/* line 474, ../../../compass/sass/front/s.scss */
+/* line 494, ../../../compass/sass/front/s.scss */
 .nav a {
   color: #333;
 }
 
-/* line 480, ../../../compass/sass/front/s.scss */
+/* line 500, ../../../compass/sass/front/s.scss */
 .pagination a {
   display: inline-block;
   width: 30px;
@@ -503,28 +526,28 @@ li.home a {
   border: 1px solid #012242;
   font-size: 10px;
 }
-/* line 493, ../../../compass/sass/front/s.scss */
+/* line 513, ../../../compass/sass/front/s.scss */
 .pagination a.current {
   background: #fff;
   color: #012242;
   border: 1px solid #012242;
 }
-/* line 496, ../../../compass/sass/front/s.scss */
+/* line 516, ../../../compass/sass/front/s.scss */
 .pagination a.current:hover {
   cursor: default;
 }
 
-/* line 505, ../../../compass/sass/front/s.scss */
+/* line 525, ../../../compass/sass/front/s.scss */
 .small {
   font-size: 9px;
 }
 
-/* line 509, ../../../compass/sass/front/s.scss */
+/* line 529, ../../../compass/sass/front/s.scss */
 label {
   float: left;
 }
 
-/* line 513, ../../../compass/sass/front/s.scss */
+/* line 533, ../../../compass/sass/front/s.scss */
 .error_list {
   padding: 0;
   font-size: 9px;
@@ -533,32 +556,32 @@ label {
   padding-top: 5px;
   padding-left: 10px;
 }
-/* line 520, ../../../compass/sass/front/s.scss */
+/* line 540, ../../../compass/sass/front/s.scss */
 .error_list li {
   list-style: none;
   color: #F00;
 }
 
-/* line 526, ../../../compass/sass/front/s.scss */
+/* line 546, ../../../compass/sass/front/s.scss */
 .has-error .form-control {
   border-color: #F00;
 }
 
-/* line 530, ../../../compass/sass/front/s.scss */
+/* line 550, ../../../compass/sass/front/s.scss */
 header .social-nav {
   position: absolute;
   top: 20px;
   right: 365px;
 }
 @media (max-width: 992px) {
-  /* line 530, ../../../compass/sass/front/s.scss */
+  /* line 550, ../../../compass/sass/front/s.scss */
   header .social-nav {
     top: 86px;
     left: 0;
   }
 }
 @media (max-width: 768px) {
-  /* line 530, ../../../compass/sass/front/s.scss */
+  /* line 550, ../../../compass/sass/front/s.scss */
   header .social-nav {
     top: 0px;
     right: 20px;
@@ -566,7 +589,7 @@ header .social-nav {
     width: inherit;
   }
 }
-/* line 548, ../../../compass/sass/front/s.scss */
+/* line 568, ../../../compass/sass/front/s.scss */
 header .social-nav li {
   padding: 0;
   width: 35px;
@@ -574,11 +597,11 @@ header .social-nav li {
   margin-right: 15px;
   margin-bottom: 10px;
 }
-/* line 554, ../../../compass/sass/front/s.scss */
+/* line 574, ../../../compass/sass/front/s.scss */
 header .social-nav li:hover {
   color: #fff;
 }
-/* line 559, ../../../compass/sass/front/s.scss */
+/* line 579, ../../../compass/sass/front/s.scss */
 header .social-nav li a {
   padding: 0;
   width: 35px;
@@ -591,31 +614,31 @@ header .social-nav li a {
   border-radius: 50%;
   box-shadow: 0px 0px 12px #000;
 }
-/* line 571, ../../../compass/sass/front/s.scss */
+/* line 591, ../../../compass/sass/front/s.scss */
 header .social-nav li a.facebook {
   background-color: #6E84B6;
 }
-/* line 575, ../../../compass/sass/front/s.scss */
+/* line 595, ../../../compass/sass/front/s.scss */
 header .social-nav li a.twitter {
   background-color: #00A5FF;
 }
 
-/* line 585, ../../../compass/sass/front/s.scss */
+/* line 605, ../../../compass/sass/front/s.scss */
 .slider-full {
   margin-top: -50px;
 }
-/* line 589, ../../../compass/sass/front/s.scss */
+/* line 609, ../../../compass/sass/front/s.scss */
 .slider-full #myCarousel {
   border: none;
   border-bottom: 5px solid #FFF;
 }
 
-/* line 595, ../../../compass/sass/front/s.scss */
+/* line 615, ../../../compass/sass/front/s.scss */
 img.swiper-lazy.photo.swiper-lazy-loaded {
   margin-left: -30px;
 }
 
-/* line 599, ../../../compass/sass/front/s.scss */
+/* line 619, ../../../compass/sass/front/s.scss */
 .team-name {
   font-family: 'Lobster', cursive;
   margin-bottom: 15px;
@@ -627,64 +650,64 @@ img.swiper-lazy.photo.swiper-lazy-loaded {
 }
 
 @media (max-width: 768px) {
-  /* line 611, ../../../compass/sass/front/s.scss */
+  /* line 631, ../../../compass/sass/front/s.scss */
   header .container-fluid,
   header .container {
     padding-right: 0px;
     padding-left: 0px;
   }
 
-  /* line 617, ../../../compass/sass/front/s.scss */
+  /* line 637, ../../../compass/sass/front/s.scss */
   #main-container {
     padding-top: 85px;
     padding-right: 0px;
     padding-left: 0px;
   }
 }
-/* line 624, ../../../compass/sass/front/s.scss */
+/* line 644, ../../../compass/sass/front/s.scss */
 .user-team-unit {
   padding: 5px;
   border-radius: 4px;
   color: #000;
   transition: box-shadow 0.3s;
 }
-/* line 630, ../../../compass/sass/front/s.scss */
+/* line 650, ../../../compass/sass/front/s.scss */
 .user-team-unit:hover {
   box-shadow: 0px 0px 20px #CCC;
   transition: box-shadow 0.3s;
 }
 
-/* line 637, ../../../compass/sass/front/s.scss */
+/* line 657, ../../../compass/sass/front/s.scss */
 iframe body {
   background: none !important;
 }
-/* line 639, ../../../compass/sass/front/s.scss */
+/* line 659, ../../../compass/sass/front/s.scss */
 iframe body table {
   border: none;
 }
-/* line 641, ../../../compass/sass/front/s.scss */
+/* line 661, ../../../compass/sass/front/s.scss */
 iframe body table tr, iframe body table td {
   border: none;
   text-align: left;
   background: none;
 }
-/* line 645, ../../../compass/sass/front/s.scss */
+/* line 665, ../../../compass/sass/front/s.scss */
 iframe body table tr img, iframe body table td img {
   display: none;
 }
 
-/* line 653, ../../../compass/sass/front/s.scss */
+/* line 673, ../../../compass/sass/front/s.scss */
 .red {
   color: red;
 }
 
-/* line 657, ../../../compass/sass/front/s.scss */
+/* line 677, ../../../compass/sass/front/s.scss */
 .green {
   color: #00C000;
 }
 
 @media (min-width: 768px) {
-  /* line 661, ../../../compass/sass/front/s.scss */
+  /* line 681, ../../../compass/sass/front/s.scss */
   .pie-chart-box {
     position: absolute;
     top: -65px;
@@ -692,7 +715,7 @@ iframe body table tr img, iframe body table td img {
   }
 }
 
-/* line 669, ../../../compass/sass/front/s.scss */
+/* line 689, ../../../compass/sass/front/s.scss */
 a.coms-number {
   position: absolute;
   right: 15px;
@@ -701,27 +724,40 @@ a.coms-number {
   color: gray;
 }
 
-/* line 677, ../../../compass/sass/front/s.scss */
+/* line 697, ../../../compass/sass/front/s.scss */
 .equalized {
   margin-top: -50px;
 }
 
-/* line 681, ../../../compass/sass/front/s.scss */
+/* line 701, ../../../compass/sass/front/s.scss */
 .info-dates {
   padding: 15px;
-  background: #D0D0D0;
+  background: #FCEEB6;
   border-radius: 4px;
   margin-bottom: 15px;
 }
-/* line 687, ../../../compass/sass/front/s.scss */
+/* line 707, ../../../compass/sass/front/s.scss */
 .info-dates .title-horaire {
   font-weight: bold;
   margin-bottom: 15px;
   text-align: center;
 }
-/* line 693, ../../../compass/sass/front/s.scss */
+/* line 713, ../../../compass/sass/front/s.scss */
 .info-dates .info-date {
   display: block;
   float: left;
   width: 100%;
+}
+
+/* line 720, ../../../compass/sass/front/s.scss */
+.special-title {
+  text-align: center;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px dashed #000;
+}
+
+/* line 727, ../../../compass/sass/front/s.scss */
+.box .row {
+  position: relative;
 }

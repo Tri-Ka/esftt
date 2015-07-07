@@ -93,20 +93,30 @@
                             <li>
                                 <a target="blank" href="<?php echo sfConfig::get('app_url_tennis_de_table'); ?>">tennis-de-table.com</a>
                             </li>
+
+                            <li>
+                                <a target="blank" href="http://www.ville-la-frette95.fr/">mairie de la Frette</a>
+                            </li>
+                            <li>
+                                <a target="blank" href="http://www.cd95tt.fr/blogs.php?lng=fr">comité 95</a>
+                            </li>
+                            <li>
+                                <a target="blank" href="http://www.fftt-idf.com/">Ligue FFTT Ile de France</a>
+                            </li>
+                            <li>
+                                <a target="blank" href="http://theo384.free.fr/">Friendship Sport</a>
+                            </li>
+
                         </ul>
 
                     </div>
 
-                    <div class="col-xs-12 col-sm-4">
-
-                    </div>
-
-                    <div class="col-xs-12 col-sm-4">
-
-                    </div>
-
-                    <div class="col-xs-12 text-center">
+                    <div class="col-xs-12 col-sm-4 text-center">
                         <span class="small">© ESFTT <?php echo date('Y'); ?> - Tous droits réservés</span>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-4">
+
                     </div>
 
                 </div>

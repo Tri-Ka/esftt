@@ -33,11 +33,11 @@
 
             <div class="box-content marged-top">
                 <div class="row">
-                <?php foreach ($events as $event): ?>
-                    
-                    <?php include_partial('event/event', array('event' => $event)); ?>
+                    <?php foreach ($events as $event): ?>
+                        
+                        <?php include_partial('event/event', array('event' => $event)); ?>
 
-                <?php endforeach; ?>
+                    <?php endforeach; ?>
                 </div>
 
             </div>

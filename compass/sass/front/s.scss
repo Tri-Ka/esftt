@@ -41,7 +41,7 @@ header {
 		box-shadow: 0px 3px 19px $dark-blue;
 		position: fixed;
 		top: 0;
-		z-index: 20;
+		z-index: 2000;
 		background: $dark-blue;
 		width: 100%;
 
@@ -726,4 +726,9 @@ a.coms-number {
 
 .box .row {
 	position: relative;
+}
+
+.hvr-grow-rotate:hover {
+	z-index: 1000;
+	text-decoration: none;
 }

@@ -34,7 +34,7 @@ header .container-fluid {
   box-shadow: 0px 3px 19px #012242;
   position: fixed;
   top: 0;
-  z-index: 20;
+  z-index: 2000;
   background: #012242;
   width: 100%;
 }
@@ -760,4 +760,10 @@ a.coms-number {
 /* line 727, ../../../compass/sass/front/s.scss */
 .box .row {
   position: relative;
+}
+
+/* line 731, ../../../compass/sass/front/s.scss */
+.hvr-grow-rotate:hover {
+  z-index: 1000;
+  text-decoration: none;
 }

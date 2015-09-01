@@ -30,6 +30,7 @@ default:
     - raphael.min.js
     - morris.min.js
     - script.js
+    - pong.js
 
 
   has_layout:     true

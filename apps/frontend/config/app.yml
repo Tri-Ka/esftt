@@ -5,7 +5,9 @@
 #all:
 
 dev:
-
+  
+  mail:
+    to: datcharrye@gmail.com
 
 all:
   
@@ -21,13 +23,13 @@ all:
       height: 360
 
   pagination:
-    max_article: 3
-    max_event: 2
+    max_article: 4
+    max_event: 4
     max_item_admin: 20
 
   sf_guard_plugin:
     success_signin_url: "@homepage"
   
   mail:
-    to: datcharrye@gmail.com
+    to: patrick.fanzutti@free.fr
 

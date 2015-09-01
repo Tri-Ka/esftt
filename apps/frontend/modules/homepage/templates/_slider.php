@@ -4,8 +4,7 @@
 
         <?php foreach ($pictures as $k => $picture): ?>
 
-            <div class="item <?php echo 0 == $k ? 'active' : ''; ?>">
-              <img class="img-responsive center-block" src="<?php echo public_path('uploads/slides'.$picture); ?>">
+            <div class="item <?php echo 0 == $k ? 'active' : ''; ?>" style="background: url('<?php echo public_path('uploads/slides'.$picture); ?>');     background-size: cover !important;">
             </div>
 
         <?php endforeach; ?>

@@ -8,6 +8,10 @@ $grey: #C3C3C3;
     src: url('../../fonts/Lobster-Regular.ttf');
 }
 
+.padded-bottom {
+	padding-bottom: 30px !important;
+}
+
 div.flash {
 
 	position: absolute;
@@ -47,9 +51,10 @@ header {
 
 		#logo {
 
-			position: absolute;
+			/*position: absolute;
 			top: 0;
 			right: 0;
+			z-index: 10;*/
 
 			img {
 				height: 150px; margin-top: 10px;
@@ -151,13 +156,14 @@ h1, h2, h3 {
 }
 
 .box {
-	border-radius: 4px;
+	border-radius: 2px;
 	background: #FFF;
 	padding: 15px;
-	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15),0 1px 5px rgba(0, 0, 0, 0.075);
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.8) !important;
 	position: relative;
   	float: left;
   	width: 100%;
+  	z-index: 1;
 
 	.box-title {
 		font-family: 'Lobster', cursive;
@@ -195,12 +201,12 @@ h1, h2, h3 {
 	content: " ";
   position: absolute;
   z-index: 0;
-  top: 5px;
-  left: 5px;
-  right: 5px;
-  bottom: 5px;
+  top: 3px;
+  left: 3px;
+  right: 3px;
+  bottom: 3px;
   border: 1px solid #748187;
-  border-radius: 3px;
+  border-radius: 1px;
 }
 
 #main-container {
@@ -209,14 +215,15 @@ h1, h2, h3 {
 	padding-bottom: 30px;
 
 	background: #668DC4;
-	background: -moz-radial-gradient(center, ellipse cover, #A0A0A0 0%, #002D45 99%);
-	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#A0A0A0), color-stop(99%,#002D45));
+	background: -moz-radial-gradient(center, ellipse cover, #364147 0%, #002D45 99%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#364147), color-stop(99%,#002D45));
 	background: -webkit-radial-gradient(center, ellipse cover, #668DC4 0%,#002D45 99%);
-	background: -o-radial-gradient(center, ellipse cover, #A0A0A0 0%,#002D45 99%);
-	background: -ms-radial-gradient(center, ellipse cover, #A0A0A0 0%,#002D45 99%);
-	background: radial-gradient(ellipse at center, #A0A0A0 0%,#002D45 99%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#A0A0A0', endColorstr='#002D45',GradientType=1 );
-
+	background: -o-radial-gradient(center, ellipse cover, #364147 0%,#002D45 99%);
+	background: -ms-radial-gradient(center, ellipse cover, #364147 0%,#002D45 99%);
+	background: radial-gradient(ellipse at center, #364147 0%,#002D45 99%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#364147', endColorstr='#002D45',GradientType=1 );
+	background: url('../../images/bg.jpg') repeat;
+	z-index: 1;
 }
 
 @media (max-width: 768px) {
@@ -225,7 +232,7 @@ h1, h2, h3 {
 	}
 }
 #myCarousel {
-	border-radius: 4px;
+	border-radius: 0px;
 	border: 5px solid #FFF;
 	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15),0 1px 5px rgba(0, 0, 0, 0.075);
 }
@@ -278,15 +285,20 @@ h1, h2, h3 {
 }
 
 footer {
-	padding-top: 40px;
-	border-top: 4px solid #FFF;
-	background: $grey;
-	height: 185px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-top: 4px solid #FFF;
+    background: #292929;
+    background: url('../../images/foot-bg.jpg') repeat;
+    position: relative;
+    box-shadow: 0px 0px 55px rgba(0, 0, 0, 0.75) inset;
+	color: #CCC;
 
 	.links {
+		list-style: none;
 		a {
-			color: #333;
-			font-weight: bold;
+			color: #fff;
+			/*font-weight: bold;*/
 		}
 	}
 }
@@ -299,7 +311,7 @@ footer {
 	}
 
 	&:last-child{
-		margin-bottom: 0;
+		margin-bottom: 15px;
 	}
 
 	.thumbnail {
@@ -319,6 +331,14 @@ footer {
 		border-radius: 50%;
 		margin-bottom: 15px;
 		font-family: 'Lobster', cursive;
+		background: -moz-radial-gradient(center, ellipse cover, #BF0000 0%, #F70404 99%);
+		background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#BF0000), color-stop(99%,#F70404));
+		background: -webkit-radial-gradient(center, ellipse cover, #BF0000 0%,#F70404 99%);
+		background: -o-radial-gradient(center, ellipse cover, #BF0000 0%,#F70404 99%);
+		background: -ms-radial-gradient(center, ellipse cover, #BF0000 0%,#F70404 99%);
+		background: radial-gradient(ellipse at center, #BF0000 0%,#F70404 99%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#BF0000', endColorstr='#F70404',GradientType=1 );
+		box-shadow: 0px 0px 2px #000;
 
 		.day {
 			display: block;
@@ -332,6 +352,17 @@ footer {
 			font-size: 15px;
 			margin-top: -10px;
 		}
+	}
+
+	.article-title-left {
+		float: left;
+		width: 10%;
+		margin-right: 3%;
+	}
+
+	.article-title-right {
+		float: left;
+		width: 87%;
 	}
 
 	.news-title {
@@ -392,7 +423,7 @@ footer {
 
 		position: absolute;
 		background: #000;
-		width: 100%;
+		width: 96%;
 		bottom: 0;
 		left: 0;
 		color: #FFF;
@@ -402,6 +433,9 @@ footer {
 		border-radius: 5px;
 		opacity: 0.6;
 		transition: opacity 0.3s;
+		z-index: 1;
+		margin-left: 2%;
+		margin-bottom: 2%;
 
 	}
 }
@@ -698,12 +732,43 @@ a.coms-number {
 	margin-top: -50px;
 }
 
+.info-dates:before {
+/*	content: "";
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    border-color: #E5CF33 #E5CF33 #FFF #D2B271;
+    border-style: solid;
+    border-width: 0px 0px 20px 20px;
+    height: 0px;
+    width: 0px;
+    display: block;
+    -moz-box-shadow: 0pt 2px 1px rgba(0, 0, 0, 0.2), -2px 1px 1px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0pt 2px 1px rgba(0, 0, 0, 0.2), -2px 1px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 6px 8px 10px 5px #FFF, -2px 1px 2px rgba(0, 0, 0, 0.72);
+    border-radius: 0pt 0pt 0pt 5px;*/
+}
+
 .info-dates {
-	padding: 15px;
-  	background: #FCEEB6;
-  	border-radius: 4px;
-  	margin-bottom: 15px;
-	
+    background: -webkit-gradient(linear, left bottom, left top, from(#E5CF33), to(#FAE139));
+    padding: 15px;
+    /* font-family: 'Gloria Hallelujah', cursive; */
+    font-size: 15px;
+    color: #000;
+    width: 195px;
+    -moz-transform: rotate(-10deg);
+    -webkit-transform: rotate(-10deg);
+    -o-transform: rotate(-10deg);
+    -ms-transform: rotate(7deg);
+    transform: rotate(-10deg);
+    box-shadow: -2px 4px 7px rgba(51, 51, 51, 0.5);
+    -moz-box-shadow: -2px 4px 7px rgba(51, 51, 51, 0.5);
+    -webkit-box-shadow: -2px 4px 7px rgba(51, 51, 51, 0.5);
+    margin-left: 50px;
+    margin-bottom: 50px;
+    border-radius: 0px;
+	max-width: 70%;
+
 	.title-horaire {
 		font-weight: bold;
   		margin-bottom: 15px;
@@ -714,6 +779,7 @@ a.coms-number {
   		display: block;
   		float: left;
   		width: 100%;
+  		margin-bottom: 10px;
   	}
 }
 
@@ -731,4 +797,135 @@ a.coms-number {
 .hvr-grow-rotate:hover {
 	z-index: 1000;
 	text-decoration: none;
+}
+
+hr {
+	width: 50%;
+
+	&:last-child{
+		display: none;
+	};
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+
+	.box .box-title {
+		font-size: 25px;
+	}
+
+	.article .article-title-left {
+	    float: left;
+	    width: 15%;
+	    margin-right: 3%;
+	}
+
+	.article .article-title-right {
+	    float: left;
+	    width: 80%;
+	}
+	.article {
+		padding-bottom: 40px;
+		.img-cont {
+			margin-bottom: 15px;
+		}
+	}
+
+}
+
+@media (max-width: 768px) {
+	.slider-full {
+	    margin-top: -50px;
+	    max-width: 100%;
+	    margin-right: 0;
+	    margin-left: 0;
+	}
+
+	.article {
+		padding-bottom: 40px;
+
+		.article-title-left {
+			float: left;
+			width: 100%;
+			margin-right: 0;
+		}
+
+		.article-title-right {
+			float: left;
+			width: 100%;
+		}
+	}
+
+}
+
+img.raq {
+    position: absolute;
+    top: -385px;
+    height: 400px;
+    z-index: 0;
+    left: -50px;
+    opacity: 0.3;
+}
+
+.box-esftt {
+	color: #FFF;
+    border-bottom: 1px dashed #FFF;
+    padding-bottom: 30px;
+	text-shadow: 0px 0px 10px #000;
+}
+
+.no-box-title {
+	text-align: center;
+    color: #FFF;
+    font-size: 50px;
+    font-family: 'Lobster', cursive;
+	text-shadow: 0px 0px 3px #000;
+}
+
+.player-score {
+	font-size: 30px;
+	color: #fff;
+	margin-top: 20px;
+
+	.score-title {
+		display: block;
+		width: 150px;
+		float: left;
+	} 
+}
+
+.pong .box-title {
+	color: #fff;
+}
+
+h1 {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 0;
+}
+
+.skotch {
+	background: url("../../images/skotch.png") no-repeat center top;
+    position: absolute;
+    top: -12px;
+    width: 100px;
+    height: 22px;
+    left: 50%;
+    margin-left: -50px;
+}
+
+.no-marg {
+	margin: 0 !important;
+}
+
+.marged-bottom-2 {
+	margin-bottom: 30px;
+}
+
+.no-pad-right {
+	padding-right: 0 !important;
+
+	@media (max-width: 768px) {
+		padding: 0 !important;
+	}	
 }

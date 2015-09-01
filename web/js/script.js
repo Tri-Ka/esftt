@@ -7,7 +7,7 @@ var swiper =
 	        prevButton: '.swiper-button-prev',
 	        // spaceBetween: 30,
         	// centeredSlides: true,
-        	autoplay: 4000,
+        	autoplay: 10000,
         	autoplayDisableOnInteraction: false,
         	// Disable preloading of all images
 	        preloadImages: false,
@@ -72,7 +72,7 @@ var chart =
 			],
 		});
 	}
-}
+};
 
 $( document ).ready(function()
 {

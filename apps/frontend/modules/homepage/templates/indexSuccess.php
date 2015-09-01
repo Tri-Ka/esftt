@@ -3,10 +3,10 @@
     <?php include_partial('menuLeft'); ?>
 
     <div class="col-xs-12 col-sm-8">
-        <div class="box marged-top">
+        <div class="box marged-top padded-bottom">
 
             <div class="box-title special-title">
-                <?php echo __('Les dernières actus'); ?>
+                <?php echo __('Les actus'); ?>
             </div>
 
             <div class="box-content">
@@ -28,7 +28,7 @@
         <div class="box marged-top">
 
             <div class="box-title special-title">
-                <?php echo __('Les dernièrs évènements'); ?>
+                <?php echo __('Les derniers évènements'); ?>
             </div>
 
             <div class="box-content marged-top">
@@ -38,6 +38,11 @@
                         <?php include_partial('event/event', array('event' => $event)); ?>
 
                     <?php endforeach; ?>
+
+                    <div class="col-xs-12 text-center">
+                        <a href="<?php echo url_for('club'); ?>" class="btn btn-primary">voir tous les évènements</a>
+                    </div>
+
                 </div>
 
             </div>

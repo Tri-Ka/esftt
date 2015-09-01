@@ -10,7 +10,7 @@
 
 				<thead>
 					<tr>
-						<th colspan="3">Entraînement jeunes</th>
+						<th colspan="3">Entraînement jeunes (loisir)</th>
 					</tr>
 				</thead>
 
@@ -29,13 +29,13 @@
 
 				<thead>
 					<tr>
-						<th colspan="3">Entraînement loisir</th>
+						<th colspan="3">Entraînement adultes (loisir)</th>
 					</tr>
 				</thead>
 
 				<tbody>
 					<tr>
-						<td colspan="2">Mercredi</td><td class="text-right">20h45 - 21h45</td>
+						<td colspan="2">Mardi</td><td class="text-right">20h45 - 21h45</td>
 					</tr>
 				</tbody>
 
@@ -45,13 +45,29 @@
 
 				<thead>
 					<tr>
-						<th colspan="3">Entraînement compétition</th>
+						<th colspan="3">Entraînement compétitions</th>
 					</tr>
 				</thead>
 
 				<tbody>
 					<tr>
-						<td>Dimanche</td><td class="text-right"></td><td class="text-right">10h15 - 12h30<br>19h30 - 22h00</td>
+						<td colspan="2">Mercredi</td><td class="text-right">19h30 - 21h00</td>
+					</tr>
+				</tbody>
+
+			</table>
+
+			<table class="table table-striped table-hover">
+
+				<thead>
+					<tr>
+						<th colspan="3">Entraînement libre</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td>Dimanche</td><td class="text-right"></td><td class="text-right">10h15 - 12h30</td>
 					</tr>
 				</tbody>
 

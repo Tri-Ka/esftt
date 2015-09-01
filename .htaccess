@@ -1,1 +1,7 @@
-#Options All +Indexes
+Options +FollowSymLinks +ExecCGI
+
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(.*)$ /web/index.php
+</IfModule>

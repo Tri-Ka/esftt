@@ -49,9 +49,9 @@
 										<th class="text-center">Points<br>(mensuel)</th>
 										<th class="text-center">Points<br>(licence)</th>
 										<th class="text-center">Classement<br>(en cours)</th>
-										<th class="text-center">Rang regional</th>
+										<th class="text-center">Rang régional</th>
 										<th class="text-center">Rang départemental</th>
-										<th class="text-center">Progression (moi)</th>
+										<th class="text-center">Progression (mois)</th>
 										<th class="text-center">Progression (année)</th>
 									</tr>
 								</thead>
@@ -154,7 +154,7 @@
 											<td class="text-center"><?php echo $infosPartie['date']; ?></td>
 											<td class="text-center"><?php echo $infosPartie['advnompre']; ?></td>
 											<td class="text-center"><?php echo $infosPartie['advclaof']; ?></td>
-											<td class="text-center"><?php echo $infosPartie['numjourn']; ?></td>
+											<td class="text-center"><?php echo is_string($infosPartie['numjourn']) ? $infosPartie['numjourn'] : 'N/A' ?></td>
 											<td class="text-center"><?php echo $infosPartie['codechamp']; ?></td>
 											<td class="text-center"><?php echo $infosPartie['coefchamp']; ?></td>
 											<td class="text-center <?php echo 0 > $infosPartie['pointres'] ? 'red' : 'green'; ?>"><?php echo $infosPartie['pointres']; ?></td>

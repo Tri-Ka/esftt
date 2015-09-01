@@ -18,6 +18,9 @@ gallery:
   url: /gallery
   param: { module: gallery, action: gallery }
 
+pong:
+  url: /pong
+  param: { module: pong, action: pong }
 
 sf_guard_signin:
   url:   /login

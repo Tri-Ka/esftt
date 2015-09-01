@@ -1,6 +1,6 @@
-<div class="box col-xs-12">
+<div class="col-xs-12">
 
-	<div class="box-title">
+	<div class="no-box-title">
 		<i class="fa fa-question-circle"></i> <?php echo __('Informations'); ?>
 	</div>
 

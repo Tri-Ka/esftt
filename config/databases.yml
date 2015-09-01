@@ -6,9 +6,9 @@ prod:
   doctrine:
     class: sfDoctrineDatabase
     param:
-      dsn:      mysql:host=localhost;dbname=esftt
-      username: root
-      password: root
+      dsn:      mysql:host=phpmyadmin.ovh.net;dbname=esfttcomkssql
+      username: esfttcomkssql
+      password: Esftt2015
 
 dev:
   doctrine:

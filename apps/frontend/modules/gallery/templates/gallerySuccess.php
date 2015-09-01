@@ -1,6 +1,6 @@
-<div class="box col-xs-12">
+<div class="col-xs-12">
 
-	<div class="box-title">
+	<div class="no-box-title">
 		<i class="fa fa-photo"></i> <?php echo $title; ?>
 	</div>
 
@@ -45,6 +45,12 @@
 
 	</div>
 
+    <div class="box col-xs-12 marged-top">
+
+		<div id="disqus_thread"></div>
+
+	</div>
+
 <?php endif; ?>
 
 <?php if (0 < count($directories)): ?>
@@ -55,12 +61,12 @@
 
 			<?php foreach ($directories as $directory): ?>
 
-				<div class="col-xs-12 col-sm-3 marged-top hvr-grow directory">
+				<div class="col-xs-12 col-sm-3 marged-top hvr-grow directory text-center">
 					<a href="<?php echo url_for('gallery', array('folder' => $directory['path'])); ?>" class="gallery-folder">
 							
 						<?php if ('' !== $directory['picture']): ?>
 							<div class="box black">
-								<img width="100%" src="<?php echo public_path('uploads/gallery/'.$directory['path'].$directory['picture']); ?>">
+								<img style="height:100%; margin-auto';" src="<?php echo public_path('uploads/gallery/'.$directory['path'].$directory['picture']); ?>">
 							</div>
 							<div class="gallery-hover">
 								<?php echo $directory['name']; ?>

@@ -1,5 +1,5 @@
 <div class="col-xs-12 col-sm-4">
-    <div class="box text-center col-xs-12 marged-top">
+    <div class="box-esftt text-center col-xs-12 marged-top">
         <div class="full-div esftt">
             <?php echo __('ESFTT'); ?>
         </div>
@@ -11,39 +11,43 @@
         </div>
     </div>
 
-    <a href="<?php echo url_for('club'); ?>">
-        <div class="box col-xs-12 hvr-grow-rotate marged-top">
-            <div class="box-title">
-                <i class="fa fa-star-o"></i> <?php echo __('Le Club'); ?>
-            </div>
-        </div>
-    </a>
+    <div class="hidden-xs">
 
-    <a href="<?php echo url_for('gallery'); ?>">
-        <div class="box col-xs-12 hvr-grow-rotate marged-top">
-            <div class="box-title">
-                <i class="fa fa-picture-o"></i> <?php echo __('Galerie'); ?>
+        <a href="<?php echo url_for('club'); ?>">
+            <div class="box col-xs-12 hvr-grow-rotate marged-top">
+                <div class="box-title">
+                    <i class="fa fa-star-o"></i> <?php echo __('Le Club'); ?>
+                </div>
             </div>
-        </div>
-    </a>
+        </a>
 
-    <a href="<?php echo url_for('infos'); ?>">
-        <div class="box col-xs-12 hvr-grow-rotate marged-top">
-            <div class="box-title">
-                <i class="fa fa-question-circle"></i> <?php echo __('Informations'); ?>
+        <a href="<?php echo url_for('gallery'); ?>">
+            <div class="box col-xs-12 hvr-grow-rotate marged-top">
+                <div class="box-title">
+                    <i class="fa fa-picture-o"></i> <?php echo __('Galerie'); ?>
+                </div>
             </div>
-        </div>
-    </a>
+        </a>
 
-    <a href="<?php echo url_for('contact'); ?>">
-        <div class="box col-xs-12 hvr-grow-rotate marged-top">
-            <div class="box-title">
-                <i class="fa fa-envelope"></i> <?php echo __('Contact'); ?>
+        <a href="<?php echo url_for('infos'); ?>">
+            <div class="box col-xs-12 hvr-grow-rotate marged-top">
+                <div class="box-title">
+                    <i class="fa fa-question-circle"></i> <?php echo __('Informations'); ?>
+                </div>
             </div>
-        </div>
-    </a>
+        </a>
 
-    <div class="box col-xs-12 marged-top">
+        <a href="<?php echo url_for('contact'); ?>">
+            <div class="box col-xs-12 hvr-grow-rotate marged-top">
+                <div class="box-title">
+                    <i class="fa fa-envelope"></i> <?php echo __('Contact'); ?>
+                </div>
+            </div>
+        </a>
+
+    </div>
+
+    <!-- <div class="box col-xs-12 marged-top">
         <div class="box-title text-center">
             <div class="full-text special-title"><?php echo __('Le mot du président'); ?></div>
             <img class="img-circle img-thumbnail marged-top" src="http://placehold.it/100x100">
@@ -51,6 +55,6 @@
         <div class="box-content marged-top">
             Harum trium sententiarum nulli prorsus assentior. Nec enim illa prima vera est, ut, quem ad modum in se quisque sit, sic in amicum sit animatus. Quam multa enim, quae nostra causa numquam faceremus, facimus causa amicorum!
         </div>
-    </div>
+    </div> -->
 
 </div>

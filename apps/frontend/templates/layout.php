@@ -6,7 +6,8 @@
         <?php include_title() ?>
         <?php include_stylesheets() ?>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="shortcut icon" href="<?php echo public_path('favicon.ico') ?>?v2" />
+
     </head>
     <body>
 
@@ -34,14 +35,15 @@
                             </ul>
                             <ul class="nav navbar-nav social-nav">
                                 <li><a target="_blank" href="<?php echo sfConfig::get('app_url_facebook'); ?>" class="facebook hvr-bounce-in"><i class="fa fa-facebook"></i></a></li>
-                                <li><a target="_blank" href="<?php echo sfConfig::get('app_url_twitter'); ?>" class="twitter hvr-bounce-in"><i class="fa fa-twitter"></i></a></li>
+                                <!-- <li><a target="_blank" href="<?php echo sfConfig::get('app_url_twitter'); ?>" class="twitter hvr-bounce-in"><i class="fa fa-twitter"></i></a></li> -->
                             </ul>
                         </div><!-- /.navbar-collapse -->
                     </nav>
-
-                    <a id="logo" href="<?php echo url_for('homepage'); ?>">
-                        <img src="<?php echo public_path('images/logo.png'); ?>">
-                    </a>
+                    <h1>
+                        <a id="logo" href="<?php echo url_for('homepage'); ?>">
+                            <img src="<?php echo public_path('images/logo-new.png'); ?>" alt="esftt" title="esftt">
+                        </a>
+                    </h1>
 
                 </div>
 
@@ -81,10 +83,13 @@
         </div>
 
         <footer>
+
+            <img class="raq" src="<?php echo public_path('images/raquette.png'); ?>">
+
             <div class="container-fluid">
                 <div class="container">
 
-                    <div class="col-xs-12 col-sm-4">
+                    <div class="col-xs-12 col-sm-4 text-center">
 
                         <ul class="links">
                             <li>
@@ -94,18 +99,14 @@
                                 <a target="blank" href="<?php echo sfConfig::get('app_url_tennis_de_table'); ?>">tennis-de-table.com</a>
                             </li>
 
-                            <li>
-                                <a target="blank" href="http://www.ville-la-frette95.fr/">mairie de la Frette</a>
-                            </li>
-                            <li>
-                                <a target="blank" href="http://www.cd95tt.fr/blogs.php?lng=fr">comité 95</a>
-                            </li>
+                           
                             <li>
                                 <a target="blank" href="http://www.fftt-idf.com/">Ligue FFTT Ile de France</a>
                             </li>
                             <li>
                                 <a target="blank" href="http://theo384.free.fr/">Friendship Sport</a>
                             </li>
+                           
 
                         </ul>
 
@@ -115,8 +116,18 @@
                         <span class="small">© ESFTT <?php echo date('Y'); ?> - Tous droits réservés</span>
                     </div>
 
-                    <div class="col-xs-12 col-sm-4">
-
+                    <div class="col-xs-12 col-sm-4 text-center">
+                        <ul class="links">
+                             <li>
+                                <a target="blank" href="http://www.ville-la-frette95.fr/">mairie de la Frette</a>
+                            </li>
+                            <li>
+                                <a target="blank" href="http://www.cd95tt.fr/blogs.php?lng=fr">comité 95</a>
+                            </li>
+                            <li>
+                                <a target="blank" href="http://www.ville-cormeilles95.fr/">Cormeilles en Parisis</a>
+                            </li>
+                        </ul>
                     </div>
 
                 </div>

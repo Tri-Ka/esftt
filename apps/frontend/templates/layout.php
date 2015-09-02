@@ -80,11 +80,13 @@
 
             </div>
 
+            <a href="<?php echo url_for('pong'); ?>" class="hidden-sm hidden-xs">
+                <img class="raq" src="<?php echo public_path('images/raquette.png'); ?>">
+            </a>
+
         </div>
 
         <footer>
-
-            <img class="raq" src="<?php echo public_path('images/raquette.png'); ?>">
 
             <div class="container-fluid">
                 <div class="container">
@@ -93,10 +95,10 @@
 
                         <ul class="links">
                             <li>
-                                <a target="blank" href="<?php echo sfConfig::get('app_url_fftt'); ?>">site de la fédération</a>
+                                <a target="blank" href="<?php echo sfConfig::get('app_url_fftt'); ?>">Site de la fédération</a>
                             </li>
                             <li>
-                                <a target="blank" href="<?php echo sfConfig::get('app_url_tennis_de_table'); ?>">tennis-de-table.com</a>
+                                <a target="blank" href="<?php echo sfConfig::get('app_url_tennis_de_table'); ?>">Tennis De Table.com</a>
                             </li>
 
                            
@@ -112,22 +114,26 @@
 
                     </div>
 
-                    <div class="col-xs-12 col-sm-4 text-center">
+                    <div class="col-xs-12 col-sm-4 text-center hidden-xs">
                         <span class="small">© ESFTT <?php echo date('Y'); ?> - Tous droits réservés</span>
                     </div>
 
                     <div class="col-xs-12 col-sm-4 text-center">
                         <ul class="links">
-                             <li>
-                                <a target="blank" href="http://www.ville-la-frette95.fr/">mairie de la Frette</a>
+                            <li>
+                                <a target="blank" href="http://www.ville-la-frette95.fr/">Mairie de la Frette sur Seine</a>
                             </li>
                             <li>
-                                <a target="blank" href="http://www.cd95tt.fr/blogs.php?lng=fr">comité 95</a>
+                                <a target="blank" href="http://www.ville-cormeilles95.fr/">Mairie de Cormeilles en Parisis</a>
                             </li>
                             <li>
-                                <a target="blank" href="http://www.ville-cormeilles95.fr/">Cormeilles en Parisis</a>
+                                <a target="blank" href="http://www.cd95tt.fr/blogs.php?lng=fr">Comité 95</a>
                             </li>
                         </ul>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-4 text-center visible-xs">
+                        <span class="small">© ESFTT <?php echo date('Y'); ?> - Tous droits réservés</span>
                     </div>
 
                 </div>

@@ -57,4 +57,8 @@
         </div>
     </div> -->
 
+    <div class="text-center marged-top hidden-xs" style="margin-top: 30px; float: left; width: 100%; z-index: 10;">
+        <img class="marged-top" width="40%" src="<?php echo public_path('images/build.png'); ?>">
+    </div>
+
 </div>

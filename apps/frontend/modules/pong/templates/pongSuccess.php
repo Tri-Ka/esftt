@@ -1,5 +1,5 @@
 
-<div class="no-box-title text-center">
+<div class="no-box-title text-center marged-bottom-2">
 	<?php echo __('Pong'); ?>
 </div>
 
@@ -12,17 +12,42 @@
 	</div>
 
 	<div class="col-sm-6">
-		<div class="box-title text-center">
-			<?php echo __('Scores'); ?>
-		</div>
+
 
 		<div class="box-content">
+
 			<div class="player-score">
-				<span class="score-title">Joueur:</span><span class="score-player">0</span>
+				<span class="score-title">Score</span><span class="score-player">0</span>
 			</div>
-			<div class="player-score">
-				<span class="score-title">Comp:</span><span class="score-comp">0</span>
+			<div class="info-player">
+				player <input type="text" maxlength="3" class="playername">
 			</div>
+
+			<table>
+				<thead>
+					<tr>
+						<th>players</th>
+						<th>scores</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>EDY</td>
+						<td>340</td>
+					</tr>
+					<tr>
+						<td>AAA</td>
+						<td>150</td>
+					</tr>
+					<tr>
+						<td>KIL</td>
+						<td>90</td>
+					</tr>
+				</tbody>
+			</table>
+			<span class="game-over blink">game over</span>
+			<a href="#" id="start-pong">start</a>
+
 		</div>
 	</div>
 
@@ -78,20 +103,20 @@
 		}
 		
 		function init() {
-		  ctx = canvas.getContext("2d");  
-		  WIDTH = canvas.width;
-		  HEIGHT = canvas.height;
-		  x = 150;
-		  y = 150;
-		  dx = 2;
-		  dy = 4;
-		  radius = 10;
-		  rightDown = false;
-		  leftDown = false;
-		  intervalId = 0;
-		  
-		  intervalId = setInterval(draw, 10);
-		  init_paddles();
+			ctx = canvas.getContext("2d");  
+			WIDTH = canvas.width;
+			HEIGHT = canvas.height;
+			x = 150;
+			y = 150;
+			dx = 2;
+			dy = 4;
+			radius = 10;
+			rightDown = false;
+			leftDown = false;
+			intervalId = 0;
+
+			intervalId = setInterval(draw, 10);
+			init_paddles();
 		   
 		}
 	
@@ -119,7 +144,7 @@
 			var delayReaction = Math.random();
 			
 			//25% chance of reaction delay
-			if(delayReaction >= 0.25) {
+			if(delayReaction >= 0.3) {
 			
 				if(x > paddlexAI + paddlew) {
 					if(paddlexAI + paddlew + 5 <= WIDTH) {
@@ -210,8 +235,7 @@
 				
 				if (x <= paddlexAI || x >= paddlexAI + paddlew) {
 					clearInterval(intervalId);
-					//alert('You WIN ! :)');
-					$('.score-player').html(parseInt($('.score-player').html()) + 1);
+					$('.score-player').html(parseInt($('.score-player').html()) + 100);
 					init();
 				}
 				
@@ -227,13 +251,14 @@
 				if (x > paddlex && x < paddlex + paddlew) {
 					dx = 8 * ((x-(paddlex+paddlew/2))/paddlew);
 					dy = -dy;
-				}
-				   
-				else {
+					$('.score-player').html(parseInt($('.score-player').html()) + 10);
+				} else {
 				  clearInterval(intervalId);
-				  //alert('You Lose ! :(');
-					$('.score-comp').html(parseInt($('.score-comp').html()) + 1);
-				  init();
+				  // alert('You Lose ! :(');
+					//$('.score-comp').html(parseInt($('.score-comp').html()) + 1);
+				  	//init();
+				  	$('.game-over').show();
+					$('#start-pong').toggle();
 				}
 			  }
 			  
@@ -241,7 +266,16 @@
 			  y += dy;
 			}
 
-			init();
+			$(document).on('click', '#start-pong', function(e)
+			{
+				$(this).toggle();
+				e.preventDefault();
+				e.stopPropagation();
+				clearInterval(intervalId);
+				$('.score-player').html(0);
+				$('.game-over').hide();
+				init();
 
+			})
 	});  
 </script>  

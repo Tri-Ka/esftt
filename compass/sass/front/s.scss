@@ -2,6 +2,7 @@ $dark-blue: #012242;
 $grey: #C3C3C3;
 
 @import url(http://fonts.googleapis.com/css?family=Oxygen:400,300,700|Playball|Righteous|Allan:400,700);
+@import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
 
 @font-face {
     font-family: Lobster;
@@ -65,10 +66,10 @@ header {
 
 			#logo {
 
-				position: absolute;
+				/*position: absolute;
 				top: 0;
 				left: 0;
-				right: inherit;
+				right: inherit;*/
 
 				img {
 					height: 50px;
@@ -212,7 +213,7 @@ h1, h2, h3 {
 #main-container {
 	min-height: 1000px;
 	padding-top: 130px;
-	padding-bottom: 30px;
+	padding-bottom: 45px;
 
 	background: #668DC4;
 	background: -moz-radial-gradient(center, ellipse cover, #364147 0%, #002D45 99%);
@@ -224,11 +225,14 @@ h1, h2, h3 {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#364147', endColorstr='#002D45',GradientType=1 );
 	background: url('../../images/bg.jpg') repeat;
 	z-index: 1;
+	position: relative;
+	box-shadow: 0px 0px 400px #000 inset;
 }
 
 @media (max-width: 768px) {
 	#main-container {
 		padding-top: 85px;
+		overflow: hidden;
 	}
 }
 #myCarousel {
@@ -296,6 +300,7 @@ footer {
 
 	.links {
 		list-style: none;
+		padding: 0;
 		a {
 			color: #fff;
 			/*font-weight: bold;*/
@@ -378,9 +383,10 @@ footer {
 	}
 
 	.show-article {
-		position: absolute;
+/*		position: absolute;
 		bottom: 0;
-		right: 15px;
+		right: 15px;*/
+		color: #fff;
 	}
 
 	.pitch, .content {
@@ -639,6 +645,8 @@ header .social-nav {
 .slider-full {
 
 	margin-top: -50px;
+	box-shadow: 0px 0px 300px #000;
+	margin-bottom: 45px;
 
 	#myCarousel {
 		border: none;
@@ -721,11 +729,7 @@ iframe {
 }
 
 a.coms-number {
-	position: absolute;
-	right: 15px;
-	bottom: 25px;
-	font-size: 10px;
-	color: gray;
+	color: #fff;
 }
 
 .equalized {
@@ -750,6 +754,7 @@ a.coms-number {
 }
 
 .info-dates {
+	background: #FAE139;
     background: -webkit-gradient(linear, left bottom, left top, from(#E5CF33), to(#FAE139));
     padding: 15px;
     /* font-family: 'Gloria Hallelujah', cursive; */
@@ -764,10 +769,12 @@ a.coms-number {
     box-shadow: -2px 4px 7px rgba(51, 51, 51, 0.5);
     -moz-box-shadow: -2px 4px 7px rgba(51, 51, 51, 0.5);
     -webkit-box-shadow: -2px 4px 7px rgba(51, 51, 51, 0.5);
-    margin-left: 50px;
+    margin-left: 20%;
     margin-bottom: 50px;
     border-radius: 0px;
 	max-width: 70%;
+	margin-top: 30px;
+	min-height: 150px;
 
 	.title-horaire {
 		font-weight: bold;
@@ -794,7 +801,12 @@ a.coms-number {
 	position: relative;
 }
 
-.hvr-grow-rotate:hover {
+.hvr-grow-rotate, .hvr-grow {
+	z-index: 999;
+	text-decoration: none;
+}
+
+.hvr-grow-rotate:hover, .hvr-grow:hover {
 	z-index: 1000;
 	text-decoration: none;
 }
@@ -859,11 +871,12 @@ hr {
 
 img.raq {
     position: absolute;
-    top: -385px;
-    height: 400px;
+    bottom: -15px;
     z-index: 0;
-    left: -50px;
+    left: 0;
     opacity: 0.3;
+    width: 550px;
+    max-width: 100%;
 }
 
 .box-esftt {
@@ -879,6 +892,12 @@ img.raq {
     font-size: 50px;
     font-family: 'Lobster', cursive;
 	text-shadow: 0px 0px 3px #000;
+	float: left;
+	width: 100%;
+
+	&.small {
+		font-size: 35px;
+	}
 }
 
 .player-score {
@@ -902,6 +921,12 @@ h1 {
 	top: 0;
 	right: 0;
 	margin: 0;
+
+	@media (max-width: 768px) {
+		right: inherit;
+		left: 0;
+	}	
+
 }
 
 .skotch {
@@ -928,4 +953,157 @@ h1 {
 	@media (max-width: 768px) {
 		padding: 0 !important;
 	}	
+}
+
+.shadowed {
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.8) !important;
+}
+
+.thumbnail {
+	border-radius: 2px;
+}
+
+.marged-top-2 {
+	margin-top: 30px;
+	float: left;
+	width: 100%;
+}
+
+.view-artcle-btn {
+    position: absolute;
+    right: -25px;
+    background: #20425F;
+    color: #FFF;
+    padding: 5px;
+    font-size: 12px;
+    text-align: center;
+    bottom: -5px;
+    box-shadow: 0px 0px 3px #000;
+    border-radius: 5px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    padding-right: 15px;
+	background-image: -webkit-linear-gradient(top,#337AB7 0,#265A88 100%);
+    background-image: -o-linear-gradient(top,#337ab7 0,#265a88 100%);
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#337AB7),to(#265A88));
+    background-image: linear-gradient(to bottom,#337AB7 0,#265A88 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff337ab7', endColorstr='#ff265a88', GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+    background-repeat: repeat-x;
+    border-color: #245580;
+	i.fa.fa-comments {
+	    /*float: left;*/
+	    margin-right: 5px;
+	}
+}
+
+.pong {
+
+	font-family: 'Press Start 2P', cursive;
+	
+	.player-score {
+
+		float: left;
+		width: 100%;
+
+		.score-player {
+			font-size: 10px;
+			margin-left: 50px;
+			margin-top: 22px;
+			display: block;
+			float: left;
+		}	
+	}
+
+	.info-player {
+		
+		float: left;
+		width: 100%;
+		color: #fff;
+		font-size: 23px;
+
+		.playername {
+			/*position: absolute;*/
+			background: #000;
+			top: 0;
+			right: 0;
+			padding: 5px;
+			width: 80px;
+			color: #fff;    
+			border: 0; 
+    		border-bottom: 1px dashed #fff;
+    		text-transform: uppercase; 
+		}		
+
+	}
+
+	table {
+		color: #fff;
+		margin-top: 100px;
+		float: left;
+
+		th {
+			width: 135px;
+    		padding-bottom: 10px;
+		}
+
+	}
+
+}
+
+.game-over {
+	position: absolute;
+	width: 250px;
+	display: block;
+	left: 50%;
+	color: #fff;
+	margin-left: -125px;
+	text-align: center;
+	top: 365px;
+	display: none;
+}
+
+#start-pong {
+	position: absolute;
+    top: 400px;
+    left: 50%;
+    color: #fff;
+    text-transform: uppercase;
+    margin-left: -125px;
+    border: 1px dotted #fff;
+    text-align: center;
+    padding: 10px;
+    display: block;
+    width: 250px;
+    height: 70px;
+    line-height: 50px;
+    font-size: 30px;
+}
+
+#start-pong:hover, #start-pong:focus {
+	text-decoration: none;
+}
+
+
+.blink {
+  -webkit-animation: blink 0.5s step-end infinite;
+  -moz-animation: blink 0.5s step-end infinite;
+  -o-animation: blink 0.5s step-end infinite;
+  animation: blink 0.5s step-end infinite;
+}
+
+@-webkit-keyframes blink {
+  50% { opacity: 0 }
+}
+
+@-moz-keyframes blink {
+  50% { opacity: 0 }
+}
+
+@-o-keyframes blink {
+  50% { opacity: 0 }
+}
+
+@keyframes blink {
+  50% { opacity: 0 }
 }

@@ -6,10 +6,12 @@ default:
     content-type: text/html
 
   metas:
-    title:        esftt
-    description:  esftt
-    keywords:     esftt
+    title:        ESFTT - La Frette sur Seine
+    description:  "Le site de l'ESFTT, club de tennis de table de la Frette sur Seine"
+    keywords:     "ping pong, tennis de table, la frette sur seine, la frette, cormeilles en parisis, esftt"
     language:     fr
+    subject:      tennis de table
+    category:     sport
     #robots:       index, follow
 
   stylesheets:
@@ -29,8 +31,8 @@ default:
     - masonry.pkgd.min.js
     - raphael.min.js
     - morris.min.js
+    # - kendo/kendo.all.min.js
     - script.js
-    - pong.js
 
 
   has_layout:     true

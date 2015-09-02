@@ -10,7 +10,13 @@
 
 			<tbody>
 				<tr>
-					<td>Patrick FANZUTTI</td><td class="text-right"></td><td class="text-right"><a href="tel:0782337972"><i class="fa fa-phone"></i> 07 82 33 79 72</a></td>
+					<td>
+						Patrick FANZUTTI
+					</td>
+					<td class="text-right"><a href="mailto:patrick.fanzutti@free.fr"><i class="fa fa-envelope"></i> patrick.fanzutti@free.fr</A></td>
+					<td class="text-right">
+						<a href="tel:0782337972"><i class="fa fa-phone"></i> 07 82 33 79 72</a>
+					</td>
 				</tr>
 			</tbody>
 

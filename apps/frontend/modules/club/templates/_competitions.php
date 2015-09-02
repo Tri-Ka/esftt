@@ -1,7 +1,7 @@
 <div class="box marged-top">
 
 	<div class="box-title">
-		Competitions
+		Compétitions
 	</div>
 
 	<div class="box-content  marged-top">

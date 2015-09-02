@@ -32,7 +32,9 @@
         </div>
     </div>
 
-    <a href="<?php echo url_for('article_show', array('id' => $article->getId())); ?>#disqus_thread" class="coms-number"></a>
-    <a href="<?php echo url_for('article_show', array('id' => $article->getId())); ?>" class="btn btn-primary btn-xs show-article"><?php echo __('voir la suite'); ?></a>
+    <div class="view-artcle-btn">
+        <div class="nb-coms"><i class="fa fa-comments"></i><a href="<?php echo url_for('article_show', array('id' => $article->getId())); ?>#disqus_thread" class="coms-number"></a></div>
+        <a href="<?php echo url_for('article_show', array('id' => $article->getId())); ?>" class="show-article"><?php echo __('voir la suite'); ?></a>
+    </div>
 
 </div>

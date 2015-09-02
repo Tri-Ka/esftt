@@ -3,7 +3,7 @@
 	<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
 
 
-		<div class="no-box-title text-center">
+		<div class="no-box-title text-center marged-bottom">
 			<?php echo __('Nous contacter'); ?>
 		</div>
 

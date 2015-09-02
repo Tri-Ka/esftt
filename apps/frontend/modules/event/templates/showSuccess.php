@@ -12,7 +12,7 @@
          		</div>
          	</div>
 
-            <div class="col-xs-12 col-sm-6 img-cont marged-bottom no-pad">
+            <div class="col-xs-12 col-sm-6 img-cont marged-bottom no-pad shadowed">
 
                 <img class="thumbnail" src="<?php echo $event->retrievePictureUrl(); ?>">
 
@@ -23,11 +23,18 @@
                 <div class="col-xs-12 info-dates">
                     <div class="skotch"></div>
 
-                    <span class="info-date date-from"><i class="fa fa-clock-o"></i> <strong>démare le</strong><br> <?php echo format_date($event->getDateFrom(), 'D'); ?> <b>à</b> <?php echo date('H:i', strtotime($event->getDateFrom())); ?></span><br><br>
-                    <span class="info-date date-to"><i class="fa fa-clock-o"></i> <strong>termine le</strong><br> <?php echo format_date($event->getDateTo(), 'D'); ?> <b>à</b> <?php echo date('H:i', strtotime($event->getDateTo())); ?></span>
+                    <span class="info-date date-from"><i class="fa fa-clock-o"></i> démare le<br><strong><?php echo format_date($event->getDateFrom(), 'D'); ?></strong> à <strong><?php echo date('H:i', strtotime($event->getDateFrom())); ?></strong></span><br><br>
+                    <?php if (strtotime($event->getDateTo())): ?>
+                        <span class="info-date date-from"><i class="fa fa-clock-o"></i> termine le<br><strong><?php echo format_date($event->getDateTo(), 'D'); ?></strong> à <strong><?php echo date('H:i', strtotime($event->getDateTo())); ?></strong></span>
+                    <?php endif; ?>
                 </div>
 
-            	<div class="box col-xs-12 marged-bottom"><?php echo $event->getDescription(ESC_RAW); ?></div>
+            	<div class="box col-xs-12 marged-bottom">
+                    <div class="box-title marged-bottom">
+                        <?php echo __('A propos'); ?>
+                    </div>
+                    <?php echo $event->getDescription(ESC_RAW); ?>
+                </div>
             </div>
 
             

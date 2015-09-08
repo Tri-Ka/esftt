@@ -8,13 +8,16 @@
  * @property string $name
  * @property Doctrine_Collection $Users
  * @property Doctrine_Collection $UserTeams
+ * @property Doctrine_Collection $BigTopics
  * 
  * @method string              getName()      Returns the current record's "name" value
  * @method Doctrine_Collection getUsers()     Returns the current record's "Users" collection
  * @method Doctrine_Collection getUserTeams() Returns the current record's "UserTeams" collection
+ * @method Doctrine_Collection getBigTopics() Returns the current record's "BigTopics" collection
  * @method Team                setName()      Sets the current record's "name" value
  * @method Team                setUsers()     Sets the current record's "Users" collection
  * @method Team                setUserTeams() Sets the current record's "UserTeams" collection
+ * @method Team                setBigTopics() Sets the current record's "BigTopics" collection
  * 
  * @package    esftt
  * @subpackage model
@@ -41,6 +44,10 @@ abstract class BaseTeam extends sfDoctrineRecord
              'foreign' => 'user_id'));
 
         $this->hasMany('UserTeam as UserTeams', array(
+             'local' => 'id',
+             'foreign' => 'team_id'));
+
+        $this->hasMany('ForumBigTopic as BigTopics', array(
              'local' => 'id',
              'foreign' => 'team_id'));
     }

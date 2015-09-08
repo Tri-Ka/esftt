@@ -3,4 +3,4 @@
 
 all:
   is_secure: true
-  credentials: admin
+  credentials: [[admin, capitaine]]

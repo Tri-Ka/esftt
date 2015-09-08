@@ -34,6 +34,25 @@ user_show:
   url: /user/:id
   param: { module: user, action: show }
 
+add_score:
+  url: /score
+  param: { module: pong, action: addScore }
+
+forum:
+  url: /forum
+  param: { module: forum, action: index }
+
+topic:
+  url: /topic/:id
+  param: { module: forum, action: topic }
+
+topic_add:
+  url: /topic-add
+  param: { module: forum, action: topicAdd }
+
+post_delete: 
+  url: /post/delete/:id
+  param: { module: forum, action: postDelete }
 
 infos:
   url: /informations

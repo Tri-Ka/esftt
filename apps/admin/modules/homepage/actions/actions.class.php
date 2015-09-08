@@ -15,6 +15,7 @@ class homepageActions extends sfActions
     	$this->teamCount = TeamTable::getInstance()->findAll()->count();
     	$this->articleCount = ArticleTable::getInstance()->findAll()->count();
     	$this->eventCount = EventTable::getInstance()->findAll()->count();
+        $this->forumCount = ForumPostTable::getInstance()->findAll()->count();
     }
 
     public function executeSb()

@@ -82,7 +82,6 @@ remove_captain:
   url:   /team/removeCaptain/:teamId/:userId
   param: { module: team, action: removeCaptain }
 
-
 add_team_user:
   url:   /team/addTeamUser/:teamId/:userId
   param: { module: team, action: addTeamUser }
@@ -91,6 +90,57 @@ test_sb:
   url:   /sb
   param: { module: homepage, action: sb }
 
+forum:
+  url: /forum
+  param: { module: forum, action: index }
+
+forum_show:
+  url: /forum/:id
+  param: { module: forum, action: bigTopicShow }
+
+topic_show:
+  url: /topic/:id
+  param: { module: forum, action: topicShow }
+
+topic_add:
+  url: /topic-add
+  param: { module: forum, action: topicAdd }
+
+big_topic_new:
+  url: /big-topic/new
+  param: { module: forum, action: bigTopicNew }
+
+big_topic_delete:
+  url: /big-topic/delete/:id
+  param: { module: forum, action: bigTopicDelete }
+
+big_topic_edit:
+  url: /big-topic/edit/:id
+  param: { module: forum, action: bigTopicEdit }
+
+topic_new:
+  url: /topic-new
+  param: { module: forum, action: topicNew }
+
+topic_delete:
+  url: /topic/delete/:id
+  param: { module: forum, action: topicDelete }
+
+topic_edit:
+  url: /topic/edit/:id
+  param: { module: forum, action: topicEdit }
+
+post_new:
+  url: /post/new
+  param: { module: forum, action: postNew }
+
+post_delete:
+  url: /post/delete/:id
+  param: { module: forum, action: postDelete }
+
+post_edit:
+  url: /post/edit/:id
+  param: { module: forum, action: postEdit }
 
 # default rules
 homepage:

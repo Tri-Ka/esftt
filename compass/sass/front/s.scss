@@ -52,6 +52,8 @@ header {
 
 		#logo {
 
+			float: left;
+
 			/*position: absolute;
 			top: 0;
 			right: 0;
@@ -374,7 +376,7 @@ footer {
 		font-family: 'Lobster', cursive;
 		font-size: 25px;
 		float: left;
-		margin-bottom: 15px;
+		margin-top: 12px;
 	}
 	
 	.content-part {
@@ -447,7 +449,7 @@ footer {
 }
 
 .directory .box{
-	height: 156px;
+	height: 200px;
 	overflow: hidden;
 }
 
@@ -629,7 +631,7 @@ header .social-nav {
   			box-shadow: 0px 0px 12px #000;
 
 			&.facebook {
-				background-color: #6E84B6;
+				background-color: #3b5998;
 			}
 
 			&.twitter {
@@ -1039,7 +1041,7 @@ h1 {
 
 	table {
 		color: #fff;
-		margin-top: 100px;
+		margin-top: 65px;
 		float: left;
 
 		th {
@@ -1106,4 +1108,205 @@ h1 {
 
 @keyframes blink {
   50% { opacity: 0 }
+}
+
+.enter-name {
+	font-size: 12px;
+}
+
+.big-topic-title {
+    color: #FFF;
+    font-size: 30px;
+    font-family: 'Lobster', cursive;
+    text-shadow: 0px 0px 3px #000;
+    float: left;
+    width: 100%;
+    margin-bottom: 15px;
+    margin-top: 15px;	
+}
+
+
+.topic-list {
+	list-style: none;
+	padding: 0;
+	float: left;
+	width: 100%;
+	margin-bottom: 0;
+	li {
+		    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+		width: 100%;
+		float: left;
+		.topic-info {
+			.author-avatar {
+				float: left;
+				width: 5%;
+				img{
+					float: left;
+					border-radius: 50%;
+					width: 100%;
+					margin-bottom: 0;
+				}
+			} 
+
+			.title-part {
+				width: 70%;
+				float: left;
+				color: #000;
+				padding-left: 20px;
+				.title-topic {
+					width: 100%;
+					display: block;
+					float: left;
+					font-size: 17px;
+    				font-weight: bold;
+				}
+				.author-topic {
+					display: block;
+					float: left;
+					width: 100%;
+				}
+			}
+
+			.nb-message {
+				float: left;
+				text-align: center;
+				color: #000;
+				width: 8%;
+				.fa {
+					font-size: 35px;
+				}
+			}
+
+			.last-message {
+				float: left;
+				text-align: center;
+				color: #000;
+				width: 17%;
+				font-size: 12px;
+			}
+		}
+	}
+}
+
+.modal-dialog {
+	position: fixed;
+	left: 50%;
+	top: 30%;
+	margin-left: -300px;
+}
+
+.modal-open .modal {
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.modal-backdrop {
+	display: none;
+}
+
+.post-list {
+	padding: 0;
+	list-style: none;
+
+	li {
+		float: left;
+		width: 100%;
+		margin-bottom: 15px;
+		background: #EFEFEF;
+    padding: 15px;
+    border-radius: 3px;
+	}
+
+	.topic-author-part {
+		float: left;
+		width: 20%;
+		text-align: center;
+		padding: 3px;
+		/*border-right: 1px solid #ddd;*/
+		.autor-name {
+			font-weight: bold;
+			margin-bottom: 15px;
+		}
+
+		.author-avatar {
+			img {
+				border-radius: 50%; 
+				width: 100%;
+				max-width: 60px;
+			}
+			margin-bottom: 15px;
+		}
+
+		.author-message-count {
+			font-size: 12px;
+		}
+	}
+
+	.topic-content {
+		float: left;
+		width: 80%;
+		padding: 15px;
+    	border: 1px solid #ddd;
+    	position: relative;
+    	border-radius: 3px;
+		background: #fff;
+
+		.title-topic-content {
+		    display: block;
+		    margin-bottom: 15px;
+		    border-bottom: 1px solid #ddd;
+		    padding-bottom: 15px;
+		}
+	}
+
+	.topic-content:after {
+		content: " ";
+		width: 0; 
+		height: 0; 
+		border-top: 10px solid transparent;
+		border-bottom: 10px solid transparent; 
+		border-right:10px solid #fff; 
+		position: absolute;
+    	top: 15px;
+    	left: -10px;
+	}
+}
+
+.delete-post {
+	color: red;
+	float: right;
+	font-size: 10px;
+}
+
+.error {
+	display: none;
+	color: red;
+}
+
+@media (max-width: 768px) {
+	.modal-dialog {
+	    position: fixed;
+	    left: 50%;
+	    top: 30%;
+	    margin-left: -45%;
+	    width: 90%;
+	}
+}
+
+.article .content {
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    box-shadow: 0px 0px 135px rgba(0, 0, 0, 0);
+}
+
+a.separated {
+	display: block;
+    float: left;
+    width: 100%;
+    border-top: 1px dashed #fff;
+    margin-top: 30px;
 }

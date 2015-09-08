@@ -8,7 +8,7 @@
  * @author     Your name here
  * @version    SVN: $Id: sfDoctrineFormTemplate.php 23810 2009-11-12 11:07:44Z Kris.Wallsmith $
  */
-class TopicMessageFrontendForm extends TopicMessageForm
+class ForumPostFrontendForm extends ForumPostForm
 {
   public function configure()
   {
@@ -19,8 +19,6 @@ class TopicMessageFrontendForm extends TopicMessageForm
 
 		$this->setDefault('author_id', $this->getOption('author_id'));
 		$this->setDefault('topic_id', $this->getOption('topic_id'));
-
-		$this->widgetSchema->setFormFormatterName('BootstrapForm');
 
   }
 }

@@ -1,3 +1,8 @@
+<?php slot('page_title', $event->getName()); ?>
+<?php slot('page_image', $event->retrievePictureUrl()); ?>
+<?php slot('page_url', url_for('event_show', array('id' => $event->getId()), true)); ?>
+<?php slot('page_description', $event->getDescription()); ?>
+
  <div class="row equalized">
 
     <?php include_partial('homepage/menuLeft'); ?>
@@ -35,11 +40,19 @@
                     </div>
                     <?php echo $event->getDescription(ESC_RAW); ?>
                 </div>
-            </div>
 
+            </div>
             
             <div class="col-xs-12 box">
                 <div class="box-content">
+
+                    <div
+                        class="fb-like"
+                        data-share="true"
+                        data-width="450"
+                        data-show-faces="true">
+                    </div>
+
                     <div id="disqus_thread"></div>
                 </div>
             </div>

@@ -55,38 +55,42 @@
 
 <?php if (0 < count($directories)): ?>
 
-	<div class="box col-xs-12 marged-top directories">
+	<div class="row">
 
-		<div class="row">
+		<div class="col-xs-12 marged-top directories">
 
-			<?php foreach ($directories as $directory): ?>
+			<div class="row">
 
-				<div class="col-xs-12 col-sm-3 marged-top hvr-grow directory text-center">
-					<a href="<?php echo url_for('gallery', array('folder' => $directory['path'])); ?>" class="gallery-folder">
+				<?php foreach ($directories as $directory): ?>
+
+					<div class="col-xs-12 col-sm-3 marged-top hvr-grow directory text-center">
+						<a href="<?php echo url_for('gallery', array('folder' => $directory['path'])); ?>" class="gallery-folder">
+								
+							<?php if ('' !== $directory['picture']): ?>
+								<div class="box black">
+									<img style="max-width: 100%; max-height: 100%; margin-auto';" src="<?php echo public_path('uploads/gallery/'.$directory['path'].$directory['picture']); ?>">
+								</div>
+								<div class="gallery-hover">
+									<?php echo $directory['name']; ?>
+								</div>
+							<?php else: ?>
+								<div class="box black">
+									<img width="100%" src="<?php echo public_path('images/default-gallery.jpg'); ?>">
+								</div>
+								<div class="gallery-hover">
+									<?php echo $directory['name']; ?>
+								</div>
+							<?php endif; ?>
 							
-						<?php if ('' !== $directory['picture']): ?>
-							<div class="box black">
-								<img style="height:100%; margin-auto';" src="<?php echo public_path('uploads/gallery/'.$directory['path'].$directory['picture']); ?>">
-							</div>
-							<div class="gallery-hover">
-								<?php echo $directory['name']; ?>
-							</div>
-						<?php else: ?>
-							<div class="box black">
-								<img width="100%" src="<?php echo public_path('images/default-gallery.jpg'); ?>">
-							</div>
-							<div class="gallery-hover">
-								<?php echo $directory['name']; ?>
-							</div>
-						<?php endif; ?>
-						
-					</a>
-				</div>
+						</a>
+					</div>
 
-			<?php endforeach; ?>
+				<?php endforeach; ?>
+
+			</div>
 
 		</div>
-
+	
 	</div>
 
 <?php endif; ?>

@@ -1,3 +1,4 @@
+$dark-blue: #012242;
 $green: #5CB85C;
 
 @import url(http://fonts.googleapis.com/css?family=Lobster|Oxygen:400,300,700|Playball|Righteous|Allan:400,700);
@@ -112,4 +113,36 @@ $green: #5CB85C;
 	.btn-group {
 		margin-bottom: 5px;
 	}
+}
+
+.pagination {
+	a {
+		display: inline-block;
+		width: 30px;
+		height: 30px;
+		text-align: center;
+		line-height: 28px;
+		background-color: $dark-blue;
+		color: #FFF;
+		border-radius: 50%;
+		text-decoration: none;
+		border: 1px solid $dark-blue;
+		font-size: 10px;
+
+		&.current {
+			background: #fff;
+			color: $dark-blue;
+			&:hover {
+				cursor: default;
+			};
+			border: 1px solid $dark-blue;
+		}
+
+	}
+}
+
+.error_list {
+	padding: 0;
+	color: red;
+	list-style: none;	
 }

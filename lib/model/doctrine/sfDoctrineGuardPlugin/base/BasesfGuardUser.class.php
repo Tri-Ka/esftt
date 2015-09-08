@@ -25,6 +25,8 @@
  * @property sfGuardRememberKey $RememberKeys
  * @property sfGuardForgotPassword $ForgotPassword
  * @property Doctrine_Collection $UserTeams
+ * @property Doctrine_Collection $Topics
+ * @property Doctrine_Collection $Posts
  * 
  * @method string                getFirstName()             Returns the current record's "first_name" value
  * @method string                getLastName()              Returns the current record's "last_name" value
@@ -46,6 +48,8 @@
  * @method sfGuardRememberKey    getRememberKeys()          Returns the current record's "RememberKeys" value
  * @method sfGuardForgotPassword getForgotPassword()        Returns the current record's "ForgotPassword" value
  * @method Doctrine_Collection   getUserTeams()             Returns the current record's "UserTeams" collection
+ * @method Doctrine_Collection   getTopics()                Returns the current record's "Topics" collection
+ * @method Doctrine_Collection   getPosts()                 Returns the current record's "Posts" collection
  * @method sfGuardUser           setFirstName()             Sets the current record's "first_name" value
  * @method sfGuardUser           setLastName()              Sets the current record's "last_name" value
  * @method sfGuardUser           setEmailAddress()          Sets the current record's "email_address" value
@@ -66,6 +70,8 @@
  * @method sfGuardUser           setRememberKeys()          Sets the current record's "RememberKeys" value
  * @method sfGuardUser           setForgotPassword()        Sets the current record's "ForgotPassword" value
  * @method sfGuardUser           setUserTeams()             Sets the current record's "UserTeams" collection
+ * @method sfGuardUser           setTopics()                Sets the current record's "Topics" collection
+ * @method sfGuardUser           setPosts()                 Sets the current record's "Posts" collection
  * 
  * @package    esftt
  * @subpackage model
@@ -177,6 +183,14 @@ abstract class BasesfGuardUser extends sfDoctrineRecord
         $this->hasMany('UserTeam as UserTeams', array(
              'local' => 'id',
              'foreign' => 'user_id'));
+
+        $this->hasMany('ForumTopic as Topics', array(
+             'local' => 'id',
+             'foreign' => 'author_id'));
+
+        $this->hasMany('ForumPost as Posts', array(
+             'local' => 'id',
+             'foreign' => 'author_id'));
 
         $timestampable0 = new Doctrine_Template_Timestampable(array(
              ));

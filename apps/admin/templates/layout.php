@@ -54,6 +54,9 @@
                         <li class="<?php echo 'event' == $sf_context->getModuleName() ? 'active' : ''; ?>">
                             <a href="<?php echo url_for('event_list'); ?>"><i class="fa fa-calendar"></i> Evènements</a>
                         </li>
+                        <li class="<?php echo 'forum' == $sf_context->getModuleName() ? 'active' : ''; ?>">
+                            <a href="<?php echo url_for('forum'); ?>"><i class="fa fa-bullhorn"></i> Forum</a>
+                        </li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
@@ -62,6 +65,18 @@
             <div id="page-wrapper">
 
                 <div class="container-fluid">
+                <?php var_dump($sf_user->hasCredential('admin')); ?>
+                    <?php if ($sf_user->hasFlash('notice')): ?>
+                        <div class="flash notice">
+                            <?php echo $sf_user->getFlash('notice') ?>
+                        </div>
+                    <?php endif ?>
+
+                    <?php if ($sf_user->hasFlash('error')): ?>
+                        <div class="flash error">
+                            <?php echo $sf_user->getFlash('error') ?>
+                        </div>
+                    <?php endif ?>
 
                     <?php echo $sf_content; ?>
 

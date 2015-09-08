@@ -85,4 +85,80 @@ Event:
     date_to:
       type: DateTime
 
+PongScore:
+  actAs:
+    Timestampable: ~
+  columns:
+    playername:
+      type: string(255)
+      notnull: true
+    score:
+      type: string(255)
+
+ForumBigTopic:
+  columns:
+    title:
+      type: string(255)
+      notnull: true
+    team_id:
+      type: integer
+  relations:
+    Team:
+      class: Team
+      local: team_id
+      foreign: id
+      foreignAlias: BigTopics
+      onDelete: CASCADE
+
+ForumTopic:
+  actAs:
+    Timestampable: ~
+  columns:
+    author_id:
+      type: integer
+      notnull: true
+    big_topic_id:
+      type: integer
+      notnull: true
+    title:
+      type: string(255)
+  relations:
+    BigTopic:
+      class: ForumBigTopic
+      local: big_topic_id
+      foreign: id
+      foreignAlias: Topics
+      onDelete: CASCADE
+    Author:
+      class: sfGuardUser
+      local: author_id
+      foreign: id
+      foreignAlias: Topics
+      onDelete: CASCADE
+
+ForumPost:
+  actAs:
+    Timestampable: ~
+  columns:
+    author_id:
+      type: integer
+      notnull: true
+    topic_id:
+      type: integer
+      notnull: true
+    content:
+      type: clob
+  relations:
+    Author:
+      class: sfGuardUser
+      local: author_id
+      foreign: id
+      foreignAlias: Posts
+      onDelete: CASCADE
+    Topic:
+      class: ForumTopic
+      local: topic_id
+      foreign: id
+      foreignAlias: Posts
+      onDelete: CASCADE
 

@@ -33,6 +33,7 @@ default:
     - morris.min.js
     # - kendo/kendo.all.min.js
     - script.js
+    - pong.js
 
 
   has_layout:     true

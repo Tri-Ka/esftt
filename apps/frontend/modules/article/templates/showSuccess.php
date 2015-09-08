@@ -1,3 +1,8 @@
+<?php slot('page_title', $article->getTitle()); ?>
+<?php slot('page_image', $article->retrievePictureUrl()); ?>
+<?php slot('page_url', url_for('article_show', array('id' => $article->getId()), true)); ?>
+<?php slot('page_description', $article->getSubTitle()); ?>
+
  <div class="row">
 
     <?php include_partial('homepage/menuLeft'); ?>
@@ -45,10 +50,17 @@
 
             <?php endif; ?>
 
-            <div class="col-xs-12">
-                <div class="row">
-                    <div class="col-xs-12 content"><?php echo $article->getContent(ESC_RAW); ?></div>
+            <div class="col-xs-12 marged-top">
+                
+                <div class="col-xs-12 content"><?php echo $article->getContent(ESC_RAW); ?></div>
+                
+                <div
+                    class="fb-like"
+                    data-share="true"
+                    data-width="450"
+                    data-show-faces="true">
                 </div>
+
             </div>
             
             <div class="col-xs-12">

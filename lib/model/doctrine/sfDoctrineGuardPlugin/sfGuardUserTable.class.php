@@ -17,6 +17,17 @@ class sfGuardUserTable extends PluginsfGuardUserTable
         return Doctrine_Core::getTable('sfGuardUser');
     }
 
+    public function retrieveByUsernameOrEmailAddress($username, $isActive = true)
+    {
+        $query = Doctrine_Core::getTable('sfGuardUser')->createQuery('u')
+            ->where('u.username = ? OR u.email_address = ?', array($username, $username))
+          ->addWhere('u.is_active = ?', $isActive)
+        ;
+
+        return $query->fetchOne();
+    }
+
+
     public function findAvailableBySessionId($session_id)
     {
 
@@ -39,11 +50,17 @@ class sfGuardUserTable extends PluginsfGuardUserTable
 
     }
 
-    public function findUsersWithoutTeam()
+    public function findUsersWithoutTeam($groupIds = null)
     {
         $q = $this->createQuery('u')
         ->leftJoin('u.Teams t')
         ->andWhere('t.id IS NULL');
+        
+        if (null !== $groupIds) {
+            $q->leftJoin('u.Groups g')
+            ->andWhere('g.id IN ?', array($groupIds));    
+        }
+        
 
         return $q->execute();
     }

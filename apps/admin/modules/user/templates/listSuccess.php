@@ -39,7 +39,7 @@
 	            </thead>
 	            <tbody>
 
-		        	<?php foreach ($users as $user): ?>
+		        	<?php foreach ($users->getResults() as $user): ?>
 
 		        		<tr>
 							<th scope="row"><?php echo $user->getId(); ?></th>
@@ -58,6 +58,9 @@
 
 	        </table>
 	    </div>
+
+		<?php include_partial('general/pagination', array('pager' => $users, 'url' => url_for('user_list'))); ?>
+
 	</div>
 	<div class="col-xs-12">
 		<a href="<?php echo url_for('user_new'); ?>" class="btn btn-success btn-sm"><?php echo __('nouveau'); ?> <i class="fa fa-plus"></i></a>

@@ -8,7 +8,7 @@
  * @author     Your name here
  * @version    SVN: $Id: sfDoctrineFormTemplate.php 23810 2009-11-12 11:07:44Z Kris.Wallsmith $
  */
-class TopicFrontendForm extends TopicForm
+class TopicFrontendForm extends ForumTopicForm
 {
   public function configure()
   {
@@ -20,6 +20,8 @@ class TopicFrontendForm extends TopicForm
 
 		$this->setDefault('author_id', $this->getOption('author_id'));
 		$this->setDefault('big_topic_id', $this->getOption('big_topic_id'));
+
+		$this->validatorSchema['title'] = new sfValidatorString(array('required' => true));
 
 		$this->widgetSchema->setFormFormatterName('BootstrapForm');
 

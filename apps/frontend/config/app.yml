@@ -28,8 +28,10 @@ all:
     max_item_admin: 20
 
   sf_guard_plugin:
-    success_signin_url: "@homepage"
+    success_signin_url: "forum"
   
   mail:
     to: patrick.fanzutti@free.fr
+
+
 

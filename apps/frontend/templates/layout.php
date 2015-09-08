@@ -3,6 +3,20 @@
     <head>
         <?php include_http_metas() ?>
         <?php include_metas() ?>
+
+        <!-- for Facebook -->          
+        <meta property="og:title" content="<?php echo get_slot('page_title', 'ESFTT - La Frette sur Seine'); ?>" />
+        <meta property="og:type" content="article" />
+        <meta property="og:image" content="<?php echo get_slot('page_image', public_path('images/default-gallery.jpg', true)); ?>" />
+        <meta property="og:url" content="<?php echo get_slot('page_url', url_for('@homepage', true)) ?>" />
+        <meta property="og:description" content="<?php echo get_slot('page_description', 'ESFTT - La Frette sur Seine'); ?>" />
+
+        <!-- for Twitter -->          
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="" />
+        <meta name="twitter:description" content="" />
+        <meta name="twitter:image" content="" />
+
         <?php include_title() ?>
         <?php include_stylesheets() ?>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +24,24 @@
 
     </head>
     <body>
+
+        <script>
+          window.fbAsyncInit = function() {
+            FB.init({
+              appId      : '1659307854309814',
+              xfbml      : true,
+              version    : 'v2.4'
+            });
+          };
+
+          (function(d, s, id){
+             var js, fjs = d.getElementsByTagName(s)[0];
+             if (d.getElementById(id)) {return;}
+             js = d.createElement(s); js.id = id;
+             js.src = "//connect.facebook.net/fr_FR/sdk.js";
+             fjs.parentNode.insertBefore(js, fjs);
+           }(document, 'script', 'facebook-jssdk'));
+        </script>
 
         <header>
             <div class="container-fluid">
@@ -32,6 +64,7 @@
                                 <li><a href="<?php echo url_for('gallery'); ?>" class="hvr-bounce-to-top">Galerie</a></li>
                                 <li><a href="<?php echo url_for('infos'); ?>" class="hvr-bounce-to-top">Infos</a></li>
                                 <li><a href="<?php echo url_for('contact'); ?>" class="hvr-bounce-to-top">Contact</a></li>
+                                <li><a href="<?php echo url_for('forum'); ?>" class="hvr-bounce-to-top">Privé</a></li>
                             </ul>
                             <ul class="nav navbar-nav social-nav">
                                 <li><a target="_blank" href="<?php echo sfConfig::get('app_url_facebook'); ?>" class="facebook hvr-bounce-in"><i class="fa fa-facebook"></i></a></li>
@@ -144,6 +177,18 @@
 
 
     <?php include_javascripts() ?>
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-67115015-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+    
     <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES * * */
         var disqus_shortname = 'esftt';

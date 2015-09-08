@@ -1,5 +1,16 @@
 $(document).ready(function() {  
-                    
+
+	$('.playername').keyup(function()
+	{
+		if (3 == $(this).val().length) {
+			$('#start-pong').removeClass('hidden');
+			$('.enter-name').addClass('hidden');
+		} else {
+			$('#start-pong').addClass('hidden');
+			$('.enter-name').removeClass('hidden');
+		}
+	})
+    
 	//BEGIN LIBRARY CODE
 	var x;
 	var y;
@@ -42,23 +53,21 @@ $(document).ready(function() {
 		
 	}
 	
-	 
-
 	function init() {
-	  ctx = canvas.getContext("2d");  
-	  WIDTH = canvas.width;
-	  HEIGHT = canvas.height;
-	  x = 150;
-	  y = 150;
-	  dx = 2;
-	  dy = 4;
-	  radius = 10;
-	  rightDown = false;
-	  leftDown = false;
-	  intervalId = 0;
-	  
-	  intervalId = setInterval(draw, 10);
-	  init_paddles();
+		ctx = canvas.getContext("2d");  
+		WIDTH = canvas.width;
+		HEIGHT = canvas.height;
+		x = 150;
+		y = 150;
+		dx = 2;
+		dy = 4;
+		radius = 10;
+		rightDown = false;
+		leftDown = false;
+		intervalId = 0;
+
+		intervalId = setInterval(draw, 10);
+		init_paddles();
 	   
 	}
 
@@ -86,7 +95,7 @@ $(document).ready(function() {
 		var delayReaction = Math.random();
 		
 		//25% chance of reaction delay
-		if(delayReaction >= 0.25) {
+		if(delayReaction >= 0.3) {
 		
 			if(x > paddlexAI + paddlew) {
 				if(paddlexAI + paddlew + 5 <= WIDTH) {
@@ -133,11 +142,13 @@ $(document).ready(function() {
 		 ctx.beginPath();
 		 ctx.rect(0,0,10,HEIGHT);
 	     ctx.closePath();
+	     ctx.fillStyle = "white";
 	     ctx.fill();
 		 
 		 ctx.beginPath();
 		 ctx.rect(WIDTH - 10,0,10,HEIGHT);
 	     ctx.closePath();
+	     ctx.fillStyle = "white";
 	     ctx.fill();
 	}
 	
@@ -175,7 +186,7 @@ $(document).ready(function() {
 			
 			if (x <= paddlexAI || x >= paddlexAI + paddlew) {
 				clearInterval(intervalId);
-				alert('You WIN ! :)');
+				$('.score-player').html(parseInt($('.score-player').html()) + 100);
 				init();
 			}
 			
@@ -187,16 +198,32 @@ $(document).ready(function() {
 		  
 		  //lower lane
 		  else if (y + dy + radius > HEIGHT) {
-			
-			if (x > paddlex && x < paddlex + paddlew) {
+
+			if (x > paddlex  && x < paddlex + paddlew) {
 				dx = 8 * ((x-(paddlex+paddlew/2))/paddlew);
 				dy = -dy;
-			}
-			   
-			else {
-			  clearInterval(intervalId);
-			  alert('You Lose ! :(');
-			  init();
+				$('.score-player').html(parseInt($('.score-player').html()) + 10);
+			} else {
+				clearInterval(intervalId);
+				// alert('You Lose ! :(');
+				//$('.score-comp').html(parseInt($('.score-comp').html()) + 1);
+			  	//init();
+
+				$.ajax({
+                    type: 'post',
+                    url: $('.playername').attr('data-url'),
+                    data: {
+                    	playername: $('.playername').val(),
+                    	score: $('.score-player').html()
+                    },
+					success: function(data)
+                    {
+                    	$('.score-table').empty().html(data);
+					  	$('.game-over').show();
+						$('#start-pong').toggle();
+                    }
+                });
+        
 			}
 		  }
 		  
@@ -204,6 +231,15 @@ $(document).ready(function() {
 		  y += dy;
 		}
 
-		init();
+		$(document).on('click', '#start-pong', function(e)
+		{
+			$(this).toggle();
+			e.preventDefault();
+			e.stopPropagation();
+			clearInterval(intervalId);
+			$('.score-player').html(0);
+			$('.game-over').hide();
+			init();
 
+		})
 });  

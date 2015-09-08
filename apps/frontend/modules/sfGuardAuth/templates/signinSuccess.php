@@ -3,7 +3,7 @@
     <div class="box">
 
         <div class="box-title">
-            <?php echo __('Login'); ?>
+            <?php echo __('Connexion'); ?>
         </div>
 
         <div class="box-content marged-top">
@@ -23,11 +23,11 @@
                 </div>
 
                 <div class="form-group">
-                    <input type="submit" class="btn btn-primary" value="<?php echo __('Login') ?>">
+                    <input type="submit" class="btn btn-primary" value="<?php echo __('Se connecter') ?>">
                         
-                    <a href="<?php echo url_for('sf_guard_forgot_password') ?>" class="btn btn-default">
-                        <?php echo __('Forgot password ?') ?>
-                    </a>
+                    <!-- <a href="<?php echo url_for('sf_guard_forgot_password') ?>" class="btn btn-default">
+                        <?php echo __('Mot de passe oublié ?') ?>
+                    </a> -->
                 </div>
             </form>
         </div>

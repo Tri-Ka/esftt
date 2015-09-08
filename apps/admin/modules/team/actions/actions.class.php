@@ -19,8 +19,13 @@ class teamActions extends sfActions
     public function executeNew(sfWebRequest $request)
     {
     	$this->form = new TeamForm();
-        $this->membersWithoutTeam = sfGuardUserTable::getInstance()->findUsersWithoutTeam();
+        
+        $groupIds = array(
+            2, 
+            3
+        );
 
+        $this->membersWithoutTeam = sfGuardUserTable::getInstance()->findUsersWithoutTeam($groupIds);
     	if ($this->form->bindAndValid($request)) {
 
     		$this->form->save();
@@ -36,7 +41,13 @@ class teamActions extends sfActions
     	$this->team = TeamTable::getInstance()->find($request->getParameter('id'));
 
     	$this->form = new TeamForm($this->team);
-        $this->membersWithoutTeam = sfGuardUserTable::getInstance()->findUsersWithoutTeam();
+
+        $groupIds = array(
+            2, 
+            3
+        );
+
+        $this->membersWithoutTeam = sfGuardUserTable::getInstance()->findUsersWithoutTeam($groupIds);
 
     	if ($this->form->bindAndValid($request)) {
 

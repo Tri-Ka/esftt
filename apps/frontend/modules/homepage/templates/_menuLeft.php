@@ -45,6 +45,22 @@
             </div>
         </a>
 
+        <a href="<?php echo url_for('forum'); ?>" class="separated">
+            <div class="box col-xs-12 hvr-grow-rotate marged-top">
+                <div class="box-title">
+                    <i class="fa fa-lock"></i> <?php echo __('Espace membre'); ?>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://www.facebook.com/groups/46831155736/" class="separated" target="_blank">
+            <div class="box col-xs-12 hvr-grow-rotate marged-top" style="background:#3b5998; color: #fff !important;">
+                <div class="box-title" style="background:#3b5998; color: #fff !important">
+                    <i class="fa fa-facebook"></i> <?php echo __('Rejoignez-nous'); ?>
+                </div>
+            </div>
+        </a>
+
     </div>
 
     <!-- <div class="box col-xs-12 marged-top">

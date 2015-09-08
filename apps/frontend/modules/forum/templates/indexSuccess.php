@@ -9,13 +9,13 @@
 		</div>
 
 		<?php foreach ($bigTopics as $bigTopic): ?>
-			
+
 			<div class="big-topic-title">
 				<?php echo $bigTopic->getTitle(); ?>
 			</div>
 
 			<div class="box col-xs-12">
-				
+
 				<div class="box-content">
 					<ul class="topic-list">
 						<?php foreach ($bigTopic->getTopics() as $topic): ?>
@@ -43,7 +43,7 @@
 						<?php endforeach; ?>
 					</ul>
 					<div class="text-center">
-						<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+						<button type="button" class="btn btn-primary add-topic" data-toggle="modal" data-target="#myModal" data-big-topic-id="<?php echo $bigTopic->getId(); ?>">
 			  				nouveau topic
 						</button>
 					</div>

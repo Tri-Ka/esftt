@@ -28,35 +28,43 @@ class EventForm extends BaseEventForm
         ));
 
         $this->validatorSchema['picture'] = new sfValidatorFileImage(array(
-            'required'   => false,
-            'path'       => sfConfig::get('sf_upload_dir').'/events',
-            'min_height' =>  0,
-            'min_width'  =>  0,
-            'max_height' =>  99999999,
-            'max_width'  =>  99999999,
+            'required' => false,
+            'path' => sfConfig::get('sf_upload_dir').'/events',
+            'min_height' => 0,
+            'min_width' => 0,
+            'max_height' => 99999999,
+            'max_width' => 99999999,
             'mime_types' => 'web_images',
         ));
     }
 
     public function bind(array $taintedValues = null, array $taintedFiles = null)
     {
-        $date_from = $taintedValues['date_from'];
-        $day_from = substr($date_from, 0, 2);
-        $month_from = substr($date_from, 3, 2);
-        $year_from = substr($date_from, 6, 4);
-        $hour_from = substr($date_from, 11, 5);
+        if (null != $taintedValues['date_from']) {
+            $date_from = $taintedValues['date_from'];
+            $day_from = substr($date_from, 0, 2);
+            $month_from = substr($date_from, 3, 2);
+            $year_from = substr($date_from, 6, 4);
+            $hour_from = substr($date_from, 11, 5);
 
-        $date_to = $taintedValues['date_to'];
-        $day_to = substr($date_to, 0, 2);
-        $month_to = substr($date_to, 3, 2);
-        $year_to = substr($date_to, 6, 4);
-        $hour_to = substr($date_to, 11, 5);
+            $new_from_format = $year_from.'-'.$month_from.'-'.$day_from.' '.$hour_from.':00';
+            $taintedValues['date_from'] = $new_from_format;
+        } else {
+            unset($this->embeddedForms['date_from']);
+        }
 
-        $new_from_format = $year_from.'-'.$month_from.'-'.$day_from.' '.$hour_from.':00';
-        $new_to_format = $year_to.'-'.$month_to.'-'.$day_to.' '.$hour_to.':00';
+        if (null != $taintedValues['date_to']) {
+            $date_to = $taintedValues['date_to'];
+            $day_to = substr($date_to, 0, 2);
+            $month_to = substr($date_to, 3, 2);
+            $year_to = substr($date_to, 6, 4);
+            $hour_to = substr($date_to, 11, 5);
 
-        $taintedValues['date_from'] = $new_from_format;
-        $taintedValues['date_to'] = $new_to_format;
+            $new_to_format = $year_to.'-'.$month_to.'-'.$day_to.' '.$hour_to.':00';
+            $taintedValues['date_to'] = $new_to_format;
+        } else {
+            unset($this->embeddedForms['date_to']);
+        }
 
         parent::bind($taintedValues, $taintedFiles);
     }

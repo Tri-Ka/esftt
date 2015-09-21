@@ -30,13 +30,14 @@
 
     <div class="col-xs-12 col-md-5">
         <div class="row">
-            <div class="col-xs-12"><?php echo $article->getSubTitle(); ?></div>
+            <div class="col-xs-12 news-subtitle"><?php echo $article->getSubTitle(); ?></div>
         </div>
     </div>
 
     <div class="view-artcle-btn">
         <div class="nb-coms"><i class="fa fa-comments"></i><a href="<?php echo url_for('article_show', array('id' => $article->getId())); ?>#disqus_thread" class="coms-number"></a></div>
-        <a href="<?php echo url_for('article_show', array('id' => $article->getId())); ?>" class="show-article"><?php echo __('voir la suite'); ?></a>
+        <?php echo __('voir la suite'); ?>
+        <a class="overide-link" href="<?php echo url_for('article_show', array('id' => $article->getId())); ?>"></a>
     </div>
 
 </div>

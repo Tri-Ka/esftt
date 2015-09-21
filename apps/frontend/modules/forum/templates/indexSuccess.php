@@ -35,7 +35,8 @@
 									<div class="last-message">
 										<?php if ($topic->getPosts()->getLast()): ?>
 											<strong>dernier message:</strong> <br>
-											<?php echo format_date($topic->getPosts()->getLast()->getCreatedAt(), 'f'); ?>
+											<?php echo format_date($topic->getPosts()->getLast()->getCreatedAt(), 'f'); ?><br>
+											de <strong><?php echo $topic->getPosts()->getLast()->getAuthor(); ?></strong>
 										<?php endif; ?>
 									</div>
 								</a>

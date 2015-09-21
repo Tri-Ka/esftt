@@ -1061,17 +1061,25 @@ h1 {
   /*float: left;*/
   margin-right: 5px;
 }
+/* line 1001, ../../../compass/sass/front/s.scss */
+.view-artcle-btn a.overide-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
 
-/* line 1002, ../../../compass/sass/front/s.scss */
+/* line 1010, ../../../compass/sass/front/s.scss */
 .pong {
   font-family: 'Press Start 2P', cursive;
 }
-/* line 1006, ../../../compass/sass/front/s.scss */
+/* line 1014, ../../../compass/sass/front/s.scss */
 .pong .player-score {
   float: left;
   width: 100%;
 }
-/* line 1011, ../../../compass/sass/front/s.scss */
+/* line 1019, ../../../compass/sass/front/s.scss */
 .pong .player-score .score-player {
   font-size: 10px;
   margin-left: 50px;
@@ -1079,14 +1087,14 @@ h1 {
   display: block;
   float: left;
 }
-/* line 1020, ../../../compass/sass/front/s.scss */
+/* line 1028, ../../../compass/sass/front/s.scss */
 .pong .info-player {
   float: left;
   width: 100%;
   color: #fff;
   font-size: 23px;
 }
-/* line 1027, ../../../compass/sass/front/s.scss */
+/* line 1035, ../../../compass/sass/front/s.scss */
 .pong .info-player .playername {
   /*position: absolute;*/
   background: #000;
@@ -1099,19 +1107,19 @@ h1 {
   border-bottom: 1px dashed #fff;
   text-transform: uppercase;
 }
-/* line 1042, ../../../compass/sass/front/s.scss */
+/* line 1050, ../../../compass/sass/front/s.scss */
 .pong table {
   color: #fff;
   margin-top: 65px;
   float: left;
 }
-/* line 1047, ../../../compass/sass/front/s.scss */
+/* line 1055, ../../../compass/sass/front/s.scss */
 .pong table th {
   width: 135px;
   padding-bottom: 10px;
 }
 
-/* line 1056, ../../../compass/sass/front/s.scss */
+/* line 1064, ../../../compass/sass/front/s.scss */
 .game-over {
   position: absolute;
   width: 250px;
@@ -1124,7 +1132,7 @@ h1 {
   display: none;
 }
 
-/* line 1068, ../../../compass/sass/front/s.scss */
+/* line 1076, ../../../compass/sass/front/s.scss */
 #start-pong {
   position: absolute;
   top: 400px;
@@ -1142,12 +1150,12 @@ h1 {
   font-size: 30px;
 }
 
-/* line 1085, ../../../compass/sass/front/s.scss */
+/* line 1093, ../../../compass/sass/front/s.scss */
 #start-pong:hover, #start-pong:focus {
   text-decoration: none;
 }
 
-/* line 1090, ../../../compass/sass/front/s.scss */
+/* line 1098, ../../../compass/sass/front/s.scss */
 .blink {
   -webkit-animation: blink 0.5s step-end infinite;
   -moz-animation: blink 0.5s step-end infinite;
@@ -1175,12 +1183,12 @@ h1 {
     opacity: 0;
   }
 }
-/* line 1113, ../../../compass/sass/front/s.scss */
+/* line 1121, ../../../compass/sass/front/s.scss */
 .enter-name {
   font-size: 12px;
 }
 
-/* line 1117, ../../../compass/sass/front/s.scss */
+/* line 1125, ../../../compass/sass/front/s.scss */
 .big-topic-title {
   color: #FFF;
   font-size: 30px;
@@ -1192,7 +1200,7 @@ h1 {
   margin-top: 15px;
 }
 
-/* line 1129, ../../../compass/sass/front/s.scss */
+/* line 1137, ../../../compass/sass/front/s.scss */
 .topic-list {
   list-style: none;
   padding: 0;
@@ -1200,7 +1208,7 @@ h1 {
   width: 100%;
   margin-bottom: 0;
 }
-/* line 1135, ../../../compass/sass/front/s.scss */
+/* line 1143, ../../../compass/sass/front/s.scss */
 .topic-list li {
   margin-bottom: 15px;
   border-bottom: 1px solid #ddd;
@@ -1208,26 +1216,32 @@ h1 {
   width: 100%;
   float: left;
 }
-/* line 1142, ../../../compass/sass/front/s.scss */
+/* line 1150, ../../../compass/sass/front/s.scss */
 .topic-list li .topic-info .author-avatar {
   float: left;
   width: 5%;
 }
-/* line 1145, ../../../compass/sass/front/s.scss */
+@media (max-width: 768px) {
+  /* line 1150, ../../../compass/sass/front/s.scss */
+  .topic-list li .topic-info .author-avatar {
+    display: none;
+  }
+}
+/* line 1158, ../../../compass/sass/front/s.scss */
 .topic-list li .topic-info .author-avatar img {
   float: left;
   border-radius: 50%;
   width: 100%;
   margin-bottom: 0;
 }
-/* line 1153, ../../../compass/sass/front/s.scss */
+/* line 1166, ../../../compass/sass/front/s.scss */
 .topic-list li .topic-info .title-part {
   width: 70%;
   float: left;
   color: #000;
   padding-left: 20px;
 }
-/* line 1158, ../../../compass/sass/front/s.scss */
+/* line 1171, ../../../compass/sass/front/s.scss */
 .topic-list li .topic-info .title-part .title-topic {
   width: 100%;
   display: block;
@@ -1235,24 +1249,30 @@ h1 {
   font-size: 17px;
   font-weight: bold;
 }
-/* line 1165, ../../../compass/sass/front/s.scss */
+/* line 1178, ../../../compass/sass/front/s.scss */
 .topic-list li .topic-info .title-part .author-topic {
   display: block;
   float: left;
   width: 100%;
 }
-/* line 1172, ../../../compass/sass/front/s.scss */
+/* line 1185, ../../../compass/sass/front/s.scss */
 .topic-list li .topic-info .nb-message {
   float: left;
   text-align: center;
   color: #000;
   width: 8%;
 }
-/* line 1177, ../../../compass/sass/front/s.scss */
+/* line 1190, ../../../compass/sass/front/s.scss */
 .topic-list li .topic-info .nb-message .fa {
-  font-size: 35px;
+  font-size: 30px;
 }
-/* line 1182, ../../../compass/sass/front/s.scss */
+@media (max-width: 768px) {
+  /* line 1190, ../../../compass/sass/front/s.scss */
+  .topic-list li .topic-info .nb-message .fa {
+    font-size: 15px;
+  }
+}
+/* line 1198, ../../../compass/sass/front/s.scss */
 .topic-list li .topic-info .last-message {
   float: left;
   text-align: center;
@@ -1261,7 +1281,7 @@ h1 {
   font-size: 12px;
 }
 
-/* line 1193, ../../../compass/sass/front/s.scss */
+/* line 1209, ../../../compass/sass/front/s.scss */
 .modal-dialog {
   position: fixed;
   left: 50%;
@@ -1269,24 +1289,24 @@ h1 {
   margin-left: -300px;
 }
 
-/* line 1200, ../../../compass/sass/front/s.scss */
+/* line 1216, ../../../compass/sass/front/s.scss */
 .modal-open .modal {
   overflow-x: hidden;
   overflow-y: auto;
   background: rgba(0, 0, 0, 0.3);
 }
 
-/* line 1206, ../../../compass/sass/front/s.scss */
+/* line 1222, ../../../compass/sass/front/s.scss */
 .modal-backdrop {
   display: none;
 }
 
-/* line 1210, ../../../compass/sass/front/s.scss */
+/* line 1226, ../../../compass/sass/front/s.scss */
 .post-list {
   padding: 0;
   list-style: none;
 }
-/* line 1214, ../../../compass/sass/front/s.scss */
+/* line 1230, ../../../compass/sass/front/s.scss */
 .post-list li {
   float: left;
   width: 100%;
@@ -1294,8 +1314,9 @@ h1 {
   background: #EFEFEF;
   padding: 15px;
   border-radius: 3px;
+  border: 1px solid #ccc;
 }
-/* line 1223, ../../../compass/sass/front/s.scss */
+/* line 1240, ../../../compass/sass/front/s.scss */
 .post-list .topic-author-part {
   float: left;
   width: 20%;
@@ -1303,26 +1324,26 @@ h1 {
   padding: 3px;
   /*border-right: 1px solid #ddd;*/
 }
-/* line 1229, ../../../compass/sass/front/s.scss */
+/* line 1246, ../../../compass/sass/front/s.scss */
 .post-list .topic-author-part .autor-name {
   font-weight: bold;
   margin-bottom: 15px;
 }
-/* line 1234, ../../../compass/sass/front/s.scss */
+/* line 1251, ../../../compass/sass/front/s.scss */
 .post-list .topic-author-part .author-avatar {
   margin-bottom: 15px;
 }
-/* line 1235, ../../../compass/sass/front/s.scss */
+/* line 1253, ../../../compass/sass/front/s.scss */
 .post-list .topic-author-part .author-avatar img {
   border-radius: 50%;
   width: 100%;
   max-width: 60px;
 }
-/* line 1243, ../../../compass/sass/front/s.scss */
+/* line 1263, ../../../compass/sass/front/s.scss */
 .post-list .topic-author-part .author-message-count {
   font-size: 12px;
 }
-/* line 1248, ../../../compass/sass/front/s.scss */
+/* line 1268, ../../../compass/sass/front/s.scss */
 .post-list .topic-content {
   float: left;
   width: 80%;
@@ -1332,14 +1353,18 @@ h1 {
   border-radius: 3px;
   background: #fff;
 }
-/* line 1257, ../../../compass/sass/front/s.scss */
+/* line 1277, ../../../compass/sass/front/s.scss */
 .post-list .topic-content .title-topic-content {
   display: block;
   margin-bottom: 15px;
   border-bottom: 1px solid #ddd;
   padding-bottom: 15px;
 }
-/* line 1265, ../../../compass/sass/front/s.scss */
+/* line 1283, ../../../compass/sass/front/s.scss */
+.post-list .topic-content .title-topic-content span.post-date {
+  font-size: 10px;
+}
+/* line 1289, ../../../compass/sass/front/s.scss */
 .post-list .topic-content:after {
   content: " ";
   width: 0;
@@ -1351,22 +1376,34 @@ h1 {
   top: 15px;
   left: -10px;
 }
+/* line 1301, ../../../compass/sass/front/s.scss */
+.post-list .topic-content:before {
+  content: " ";
+  width: 0;
+  height: 0;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-right: 12px solid #DDDDDD;
+  position: absolute;
+  top: 13px;
+  left: -12px;
+}
 
-/* line 1278, ../../../compass/sass/front/s.scss */
+/* line 1314, ../../../compass/sass/front/s.scss */
 .delete-post {
   color: red;
   float: right;
   font-size: 10px;
 }
 
-/* line 1284, ../../../compass/sass/front/s.scss */
+/* line 1320, ../../../compass/sass/front/s.scss */
 .error {
   display: none;
   color: red;
 }
 
 @media (max-width: 768px) {
-  /* line 1290, ../../../compass/sass/front/s.scss */
+  /* line 1326, ../../../compass/sass/front/s.scss */
   .modal-dialog {
     position: fixed;
     left: 50%;
@@ -1375,7 +1412,7 @@ h1 {
     width: 90%;
   }
 }
-/* line 1299, ../../../compass/sass/front/s.scss */
+/* line 1335, ../../../compass/sass/front/s.scss */
 .article .content {
   margin-bottom: 15px;
   padding: 15px;
@@ -1383,11 +1420,30 @@ h1 {
   box-shadow: 0px 0px 135px transparent;
 }
 
-/* line 1306, ../../../compass/sass/front/s.scss */
+/* line 1342, ../../../compass/sass/front/s.scss */
 a.separated {
   display: block;
   float: left;
   width: 100%;
   border-top: 1px dashed #fff;
   margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+  /* line 1352, ../../../compass/sass/front/s.scss */
+  .news-subtitle {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  /* line 1357, ../../../compass/sass/front/s.scss */
+  .view-artcle-btn {
+    position: relative;
+    float: none;
+    margin: auto;
+    right: inherit;
+    width: 170px;
+    clear: both;
+    border-radius: 4px;
+  }
 }

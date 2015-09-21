@@ -18,8 +18,8 @@
 						</div>
 						<div class="topic-content">
 							<div class="title-topic-content">
-								<span class="subtitle-post">Re: <?php echo $topic->getTitle(); ?></span>
-								<span class="post-date"><?php echo format_date('D', $post->getCreatedAt()); ?></span>
+								<span class="subtitle-post">Re: <?php echo $topic->getTitle(); ?></span><br>
+								<span class="post-date"><?php echo format_date($post->getCreatedAt(), 'f'); ?></span>
 							</div>
 							<?php echo $post->getContent(); ?>
 						</div>
@@ -35,11 +35,11 @@
 				<?php echo $form->renderHiddenFields(); ?>
 
 				<div class="form-group">
-		 		
+
 			 		<label><?php echo __('Votre message'); ?></label>
 			 		<?php echo $form['content']->render(array('class' => 'form-control check-empty')); ?>
 			 		<span class="error">veuillez renseigner ce champs</span>
-				</div>	
+				</div>
 
 				<input type="submit" class="btn btn-primary" value="envoyer">
 

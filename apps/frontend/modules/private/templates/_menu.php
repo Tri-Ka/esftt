@@ -9,8 +9,8 @@
         <div class="box-content marged-top">
             <ul class="nav nav-pills nav-stacked nav-tabs">
                 <li class="active"><a href="#"><?php echo __('Forum'); ?></a></li>
-                <li><a href="#"><?php echo __('Championat départemental'); ?></a></li>
-                <li><a href="#"><?php echo __('Championat de Paris'); ?></a></li>
+                <li><a href="#"><?php echo __('Championnat départemental'); ?></a></li>
+                <li><a href="#"><?php echo __('Championnat de Paris'); ?></a></li>
                 <li><a href="#"><?php echo __('Fichiers'); ?></a></li>
                 <li><a href="#"><?php echo __('Adhérents'); ?></a></li>
             </ul>

@@ -46,9 +46,9 @@
 	</div>
 
     <div class="box col-xs-12 marged-top">
-
-		<div id="disqus_thread"></div>
-
+    	<div class="box-content">
+			<div id="disqus_thread"></div>
+		</div>
 	</div>
 
 <?php endif; ?>

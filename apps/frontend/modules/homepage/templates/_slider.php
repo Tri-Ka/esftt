@@ -4,7 +4,7 @@
 
         <?php foreach ($pictures as $k => $picture): ?>
 
-            <div class="item <?php echo 0 == $k ? 'active' : ''; ?>" style="background: url('<?php echo public_path('uploads/slides'.$picture); ?>');     background-size: cover !important;">
+            <div class="item <?php echo 0 == $k ? 'active' : ''; ?>" style="background: url('<?php echo public_path('uploads/slides'.$picture); ?>'); background-size: cover !important; background-position: center;">
             </div>
 
         <?php endforeach; ?>

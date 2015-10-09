@@ -51,9 +51,9 @@
             <?php endif; ?>
 
             <div class="col-xs-12 marged-top">
-                
+
                 <div class="col-xs-12 content"><?php echo $article->getContent(ESC_RAW); ?></div>
-                
+
                 <div
                     class="fb-like"
                     data-share="true"
@@ -62,7 +62,7 @@
                 </div>
 
             </div>
-            
+
             <div class="col-xs-12">
                 <div id="disqus_thread"></div>
             </div>

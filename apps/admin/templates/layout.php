@@ -65,7 +65,7 @@
             <div id="page-wrapper">
 
                 <div class="container-fluid">
-                <?php var_dump($sf_user->hasCredential('admin')); ?>
+
                     <?php if ($sf_user->hasFlash('notice')): ?>
                         <div class="flash notice">
                             <?php echo $sf_user->getFlash('notice') ?>
@@ -92,5 +92,5 @@
 
     <script src="http://js.nicedit.com/nicEdit-latest.js" type="text/javascript"></script>
     <script type="text/javascript">bkLib.onDomLoaded(nicEditors.allTextAreas);</script>
-                        
+
 </html>

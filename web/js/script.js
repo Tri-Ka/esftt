@@ -104,6 +104,18 @@ var checkEmptyForm =
 			}
 		})
 	}
+};
+
+var addTopic =
+{
+	init: function()
+	{
+		$(document).on('click', '.add-topic', function()
+		{
+			$('#big-topic-id').val($(this).attr('data-big-topic-id'));
+
+		});
+	}
 }
 
 $( document ).ready(function()
@@ -113,4 +125,5 @@ $( document ).ready(function()
 	$('iframe').removeAttr('style');
 	chart.init();
 	checkEmptyForm.init();
+	addTopic.init();
 });

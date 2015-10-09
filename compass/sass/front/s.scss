@@ -997,6 +997,14 @@ h1 {
 	    /*float: left;*/
 	    margin-right: 5px;
 	}
+
+	a.overide-link {
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    right: 0;
+	    bottom: 0;
+	}
 }
 
 .pong {
@@ -1142,6 +1150,11 @@ h1 {
 			.author-avatar {
 				float: left;
 				width: 5%;
+			
+				@media (max-width: 768px) {
+					display: none;
+				}
+
 				img{
 					float: left;
 					border-radius: 50%;
@@ -1175,7 +1188,10 @@ h1 {
 				color: #000;
 				width: 8%;
 				.fa {
-					font-size: 35px;
+					font-size: 30px;
+					@media (max-width: 768px) {
+						font-size: 15px;
+					}	
 				}
 			}
 
@@ -1216,8 +1232,9 @@ h1 {
 		width: 100%;
 		margin-bottom: 15px;
 		background: #EFEFEF;
-    padding: 15px;
-    border-radius: 3px;
+	    padding: 15px;
+	    border-radius: 3px;
+	    border: 1px solid #ccc;
 	}
 
 	.topic-author-part {
@@ -1232,11 +1249,14 @@ h1 {
 		}
 
 		.author-avatar {
+
 			img {
 				border-radius: 50%; 
 				width: 100%;
 				max-width: 60px;
 			}
+
+
 			margin-bottom: 15px;
 		}
 
@@ -1259,6 +1279,10 @@ h1 {
 		    margin-bottom: 15px;
 		    border-bottom: 1px solid #ddd;
 		    padding-bottom: 15px;
+
+		    span.post-date {
+			    font-size: 10px;
+			}
 		}
 	}
 
@@ -1272,6 +1296,18 @@ h1 {
 		position: absolute;
     	top: 15px;
     	left: -10px;
+	}
+	
+	.topic-content:before {
+		content: " ";
+		width: 0;
+		height: 0;
+		border-top: 12px solid transparent;
+		border-bottom: 12px solid transparent;
+		border-right: 12px solid #DDDDDD;
+		position: absolute;
+		top: 13px;
+		left: -12px;
 	}
 }
 
@@ -1309,4 +1345,22 @@ a.separated {
     width: 100%;
     border-top: 1px dashed #fff;
     margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+
+	.news-subtitle {
+		margin-top: 15px;
+		margin-bottom: 15px;
+	}
+	
+	.view-artcle-btn {
+		position: relative;
+		float: none;
+		margin: auto;
+		right: inherit;
+		width: 170px;
+		clear: both;
+		border-radius: 4px;
+	}
 }

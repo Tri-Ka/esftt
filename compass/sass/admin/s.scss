@@ -56,18 +56,18 @@ $green: #5CB85C;
 		right: 5px;
 	}
 
-	.captain {  
+	.captain {
 		position: absolute;
 		top: -10px;
 		right: 6px;
 		font-size: 20px;
-		color: #F80;	
+		color: #F80;
 	}
 }
 
 .textarea {
-	width: 100%; 
-	min-height: 300px;   
+	width: 100%;
+	min-height: 300px;
 	-webkit-appearance: textarea;
 	border-image-source: initial;
 	border-image-slice: initial;
@@ -112,4 +112,16 @@ $green: #5CB85C;
 	.btn-group {
 		margin-bottom: 5px;
 	}
+}
+
+.go-to-front-url {
+	display: block;
+    float: left;
+    color: #9D9D9D;
+    padding: 15px;
+    border-left: 1px solid #404040;
+    &:hover {
+    	text-decoration: none;
+    	color: #fff;
+    }
 }

@@ -15,8 +15,8 @@
 			<?php $folderRoot = ''; ?>
 
 			<?php foreach ($breadscrums as $folder): ?>
-				<?php $folderRoot.= '/'.$folder; ?>
-				/ <a href="<?php echo url_for('gallery', array('folder' => $folderRoot)); ?>"><?php echo $folder ; ?></a>
+				<?php $folderRoot .= '/'.$folder; ?>
+				/ <a href="<?php echo url_for('gallery', array('folder' => $folderRoot)); ?>"><?php echo $folder; ?></a>
 			<?php endforeach; ?>
 		</div>
 	</div>
@@ -41,13 +41,13 @@
 	        <div class="swiper-button-next swiper-button-white"></div>
 	        <div class="swiper-button-prev swiper-button-white"></div>
 	    </div>
-	    
+
 
 	</div>
 
     <div class="box col-xs-12 marged-top">
     	<div class="box-content">
-			<div id="disqus_thread"></div>
+			<div class="fb-comments" data-href="<?php echo url_for('gallery', true); ?>" data-width="100%" data-numposts="10"></div>
 		</div>
 	</div>
 
@@ -65,7 +65,7 @@
 
 					<div class="col-xs-12 col-sm-3 marged-top hvr-grow directory text-center">
 						<a href="<?php echo url_for('gallery', array('folder' => $directory['path'])); ?>" class="gallery-folder">
-								
+
 							<?php if ('' !== $directory['picture']): ?>
 								<div class="box black">
 									<img style="max-width: 100%; max-height: 100%; margin-auto';" src="<?php echo public_path('uploads/gallery/'.$directory['path'].$directory['picture']); ?>">
@@ -81,7 +81,7 @@
 									<?php echo $directory['name']; ?>
 								</div>
 							<?php endif; ?>
-							
+
 						</a>
 					</div>
 
@@ -90,7 +90,7 @@
 			</div>
 
 		</div>
-	
+
 	</div>
 
 <?php endif; ?>

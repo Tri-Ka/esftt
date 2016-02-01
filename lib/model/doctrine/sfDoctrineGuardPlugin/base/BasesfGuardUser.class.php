@@ -17,6 +17,7 @@
  * @property timestamp $last_login
  * @property string $avatar
  * @property string $licence
+ * @property timestamp $last_visit
  * @property Doctrine_Collection $Groups
  * @property Doctrine_Collection $Permissions
  * @property Doctrine_Collection $Teams
@@ -40,6 +41,7 @@
  * @method timestamp             getLastLogin()             Returns the current record's "last_login" value
  * @method string                getAvatar()                Returns the current record's "avatar" value
  * @method string                getLicence()               Returns the current record's "licence" value
+ * @method timestamp             getLastVisit()             Returns the current record's "last_visit" value
  * @method Doctrine_Collection   getGroups()                Returns the current record's "Groups" collection
  * @method Doctrine_Collection   getPermissions()           Returns the current record's "Permissions" collection
  * @method Doctrine_Collection   getTeams()                 Returns the current record's "Teams" collection
@@ -62,6 +64,7 @@
  * @method sfGuardUser           setLastLogin()             Sets the current record's "last_login" value
  * @method sfGuardUser           setAvatar()                Sets the current record's "avatar" value
  * @method sfGuardUser           setLicence()               Sets the current record's "licence" value
+ * @method sfGuardUser           setLastVisit()             Sets the current record's "last_visit" value
  * @method sfGuardUser           setGroups()                Sets the current record's "Groups" collection
  * @method sfGuardUser           setPermissions()           Sets the current record's "Permissions" collection
  * @method sfGuardUser           setTeams()                 Sets the current record's "Teams" collection
@@ -135,6 +138,9 @@ abstract class BasesfGuardUser extends sfDoctrineRecord
         $this->hasColumn('licence', 'string', 255, array(
              'type' => 'string',
              'length' => 255,
+             ));
+        $this->hasColumn('last_visit', 'timestamp', null, array(
+             'type' => 'timestamp',
              ));
 
 

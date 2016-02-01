@@ -6,9 +6,10 @@
 
 dev:
 
+  front_url: 'http://esftt.dev/frontend_dev.php'
 
 all:
-  
+
   imagesizes:
     article_picture:
       width: 580
@@ -26,3 +27,4 @@ all:
   pagination:
     max_item_admin: 20
 
+  front_url: 'http://www.esftt.com'

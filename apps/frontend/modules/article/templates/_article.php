@@ -35,7 +35,10 @@
     </div>
 
     <div class="view-artcle-btn">
-        <div class="nb-coms"><i class="fa fa-comments"></i><a href="<?php echo url_for('article_show', array('id' => $article->getId())); ?>#disqus_thread" class="coms-number"></a></div>
+        <div class="nb-coms">
+            <i class="fa fa-comments"></i>
+            <span class="fb-comments-count" data-href="<?php echo url_for('article_show', array('id' => $article->getId())); ?>"></span>
+        </div>
         <?php echo __('voir la suite'); ?>
         <a class="overide-link" href="<?php echo url_for('article_show', array('id' => $article->getId())); ?>"></a>
     </div>

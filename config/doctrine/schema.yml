@@ -26,6 +26,8 @@ sfGuardUser:
       type: string(255)
     licence:
       type: string(255)
+    last_visit:
+      type: timestamp
   relations:
     Teams:
       class: Team

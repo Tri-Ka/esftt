@@ -9,48 +9,53 @@
  */
 class forumActions extends sfActions
 {
-	public function executeIndex(sfWebRequest $request)
-	{
-		$this->bigTopics = forumBigTopicTable::getInstance()->findAll();
-	}
+    public function executeIndex(sfWebRequest $request)
+    {
+        $this->bigTopics = forumBigTopicTable::getInstance()->findAll();
 
-	public function executeTopic(sfWebRequest $request)
-	{
-		$this->topic = forumTopicTable::getInstance()->find($request->getParameter('id'));
+        if ($this->getUser()->isAuthenticated()) {
+            $user = $this->getUser()->getGuardUser();
 
-		$options = array(
-			'author_id' => $this->getUser()->getGuardUser()->getId(),
-			'topic_id' => $this->topic->getId()
-		);
+            $user->setLastVisit(Date('Y-m-d H:i:s'));
+            $user->save();
+        }
+    }
 
-		$this->form = new ForumPostFrontendForm(null, $options);
+    public function executeTopic(sfWebRequest $request)
+    {
+        $this->topic = forumTopicTable::getInstance()->find($request->getParameter('id'));
 
-		if ($this->form->bindAndValid($request))
-		{
-			$this->form->save();
-			$this->redirect('topic', array('id' => $this->topic->getId()));
-		}
+        $options = array(
+            'author_id' => $this->getUser()->getGuardUser()->getId(),
+            'topic_id' => $this->topic->getId(),
+        );
 
-	}
+        $this->form = new ForumPostFrontendForm(null, $options);
 
-	public function executeTopicAdd(sfWebRequest $request)
-	{
-		$this->topic = new forumTopic();
+        if ($this->form->bindAndValid($request)) {
+            $this->form->save();
+            $this->redirect('topic', array('id' => $this->topic->getId()));
+        }
+    }
 
-		$this->topic->setTitle($request->getParameter('topic-name'));
-		$this->topic->setAuthorId($this->getUser()->getGuardUser()->getId());
-		$this->topic->setBigTopicId($request->getParameter('big-topic-id'));
-		$this->topic->save();
+    public function executeTopicAdd(sfWebRequest $request)
+    {
+        $this->topic = new forumTopic();
 
-		$this->redirect('topic', array('id' => $this->topic->getId()));
-	}
+        $this->topic->setTitle($request->getParameter('topic-name'));
+        $this->topic->setAuthorId($this->getUser()->getGuardUser()->getId());
+        $this->topic->setBigTopicId($request->getParameter('big-topic-id'));
+        $this->topic->save();
 
-	public function executePostDelete(sfWebRequest $request)
-	{
-		$post = forumPostTable::getInstance()->find($request->getParameter('id'));
-		$topicId = $post->getTopicId();
-		$post->delete();
-		
-		$this->redirect('topic', array('id' => $topicId));
-	}
+        $this->redirect('topic', array('id' => $this->topic->getId()));
+    }
+
+    public function executePostDelete(sfWebRequest $request)
+    {
+        $post = forumPostTable::getInstance()->find($request->getParameter('id'));
+        $topicId = $post->getTopicId();
+        $post->delete();
+
+        $this->redirect('topic', array('id' => $topicId));
+    }
 }

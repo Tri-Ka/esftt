@@ -51,9 +51,9 @@
             <?php endif; ?>
 
             <div class="col-xs-12 marged-top">
-                
+
                 <div class="col-xs-12 content"><?php echo $article->getContent(ESC_RAW); ?></div>
-                
+
                 <div
                     class="fb-like"
                     data-share="true"
@@ -62,9 +62,9 @@
                 </div>
 
             </div>
-            
+
             <div class="col-xs-12">
-                <div id="disqus_thread"></div>
+                <div class="fb-comments" data-href="<?php echo url_for('article_show', array('id' => $article->getId()), true); ?>" data-width="100%" data-numposts="10"></div>
             </div>
 
         </div>

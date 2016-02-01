@@ -24,7 +24,7 @@
             </div>
 
             <div class="col-xs-12 col-sm-6 no-pad-right">
-                    
+
                 <div class="col-xs-12 info-dates">
                     <div class="skotch"></div>
 
@@ -42,7 +42,7 @@
                 </div>
 
             </div>
-            
+
             <div class="col-xs-12 box">
                 <div class="box-content">
 
@@ -53,7 +53,7 @@
                         data-show-faces="true">
                     </div>
 
-                    <div id="disqus_thread"></div>
+                    <div class="fb-comments" data-href="<?php echo url_for('event_show', array('id' => $event->getId()), true); ?>" data-width="100%" data-numposts="10"></div>
                 </div>
             </div>
 

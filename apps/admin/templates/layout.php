@@ -23,6 +23,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="<?php echo url_for('homepage'); ?>">Admin ESFTT</a>
+                    <a class="go-to-front-url" href="<?php echo sfConfig::get('app_front_url'); ?>">Aller vers le site</a>
                 </div>
                 <!-- Top Menu Items -->
                 <ul class="nav navbar-right top-nav">
@@ -65,7 +66,7 @@
             <div id="page-wrapper">
 
                 <div class="container-fluid">
-                
+
                     <?php if ($sf_user->hasFlash('notice')): ?>
                         <div class="flash notice">
                             <?php echo $sf_user->getFlash('notice') ?>
@@ -92,5 +93,5 @@
 
     <script src="http://js.nicedit.com/nicEdit-latest.js" type="text/javascript"></script>
     <script type="text/javascript">bkLib.onDomLoaded(nicEditors.allTextAreas);</script>
-                        
+
 </html>

@@ -38,6 +38,8 @@ Team:
   columns:
     name:
       type: string(255)
+    appearance_order:
+      type: integer
   relations:
     Users:
       class: sfGuardUser

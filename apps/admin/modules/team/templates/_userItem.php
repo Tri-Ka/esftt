@@ -7,7 +7,7 @@
 		<?php endif; ?>
 
 		<div class="user-picture col-xs-5">
-			<img class="img-thumbnail img-circle" src="http://placehold.it/70x70">
+			<img class="img-thumbnail img-circle" src="<?php echo $user->retrievePictureUrl(); ?>">
 		</div>
 
 		<div class="col-xs-7">

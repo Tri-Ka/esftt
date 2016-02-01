@@ -76,4 +76,16 @@ class userActions extends sfActions
     	}
 
     }
+
+    public function executeMyAccount(sfWebRequest $request)
+    {
+		$this->user = sfGuardUserTable::getInstance()->find($this->getUser()->getGuardUser()->getId());
+		$this->form = new sfGuardUserFrontendForm($this->user);
+
+		if ($this->form->bindAndValid($request))
+		{
+			$this->form->save();
+			$this->redirect('my_account');
+		}
+    }
 }

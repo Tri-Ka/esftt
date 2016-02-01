@@ -8,11 +8,13 @@
         
         <div class="box-content marged-top">
             <ul class="nav nav-pills nav-stacked nav-tabs">
-                <li class="active"><a href="#"><?php echo __('Forum'); ?></a></li>
-                <li><a href="#"><?php echo __('Championnat départemental'); ?></a></li>
+                <li class="<?php echo !isset($active) || $active == 'forum' ? 'active' : ''; ?>"><a href="<?php echo url_for('forum'); ?>"><?php echo __('Forum'); ?></a></li>
+    <!--             <li><a href="#"><?php echo __('Championnat départemental'); ?></a></li>
                 <li><a href="#"><?php echo __('Championnat de Paris'); ?></a></li>
                 <li><a href="#"><?php echo __('Fichiers'); ?></a></li>
-                <li><a href="#"><?php echo __('Adhérents'); ?></a></li>
+                <li><a href="#"><?php echo __('Adhérents'); ?></a></li> -->
+                <hr>
+                <li class="<?php echo isset($active) && $active == 'account' ? 'active' : ''; ?>"><a href="<?php echo url_for('my_account'); ?>"><?php echo __('Mon compte'); ?></a></li>
             </ul>
         </div>
     </div>

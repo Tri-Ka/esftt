@@ -21,7 +21,7 @@
 								<span class="subtitle-post">Re: <?php echo $topic->getTitle(); ?></span><br>
 								<span class="post-date"><?php echo format_date($post->getCreatedAt(), 'f'); ?></span>
 							</div>
-							<?php echo nl2br($post->getContent()); ?>
+							<?php echo nl2br($post->getContent(ESC_RAW)); ?>
 						</div>
 						<?php if ($sf_user->getGuardUser()->hasGroup('admin')): ?>
 							<a href="<?php echo url_for('post_delete', array('id' => $post->getId())); ?>" class="delete-post"><i class="fa fa-trash"></i> supprimer</a>

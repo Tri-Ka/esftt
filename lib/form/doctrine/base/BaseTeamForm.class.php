@@ -15,15 +15,17 @@ abstract class BaseTeamForm extends BaseFormDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'id'         => new sfWidgetFormInputHidden(),
-      'name'       => new sfWidgetFormInputText(),
-      'users_list' => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'sfGuardUser')),
+      'id'               => new sfWidgetFormInputHidden(),
+      'name'             => new sfWidgetFormInputText(),
+      'appearance_order' => new sfWidgetFormInputText(),
+      'users_list'       => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'sfGuardUser')),
     ));
 
     $this->setValidators(array(
-      'id'         => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
-      'name'       => new sfValidatorString(array('max_length' => 255, 'required' => false)),
-      'users_list' => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'sfGuardUser', 'required' => false)),
+      'id'               => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
+      'name'             => new sfValidatorString(array('max_length' => 255, 'required' => false)),
+      'appearance_order' => new sfValidatorInteger(array('required' => false)),
+      'users_list'       => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'sfGuardUser', 'required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('team[%s]');

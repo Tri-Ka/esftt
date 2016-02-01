@@ -1447,3 +1447,8 @@ a.separated {
     border-radius: 4px;
   }
 }
+/* line 1369, ../../../compass/sass/front/s.scss */
+.user-team-unit img {
+  width: 110px;
+  height: 110px;
+}

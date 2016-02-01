@@ -7,7 +7,12 @@
 	 	<div class="form-group">
 	 		<label><?php echo __('Nom'); ?></label>
 	 		<?php echo $form['name']->render(array('class' => 'form-control')); ?>
-		</div>	
+		</div>
+
+		<div class="form-group">
+	 		<label><?php echo __('Ordre d\'apparence'); ?></label>
+	 		<?php echo $form['appearance_order']->render(array('class' => 'form-control')); ?>
+		</div>
 
 		<?php if (!$form->getObject()->isNew()): ?>
 
@@ -16,7 +21,7 @@
 			<div class="row">
 
 				<?php foreach ($form->getObject()->getUserTeams() as $userTeam): ?>
-					
+
 					<?php include_partial('team/userItem', array('user' => $userTeam->getUser(), 'team' => $form->getObject(), 'inTeam' => true, 'isCaptain' => $userTeam->getIsCaptain())); ?>
 
 				<?php endforeach; ?>
@@ -31,7 +36,7 @@
 
 		<div class="col-xs-12 col-sm-6">
 
-			<label><?php echo __('Membres disponibles'); ?></label>	
+			<label><?php echo __('Membres disponibles'); ?></label>
 
 			<div class="row">
 
@@ -51,7 +56,7 @@
 
 		<div class="form-group">
 	 		<input type="submit" class="btn btn-primary" value="enregistrer">
-		</div>				
+		</div>
 
 	</div>
 

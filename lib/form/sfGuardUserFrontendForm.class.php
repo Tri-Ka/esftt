@@ -9,9 +9,12 @@ class sfGuardUserFrontendForm extends BasesfGuardUserForm
         sfApplicationConfiguration::getActive()->loadHelpers(array('Url'));
 
         $this->useFields(array(
+          'first_name',
+          'last_name',
           'email_address',
           'password',
           'username',
+          'licence'
         ));
 
         $this->widgetSchema['password'] = new sfWidgetFormInputPassword();
@@ -22,6 +25,7 @@ class sfGuardUserFrontendForm extends BasesfGuardUserForm
           'file_src' => $this->getObject()->retrievePictureUrl(),
           'is_image' => true,
           'edit_mode' => !$this->isNew() && null != $this->getObject()->getAvatar(),
+          'template' => '%input%'
         ));
 
         $this->validatorSchema['avatar'] = new sfValidatorFileImage(array(
@@ -31,7 +35,7 @@ class sfGuardUserFrontendForm extends BasesfGuardUserForm
             'min_width'  =>  0,
             'max_height' =>  99999999,
             'max_width'  =>  99999999,
-            'mime_types' => 'web_images',
+            'mime_types' => 'web_images'
         ));
 
         $this->validatorSchema['email_address'] = new sfValidatorEmail(array('required' => true));

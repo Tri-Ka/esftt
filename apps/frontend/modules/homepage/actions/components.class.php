@@ -16,9 +16,7 @@ class homepageComponents extends sfComponents
 
 		$this->images = array_merge(
             glob($this->dir.DIRECTORY_SEPARATOR."*.jpg"),
-            glob($this->dir.DIRECTORY_SEPARATOR."*.JPG"),
-            glob($this->dir.DIRECTORY_SEPARATOR."*.png"),
-            glob($this->dir.DIRECTORY_SEPARATOR."*.jpeg")
+            glob($this->dir.DIRECTORY_SEPARATOR."*.JPG")
         );
 
         $this->pictures = array();

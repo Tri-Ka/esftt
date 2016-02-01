@@ -11,8 +11,8 @@ class clubActions extends sfActions
 {
     public function executeShow(sfWebRequest $request)
     {
-    	$this->teams = TeamTable::getInstance()->findAll();
-    	$this->events = EventTable::getInstance()->findAllQuery()->execute();
+        $this->teams = TeamTable::getInstance()->findAllOrdered()->execute();
+        $this->events = EventTable::getInstance()->findAllQuery()->execute();
     }
 
     public function executeInfo(sfWebRequest $request)

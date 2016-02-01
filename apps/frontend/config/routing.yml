@@ -58,6 +58,10 @@ infos:
   url: /informations
   param: { module: club, action: info }
 
+my_account:
+  url: /my-account
+  param: { module: user, action: myAccount }
+
 # default rules
 homepage:
   url:   /

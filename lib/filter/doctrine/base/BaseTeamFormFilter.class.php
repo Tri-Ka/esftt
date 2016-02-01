@@ -13,13 +13,15 @@ abstract class BaseTeamFormFilter extends BaseFormFilterDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'name'       => new sfWidgetFormFilterInput(),
-      'users_list' => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'sfGuardUser')),
+      'name'             => new sfWidgetFormFilterInput(),
+      'appearance_order' => new sfWidgetFormFilterInput(),
+      'users_list'       => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'sfGuardUser')),
     ));
 
     $this->setValidators(array(
-      'name'       => new sfValidatorPass(array('required' => false)),
-      'users_list' => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'sfGuardUser', 'required' => false)),
+      'name'             => new sfValidatorPass(array('required' => false)),
+      'appearance_order' => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
+      'users_list'       => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'sfGuardUser', 'required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('team_filters[%s]');
@@ -57,9 +59,10 @@ abstract class BaseTeamFormFilter extends BaseFormFilterDoctrine
   public function getFields()
   {
     return array(
-      'id'         => 'Number',
-      'name'       => 'Text',
-      'users_list' => 'ManyKey',
+      'id'               => 'Number',
+      'name'             => 'Text',
+      'appearance_order' => 'Number',
+      'users_list'       => 'ManyKey',
     );
   }
 }

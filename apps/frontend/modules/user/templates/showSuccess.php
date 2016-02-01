@@ -14,7 +14,7 @@
 					</div>
 					<div class="box-content marged-top">
 						<div class="col-xs-12 marged-bottom">
-							<img class="img-thumbnail img-circle" src="<?php echo $user->retrievePictureUrl(true, true); ?>">
+							<img class="img-thumbnail img-circle" src="<?php echo $user->retrievePictureUrl(); ?>">
 						</div>
 						<strong><?php echo $user->getLastName(); ?></strong><br>
 						<?php echo $user->getFirstName(); ?>

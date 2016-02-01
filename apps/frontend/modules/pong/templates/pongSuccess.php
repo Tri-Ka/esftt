@@ -1,3 +1,4 @@
+
 <div class="no-box-title text-center marged-bottom-2">
 	<?php echo __('Pong'); ?>
 </div>

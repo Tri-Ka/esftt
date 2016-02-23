@@ -50,7 +50,7 @@ topic_add:
   url: /topic-add
   param: { module: forum, action: topicAdd }
 
-post_delete: 
+post_delete:
   url: /post/delete/:id
   param: { module: forum, action: postDelete }
 
@@ -61,6 +61,10 @@ infos:
 my_account:
   url: /my-account
   param: { module: user, action: myAccount }
+
+new_post_count:
+  url: /pta
+  param: { module: user, action: newPostCount }
 
 # default rules
 homepage:

@@ -67,7 +67,7 @@
                                 <li>
                                     <a href="<?php echo url_for('forum'); ?>" class="hvr-bounce-to-top forum-link">
                                         Privé
-                                        <?php include_component('user', 'notif'); ?>
+                                        <span class="count-container" data-url="<?php echo url_for('new_post_count'); ?>"></span>
                                     </a>
                                 </li>
                             </ul>

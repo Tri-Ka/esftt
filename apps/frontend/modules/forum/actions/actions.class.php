@@ -13,17 +13,43 @@ class forumActions extends sfActions
     {
         $this->bigTopics = forumBigTopicTable::getInstance()->findAll();
 
-        if ($this->getUser()->isAuthenticated()) {
-            $user = $this->getUser()->getGuardUser();
+        $cookieName = 'esftt_newposts_'.$this->getUser()->getGuardUser()->getId();
+        $newPostString = $this->getRequest()->getCookie($cookieName);
+        $newPostArray = explode('-', $newPostString);
+        unset($newPostArray[count($newPostArray) - 1]);
 
-            $user->setLastVisit(Date('Y-m-d H:i:s'));
-            $user->save();
+        $this->topicIdsWithNewPosts = array();
+        if (0 < count($newPostArray)) {
+            $this->topicsWithNewPosts = ForumTopicTable::getInstance()->findByPostIds($newPostArray);
+
+            foreach ($this->topicsWithNewPosts as $topic) {
+                $this->topicIdsWithNewPosts[] = $topic->getId();
+            }
         }
     }
 
     public function executeTopic(sfWebRequest $request)
     {
         $this->topic = forumTopicTable::getInstance()->find($request->getParameter('id'));
+
+        $cookieName = 'esftt_newposts_'.$this->getUser()->getGuardUser()->getId();
+        $newPostString = $this->getRequest()->getCookie($cookieName);
+        $newPostArray = explode('-', $newPostString);
+        unset($newPostArray[count($newPostArray) - 1]);
+        $str = '';
+        if (0 < count($newPostArray)) {
+            $topicWithNewPosts = ForumTopicTable::getInstance()->findByPostIds($newPostArray);
+            foreach ($topicWithNewPosts as $topic) {
+                if ($topic !== $this->topic) {
+                    foreach ($topic->getPosts() as $post) {
+                        $str = $str.$post->getId().'-';
+                    }
+                }
+            }
+        }
+
+        $this->getResponse()->setCookie($cookieName, '',  time() - 3600, '/');
+        $this->getResponse()->setCookie($cookieName, $str);
 
         $options = array(
             'author_id' => $this->getUser()->getGuardUser()->getId(),

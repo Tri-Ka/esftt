@@ -38,6 +38,11 @@
 											<?php echo format_date($topic->getPosts()->getLast()->getCreatedAt(), 'f'); ?><br>
 											de <strong><?php echo $topic->getPosts()->getLast()->getAuthor(); ?></strong>
 										<?php endif; ?>
+
+										<span data-newpost-<?php echo $topic->getId(); ?> class="new-post hidden">
+											<span class="label label-warning">NEW</span>
+										</span>
+
 									</div>
 								</a>
 							</li>

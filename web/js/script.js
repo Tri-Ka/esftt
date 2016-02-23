@@ -1,4 +1,4 @@
-var swiper = 
+var swiper =
 {
 	init: function()
 	{
@@ -27,10 +27,10 @@ var swiper =
 	}
 };
 
-var masonry = 
+var masonry =
 {
 	init: function()
-	{	
+	{
 
 		if (0 < $('.directories').length) {
 			var container = $('.directories');
@@ -38,13 +38,13 @@ var masonry =
 			container.masonry({
 			  columnWidth: '.directory',
 			  itemSelector: '.directory'
-			});	
+			});
 		}
-		
+
 	}
 };
 
-var chart = 
+var chart =
 {
 	init: function()
 	{
@@ -77,7 +77,7 @@ var chart =
 				],
 			});
 		}
-		
+
 	}
 };
 
@@ -118,6 +118,30 @@ var addTopic =
 	}
 }
 
+var newPostCount =
+{
+	init: function()
+	{
+		var $url = $('.count-container').attr('data-url');
+
+		$.ajax(
+		$url, {
+			dataType: "json",
+		})
+        .done(function (datas) {
+        	$.each(datas.topcisIds, function(index, value){
+        		if (0 < $('[data-newpost-' + value +']').length) {
+        			$('[data-newpost-' + value +']').removeClass('hidden');
+        		}
+        	});
+        	$('.count-container').html(datas.template);
+        })
+        .error(function () {
+
+        });
+	}
+}
+
 $( document ).ready(function()
 {
 	swiper.init();
@@ -126,4 +150,5 @@ $( document ).ready(function()
 	chart.init();
 	checkEmptyForm.init();
 	addTopic.init();
+	newPostCount.init();
 });

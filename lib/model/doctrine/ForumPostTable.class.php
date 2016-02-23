@@ -17,10 +17,19 @@ class ForumPostTable extends Doctrine_Table
         return Doctrine_Core::getTable('ForumPost');
     }
 
-    public function findFromDate($date, $user)
+    public function findFromDate($date, $user, $topicId = null)
     {
-        return $this->createQuery('fp')
-            ->andWhere('fp.created_at >= ?', array($date))
+        $q = $this->createQuery('fp')
             ->andWhere('fp.author_id != ?', array($user->getId()));
+
+        if (null !== $date) {
+            $q->andWhere('fp.created_at >= ?', array($date));
+        }
+
+        if (null !== $topicId) {
+            $q->andWhere('fp.topic_id = ?', array($topicId));
+        }
+
+        return $q->execute();
     }
 }

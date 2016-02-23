@@ -37,7 +37,7 @@
     <div class="view-artcle-btn">
         <div class="nb-coms">
             <i class="fa fa-comments"></i>
-            <span class="fb-comments-count" data-href="<?php echo url_for('article_show', array('id' => $article->getId())); ?>"></span>
+            <span class="fb-comments-count" data-href="<?php echo url_for('article_show', array('id' => $article->getId()), true); ?>"></span>
         </div>
         <?php echo __('voir la suite'); ?>
         <a class="overide-link" href="<?php echo url_for('article_show', array('id' => $article->getId())); ?>"></a>

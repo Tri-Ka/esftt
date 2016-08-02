@@ -58,6 +58,9 @@
                         <li class="<?php echo 'forum' == $sf_context->getModuleName() ? 'active' : ''; ?>">
                             <a href="<?php echo url_for('forum'); ?>"><i class="fa fa-bullhorn"></i> Forum</a>
                         </li>
+                        <li class="<?php echo 'file' == $sf_context->getModuleName() ? 'active' : ''; ?>">
+                            <a href="<?php echo url_for('file_list'); ?>"><i class="fa fa-file"></i> Fichiers</a>
+                        </li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->

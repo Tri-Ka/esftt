@@ -1,6 +1,6 @@
 <div class="row">
 
-	<?php include_partial('private/menu'); ?>
+	<?php include_partial('private/menu', array('active' => 'forum')); ?>
 
 	<div class="col-xs-12 col-sm-8">
 

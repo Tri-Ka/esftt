@@ -16,7 +16,17 @@ var checkEmptyForm =
 
 $( document ).ready(function()
 {
-	$('.datepicker').datetimepicker();
-		checkEmptyForm.init();
+	checkEmptyForm.init();
 
+	$('.datepicker').each(function(){
+		var $date = new Date($(this).val());
+		var d = $date.getDate();
+		var m =  $date.getMonth() + 1;
+		var y = $date.getFullYear();
+		var h = $date.getHours();
+		var i = $date.getMinutes();
+
+		$(this).val(d + "-" + m + "-" + y + ' ' + h + ':' + i)
+		$(this).datetimepicker();
+	});
 });

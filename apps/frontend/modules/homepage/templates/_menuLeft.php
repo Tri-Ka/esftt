@@ -21,18 +21,18 @@
             </div>
         </a>
 
-        <a href="<?php echo url_for('gallery'); ?>">
-            <div class="box col-xs-12 hvr-grow-rotate marged-top">
-                <div class="box-title">
-                    <i class="fa fa-picture-o"></i> <?php echo __('Galerie'); ?>
-                </div>
-            </div>
-        </a>
-
         <a href="<?php echo url_for('infos'); ?>">
             <div class="box col-xs-12 hvr-grow-rotate marged-top">
                 <div class="box-title">
                     <i class="fa fa-question-circle"></i> <?php echo __('Informations'); ?>
+                </div>
+            </div>
+        </a>
+
+        <a href="<?php echo url_for('gallery'); ?>">
+            <div class="box col-xs-12 hvr-grow-rotate marged-top">
+                <div class="box-title">
+                    <i class="fa fa-picture-o"></i> <?php echo __('Galerie'); ?>
                 </div>
             </div>
         </a>

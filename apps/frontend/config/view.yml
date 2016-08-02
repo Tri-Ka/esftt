@@ -22,17 +22,19 @@ default:
     - hover-min.css
     - animate.css
     - morris.css
-    - front/s.css
+    - front/s.css?v=1.2
 
   javascripts:
     - jquery.min.js
     - bootstrap.min.js
     - swiper.min.js
-    - masonry.pkgd.min.js
+    - imagesloaded.pkgd.min.js
+    - isotope.pkgd.min.js
+    # - masonry.pkgd.min.js
     - raphael.min.js
     - morris.min.js
     # - kendo/kendo.all.min.js
-    - script.js
+    - script.js?v=1.2
     - pong.js
 
 

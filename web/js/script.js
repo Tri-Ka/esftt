@@ -31,13 +31,17 @@ var masonry =
 {
 	init: function()
 	{
-
-		if (0 < $('.directories').length) {
-			var container = $('.directories');
+		if (0 < $('.grid').length) {
+			var $container = $('.grid');
 			// initialize
-			container.masonry({
-			  columnWidth: '.directory',
-			  itemSelector: '.directory'
+			$container.imagesLoaded(function(){
+				$container.isotope({
+					itemSelector: '.grid-item',
+				  	percentPosition: true,
+				  	masonry: {
+				    	columnWidth: '.grid-item'
+				  	}
+				})
 			});
 		}
 
@@ -145,7 +149,7 @@ var newPostCount =
 $( document ).ready(function()
 {
 	swiper.init();
-	//masonry.init();
+	masonry.init();
 	$('iframe').removeAttr('style');
 	chart.init();
 	checkEmptyForm.init();

@@ -2,21 +2,13 @@
 # http://www.symfony-project.org/reference/1_4/en/07-Databases
 
 
-# prod:
-#   doctrine:
-#     class: sfDoctrineDatabase
-#     param:
-#       dsn:      mysql:host=esfttcomkssql.mysql.db;dbname=esfttcomkssql
-#       username: esfttcomkssql
-#       password: Esftt2015
-
-# dev:
-#   doctrine:
-#     class: sfDoctrineDatabase
-#     param:
-#       dsn:      mysql:host=esfttcomkssql.mysql.db;dbname=esfttcomkssql
-#       username: esfttcomkssql
-#       password: Esftt2015
+prod:
+  doctrine:
+    class: sfDoctrineDatabase
+    param:
+      dsn:      mysql:host=esfttcomkssql.mysql.db;dbname=esfttcomkssql
+      username: esfttcomkssql
+      password: Esftt2015
 
 dev:
   doctrine:

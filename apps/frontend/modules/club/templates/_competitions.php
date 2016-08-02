@@ -1,5 +1,4 @@
 <div class="box marged-top">
-
 	<div class="box-title">
 		Compétitions
 	</div>
@@ -8,10 +7,7 @@
 
 		Cette saison notre club alignera :
 		<ul>
-			<li>4 équipes en championnat de FRANCE: <br />de pré-régionale à départementale 3</li>
-			<li>1 équipe en championnat de Paris: <br />en Promotion d'Honneur</li>
+			<li>3 équipes en championnat de FRANCE: <br />de D1 à D3</li>
 		</ul>
-
 	</div>
-
 </div>

@@ -38,13 +38,13 @@
 
 			<tbody>
 				<tr>
-					<td colspan="2">Poussins - Benjamins</td><td class="text-right"><strong>23€</strong></td>
+					<td colspan="2">Poussins - Benjamins</td><td class="text-right"><strong>24€</strong></td>
 				</tr>
 				<tr>
-					<td colspan="2">Minimes - Cadets - Juniors</td><td class="text-right"><strong>31€</strong></td>
+					<td colspan="2">Minimes - Cadets - Juniors</td><td class="text-right"><strong>32€</strong></td>
 				</tr>
 				<tr>
-					<td colspan="2">Adultes</td><td class="text-right"><strong>40€</strong></td>
+					<td colspan="2">Adultes</td><td class="text-right"><strong>41€</strong></td>
 				</tr>
 			</tbody>
 

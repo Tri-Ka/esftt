@@ -3,43 +3,40 @@
 /**
  * Article form.
  *
- * @package    esftt
- * @subpackage form
  * @author     Your name here
+ *
  * @version    SVN: $Id: sfDoctrineFormTemplate.php 23810 2009-11-12 11:07:44Z Kris.Wallsmith $
  */
 class ArticleBackendForm extends ArticleForm
 {
-	public function configure()
-	{
-  		$this->usefields(
-  			array(
-				'title',
-				'sub_title',
-				'content',
-				'is_published',
-				'picture'
-			)
-		);
+    public function configure()
+    {
+        $this->usefields(
+            array(
+                'title',
+                'content',
+                'is_published',
+                'picture',
+            )
+        );
 
-		// illustration
+        // illustration
         $sizes = sfConfig::get('app_imagesizes_article_picture');
         $this->widgetSchema['picture'] = new sfWidgetFormInputFileEditable(array(
           'file_src' => $this->getObject()->retrievePictureUrl(),
           'is_image' => true,
           'edit_mode' => !$this->isNew() && null != $this->getObject()->getPicture(),
-          'template' => '<div class="img-thumbnail marged-bottom">%file%</div>%input%'
+          'template' => '<div class="img-thumbnail marged-bottom">%file%</div>%input%',
         ));
 
         $this->validatorSchema['picture'] = new sfValidatorFile(array(
-            'required'   => false,
-            'path'       => sfConfig::get('sf_upload_dir').'/avatars',
+            'required' => false,
+            'path' => sfConfig::get('sf_upload_dir').'/avatars',
             'mime_types' => 'web_images',
         ));
+    }
 
-	}
-
-	/**
+    /**
      * @see sfFormObject
      */
     public function doSave($con = null)
@@ -57,12 +54,10 @@ class ArticleBackendForm extends ArticleForm
         $picture = $this->getValue('picture');
 
         if (!is_null($picture)) {
-
             $sizes = sfConfig::get('app_imagesizes_article_picture');
 
             $old = $picture->getSavedName();
             $img = new sfImage($old, $picture->getType());
-            $img->thumbnail($sizes['width'], $sizes['height'], 'center');
             $img->saveAs($directory.DIRECTORY_SEPARATOR.$article->getPicture());
 
             if (file_exists($old)) {

@@ -166,3 +166,13 @@ ForumPost:
       foreignAlias: Posts
       onDelete: CASCADE
 
+File:
+  actAs:
+    Timestampable: ~
+  columns:
+    name:
+      type: string
+      notnull: true
+    file_name:
+      type: string
+      notnull: true

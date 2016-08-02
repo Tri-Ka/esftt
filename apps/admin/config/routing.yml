@@ -54,6 +54,22 @@ event_delete:
   url:   /event/delete/:id
   param: { module: event, action: delete }
 
+file_list:
+  url:   /files
+  param: { module: file, action: list }
+
+file_new:
+  url:   /file/new
+  param: { module: file, action: new }
+
+file_edit:
+  url:   /file/edit/:id
+  param: { module: file, action: edit }
+
+file_delete:
+  url:   /file/delete/:id
+  param: { module: file, action: delete }
+
 team_list:
   url:   /teams
   param: { module: team, action: list }

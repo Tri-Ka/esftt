@@ -42,6 +42,10 @@ forum:
   url: /forum
   param: { module: forum, action: index }
 
+files:
+  url: /files
+  param: { module: files, action: index }
+
 topic:
   url: /topic/:id
   param: { module: forum, action: topic }

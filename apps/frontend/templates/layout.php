@@ -125,61 +125,62 @@
         </div>
 
         <footer>
-
             <div class="container-fluid">
                 <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-4  text-center">
+                            <ul class="links">
+                                <li>
+                                    <a target="blank" href="<?php echo sfConfig::get('app_url_fftt'); ?>">Site de la fédération</a>
+                                </li>
 
-                    <div class="col-xs-12 col-sm-4 text-center">
+                                <li>
+                                    <a target="blank" href="<?php echo sfConfig::get('app_url_tennis_de_table'); ?>">Tennis De Table.com</a>
+                                </li>
 
-                        <ul class="links">
-                            <li>
-                                <a target="blank" href="<?php echo sfConfig::get('app_url_fftt'); ?>">Site de la fédération</a>
-                            </li>
-                            <li>
-                                <a target="blank" href="<?php echo sfConfig::get('app_url_tennis_de_table'); ?>">Tennis De Table.com</a>
-                            </li>
+                                <li>
+                                    <a target="blank" href="http://www.fftt-idf.com/">Ligue FFTT Ile de France</a>
+                                </li>
 
+                                <li>
+                                    <a target="blank" href="http://theo384.free.fr/">Friendship Sport</a>
+                                </li>
 
-                            <li>
-                                <a target="blank" href="http://www.fftt-idf.com/">Ligue FFTT Ile de France</a>
-                            </li>
-                            <li>
-                                <a target="blank" href="http://theo384.free.fr/">Friendship Sport</a>
-                            </li>
+                                <li>
+                                    <a target="blank" href="http://www.ville-la-frette95.fr/">Mairie de la Frette sur Seine</a>
+                                </li>
 
+                                <li>
+                                    <a target="blank" href="http://www.ville-cormeilles95.fr/">Mairie de Cormeilles en Parisis</a>
+                                </li>
 
-                        </ul>
+                                <li>
+                                    <a target="blank" href="http://www.cd95tt.fr/blogs.php?lng=fr">Comité 95</a>
+                                </li>
+                            </ul>
+                        </div>
 
+                        <div class="col-xs-12 col-sm-4 text-center">
+                            Salle Albert Marquet, <br>
+                            avenue des Lilas, 95530 <br>
+                            la Frette sur Seine.<br />
+                            <a href="tel:0139781889"><i class="fa fa-phone"></i> 01 39 78 18 89</a><br>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-4 text-center">
+                            <iframe class="thumbnail" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2619.3882387855538!2d2.182864649212645!3d48.96513355470489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDjCsDU3JzU1LjciTiAywrAxMCc1NS4zIkU!5e0!3m2!1sfr!2sfr!4v1441530564349" width="100%" height="200" frameborder="0" style="margin-bottom:0"></iframe>
+                        </div>
                     </div>
 
-                    <div class="col-xs-12 col-sm-4 text-center hidden-xs">
-                        <span class="small">© ESFTT <?php echo date('Y'); ?> - Tous droits réservés</span>
+                    <div class="row">
+                        <div class="col-xs-12 text-center">
+                            <span class="small">© ESFTT <?php echo date('Y'); ?> - Tous droits réservés</span>
+                        </div>
                     </div>
-
-                    <div class="col-xs-12 col-sm-4 text-center">
-                        <ul class="links">
-                            <li>
-                                <a target="blank" href="http://www.ville-la-frette95.fr/">Mairie de la Frette sur Seine</a>
-                            </li>
-                            <li>
-                                <a target="blank" href="http://www.ville-cormeilles95.fr/">Mairie de Cormeilles en Parisis</a>
-                            </li>
-                            <li>
-                                <a target="blank" href="http://www.cd95tt.fr/blogs.php?lng=fr">Comité 95</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="col-xs-12 col-sm-4 text-center visible-xs">
-                        <span class="small">© ESFTT <?php echo date('Y'); ?> - Tous droits réservés</span>
-                    </div>
-
                 </div>
             </div>
         </footer>
-
     </body>
-
 
     <?php include_javascripts() ?>
 

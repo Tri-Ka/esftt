@@ -87,8 +87,6 @@ class EventForm extends BaseEventForm
         if (!is_null($picture)) {
             $old = $picture->getSavedName();
             $img = new sfImage($old, $picture->getType());
-
-            $img->thumbnail($sizes['width'], $sizes['height'], 'center');
             $img->saveAs($directory.DIRECTORY_SEPARATOR.$event->getPicture());
 
             @unlink($old);

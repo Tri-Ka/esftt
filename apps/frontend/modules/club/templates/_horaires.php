@@ -67,7 +67,7 @@
 
 				<tbody>
 					<tr>
-						<td>Dimanche</td><td class="text-right"></td><td class="text-right">10h15 - 12h30</td>
+						<td>Dimanche (sous réserve de disponibilité de la salle)</td><td class="text-right"></td><td class="text-right">10h30 - 12h30</td>
 					</tr>
 				</tbody>
 

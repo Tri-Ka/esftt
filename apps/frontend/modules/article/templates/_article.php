@@ -21,7 +21,7 @@
     <?php if (null !== $article->getPicture()): ?>
 
         <a href="<?php echo url_for('article_show', array('id' => $article->getId())); ?>">
-            <div class="col-xs-12 col-md-5 img-cont">
+            <div class="col-xs-12 col-md-5">
                 <img class="thumbnail" src="<?php echo $article->retrievePictureUrl(); ?>">
             </div>
         </a>
@@ -30,17 +30,20 @@
 
     <div class="col-xs-12 col-md-5">
         <div class="row">
-            <div class="col-xs-12 news-subtitle"><?php echo $article->getSubTitle(); ?></div>
+            <div class="col-xs-12 news-subtitle">
+                <?php echo substr(strip_tags(html_entity_decode($article->getContent())), 0, 200); ?> ...
+            </div>
+
+            <div class="col-xs-12">
+                <a href="<?php echo url_for('article_show', array('id' => $article->getId())); ?>" class="btn btn-primary btn-xs marged-top">
+                    <div class="nb-coms">
+                        <?php echo __('voir la suite'); ?>
+                        &nbsp;
+                        <i class="fa fa-comments"></i>
+                        <span class="fb-comments-count" data-href="<?php echo url_for('article_show', array('id' => $article->getId()), true); ?>"></span>
+                    </div>
+                </a>
+            </div>
         </div>
     </div>
-
-    <div class="view-artcle-btn">
-        <div class="nb-coms">
-            <i class="fa fa-comments"></i>
-            <span class="fb-comments-count" data-href="<?php echo url_for('article_show', array('id' => $article->getId()), true); ?>"></span>
-        </div>
-        <?php echo __('voir la suite'); ?>
-        <a class="overide-link" href="<?php echo url_for('article_show', array('id' => $article->getId())); ?>"></a>
-    </div>
-
 </div>

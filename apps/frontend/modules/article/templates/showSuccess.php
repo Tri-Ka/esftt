@@ -14,7 +14,6 @@
         </div>
 
         <div class="box article">
-
          	<div class="col-xs-12 title-part">
                 <div class="row">
                     <div class="col-xs-12 article-title">
@@ -34,24 +33,15 @@
                 </div>
          	</div>
 
-            <div class="col-xs-12">
-                <div class="row">
-                    <div class="col-xs-12 pitch"><strong><?php echo $article->getSubTitle(); ?></strong></div>
-                </div>
-            </div>
-
             <?php if (null !== $article->getPicture()): ?>
 
                 <div class="col-xs-12 img-cont marged-bottom">
-
                     <img class="thumbnail" src="<?php echo $article->retrievePictureUrl(); ?>">
-
                 </div>
 
             <?php endif; ?>
 
             <div class="col-xs-12 marged-top">
-
                 <div class="col-xs-12 content"><?php echo $article->getContent(ESC_RAW); ?></div>
 
                 <div
@@ -60,14 +50,11 @@
                     data-width="450"
                     data-show-faces="true">
                 </div>
-
             </div>
 
             <div class="col-xs-12">
                 <div class="fb-comments" data-href="<?php echo url_for('article_show', array('id' => $article->getId()), true); ?>" data-width="100%" data-numposts="10"></div>
             </div>
-
         </div>
     </div>
-
 </div>

@@ -135,7 +135,7 @@
                                 </li>
 
                                 <li>
-                                    <a target="blank" href="<?php echo sfConfig::get('app_url_tennis_de_table'); ?>">Tennis De Table.com</a>
+                                    <a target="blank" href="<?php echo sfConfig::get('app_url_tennis_de_table'); ?>">Tennis-de-Table.com</a>
                                 </li>
 
                                 <li>
@@ -155,7 +155,7 @@
                                 </li>
 
                                 <li>
-                                    <a target="blank" href="http://www.cd95tt.fr/blogs.php?lng=fr">Comité 95</a>
+                                    <a target="blank" href="http://www.cd95tt.fr/">Comité 95</a>
                                 </li>
                             </ul>
                         </div>
@@ -164,7 +164,7 @@
                             Salle Albert Marquet, <br>
                             avenue des Lilas, 95530 <br>
                             la Frette sur Seine.<br />
-                            <a href="tel:0139781889"><i class="fa fa-phone"></i> 01 39 78 18 89</a><br>
+                            <!-- <a href="tel:0139781889"><i class="fa fa-phone"></i> 01 39 78 18 89</a><br> -->
                         </div>
 
                         <div class="col-xs-12 col-sm-4 text-center">

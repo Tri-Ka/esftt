@@ -5,14 +5,14 @@
 #all:
 
 dev:
-  
+
   mail:
     to: datcharrye@gmail.com
 
 all:
-  
+
   url:
-    facebook: https://www.facebook.com/groups/46831155736/
+    facebook: https://www.facebook.com/ESFTT/
     twitter: 'https://twitter.com'
     fftt: 'http://www.fftt.com/'
     tennis_de_table: 'http://www.tennis-de-table.com/'
@@ -29,7 +29,7 @@ all:
 
   sf_guard_plugin:
     success_signin_url: "forum"
-  
+
   mail:
     to: patrick.fanzutti@free.fr
 

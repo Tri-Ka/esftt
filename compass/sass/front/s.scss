@@ -3,7 +3,7 @@ $grey: #C3C3C3;
 $color-red : #F44336;
 @import "compass";
 @import url(http://fonts.googleapis.com/css?family=Oxygen:400,300,700|Playball|Righteous|Allan:400,700);
-
+@import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
 @font-face {
     font-family: Lobster;
     src: url('../../fonts/Lobster-Regular.ttf');
@@ -325,7 +325,6 @@ footer .links a {
   position: relative;
 
 	.img-cont {
-		height: 300px;
 		text-align: center;
 	    img {
 	    	max-width: 100%;
@@ -423,6 +422,10 @@ footer .links a {
   .article .title-part .date {
     left: 50%;
     margin-left: -32px;
+  }
+
+  .article .img-cont {
+    height: auto;
   }
 }
 
@@ -1413,10 +1416,12 @@ h1 {
 }
 /* line 1335, ../../../compass/sass/front/s.scss */
 .article .content {
-  margin-bottom: 15px;
-  padding: 15px;
-  border: 1px solid #ddd;
+  margin-bottom: 30px;
+  padding: 0;
+  padding-bottom: 30px;
   box-shadow: 0px 0px 135px transparent;
+  border-bottom: 1px dashed #ddd;
+  font-size: 15px;
 }
 
 /* line 1342, ../../../compass/sass/front/s.scss */
@@ -1475,6 +1480,7 @@ a.separated {
     background: #03A9F4;
     border-radius: 3px;
     margin-bottom: 20px;
+    display: block;
     @include clearfix();
 
     &__left {

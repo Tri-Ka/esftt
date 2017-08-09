@@ -17,7 +17,7 @@
          		</div>
          	</div>
 
-            <div class="col-xs-12 col-sm-6 img-cont marged-bottom no-pad shadowed">
+            <div class="col-xs-12 col-sm-6 marged-bottom no-pad shadowed">
 
                 <img class="thumbnail" src="<?php echo $event->retrievePictureUrl(); ?>">
 

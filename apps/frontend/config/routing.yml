@@ -74,12 +74,3 @@ new_post_count:
 homepage:
   url:   /
   param: { module: homepage, action: index }
-
-# generic rules
-# please, remove them by adding more specific rules
-default_index:
-  url:   /:module
-  param: { action: index }
-
-default:
-  url:   /:module/:action/*

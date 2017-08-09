@@ -7,7 +7,15 @@
 
 		Cette saison notre club alignera :
 		<ul>
-			<li>3 équipes en championnat de FRANCE: <br />de D1 à D3</li>
+			<li>
+				4 équipes en championnat de France: <br />
+				de PR à D3
+			</li>
+
+			<li>
+				1 équipe en championnat de Paris: <br />
+				En PH
+			</li>
 		</ul>
 	</div>
 </div>

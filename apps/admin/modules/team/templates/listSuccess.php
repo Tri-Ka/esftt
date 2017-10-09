@@ -23,10 +23,9 @@
 						<th><?php echo __('actions'); ?></th>
 	                </tr>
 	            </thead>
+
 	            <tbody>
-
 		        	<?php foreach ($teams as $team): ?>
-
 		        		<tr>
 							<th class="text-center"><?php echo $team->getId(); ?></th>
 							<td><?php echo $team->getName(); ?></td>
@@ -35,12 +34,11 @@
 			        			<a href="<?php echo url_for('team_delete', array('id' => $team->getId())); ?>" class="btn btn-danger btn-xs"><?php echo __('supprimer'); ?> <i class="fa fa-times"></i></a>
 			        		</td>
 				        </tr>
-
 		        	<?php endforeach; ?>
-
 	    		</tbody>
-
 	        </table>
+
+			<?php include_partial('general/pagination', array('pager' => $teams, 'url' => url_for('team_list'))); ?>
 	    </div>
 	</div>
 	<div class="col-xs-12">

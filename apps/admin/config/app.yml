@@ -25,6 +25,6 @@ all:
       height: 300
 
   pagination:
-    max_item_admin: 20
+    max_item_admin: 10
 
   front_url: 'http://www.esftt.com'

@@ -176,3 +176,17 @@ File:
     file_name:
       type: string
       notnull: true
+
+Sponsor:
+  tableName: sponsor
+  actAs:
+    Timestampable: ~
+  columns:
+    name:
+      type: string(255)
+      notnull: true
+    link:
+      type: string(255)
+      notnull: true
+    picture:
+      type: string(255)

@@ -3,7 +3,10 @@
     <?php include_partial('club/menu'); ?>
 
     <div class="tab-content">
-		<div role="tabpanel" class="tab-pane active" id="events"><?php include_partial('club/events', array('events' => $events)); ?></div>
+		<div role="tabpanel" class="tab-pane active" id="events"><?php include_partial('club/events', array(
+            'eventsToCome' => $eventsToCome,
+            'eventsPassed' => $eventsPassed,
+        )); ?></div>
 		<div role="tabpanel" class="tab-pane" id="histo"><?php include_partial('club/histo'); ?></div>
 		<div role="tabpanel" class="tab-pane" id="team"><?php include_partial('club/team', array('teams' => $teams)); ?></div>
 		<div role="tabpanel" class="tab-pane" id="pre-w"><?php include_partial('club/pre-w'); ?></div>

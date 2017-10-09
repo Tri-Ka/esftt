@@ -41,10 +41,10 @@
 				        </tr>
 
 		        	<?php endforeach; ?>
-
 	    		</tbody>
-
 	        </table>
+
+			<?php include_partial('general/pagination', array('pager' => $articles, 'url' => url_for('article_list'))); ?>
 	    </div>
 	</div>
 	<div class="col-xs-12">

@@ -77,19 +77,17 @@
                             </ul>
                         </div><!-- /.navbar-collapse -->
                     </nav>
+
                     <h1>
                         <a id="logo" href="<?php echo url_for('homepage'); ?>">
                             <img src="<?php echo public_path('images/logo-new.png'); ?>" alt="esftt" title="esftt">
                         </a>
                     </h1>
-
                 </div>
-
             </div>
         </header>
 
         <div id="main-container" class="container-fluid">
-
             <?php if ($sf_user->hasFlash('notice')): ?>
                 <div class="flash notice">
                     <?php echo $sf_user->getFlash('notice') ?>
@@ -103,25 +101,14 @@
             <?php endif ?>
 
             <?php if ('homepage' == $sf_params->get('module')): ?>
-
                 <div class="row slider-full">
-
                     <?php include_component('homepage', 'slider'); ?>
-
                 </div>
-
             <?php endif; ?>
 
             <div class="container">
-
                 <?php echo $sf_content ?>
-
             </div>
-
-            <a href="<?php echo url_for('pong'); ?>" class="hidden-sm hidden-xs">
-                <img class="raq" src="<?php echo public_path('images/raquette.png'); ?>">
-            </a>
-
         </div>
 
         <footer>

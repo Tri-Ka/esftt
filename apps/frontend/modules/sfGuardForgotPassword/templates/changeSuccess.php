@@ -1,13 +1,28 @@
-<?php use_helper('I18N') ?>
-<h2><?php echo __('Hello %name%', array('%name%' => $user->getName()), 'sf_guard') ?></h2>
+<div class="col-xs-12 col-sm-4 col-sm-offset-4 animated flipInX">
+    <div class="box">
+    	<div class="box-content">
+			<h2><?php echo __('Nouveau mot de passe'); ?></h2>
 
-<h3><?php echo __('Enter your new password in the form below.', null, 'sf_guard') ?></h3>
+			<p><?php echo __('Bonjour %name%', array('%name%' => $user->getName()), 'sf_guard') ?></p>
+			<p><?php echo __('Entrer votre nouveau mot de passe ci dessous.', null, 'sf_guard') ?></p>
 
-<form action="<?php echo url_for('@sf_guard_forgot_password_change?unique_key='.$sf_request->getParameter('unique_key')) ?>" method="POST">
-  <table>
-    <tbody>
-      <?php echo $form ?>
-    </tbody>
-    <tfoot><tr><td><input type="submit" name="change" value="<?php echo __('Change', null, 'sf_guard') ?>" /></td></tr></tfoot>
-  </table>
-</form>
+			<form action="<?php echo url_for('@sf_guard_forgot_password_change?unique_key='.$sf_request->getParameter('unique_key')) ?>" method="POST">
+				<?php echo $form->renderHiddenFields() ?>
+
+				<div class="form-group">
+		            <?php echo $form['password']->renderError() ?>
+		            <?php echo $form['password']->render(array('class' => 'form-control', 'placeholder' => __('Nouveau mot de passe'))) ?>
+		        </div>
+
+		        <div class="form-group">
+		            <?php echo $form['password_again']->renderError() ?>
+		            <?php echo $form['password_again']->render(array('class' => 'form-control', 'placeholder' => __('Répéter'))) ?>
+		        </div>
+
+		        <div class="form-group">
+		            <input type="submit" class="btn btn-primary" name="change" value="<?php echo __('Modifier mon mot de passe'); ?>">
+		        </div>
+			</form>
+		</div>
+	</div>
+</div>

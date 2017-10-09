@@ -54,6 +54,22 @@ event_delete:
   url:   /event/delete/:id
   param: { module: event, action: delete }
 
+sponsor_list:
+  url:   /sponsor
+  param: { module: sponsor, action: list }
+
+sponsor_new:
+  url:   /sponsor/new
+  param: { module: sponsor, action: new }
+
+sponsor_edit:
+  url:   /sponsor/edit/:id
+  param: { module: sponsor, action: edit }
+
+sponsor_delete:
+  url:   /sponsor/delete/:id
+  param: { module: sponsor, action: delete }
+
 file_list:
   url:   /files
   param: { module: file, action: list }

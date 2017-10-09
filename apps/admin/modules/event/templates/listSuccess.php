@@ -25,10 +25,9 @@
 						<th><?php echo __('actions'); ?></th>
 	                </tr>
 	            </thead>
+
 	            <tbody>
-
 		        	<?php foreach ($events as $event): ?>
-
 		        		<tr>
 							<th><?php echo $event->getId(); ?></th>
 							<td><?php echo $event->getName(); ?></td>
@@ -39,12 +38,11 @@
 			        			<a href="<?php echo url_for('event_delete', array('id' => $event->getId())); ?>" class="btn btn-danger btn-xs"><?php echo __('supprimer'); ?> <i class="fa fa-times"></i></a>
 			        		</td>
 				        </tr>
-
 		        	<?php endforeach; ?>
-
 	    		</tbody>
-
 	        </table>
+
+	        <?php include_partial('general/pagination', array('pager' => $events, 'url' => url_for('event_list'))); ?>
 	    </div>
 	</div>
 	<div class="col-xs-12">

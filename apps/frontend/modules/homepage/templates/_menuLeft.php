@@ -1,5 +1,5 @@
 <div class="col-xs-12 col-sm-4">
-    <div class="box-esftt text-center col-xs-12 marged-top">
+    <div class="box-esftt text-center marged-top">
         <div class="full-div esftt">
             <?php echo __('ESFTT'); ?>
         </div>
@@ -11,8 +11,30 @@
         </div>
     </div>
 
-    <div class="hidden-xs">
+    <?php if (0 < $events->count()): ?>
+        <div class="no-box-title small marged-top">
+            <?php echo __('Évènements à venir'); ?>
+        </div>
 
+        <div class="event-list">
+            <div class="row">
+                <?php foreach ($events as $event): ?>
+                    <div class="col-xs-12">
+                        <?php include_partial('event/simpleEvent', array('event' => $event)); ?>
+                    </div>
+                <?php endforeach; ?>
+
+                <div class="col-xs-12 text-center">
+                    <a href="<?php echo url_for('club'); ?>" class="btn btn-primary btn-xs">
+                        <?php echo __('voir tous les évènements'); ?>
+                        <i class="fa fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    <?php endif; ?>
+
+    <div class="hidden-xs clearfix">
         <a href="<?php echo url_for('club'); ?>">
             <div class="box col-xs-12 hvr-grow-rotate marged-top">
                 <div class="box-title">
@@ -53,14 +75,13 @@
             </div>
         </a>
 
-        <a href="https://www.facebook.com/groups/46831155736/" class="separated" target="_blank">
+        <a href="<?php echo sfConfig::get('app_url_facebook'); ?>" class="separated" target="_blank">
             <div class="box col-xs-12 hvr-grow-rotate marged-top" style="background:#3b5998; color: #fff !important;">
                 <div class="box-title" style="background:#3b5998; color: #fff !important">
                     <i class="fa fa-facebook"></i> <?php echo __('Rejoignez-nous'); ?>
                 </div>
             </div>
         </a>
-
     </div>
 
     <!-- <div class="box col-xs-12 marged-top">
@@ -73,4 +94,33 @@
         </div>
     </div> -->
 
+    <?php if (0 < $sponsors->count()): ?>
+        <div class="sponsor-block">
+            <div class="no-box-title small marged-top">
+                <?php echo __('Nos sponsors'); ?>
+            </div>
+
+            <div class="sponsor-list">
+                <div class="row">
+                    <?php foreach ($sponsors as $sponsor): ?>
+                        <div class="col-xs-12">
+                            <a href="<?php echo $sponsor->getLink(); ?>" class="sponsor">
+                                <img class="sponor__img" src="<?php echo $sponsor->retrievePictureUrl(); ?>">
+
+                                <div class="sponsor__title">
+                                    <h4><?php echo $sponsor->getName(); ?></h4>
+                                </div>
+                            </a>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+        </div>
+    <?php endif; ?>
+
+    <div class="game-block hidden-sm hidden-xs">
+        <a href="<?php echo url_for('pong'); ?>" class="">
+            <img class="" src="<?php echo public_path('images/pong.jpg'); ?>">
+        </a>
+    </div>
 </div>

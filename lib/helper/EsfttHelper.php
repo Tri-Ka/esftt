@@ -2,17 +2,15 @@
 
 /**
  * EsfttHelper.
- *
- * @package    symfony
- * @subpackage helper
  */
 
 /**
- * Truncate text and keep suppressed text into a template
+ * Truncate text and keep suppressed text into a template.
  *
- * @param <string> $text : text to truncate
- * @param <int> $length : size of text to stay visible
- * @param <string> $wrap : template to wrap the hidden part of text
+ * @param <string> $text   : text to truncate
+ * @param <int>    $length : size of text to stay visible
+ * @param <string> $wrap   : template to wrap the hidden part of text
+ *
  * @return <string> $text truncated
  */
 function ppst_truncate_text($text, $length = 30, $truncate_string = '...', $truncate_lastspace = false)
@@ -36,7 +34,7 @@ function ppst_truncate_text($text, $length = 30, $truncate_string = '...', $trun
         if ($truncate_lastspace) {
             $truncate_text = preg_replace('/\s+?(\S+)?$/', '', $truncate_text);
         }
-        $text = $truncate_text . $truncate_string;
+        $text = $truncate_text.$truncate_string;
     }
 
     if ($mbstring) {
@@ -52,40 +50,37 @@ function renderPagination($pager, $url, $params = array(), $ajax = null)
         $params = $params->getRawValue();
     }
 
-    $params = (!empty($params)) ? '&' . http_build_query($params) : '';
+    $params = (!empty($params)) ? '&'.http_build_query($params) : '';
 
     if ($pager->haveToPaginate()) {
-
         echo '<nav>';
-        echo '<ul class="pagination ' . ((null !== $ajax) ? 'paginationAjax' : '' ) . '" data-load="' . ((null !== $ajax) ? $ajax : '' ) . '">';
+        echo '<ul class="pagination '.((null !== $ajax) ? 'paginationAjax' : '').'" data-load="'.((null !== $ajax) ? $ajax : '').'">';
 
         echo '
           <li>
-            <a class="pagination_list" href="' . $url . '?page=1' . $params . '" title="' . __('aller à la première page') . '"><<</a>
+            <a class="pagination_list" href="'.$url.'?page=1'.$params.'" title="'.__('aller à la première page').'"><<</a>
           </li>
           <li>
-            <a class="pagination_list" href="' . $url . '?page=' . $pager->getPreviousPage() . '' . $params . '" title="' . __('aller à la page précédente') . '"><</a>
+            <a class="pagination_list" href="'.$url.'?page='.$pager->getPreviousPage().''.$params.'" title="'.__('aller à la page précédente').'"><</a>
           </li>
         ';
 
         foreach ($pager->getLinks() as $page) {
-
             if ($page === $pager->getPage()) {
-                $class = "current";
+                $class = 'current';
             } else {
-                $class = "";
+                $class = '';
             }
 
-            echo '<li><a class="pagination_list '. $class .'" href="' . $url . '?page=' . $page . '' . $params . '" title="' . __('aller à la page') . ' ' . $page . '" >' . $page . '</a></li>';
-
+            echo '<li><a class="pagination_list '.$class.'" href="'.$url.'?page='.$page.''.$params.'" title="'.__('aller à la page').' '.$page.'" >'.$page.'</a></li>';
         }
 
         echo '
           <li>
-            <a class="pagination_list" href="' . $url . '?page=' . $pager->getNextPage() . '' . $params . '" title="' . __('aller à la page suivante') . '">></a>
+            <a class="pagination_list" href="'.$url.'?page='.$pager->getNextPage().''.$params.'" title="'.__('aller à la page suivante').'">></a>
           </li>
           <li>
-            <a class="pagination_list" href="' . $url . '?page=' . $pager->getLastPage() . '' . $params . '" title="' . __('aller à la dernière page') . '">>></a>
+            <a class="pagination_list" href="'.$url.'?page='.$pager->getLastPage().''.$params.'" title="'.__('aller à la dernière page').'">>></a>
           </li>
         ';
 
@@ -169,14 +164,13 @@ function button($params)
     }
 
     if (isset($params['confirm'])) {
-        $params['confirm'] = 'onclick="return confirm(\'' . $params['confirm'] . '\')"';
+        $params['confirm'] = 'onclick="return confirm(\''.$params['confirm'].'\')"';
     } else {
         $params['confirm'] = '';
     }
 
-
     foreach ($params['attributes'] as $name => $value) {
-        $attributes.= ' ' . $name . '="' . $value . '"';
+        $attributes .= ' '.$name.'="'.$value.'"';
     }
 
     return str_replace(
@@ -187,7 +181,7 @@ function button($params)
             '%text%',
             '%attributes%',
             '%confirm%',
-            '%icon%'
+            '%icon%',
             ), array(
             $params['url'],
             $params['title'],
@@ -195,7 +189,7 @@ function button($params)
             $params['text'],
             $attributes,
             $params['confirm'],
-            $params['icon']
+            $params['icon'],
             ), $model
     );
 }
@@ -212,11 +206,12 @@ function nullForStats($value, $replace)
 }
 
 /**
- * Formats a date in "time ago" style or "DD Month YYYY" and returns html
+ * Formats a date in "time ago" style or "DD Month YYYY" and returns html.
  *
  * @param string $d
  * @param string $appTimezone
  * @param string $culture
+ *
  * @return string
  */
 function ppst_time_ago($date, $culture = null)
@@ -238,16 +233,13 @@ function ppst_time_ago($date, $culture = null)
 function squareMe($src, $name, $dim = 64)
 {
     $attributes = '';
-    $sizes = @getimagesize(sfConfig::get('sf_web_dir') . $src);
+    $sizes = @getimagesize(sfConfig::get('sf_web_dir').$src);
 
     if (false !== $sizes) {
-
         if ($sizes[0] > $sizes[1]) {
-
-            $attributes = 'height="' . $dim . '" ' . 'style="left:-39%;"';
+            $attributes = 'height="'.$dim.'" '.'style="left:-39%;"';
         } else {
-
-            $attributes = 'width="' . $dim . '"';
+            $attributes = 'width="'.$dim.'"';
         }
     }
 
@@ -270,7 +262,6 @@ function renderAvatar($params)
 }
 
 /**
- *
  * @param type $params
  *
  * count:   number to display;
@@ -283,11 +274,10 @@ function renderAvatar($params)
  * url:     redirect on click
  * plural:  type when count > 1
  *
- * @return boolean
+ * @return bool
  */
 function displayNotifCount($params)
 {
-
     $model = '';
 
     $params['count'] = isset($params['count']) ? $params['count'] : 0;
@@ -303,20 +293,16 @@ function displayNotifCount($params)
     }
 
     if (1 < $params['count']) {
-
         if (isset($params['plural'])) {
-
             $params['type'] = $params['plural'];
         } else {
-
             $params['type'] .= 's';
         }
     }
 
-    $params['class'] = 'notif-alert-' . $params['class'];
+    $params['class'] = 'notif-alert-'.$params['class'];
 
     $model = '';
-
 
     $model .= '<div class="notif-alert-default %class% %blink%">';
     (null != $params['url']) ? $model .= '<a href="%url%">' : '';
@@ -325,9 +311,7 @@ function displayNotifCount($params)
     (null != $params['url']) ? $model .= '</a>' : '';
     $model .= '</div>';
 
-
     if (0 < $params['count'] || true == $params['allwaysDisplay']) {
-
         return str_replace(
                 array(
                 '%ico%',
@@ -335,7 +319,7 @@ function displayNotifCount($params)
                 '%type%',
                 '%class%',
                 '%url%',
-                '%blink%'
+                '%blink%',
                 ), array(
                 $params['ico'],
                 $params['count'],
@@ -346,13 +330,13 @@ function displayNotifCount($params)
                 ), $model
         );
     } else {
-        return FALSE;
+        return false;
     }
 }
 
 function helptxt($text, $class = '')
 {
-    return '<div class="help-txt ' . $class . '"><p>' . $text . '</p></div>';
+    return '<div class="help-txt '.$class.'"><p>'.$text.'</p></div>';
 }
 
 function ppst_encode_to_rtf($text)
@@ -369,4 +353,18 @@ function implodeObject($glue, $array, $toStringFunction = '__toString')
     }
 
     return implode($glue, $return);
+}
+
+function simplyfyText($text)
+{
+    $text = html_entity_decode($text);
+    $text = strip_tags($text);
+    $text = nl2br($text);
+
+    if (400 < strlen($text)) {
+        $text = substr($text, 0, 400);
+        $text .= ' [...]';
+    }
+
+    return $text;
 }

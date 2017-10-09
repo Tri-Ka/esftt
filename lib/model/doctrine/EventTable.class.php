@@ -28,4 +28,20 @@ class EventTable extends Doctrine_Table
             ->andWhere('DATE_ADD(e.date_from, INTERVAL 1 DAY) >= NOW() OR DATE_ADD(e.date_to, INTERVAL 1 DAY) >= NOW()')
             ->orderBy('e.date_from DESC');
     }
+
+    public function findToCome()
+    {
+        return $this->createQuery('e')
+            ->andWhere('e.date_from >= NOW()')
+            ->orderBy('e.date_from DESC')
+            ->execute();
+    }
+
+    public function findPassed()
+    {
+        return $this->createQuery('e')
+            ->andWhere('e.date_to < NOW()')
+            ->orderBy('e.date_from DESC')
+            ->execute();
+    }
 }

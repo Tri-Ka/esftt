@@ -15,9 +15,5 @@ class homepageActions extends sfActions
         $this->articles->setQuery(ArticleTable::getInstance()->findAllPublishedQuery());
         $this->articles->setPage($request->getParameter('page', 1));
         $this->articles->init();
-
-        $this->events = new sfDoctrinePager('Event', sfConfig::get('app_pagination_max_event'));
-        $this->events->setQuery(EventTable::getInstance()->findNextQuery());
-        $this->events->init();
     }
 }

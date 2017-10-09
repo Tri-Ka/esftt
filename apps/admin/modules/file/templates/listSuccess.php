@@ -25,9 +25,7 @@
 	                </tr>
 	            </thead>
 	            <tbody>
-
-		        	<?php foreach ($files as $file): ?>
-
+					<?php foreach ($files->getResults() as $file): ?>
 		        		<tr>
 							<th><?php echo $file->getId(); ?></th>
 							<td><?php echo $file->getName(); ?></td>
@@ -42,10 +40,10 @@
 				        </tr>
 
 		        	<?php endforeach; ?>
-
 	    		</tbody>
-
 	        </table>
+
+			<?php include_partial('general/pagination', array('pager' => $files, 'url' => url_for('file_list'))); ?>
 	    </div>
 	</div>
 	<div class="col-xs-12">

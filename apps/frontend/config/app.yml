@@ -5,12 +5,10 @@
 #all:
 
 dev:
-
   mail:
     to: datcharrye@gmail.com
 
 all:
-
   url:
     facebook: https://www.facebook.com/ESFTT/
     twitter: 'https://twitter.com'

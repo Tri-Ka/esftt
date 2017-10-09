@@ -61,6 +61,9 @@
                         <li class="<?php echo 'file' == $sf_context->getModuleName() ? 'active' : ''; ?>">
                             <a href="<?php echo url_for('file_list'); ?>"><i class="fa fa-file"></i> Fichiers</a>
                         </li>
+                        <li class="<?php echo 'sponsor' == $sf_context->getModuleName() ? 'active' : ''; ?>">
+                            <a href="<?php echo url_for('sponsor_list'); ?>"><i class="fa fa-star"></i> Sponsors</a>
+                        </li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->

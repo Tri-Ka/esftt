@@ -1733,7 +1733,7 @@ a.separated {
 }
 /* line 1469, ../../../compass/sass/front/s.scss */
 .article__big-content img {
-  width: 100%;
+  max-width: 100%;
 }
 /* line 1473, ../../../compass/sass/front/s.scss */
 .article__big-content__fb-part {

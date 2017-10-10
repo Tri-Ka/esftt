@@ -1,18 +1,12 @@
 <div class="row">
-
 	<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
-
-
 		<div class="no-box-title text-center marged-bottom">
 			<?php echo __('Nous contacter'); ?>
 		</div>
 
 		<div class="box">
-
 			<div class="box-content marged-top">
-
 				<form action="" method="post" class="">
-
 					<?php echo $form->renderHiddenFields() ?>
 
 				 	<div class="form-group  <?php echo true == $form['from']->hasError() ? 'has-error' : ''; ?>">
@@ -34,18 +28,14 @@
 					</div>
 
 					<div class="form-group">
-				 		<button type="submit" class="btn btn-primary pull-right">
-				 		<?php echo __('envoyer'); ?> <i class="fa fa-paper-plane"></i>
-
-				 		</button>
+						<div class="text-right">
+							<button type="submit" class="btn btn-primary">
+				 				<?php echo __('envoyer'); ?> <i class="fa fa-paper-plane"></i>
+				 			</button>
+						</div>
 					</div>
-
 				</form>
-
 			</div>
-
 		</div>
-
 	</div>
-
 </div>

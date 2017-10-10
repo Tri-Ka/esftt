@@ -21,9 +21,9 @@
                 <div class="form-group">
                     <input type="submit" class="btn btn-primary" value="<?php echo __('Se connecter') ?>">
 
-                    <a href="<?php echo url_for('sf_guard_forgot_password') ?>" class="btn btn-default">
+                   <!--  <a href="<?php echo url_for('sf_guard_forgot_password') ?>" class="btn btn-default">
                         <?php echo __('Mot de passe oublié ?') ?>
-                    </a>
+                    </a> -->
                 </div>
             </form>
         </div>

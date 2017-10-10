@@ -22,7 +22,7 @@ default:
     - hover-min.css
     - animate.css
     - morris.css
-    - front/s.css?v=1.2
+    - front/s.css?v=1.5
 
   javascripts:
     - jquery.min.js

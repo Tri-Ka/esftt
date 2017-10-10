@@ -32,7 +32,7 @@ class EventTable extends Doctrine_Table
     public function findToCome()
     {
         return $this->createQuery('e')
-            ->andWhere('e.date_from >= NOW()')
+            ->andWhere('e.date_from >= NOW() OR e.date_to >= NOW()')
             ->orderBy('e.date_from DESC')
             ->execute();
     }

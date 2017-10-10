@@ -10,6 +10,7 @@
         <meta property="og:image" content="<?php echo get_slot('page_image', public_path('images/default-gallery.jpg', true)); ?>" />
         <meta property="og:url" content="<?php echo get_slot('page_url', url_for('@homepage', true)) ?>" />
         <meta property="og:description" content="<?php echo get_slot('page_description', 'ESFTT - La Frette sur Seine'); ?>" />
+        <meta property="fb:app_id" content="1659307854309814" />
 
         <!-- for Twitter -->
         <meta name="twitter:card" content="summary" />
@@ -181,25 +182,4 @@
         ga('send', 'pageview');
 
     </script>
-
-    <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES * * */
-        var disqus_shortname = 'esftt';
-
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function () {
-            var s = document.createElement('script'); s.async = true;
-            s.type = 'text/javascript';
-            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-        }());
-    </script>
-
 </html>

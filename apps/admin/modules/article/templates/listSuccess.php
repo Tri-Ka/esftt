@@ -20,7 +20,6 @@
 	                <tr>
 	                    <th>#</th>
 						<th><?php echo __('titre'); ?></th>
-						<th><?php echo __('pitch'); ?></th>
 						<th><?php echo __('publié ?'); ?></th>
 						<th><?php echo __('actions'); ?></th>
 	                </tr>
@@ -32,7 +31,6 @@
 		        		<tr>
 							<th><?php echo $article->getId(); ?></th>
 							<td><?php echo $article->getTitle(); ?></td>
-							<td><?php echo $article->getSubTitle(); ?></td>
 							<td><?php echo true == $article->getIsPublished() ? '<i class="fa fa-check green"></i>' : ''; ?></td>
 							<td>
 								<a href="<?php echo url_for('article_edit', array('id' => $article->getId())); ?>" class="btn btn-default btn-xs"><?php echo __('editer'); ?> <i class="fa fa-pencil"></i></a>

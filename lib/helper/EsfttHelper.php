@@ -355,15 +355,21 @@ function implodeObject($glue, $array, $toStringFunction = '__toString')
     return implode($glue, $return);
 }
 
-function simplyfyText($text)
+function simplyfyText($text, $all = false)
 {
+    $text = trim($text);
     $text = html_entity_decode($text);
-    $text = strip_tags($text);
     $text = nl2br($text);
 
-    if (400 < strlen($text)) {
-        $text = substr($text, 0, 400);
-        $text .= ' [...]';
+    if ($all) {
+        $text = strip_tags($text);
+    } else {
+        $text = strip_tags($text, '<br>');
+
+        if (400 < strlen($text)) {
+            $text = substr($text, 0, 400);
+            $text .= ' [...]';
+        }
     }
 
     return $text;

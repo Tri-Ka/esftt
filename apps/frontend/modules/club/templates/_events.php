@@ -10,7 +10,9 @@
                     <?php include_partial('event/event_sm', array('event' => $event)); ?>
                 <?php endforeach; ?>
             </div>
+        </div>
 
+        <div class="row">
             <div class="no-box-title small marged-bottom">
                 <?php echo __('Événements passés'); ?>
             </div>

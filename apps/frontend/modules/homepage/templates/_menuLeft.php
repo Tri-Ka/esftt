@@ -95,19 +95,19 @@
     </div> -->
 
     <?php if (0 < $sponsors->count()): ?>
-        <div class="sponsor-block">
+        <div class="special-block hidden-sm hidden-xs">
             <div class="no-box-title small marged-top">
-                <?php echo __('Nos sponsors'); ?>
+                <?php echo __('Nos partenaires'); ?>
             </div>
 
-            <div class="sponsor-list">
+            <div class="special-list">
                 <div class="row">
                     <?php foreach ($sponsors as $sponsor): ?>
                         <div class="col-xs-12">
-                            <a href="<?php echo $sponsor->getLink(); ?>" class="sponsor">
-                                <img class="sponor__img" src="<?php echo $sponsor->retrievePictureUrl(); ?>">
+                            <a href="<?php echo $sponsor->getLink(); ?>" target="_blank" class="special hvr-grow-rotate">
+                                <img class="special__img" src="<?php echo $sponsor->retrievePictureUrl(); ?>">
 
-                                <div class="sponsor__title">
+                                <div class="special__title">
                                     <h4><?php echo $sponsor->getName(); ?></h4>
                                 </div>
                             </a>
@@ -119,7 +119,7 @@
     <?php endif; ?>
 
     <div class="game-block hidden-sm hidden-xs">
-        <a href="<?php echo url_for('pong'); ?>" class="">
+        <a href="<?php echo url_for('pong'); ?>" class="hvr-grow-rotate">
             <img class="" src="<?php echo public_path('images/pong.jpg'); ?>">
         </a>
     </div>

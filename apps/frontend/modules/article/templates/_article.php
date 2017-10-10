@@ -15,21 +15,23 @@
             </h3>
 
             <?php if (isset($big) && $big === true): ?>
-                <div class="article__mini-content">
+                <div class="article__big-content">
                     <?php echo $article->getContent(ESC_RAW); ?>
 
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <div
-                                class="fb-like"
-                                data-share="true"
-                                data-width="450"
-                                data-show-faces="true">
+                    <div class="article__big-content__fb-part">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div
+                                    class="fb-like"
+                                    data-share="true"
+                                    data-width="450"
+                                    data-show-faces="true">
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="col-xs-12">
-                            <div class="fb-comments" data-href="<?php echo url_for('article_show', array('id' => $article->getId()), true); ?>" data-width="100%" data-numposts="10"></div>
+                            <div class="col-xs-12">
+                                <div class="fb-comments" data-href="<?php echo url_for('article_show', array('id' => $article->getId()), true); ?>" data-width="100%" data-numposts="10"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -41,6 +43,8 @@
                 <a href="<?php echo url_for('article_show', array('id' => $article->getId())); ?>" class="btn btn-primary btn-xs marged-top">
                     <?php echo __('voir la suite'); ?> <i class="fa fa-chevron-right"></i>
                 </a>
+
+                <div class="fb-like article__fb-like" data-href="<?php echo url_for('article_show', array('id' => $article->getId()), true); ?>" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
             <?php endif; ?>
         </div>
     </div>

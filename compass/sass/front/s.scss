@@ -48,7 +48,7 @@ div.flash.error {
 /* line 44, ../../../compass/sass/front/s.scss */
 header .container-fluid {
   border-bottom: 4px solid #FFF;
-  box-shadow: 0px 3px 19px #012242;
+  box-shadow: 0px 3px 19px rgba(0, 0, 0, 0.35);
   position: fixed;
   top: 0;
   z-index: 2000;
@@ -65,8 +65,8 @@ header .container-fluid #logo {
 }
 /* line 62, ../../../compass/sass/front/s.scss */
 header .container-fluid #logo img {
-  height: 150px;
-  margin-top: 10px;
+  height: 140px;
+  /*margin-top: 10px;*/
 }
 @media (max-width: 768px) {
   /* line 69, ../../../compass/sass/front/s.scss */
@@ -936,8 +936,6 @@ h1 {
 /* line 968, ../../../compass/sass/front/s.scss */
 .marged-top-2 {
   margin-top: 30px;
-  float: left;
-  width: 100%;
 }
 
 /* line 974, ../../../compass/sass/front/s.scss */
@@ -1450,6 +1448,7 @@ a.separated {
     margin-bottom: 50px;
     border-radius: 3px;
     box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.2);
+    position: relative;
 
     &__img {
         height: 250px;
@@ -1460,6 +1459,28 @@ a.separated {
         display: block;
         border-top-right-radius: 3px;
         border-top-left-radius: 3px;
+
+        @media (max-width: 768px) {
+            height: 165px;
+        }
+    }
+
+    &__big-content {
+        img {
+            width: 100%;
+        }
+
+        &__fb-part {
+            border-top: 1px dashed #ddd;
+            padding-top: 30px;
+            margin-top: 30px;
+        }
+    }
+
+    &__mini-content {
+        img {
+            display: none;
+        }
     }
 
     &__date {
@@ -1478,7 +1499,7 @@ a.separated {
         position: absolute;
         top: -25px;
         margin: 0;
-        left: 0px;
+        left: -15px;
 
         .day {
             display: block;
@@ -1492,6 +1513,12 @@ a.separated {
             font-size: 15px;
             margin-top: -10px;
         }
+    }
+
+    &__fb-like.fb_iframe_widget {
+        position: absolute;
+        bottom: 30px;
+        right: 30px;
     }
 }
 
@@ -1576,14 +1603,14 @@ div.flash.notice {
     overflow: auto;
 }
 
-.sponsor-block {
+.special-block {
     border-top: 1px dashed #fff;
     margin-top: 30px;
 
-    .sponsor-list {
+    .special-list {
         margin-top: 15px;
 
-        .sponsor {
+        .special {
             display: block;
             background: #fff;
             border-radius: 3px;
@@ -1600,10 +1627,19 @@ div.flash.notice {
                 left: 0;
                 right: 0;
                 color: #000;
+                margin-bottom: -50px;
+                transition: all .3s;
 
                 h4 {
                     margin: 0;
                     font-family: 'Lobster', cursive;
+                }
+            }
+
+            &:hover,
+            &:focus {
+                .special__title {
+                    margin-bottom: 0;
                 }
             }
         }

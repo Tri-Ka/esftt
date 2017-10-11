@@ -1930,3 +1930,18 @@ div.flash.notice {
   width: 215px;
   margin: auto;
 }
+
+/* line 1670, ../../../compass/sass/front/s.scss */
+.gglcalendar {
+  margin-top: 15px;
+}
+/* line 1673, ../../../compass/sass/front/s.scss */
+.gglcalendar__content {
+  margin-top: 15px;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.2);
+  height: 329px;
+  background-color: #e3e9ff;
+  border-bottom: 5px solid #e3e9ff;
+}

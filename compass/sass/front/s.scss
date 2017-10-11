@@ -1666,3 +1666,17 @@ div.flash.notice {
         }
     }
 }
+
+.gglcalendar {
+    margin-top: 15px;
+
+    &__content {
+        margin-top: 15px;
+        border-radius: 5px;
+        overflow: hidden;
+        box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.2);
+        height: 329px;
+        background-color: #e3e9ff;
+        border-bottom: 5px solid #e3e9ff;
+    }
+}

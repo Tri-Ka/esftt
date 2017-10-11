@@ -14,6 +14,7 @@ dev:
   doctrine:
     class: sfDoctrineDatabase
     param:
+      # dsn:      mysql:host=localhost;dbname=esftt_prod_build
       dsn:      mysql:host=localhost;dbname=esftt_prod
       username: root
       password: root

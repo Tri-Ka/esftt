@@ -1,10 +1,10 @@
 <div class="box marged-top">
 	<div class="box-title">
-		Horaires
+		Tarifs
 	</div>
 
 	<div class="box-content">
-		<?php foreach ($sCats as $cat): ?>
+		<?php foreach ($pCats as $cat): ?>
 			<table class="table table-striped table-hover">
 				<thead>
 					<tr>
@@ -13,9 +13,9 @@
 				</thead>
 
 				<tbody>
-					<?php foreach ($cat->getDays() as $day): ?>
+					<?php foreach ($cat->getPrices() as $price): ?>
 						<tr>
-							<td><?php echo $day->getDay(); ?></td><td class="text-right"><?php echo $day->getInfo(); ?></td><td class="text-right"><?php echo $day->getHours(); ?></td>
+							<td><?php echo $price->getElement(); ?></td><td class="text-right"><?php echo $price->getInfo(); ?></td><td class="text-right"><?php echo $price->getPrice(); ?></td>
 						</tr>
 					<?php endforeach; ?>
 				</tbody>

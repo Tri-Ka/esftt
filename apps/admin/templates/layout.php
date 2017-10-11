@@ -64,6 +64,18 @@
                         <li class="<?php echo 'sponsor' == $sf_context->getModuleName() ? 'active' : ''; ?>">
                             <a href="<?php echo url_for('sponsor_list'); ?>"><i class="fa fa-star"></i> Sponsors</a>
                         </li>
+                        <li class="<?php echo 'scheduleCat' == $sf_context->getModuleName() ? 'active' : ''; ?>">
+                            <a href="<?php echo url_for('schedule_cat_list'); ?>"><i class="fa fa-clock-o"></i> Horaires (cat)</a>
+                        </li>
+                        <li class="<?php echo 'scheduleDay' == $sf_context->getModuleName() ? 'active' : ''; ?>">
+                            <a href="<?php echo url_for('schedule_day_list'); ?>"><i class="fa fa-clock-o"></i> Horaires (jours)</a>
+                        </li>
+                        <li class="<?php echo 'priceCat' == $sf_context->getModuleName() ? 'active' : ''; ?>">
+                            <a href="<?php echo url_for('price_cat_list'); ?>"><i class="fa fa-money"></i> Tarifs (cat)</a>
+                        </li>
+                        <li class="<?php echo 'priceElem' == $sf_context->getModuleName() ? 'active' : ''; ?>">
+                            <a href="<?php echo url_for('price_elem_list'); ?>"><i class="fa fa-money"></i> Tarifs (elements)</a>
+                        </li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->

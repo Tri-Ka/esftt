@@ -174,6 +174,70 @@ post_edit:
   url: /post/edit/:id
   param: { module: forum, action: postEdit }
 
+schedule_cat_list:
+  url:   /schedule_cat
+  param: { module: scheduleCat, action: list }
+
+schedule_cat_new:
+  url:   /schedule_cat/new
+  param: { module: scheduleCat, action: new }
+
+schedule_cat_edit:
+  url:   /schedule_cat/edit/:id
+  param: { module: scheduleCat, action: edit }
+
+schedule_cat_delete:
+  url:   /schedule_cat/delete/:id
+  param: { module: scheduleCat, action: delete }
+
+schedule_day_list:
+  url:   /schedule_day
+  param: { module: scheduleDay, action: list }
+
+schedule_day_new:
+  url:   /schedule_day/new
+  param: { module: scheduleDay, action: new }
+
+schedule_day_edit:
+  url:   /schedule_day/edit/:id
+  param: { module: scheduleDay, action: edit }
+
+schedule_day_delete:
+  url:   /schedule_day/delete/:id
+  param: { module: scheduleDay, action: delete }
+
+price_cat_list:
+  url:   /price_cat
+  param: { module: priceCat, action: list }
+
+price_cat_new:
+  url:   /price_cat/new
+  param: { module: priceCat, action: new }
+
+price_cat_edit:
+  url:   /price_cat/edit/:id
+  param: { module: priceCat, action: edit }
+
+price_cat_delete:
+  url:   /price_cat/delete/:id
+  param: { module: priceCat, action: delete }
+
+price_elem_list:
+  url:   /price_elem
+  param: { module: priceElem, action: list }
+
+price_elem_new:
+  url:   /price_elem/new
+  param: { module: priceElem, action: new }
+
+price_elem_edit:
+  url:   /price_elem/edit/:id
+  param: { module: priceElem, action: edit }
+
+price_elem_delete:
+  url:   /price_elem/delete/:id
+  param: { module: priceElem, action: delete }
+
 # default rules
 homepage:
   url:   /

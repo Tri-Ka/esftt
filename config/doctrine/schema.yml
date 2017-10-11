@@ -190,3 +190,63 @@ Sponsor:
       notnull: true
     picture:
       type: string(255)
+
+scheduleCategory:
+  columns:
+    position:
+      type: integer
+    name:
+      type: string(255)
+      notnull: true
+
+
+scheduleDay:
+  columns:
+    day:
+      type: string(255)
+      notnull: true
+    info:
+      type: string(255)
+    hours:
+      type: string(255)
+      notnull: true
+    category_id:
+      type: integer
+      notnull: true
+  relations:
+    Category:
+      class: scheduleCategory
+      local: category_id
+      foreign: id
+      foreignAlias: Days
+      onDelete: CASCADE
+
+PriceCategory:
+  columns:
+    position:
+      type: integer
+    name:
+      type: string(255)
+      notnull: true
+
+
+PriceElement:
+  columns:
+    element:
+      type: string(255)
+      notnull: true
+    info:
+      type: string(255)
+    price:
+      type: string(255)
+      notnull: true
+    category_id:
+      type: integer
+      notnull: true
+  relations:
+    Category:
+      class: PriceCategory
+      local: category_id
+      foreign: id
+      foreignAlias: Prices
+      onDelete: CASCADE

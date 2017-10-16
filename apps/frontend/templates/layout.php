@@ -21,7 +21,7 @@
         <?php include_title() ?>
         <?php include_stylesheets() ?>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" href="<?php echo public_path('favicon.ico') ?>?v2" />
+        <link rel="shortcut icon" href="<?php echo public_path('favicon.ico') ?>?v3" />
 
     </head>
     <body>

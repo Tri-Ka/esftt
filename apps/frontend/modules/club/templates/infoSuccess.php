@@ -11,8 +11,6 @@
     </div>
 
  	<div class="col-xs-12 col-sm-6">
- 		<?php include_partial('salle'); ?>
- 		<?php include_partial('competitions'); ?>
- 		<?php include_partial('renseignements'); ?>
+ 		<?php include_component('club', 'infos'); ?>
  	</div>
 </div>

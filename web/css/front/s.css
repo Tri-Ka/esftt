@@ -1945,3 +1945,26 @@ div.flash.notice {
   background-color: #e3e9ff;
   border-bottom: 5px solid #e3e9ff;
 }
+
+@media (max-width: 768px) {
+  /* line 2, ../../../compass/sass/front/_responsive.scss */
+  .article {
+    padding: 15px;
+  }
+  /* line 5, ../../../compass/sass/front/_responsive.scss */
+  .article__img {
+    margin: -15px;
+    margin-bottom: 0;
+  }
+
+  /* line 11, ../../../compass/sass/front/_responsive.scss */
+  .article__fb-like.fb_iframe_widget {
+    bottom: 15px;
+    right: 15px;
+  }
+
+  /* line 16, ../../../compass/sass/front/_responsive.scss */
+  .slider-full {
+    margin-bottom: 0;
+  }
+}

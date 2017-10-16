@@ -11,4 +11,9 @@ class clubComponents extends sfComponents
     {
         $this->pCats = PriceCategoryTable::getInstance()->findOrdered();
     }
+
+    public function executeInfos(sfWebRequest $request)
+    {
+        $this->iElems = InfoElementTable::getInstance()->findOrdered();
+    }
 }

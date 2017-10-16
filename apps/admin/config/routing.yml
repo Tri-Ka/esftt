@@ -238,6 +238,22 @@ price_elem_delete:
   url:   /price_elem/delete/:id
   param: { module: priceElem, action: delete }
 
+info_elem_list:
+  url:   /info_elem
+  param: { module: infoElem, action: list }
+
+info_elem_new:
+  url:   /info_elem/new
+  param: { module: infoElem, action: new }
+
+info_elem_edit:
+  url:   /info_elem/edit/:id
+  param: { module: infoElem, action: edit }
+
+info_elem_delete:
+  url:   /info_elem/delete/:id
+  param: { module: infoElem, action: delete }
+
 # default rules
 homepage:
   url:   /

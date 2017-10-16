@@ -11,5 +11,9 @@
         <?php endforeach; ?>
 
         <?php include_partial('general/pagination', array('pager' => $articles, 'url' => url_for('homepage'))); ?>
+
+        <div class="visible-xs">
+            <?php include_partial('homepage/calendar'); ?>
+        </div>
     </div>
 </div>

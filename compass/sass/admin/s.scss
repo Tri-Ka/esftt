@@ -2,6 +2,10 @@ $green: #5CB85C;
 
 @import url(http://fonts.googleapis.com/css?family=Lobster|Oxygen:400,300,700|Playball|Righteous|Allan:400,700);
 
+body {
+	background-color: #fff;
+}
+
 .box {
 	background: #EEE;
 	border-radius: 4px;
@@ -124,4 +128,68 @@ $green: #5CB85C;
     	text-decoration: none;
     	color: #fff;
     }
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: #9d9d9d;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #000;
+}
+
+$menuWith: 300px;
+
+#wrapper {
+	padding-left: $menuWith;
+
+	.side-nav {
+		width: $menuWith;
+		background-color: #000;
+		border-right: 1px solid #000;
+		direction: rtl;
+		overflow-y: scroll;
+		padding-left: 15px;
+		left: 0;
+		margin: 0;
+		margin-left: -15px;
+	}
+
+	.side-nav>li {
+		direction: ltr;
+		text-align: left;
+
+		&.active {
+			&>a {
+				background: #444;
+				box-shadow: none;
+			}
+		}
+		&>a {
+			width: $menuWith;
+			padding-left: 60px;
+			position: relative;
+			background: #222;
+			padding-right: 30px;
+
+			&>i {
+				color: #fff;
+				position: absolute;
+				left: 0;
+				top: 0;
+				bottom: 0;
+				width: 50px;
+				line-height: 50px;
+				font-size: 20px;
+				text-align: center;
+			}
+		}
+	}
+
+	.side-nav>li>ul {
+		background: #111;
+
+		&>li>a {
+		    border-top: 1px solid #222;
+    		border-bottom: 1px solid #000;
+		}
+	}
 }

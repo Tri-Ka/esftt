@@ -39,7 +39,7 @@
                 </ul>
                 <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
                 <div class="navbar-collapse navbar-ex1-collapse collapse" aria-expanded="false" style="height: 1px;">
-                    <ul class="nav navbar-nav side-nav">
+                    <ul class="nav navbar-nav side-nav" id="sidebar-menu">
                         <li class="<?php echo 'homepage' == $sf_context->getModuleName() ? 'active' : ''; ?>">
                             <a href="<?php echo url_for('homepage'); ?>"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
                         </li>
@@ -64,17 +64,45 @@
                         <li class="<?php echo 'sponsor' == $sf_context->getModuleName() ? 'active' : ''; ?>">
                             <a href="<?php echo url_for('sponsor_list'); ?>"><i class="fa fa-star"></i> Sponsors</a>
                         </li>
-                        <li class="<?php echo 'scheduleCat' == $sf_context->getModuleName() ? 'active' : ''; ?>">
-                            <a href="<?php echo url_for('schedule_cat_list'); ?>"><i class="fa fa-clock-o"></i> Horaires (cat)</a>
+
+                        <li class="has_sub">
+                            <a href="javascript:void(0);" class="">
+                                <i class="fa fa-clock-o"></i>
+                                <span>Horaires</span>
+                                <span class="pull-right"><i class="fa fa-angle-down"></i></span>
+                            </a>
+
+                            <ul style="display: none;">
+                                <li class="<?php echo 'scheduleCat' == $sf_context->getModuleName() ? 'active' : ''; ?>">
+                                    <a href="<?php echo url_for('schedule_cat_list'); ?>">Catégorie</a>
+                                </li>
+
+                                <li class="<?php echo 'scheduleDay' == $sf_context->getModuleName() ? 'active' : ''; ?>">
+                                    <a href="<?php echo url_for('schedule_day_list'); ?>">Jour</a>
+                                </li>
+                            </ul>
                         </li>
-                        <li class="<?php echo 'scheduleDay' == $sf_context->getModuleName() ? 'active' : ''; ?>">
-                            <a href="<?php echo url_for('schedule_day_list'); ?>"><i class="fa fa-clock-o"></i> Horaires (jours)</a>
+
+                        <li class="has_sub">
+                            <a href="javascript:void(0);" class="">
+                                <i class="fa fa-money"></i>
+                                <span>Tarifs</span>
+                                <span class="pull-right"><i class="fa fa-angle-down"></i></span>
+                            </a>
+
+                            <ul style="display: none;">
+                                <li class="<?php echo 'priceCat' == $sf_context->getModuleName() ? 'active' : ''; ?>">
+                                    <a href="<?php echo url_for('price_cat_list'); ?>">Catégorie</a>
+                                </li>
+
+                                <li class="<?php echo 'priceElem' == $sf_context->getModuleName() ? 'active' : ''; ?>">
+                                    <a href="<?php echo url_for('price_elem_list'); ?>">Tarifs</a>
+                                </li>
+                            </ul>
                         </li>
-                        <li class="<?php echo 'priceCat' == $sf_context->getModuleName() ? 'active' : ''; ?>">
-                            <a href="<?php echo url_for('price_cat_list'); ?>"><i class="fa fa-money"></i> Tarifs (cat)</a>
-                        </li>
-                        <li class="<?php echo 'priceElem' == $sf_context->getModuleName() ? 'active' : ''; ?>">
-                            <a href="<?php echo url_for('price_elem_list'); ?>"><i class="fa fa-money"></i> Tarifs (elements)</a>
+
+                        <li class="<?php echo 'infoElem' == $sf_context->getModuleName() ? 'active' : ''; ?>">
+                            <a href="<?php echo url_for('info_elem_list'); ?>"><i class="fa fa-info"></i> Autres informations</a>
                         </li>
                     </ul>
                 </div>
@@ -82,9 +110,7 @@
             </nav>
 
             <div id="page-wrapper">
-
                 <div class="container-fluid">
-
                     <?php if ($sf_user->hasFlash('notice')): ?>
                         <div class="flash notice">
                             <?php echo $sf_user->getFlash('notice') ?>
@@ -98,18 +124,13 @@
                     <?php endif ?>
 
                     <?php echo $sf_content; ?>
-
                 </div>
-
             </div>
-
         </div>
-
     </body>
 
     <?php include_javascripts() ?>
 
     <script src="http://js.nicedit.com/nicEdit-latest.js" type="text/javascript"></script>
-    <script type="text/javascript">bkLib.onDomLoaded(nicEditors.allTextAreas);</script>
-
+    <script type="text/javascript">bkLib.onDomLoaded(nicEditors.allTextAreas({fullPanel : true}));</script>
 </html>

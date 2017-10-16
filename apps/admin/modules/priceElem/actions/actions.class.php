@@ -43,9 +43,9 @@ class priceElemActions extends sfActions
 
     public function executeDelete(sfWebRequest $request)
     {
-        $this->sDay = ScheduleDayTable::getInstance()->find($request->getParameter('id'));
+        $this->sDay = PriceElementTable::getInstance()->find($request->getParameter('id'));
         $this->sDay->delete();
-        $this->getUser()->setFlash('notice', 'horaire supprimée');
-        $this->redirect('schedule_day_list');
+        $this->getUser()->setFlash('notice', 'tarif supprimée');
+        $this->redirect('price_elem_list');
     }
 }

@@ -1,0 +1,19 @@
+@media (max-width: 768px) {
+	.article {
+		padding: 15px;
+
+		&__img {
+			margin: -15px;
+			margin-bottom: 0;
+		}
+	}
+
+	.article__fb-like.fb_iframe_widget {
+		bottom: 15px;
+		right: 15px;
+	}
+
+	.slider-full {
+		margin-bottom: 0;
+	}
+}

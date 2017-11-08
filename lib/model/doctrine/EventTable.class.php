@@ -44,4 +44,11 @@ class EventTable extends Doctrine_Table
             ->orderBy('e.date_from DESC')
             ->execute();
     }
+
+    public function findForAdminQuery()
+    {
+        return $this
+            ->createQuery('e')
+            ->orderBy('e.id DESC');
+    }
 }

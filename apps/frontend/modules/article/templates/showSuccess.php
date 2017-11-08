@@ -6,7 +6,9 @@
 <?php slot('page_description', $desc); ?>
 
  <div class="row">
-    <?php include_component('homepage', 'menuLeft'); ?>
+ 	<div class="hidden-xs">
+    	<?php include_component('homepage', 'menuLeft'); ?>
+    </div>
 
     <div class="col-xs-12 col-sm-8">
 

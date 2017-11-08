@@ -29,4 +29,11 @@ class ArticleTable extends Doctrine_Table
     {
         return $this->findAllPublishedQuery()->execute();
     }
+
+    public function findForAdminQuery()
+    {
+        return $this
+            ->createQuery('a')
+            ->orderBy('a.id DESC');
+    }
 }

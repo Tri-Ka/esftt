@@ -22,18 +22,21 @@
 
                     <span class="info-date date-from"><i class="fa fa-clock-o"></i> démare le<br><strong><?php echo format_date($event->getDateFrom(), 'D'); ?></strong> à <strong><?php echo date('H:i', strtotime($event->getDateFrom())); ?></strong></span><br><br>
 
-                    <?php if (strtotime($event->getDateTo()) && 0 < strtotime($event->getDateTo())): ?>
+                    <?php if (strtotime($event->getDateTo()) && 0 < strtotime($event->getDateTo())) : ?>
                         <span class="info-date date-from"><i class="fa fa-clock-o"></i> termine le<br><strong><?php echo format_date($event->getDateTo(), 'D'); ?></strong> à <strong><?php echo date('H:i', strtotime($event->getDateTo())); ?></strong></span>
                     <?php endif; ?>
                 </div>
+            </div>
 
-            	<div class="box col-xs-12 marged-bottom">
+            <?php if ('' != trim(strip_tags($event->getDescription(ESC_RAW)))) : ?>
+                <div class="box col-xs-12 marged-bottom--big">
                     <div class="box-title marged-bottom">
                         <?php echo __('A propos'); ?>
                     </div>
+
                     <?php echo $event->getDescription(ESC_RAW); ?>
                 </div>
-            </div>
+            <?php endif; ?>
 
             <div class="col-xs-12 box">
                 <div class="box-content">

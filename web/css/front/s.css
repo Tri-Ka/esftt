@@ -1805,9 +1805,9 @@ a.separated {
 
 /* line 1543, ../../../compass/sass/front/s.scss */
 .event-list {
-  margin-top: 15px;
+  margin-top: 30px;
   border-bottom: 1px dashed #fff;
-  padding-bottom: 15px;
+  padding-bottom: 30px;
 }
 
 /* line 1550, ../../../compass/sass/front/s.scss */
@@ -1836,49 +1836,53 @@ a.separated {
   top: -5px;
   left: 10px;
 }
-/* line 1575, ../../../compass/sass/front/s.scss */
+/* line 1574, ../../../compass/sass/front/s.scss */
+.event-link--simple .event-link__date.event-link__date__type-1 {
+  background: #F44336;
+}
+/* line 1579, ../../../compass/sass/front/s.scss */
 .event-link--simple:hover, .event-link--simple:focus {
   text-decoration: none;
   color: #000;
 }
 
-/* line 1583, ../../../compass/sass/front/s.scss */
+/* line 1587, ../../../compass/sass/front/s.scss */
 .gallery-title {
   color: #fff;
 }
-/* line 1586, ../../../compass/sass/front/s.scss */
+/* line 1590, ../../../compass/sass/front/s.scss */
 .gallery-title a {
   color: #fff;
 }
 
-/* line 1591, ../../../compass/sass/front/s.scss */
+/* line 1595, ../../../compass/sass/front/s.scss */
 div.flash {
   top: 15%;
   padding: 15px;
   border: none !important;
 }
 
-/* line 1597, ../../../compass/sass/front/s.scss */
+/* line 1601, ../../../compass/sass/front/s.scss */
 div.flash.notice {
   border: none;
   background-color: #4581be;
 }
 
-/* line 1602, ../../../compass/sass/front/s.scss */
+/* line 1606, ../../../compass/sass/front/s.scss */
 .menu-left-links {
   overflow: auto;
 }
 
-/* line 1606, ../../../compass/sass/front/s.scss */
+/* line 1610, ../../../compass/sass/front/s.scss */
 .special-block {
   border-top: 1px dashed #fff;
   margin-top: 30px;
 }
-/* line 1610, ../../../compass/sass/front/s.scss */
+/* line 1614, ../../../compass/sass/front/s.scss */
 .special-block .special-list {
   margin-top: 15px;
 }
-/* line 1613, ../../../compass/sass/front/s.scss */
+/* line 1617, ../../../compass/sass/front/s.scss */
 .special-block .special-list .special {
   display: block;
   background: #fff;
@@ -1888,7 +1892,7 @@ div.flash.notice {
   margin-bottom: 10px;
   box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.2);
 }
-/* line 1622, ../../../compass/sass/front/s.scss */
+/* line 1626, ../../../compass/sass/front/s.scss */
 .special-block .special-list .special__title {
   padding: 10px 15px;
   position: absolute;
@@ -1900,23 +1904,23 @@ div.flash.notice {
   margin-bottom: -50px;
   transition: all .3s;
 }
-/* line 1633, ../../../compass/sass/front/s.scss */
+/* line 1637, ../../../compass/sass/front/s.scss */
 .special-block .special-list .special__title h4 {
   margin: 0;
   font-family: 'Lobster', cursive;
 }
-/* line 1641, ../../../compass/sass/front/s.scss */
+/* line 1645, ../../../compass/sass/front/s.scss */
 .special-block .special-list .special:hover .special__title, .special-block .special-list .special:focus .special__title {
   margin-bottom: 0;
 }
 
-/* line 1650, ../../../compass/sass/front/s.scss */
+/* line 1654, ../../../compass/sass/front/s.scss */
 .game-block {
   margin-top: 30px;
   border-top: 1px dashed #fff;
   padding-top: 30px;
 }
-/* line 1655, ../../../compass/sass/front/s.scss */
+/* line 1659, ../../../compass/sass/front/s.scss */
 .game-block a {
   background-color: #000;
   display: block;
@@ -1925,17 +1929,17 @@ div.flash.notice {
   overflow: hidden;
   box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.2);
 }
-/* line 1663, ../../../compass/sass/front/s.scss */
+/* line 1667, ../../../compass/sass/front/s.scss */
 .game-block a img {
   width: 215px;
   margin: auto;
 }
 
-/* line 1670, ../../../compass/sass/front/s.scss */
+/* line 1674, ../../../compass/sass/front/s.scss */
 .gglcalendar {
   margin-top: 15px;
 }
-/* line 1673, ../../../compass/sass/front/s.scss */
+/* line 1677, ../../../compass/sass/front/s.scss */
 .gglcalendar__content {
   margin-top: 15px;
   border-radius: 5px;
@@ -1944,6 +1948,11 @@ div.flash.notice {
   height: 329px;
   background-color: #e3e9ff;
   border-bottom: 5px solid #e3e9ff;
+}
+
+/* line 1689, ../../../compass/sass/front/s.scss */
+.menu-left .no-box-title {
+  text-align: left;
 }
 
 @media (max-width: 768px) {

@@ -88,6 +88,9 @@ Event:
       type: DateTime
     date_to:
       type: DateTime
+    type:
+      type: integer
+      default: 0
 
 PongScore:
   actAs:

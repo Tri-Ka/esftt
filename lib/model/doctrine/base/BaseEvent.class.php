@@ -10,17 +10,20 @@
  * @property string $picture
  * @property DateTime $date_from
  * @property DateTime $date_to
+ * @property integer $type
  * 
  * @method string   getName()        Returns the current record's "name" value
  * @method clob     getDescription() Returns the current record's "description" value
  * @method string   getPicture()     Returns the current record's "picture" value
  * @method DateTime getDateFrom()    Returns the current record's "date_from" value
  * @method DateTime getDateTo()      Returns the current record's "date_to" value
+ * @method integer  getType()        Returns the current record's "type" value
  * @method Event    setName()        Sets the current record's "name" value
  * @method Event    setDescription() Sets the current record's "description" value
  * @method Event    setPicture()     Sets the current record's "picture" value
  * @method Event    setDateFrom()    Sets the current record's "date_from" value
  * @method Event    setDateTo()      Sets the current record's "date_to" value
+ * @method Event    setType()        Sets the current record's "type" value
  * 
  * @package    esftt
  * @subpackage model
@@ -49,6 +52,10 @@ abstract class BaseEvent extends sfDoctrineRecord
              ));
         $this->hasColumn('date_to', 'DateTime', null, array(
              'type' => 'DateTime',
+             ));
+        $this->hasColumn('type', 'integer', null, array(
+             'type' => 'integer',
+             'default' => 0,
              ));
     }
 

@@ -57,4 +57,14 @@ class Event extends BaseEvent
             return implode($dirSep, array_merge_recursive(array($dirPrefix, 'events'), str_split($this->getId())));
         }
     }
+
+    public function getNbDaysLength()
+    {
+        $datetime1 = date_create($this->getDateFrom());
+        $datetime2 = date_create($this->getDateTo());
+        
+        $interval = date_diff($datetime1, $datetime2);
+        
+        return $interval->format('%d');
+    }
 }

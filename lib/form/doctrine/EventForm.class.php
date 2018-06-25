@@ -17,6 +17,7 @@ class EventForm extends BaseEventForm
             'description',
             'date_from',
             'date_to',
+            'type'
         ));
 
         // avatar
@@ -36,6 +37,13 @@ class EventForm extends BaseEventForm
             'max_width' => 99999999,
             'mime_types' => 'web_images',
         ));
+
+        $choices = array(
+            0 => 'Evènement',
+            1 => 'Championnat / Compétition',
+        );
+
+        $this->widgetSchema['type'] = new sfWidgetFormChoice(array('choices' => $choices));
     }
 
     public function bind(array $taintedValues = null, array $taintedFiles = null)

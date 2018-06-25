@@ -29,10 +29,11 @@ class EventTable extends Doctrine_Table
             ->orderBy('e.date_from DESC');
     }
 
-    public function findToCome()
+    public function findToCome($type = 0)
     {
         return $this->createQuery('e')
             ->andWhere('e.date_from >= NOW() OR e.date_to >= NOW()')
+            ->andWhere('e.type = ?', array($type))
             ->orderBy('e.date_from DESC')
             ->execute();
     }

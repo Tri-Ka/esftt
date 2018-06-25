@@ -1541,9 +1541,9 @@ a.separated {
 }
 
 .event-list {
-    margin-top: 15px;
+    margin-top: 30px;
     border-bottom: 1px dashed #fff;
-    padding-bottom: 15px;
+    padding-bottom: 30px;
 }
 
 .event-link {
@@ -1570,6 +1570,10 @@ a.separated {
             font-size: 11px;
             top: -5px;
             left: 10px;
+
+            &.event-link__date__type-1 {
+                background: #F44336;
+            }
         }
 
         &:hover,
@@ -1681,4 +1685,11 @@ div.flash.notice {
     }
 }
 
+.menu-left {
+    .no-box-title {
+        text-align: left;
+    }
+}
+
 @import 'responsive';
+

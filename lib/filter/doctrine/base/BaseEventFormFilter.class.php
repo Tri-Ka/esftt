@@ -18,6 +18,7 @@ abstract class BaseEventFormFilter extends BaseFormFilterDoctrine
       'picture'     => new sfWidgetFormFilterInput(),
       'date_from'   => new sfWidgetFormFilterInput(),
       'date_to'     => new sfWidgetFormFilterInput(),
+      'type'        => new sfWidgetFormFilterInput(),
       'created_at'  => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
       'updated_at'  => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
     ));
@@ -28,6 +29,7 @@ abstract class BaseEventFormFilter extends BaseFormFilterDoctrine
       'picture'     => new sfValidatorPass(array('required' => false)),
       'date_from'   => new sfValidatorPass(array('required' => false)),
       'date_to'     => new sfValidatorPass(array('required' => false)),
+      'type'        => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
       'created_at'  => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
       'updated_at'  => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
     ));
@@ -55,6 +57,7 @@ abstract class BaseEventFormFilter extends BaseFormFilterDoctrine
       'picture'     => 'Text',
       'date_from'   => 'Text',
       'date_to'     => 'Text',
+      'type'        => 'Number',
       'created_at'  => 'Date',
       'updated_at'  => 'Date',
     );

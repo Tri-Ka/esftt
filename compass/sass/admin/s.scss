@@ -147,10 +147,8 @@ $menuWith: 300px;
 		border-right: 1px solid #000;
 		direction: rtl;
 		overflow-y: scroll;
-		padding-left: 15px;
-		left: 0;
+		left: -15px;
 		margin: 0;
-		margin-left: -15px;
 	}
 
 	.side-nav>li {

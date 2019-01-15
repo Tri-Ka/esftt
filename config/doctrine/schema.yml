@@ -180,6 +180,16 @@ File:
       type: string
       notnull: true
 
+Cover:
+  actAs:
+    Timestampable: ~
+  columns:
+    file_name:
+      type: string
+      notnull: true
+    position:
+      type: integer
+
 Sponsor:
   tableName: sponsor
   actAs:

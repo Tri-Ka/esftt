@@ -28,6 +28,10 @@ all:
   sf_guard_plugin:
     success_signin_url: "forum"
 
+  fftt:
+    api_id: SW405
+    api_pwd: d7ZG56dQKf
+
   mail:
     to: patrick.fanzutti@free.fr
 

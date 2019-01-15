@@ -259,32 +259,6 @@ h1, h2, h3 {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 5px rgba(0, 0, 0, 0.075);
 }
 
-/* line 248, ../../../compass/sass/front/s.scss */
-.carousel .item {
-  height: 500px;
-}
-@media (max-width: 768px) {
-  /* line 248, ../../../compass/sass/front/s.scss */
-  .carousel .item {
-    height: 180px;
-  }
-}
-@media (min-width: 769px) and (max-width: 992px) {
-  /* line 248, ../../../compass/sass/front/s.scss */
-  .carousel .item {
-    height: 360px;
-  }
-}
-/* line 261, ../../../compass/sass/front/s.scss */
-.carousel img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  height: 500px;
-  max-width: none;
-}
-
 /* line 272, ../../../compass/sass/front/s.scss */
 .article-form img {
   width: 100%;

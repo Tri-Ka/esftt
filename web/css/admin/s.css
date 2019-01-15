@@ -150,22 +150,20 @@ body {
   border-right: 1px solid #000;
   direction: rtl;
   overflow-y: scroll;
-  padding-left: 15px;
-  left: 0;
+  left: -15px;
   margin: 0;
-  margin-left: -15px;
 }
-/* line 156, ../../../compass/sass/admin/s.scss */
+/* line 154, ../../../compass/sass/admin/s.scss */
 #wrapper .side-nav > li {
   direction: ltr;
   text-align: left;
 }
-/* line 161, ../../../compass/sass/admin/s.scss */
+/* line 159, ../../../compass/sass/admin/s.scss */
 #wrapper .side-nav > li.active > a {
   background: #444;
   box-shadow: none;
 }
-/* line 166, ../../../compass/sass/admin/s.scss */
+/* line 164, ../../../compass/sass/admin/s.scss */
 #wrapper .side-nav > li > a {
   width: 300px;
   padding-left: 60px;
@@ -173,7 +171,7 @@ body {
   background: #222;
   padding-right: 30px;
 }
-/* line 173, ../../../compass/sass/admin/s.scss */
+/* line 171, ../../../compass/sass/admin/s.scss */
 #wrapper .side-nav > li > a > i {
   color: #fff;
   position: absolute;
@@ -185,11 +183,11 @@ body {
   font-size: 20px;
   text-align: center;
 }
-/* line 187, ../../../compass/sass/admin/s.scss */
+/* line 185, ../../../compass/sass/admin/s.scss */
 #wrapper .side-nav > li > ul {
   background: #111;
 }
-/* line 190, ../../../compass/sass/admin/s.scss */
+/* line 188, ../../../compass/sass/admin/s.scss */
 #wrapper .side-nav > li > ul > li > a {
   border-top: 1px solid #222;
   border-bottom: 1px solid #000;

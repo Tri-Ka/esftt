@@ -5,20 +5,20 @@ sfCoreAutoload::register();
 
 class ProjectConfiguration extends sfProjectConfiguration
 {
-   public function setup()
-  {
-    $this->enablePlugins('sfDoctrinePlugin');
-    $this->enablePlugins('sfDoctrineGuardPlugin');
-    $this->enablePlugins('sfImageTransformPlugin');
-    $this->enablePlugins('sfFormExtraPlugin');
-    $this->enablePlugins('sfAdminDashPlugin');
-    $this->enablePlugins('ffttPlugin');
+    public function setup()
+    {
+        $this->enablePlugins('sfDoctrinePlugin');
+        $this->enablePlugins('sfDoctrineGuardPlugin');
+        $this->enablePlugins('sfImageTransformPlugin');
+        $this->enablePlugins('sfFormExtraPlugin');
+        $this->enablePlugins('sfAdminDashPlugin');
+        $this->enablePlugins('ffttPlugin');
+        // $this->enablePlugins('ffttAPI');
+    }
 
-  }
-
-  public function configureDoctrine(Doctrine_Manager $manager)
-  {
-    $manager->setCollate('utf8_unicode_ci');
-    $manager->setCharset('utf8');
-  }
+    public function configureDoctrine(Doctrine_Manager $manager)
+    {
+        $manager->setCollate('utf8_unicode_ci');
+        $manager->setCharset('utf8');
+    }
 }

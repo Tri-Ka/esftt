@@ -89,19 +89,19 @@
         </header>
 
         <div id="main-container" class="container-fluid">
-            <?php if ($sf_user->hasFlash('notice')): ?>
+            <?php if ($sf_user->hasFlash('notice')) : ?>
                 <div class="flash notice">
                     <?php echo $sf_user->getFlash('notice') ?>
                 </div>
             <?php endif ?>
 
-            <?php if ($sf_user->hasFlash('error')): ?>
+            <?php if ($sf_user->hasFlash('error')) : ?>
                 <div class="flash error">
                     <?php echo $sf_user->getFlash('error') ?>
                 </div>
             <?php endif ?>
 
-            <?php if ('homepage' == $sf_params->get('module')): ?>
+            <?php if ('homepage' == $sf_params->get('module')) : ?>
                 <div class="row slider-full">
                     <?php include_component('homepage', 'slider'); ?>
                 </div>

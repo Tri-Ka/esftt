@@ -86,6 +86,22 @@ file_delete:
   url:   /file/delete/:id
   param: { module: file, action: delete }
 
+cover_list:
+  url:   /covers
+  param: { module: cover, action: list }
+
+cover_new:
+  url:   /cover/new
+  param: { module: cover, action: new }
+
+cover_edit:
+  url:   /cover/edit/:id
+  param: { module: cover, action: edit }
+
+cover_delete:
+  url:   /cover/delete/:id
+  param: { module: cover, action: delete }
+
 team_list:
   url:   /teams
   param: { module: team, action: list }

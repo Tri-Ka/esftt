@@ -13,10 +13,19 @@ class userActions extends sfActions
     {
         $this->user = sfGuardUserTable::getInstance()->find($request->getParameter('id'));
 
+        $apiId = sfConfig::get('app_fftt_api_id');
+        $apiPwd = sfConfig::get('app_fftt_api_pwd');
+
+        $apiId = 'SW405';
+        $apiPwd = 'd7ZG56dQKf';
+
         if (null !== $this->user->getLicence()) {
-            $serv = new Service();
-            $this->infosJoueur = $serv->getJoueur($this->user->getLicence());
-            $this->infosParties = $serv->getJoueurParties($this->user->getLicence());
+            $api = new ffttService2($apiId, $apiPwd);
+            $api->setSerial(ffttService2::generateSerial());
+            $api->initialization();
+
+            $this->infosJoueur = $api->getJoueur($this->user->getLicence());
+            $this->infosParties = $api->getJoueurParties($this->user->getLicence());
 
             if (0 < count($this->infosParties)) {
                 $nbVic = 0;

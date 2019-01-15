@@ -61,6 +61,9 @@
                         <li class="<?php echo 'file' == $sf_context->getModuleName() ? 'active' : ''; ?>">
                             <a href="<?php echo url_for('file_list'); ?>"><i class="fa fa-file"></i> Fichiers</a>
                         </li>
+                        <li class="<?php echo 'cover' == $sf_context->getModuleName() ? 'active' : ''; ?>">
+                            <a href="<?php echo url_for('cover_list'); ?>"><i class="fa fa-picture-o"></i> Images de couverture</a>
+                        </li>
                         <li class="<?php echo 'sponsor' == $sf_context->getModuleName() ? 'active' : ''; ?>">
                             <a href="<?php echo url_for('sponsor_list'); ?>"><i class="fa fa-star"></i> Sponsors</a>
                         </li>
@@ -111,13 +114,13 @@
 
             <div id="page-wrapper">
                 <div class="container-fluid">
-                    <?php if ($sf_user->hasFlash('notice')): ?>
+                    <?php if ($sf_user->hasFlash('notice')) : ?>
                         <div class="flash notice">
                             <?php echo $sf_user->getFlash('notice') ?>
                         </div>
                     <?php endif ?>
 
-                    <?php if ($sf_user->hasFlash('error')): ?>
+                    <?php if ($sf_user->hasFlash('error')) : ?>
                         <div class="flash error">
                             <?php echo $sf_user->getFlash('error') ?>
                         </div>

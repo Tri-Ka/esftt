@@ -372,10 +372,10 @@ function simplyfyText($text, $all = false)
     if ($all) {
         $text = strip_tags($text);
     } else {
-        $text = strip_tags($text, '<p> <div>');
+        $text = strip_tags($text, '<p> <div> <ul> <li> <a>');
 
-        if (400 < strlen($text)) {
-            $text = truncate($text, 400, '[...]');
+        if (200 < strlen($text)) {
+            $text = truncate($text, 200, '[...]');
         }
     }
 

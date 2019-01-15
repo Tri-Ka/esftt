@@ -37,7 +37,7 @@
 
         <?php if (0 < $competitions->count()) : ?>
             <div class="no-box-title small marged-top">
-                <?php echo __('Compétitions en cours'); ?>
+                <?php echo __('Compétitions'); ?>
             </div>
 
             <div class="event-list">

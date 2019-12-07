@@ -15,6 +15,6 @@ dev:
     class: sfDoctrineDatabase
     param:
       # dsn:      mysql:host=localhost;dbname=esftt_prod_build
-      dsn:      mysql:host=localhost;dbname=esftt_prod
+      dsn:      mysql:host=localhost;dbname=esftt
       username: root
       password: root

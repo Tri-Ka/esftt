@@ -134,6 +134,6 @@
 
     <?php include_javascripts() ?>
 
-    <script src="http://js.nicedit.com/nicEdit-latest.js" type="text/javascript"></script>
+    <script src="<?php echo public_path('js/nicEdit.js'); ?>" type="text/javascript"></script>
     <script type="text/javascript">bkLib.onDomLoaded(nicEditors.allTextAreas({fullPanel : true}));</script>
 </html>
